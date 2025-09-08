@@ -359,6 +359,12 @@ Introduction to Image Datasets, Object Detection, Object Tracking, and its Appli
 ![](https://github.com/sunsmarterjie/yolov12/raw/main/assets/tradeoff.svg)
 
 ---
+### YOLOv13
+**Paper:** [YOLOv13: Real-Time Object Detection with Hypergraph-Enhanced Adaptive Visual Perception](https://arxiv.org/abs/2506.17733)<br>
+**Code:** [https://github.com/iMoonLab/yolov13](https://github.com/iMoonLab/yolov13)<br>
+![](https://github.com/iMoonLab/yolov13/raw/main/assets/framework.png)
+
+---
 ## Trash Detection
 ### Localize and Classify Wastes on the Streets
 **Paper:** [arxiv.org/abs/1710.11374](https://arxiv.org/abs/1710.11374)<br>
