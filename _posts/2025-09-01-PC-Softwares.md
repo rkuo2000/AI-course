@@ -118,11 +118,12 @@ Python 3.12.3
 
 ### [Ollama](https://ollama.com/)
 
-#### [Download](https://ollama.com/download)
+* [Download](https://ollama.com/download)
 
-#### [Models](https://ollama.com/search)
+* [Models](https://ollama.com/search)
 
-#### commands
+* commands
+  
 ```
 ollama -h
 ollama -v
@@ -139,8 +140,6 @@ ollama run gemma3
 ### [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 
 #### [ComfyUI 安裝](https://www.comfy.org/zh-cn/download) 
-
-![](https://private-user-images.githubusercontent.com/20929282/387336446-7ccaf2c1-9b72-41ae-9a89-5688c94b7abe.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTczNjY2OTksIm5iZiI6MTc1NzM2NjM5OSwicGF0aCI6Ii8yMDkyOTI4Mi8zODczMzY0NDYtN2NjYWYyYzEtOWI3Mi00MWFlLTlhODktNTY4OGM5NGI3YWJlLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNTA5MDglMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjUwOTA4VDIxMTk1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWNjYTdiZTY2MTljNjE4MjlhMDc5MzQ0NzdiMGZjMTlhODM3MDExOTA2NmRjYTIwOGM3ZjQ3YTUyNjQ5MTg1NTkmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.WRFtYAEqYNJ9Huukwi4RLtEM3AN2ZxIetsbKuvqtJU8)
 
 <br>
 <br>
