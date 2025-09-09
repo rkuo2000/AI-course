@@ -52,7 +52,7 @@ Built on the 4th Gen AMD CDNA™ architecture, AMD Instinct™ MI355X GPUs deliv
 #### [AMD 7 GHz Zen 6 Clock Speed Target “Confirmed” – Leaker Claims](https://overclock3d.net/news/cpu_mainboard/amd-7-ghz-zen-6-clock-speed-target-confirmed-leaker-claims/)
 
 ---
-### Intel Gaudi3
+### Intel Gaudi 3
 ![](https://intelcorp.scene7.com/is/image/intelcorp/designed-for-ai-graphic:1920-1080?wid=978&hei=550&fmt=webp-alpha)
 
 #### [Intel® Gaudi® 3 AI Accelerators on IBM Cloud](https://www.ibm.com/products/gpu-ai-accelerator/intel-gaudi3)
