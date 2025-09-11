@@ -43,7 +43,7 @@ AI chips, Edge-AI, Benchrmarks, Frameworks
 ---
 ### [DGX-Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
 ![](https://s4.itho.me/sites/default/files/styles/picture_size_large/public/field/image/0319-nvidia_dgx_personal_ai_supercomputers-spark-9601.jpg?itok=xkbEiLyr)
-NVIDIA GB10 Grace Blackwell Superchip<br>
+
 Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tensor Cores及FP4精度支援的Nvidia Blackwell GPU，使DGX具備128GB記憶體，並支援最高1000 TOPS<br>
 ![](https://img.technews.tw/wp-content/uploads/2025/01/07130136/NVIDIA-Project-Digits-3.png)
 
