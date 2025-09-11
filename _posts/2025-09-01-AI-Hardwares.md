@@ -51,7 +51,6 @@ Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tenso
 
 [ASUS Ascent GX10](https://www.asus.com/tw/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/)
 搭載 NVIDIA® GB10 Grace Blackwell 超級晶片，提供高達 1 petaFLOP 的 AI 運算效能，並配備 **128GB** 記憶體，足以支援 2000 億（200B）參數模型的微調。
-![](https://dlcdnwebimgs.asus.com/gain/8d1bd1a2-afd2-4724-939f-c08799b3b5a7/w692)
 
 ---
 ### [Geforce RTX 50 series](https://www.nvidia.com/zh-tw/geforce/graphics-cards/50-series/)<br>
