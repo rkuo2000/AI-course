@@ -28,6 +28,7 @@ AI chips, Edge-AI, Benchrmarks, Frameworks
 ![](https://www.autopilotreview.com/wp-content/uploads/2019/11/andrej-karpathy-pytorch-conference-image-7-700x349.jpg)
 
 **[Tesla’s Hardware & E/E Architecture](https://www.vaisakhvenugopal.com/p/inside-teslas-brain-before-cybertruck)**<br>
+![](https://github.com/rkuo2000/AI-course/blob/main/images/Tesla-FSD-HW-architecture.png?raw=true)
 
 ---
 ### Nvidia
