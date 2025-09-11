@@ -40,8 +40,6 @@ AI chips, Edge-AI, Benchrmarks, Frameworks
 #### [Analysis of NVIDIA’s Latest Hardware: B100/B200/GH200/NVL72/SuperPod](https://www.fibermall.com/blog/nvidia-b100-b200-gh200-nvl72-superpod.htm)
 ![](https://www.fibermall.com/blog/wp-content/uploads/2024/04/GB200-uses-the-full-B200-chip-1024x338.png)
 
-<iframe width="1264" height="711" src="https://www.youtube.com/embed/TLzna9__DnI" title="NVIDIA CEO Jensen Huang Keynote at COMPUTEX 2025" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ---
 ### [DGX-Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
 ![](https://s4.itho.me/sites/default/files/styles/picture_size_large/public/field/image/0319-nvidia_dgx_personal_ai_supercomputers-spark-9601.jpg?itok=xkbEiLyr)
@@ -116,10 +114,6 @@ Taiwan AI Cloud operates based on the strength of Taiwania 2, the supercomputer,
 
 ---
 ### [Kinara](https://kinara.ai/)
-<p>
-<img src="https://kinara.ai/wp-content/uploads/ara2_latest.png">
-<img src="https://kinara.ai/wp-content/uploads/ara-2_2.png">
-</p><br>
 [Ara-2](https://kinara.ai/products/kinara-ara-2/)<br>
 the Kinara Ara-2 AI processor, the leader in Edge AI acceleration. This 40 TOPS powerhouse tackles the massive compute demands of Generative AI and transformer-based models with unmatched cost-effectiveness.<br>
 
