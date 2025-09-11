@@ -15,6 +15,19 @@ AI chips, Edge-AI, Benchrmarks, Frameworks
 ![](https://github.com/rkuo2000/AI-course/blob/main/images/Top10_AI_Chip_Makers.png?raw=true)
 
 ---
+### Tesla
+#### AI5
+![](https://img.technews.tw/wp-content/uploads/2025/05/14100607/Tesla-AI4-800x359.jpeg)
+![](https://pbs.twimg.com/media/GUAB7GNbYAAx0VN?format=jpg&name=small)
+特斯拉 AI5 / HW5 下代 FSD 晶片號稱運算性能達 2,000~2,500TOPS（每秒兆次操作），是現款 HW4（約 500TOPS）晶片五倍，可支援更複雜的無監督 FSD 演算法。輝達 RTX5080 和 RTX5090（分別約為 1,500 美元和 3,000 美元）運算性能為 1,800TOPS 和 3,400TOPS。
+
+#### [Tesla Hardware 4 (AI4) – Full Details and Latest News](https://www.autopilotreview.com/tesla-hardware-4-rolling-out-to-new-vehicles/)
+![](https://www.autopilotreview.com/wp-content/uploads/2023/05/tesla-hardware-4-hw4-fsd-computer-2-image-696x405.jpg)
+
+#### Hardware 3 (AI3) – FSD Computer
+![](https://www.autopilotreview.com/wp-content/uploads/2019/11/andrej-karpathy-pytorch-conference-image-7-700x349.jpg)
+
+---
 ### Nvidia
 ![](https://miro.medium.com/v2/resize:fit:720/format:webp/0*gPajGtDQ-yPGgyFj.gif)
 
@@ -28,21 +41,22 @@ AI chips, Edge-AI, Benchrmarks, Frameworks
 
 ---
 ### [DGX-Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
+![](https://s4.itho.me/sites/default/files/styles/picture_size_large/public/field/image/0319-nvidia_dgx_personal_ai_supercomputers-spark-9601.jpg?itok=xkbEiLyr)
 NVIDIA GB10 Grace Blackwell Superchip<br>
+Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tensor Cores及FP4精度支援的Nvidia Blackwell GPU，使DGX具備128GB記憶體，並支援最高1000 TOPS<br>
 ![](https://img.technews.tw/wp-content/uploads/2025/01/07130136/NVIDIA-Project-Digits-3.png)
+
+[ASUS Ascent GX10](https://www.asus.com/tw/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/)
+搭載 NVIDIA® GB10 Grace Blackwell 超級晶片，提供高達 1 petaFLOP 的 AI 運算效能，並配備 **128GB** 記憶體，足以支援 2000 億（200B）參數模型的微調。
+![](https://dlcdnwebimgs.asus.com/gain/8d1bd1a2-afd2-4724-939f-c08799b3b5a7/w692)
 
 ---
 ### [Geforce RTX 50 series](https://www.nvidia.com/zh-tw/geforce/graphics-cards/50-series/)<br>
-Giga 5090OC 32GB<br>
-![](https://www.coolpc.com.tw/eval/12/giga5090goc32g.jpg)
-
-MSI 5080OC 16GB<br>
-![](https://www.coolpc.com.tw/eval/12/msi508016gventus3xocplus.jpg)
-
-Giga 5070Ti 16GB<br>
-![](https://www.coolpc.com.tw/eval/12/giga5070tiwfsff16g.jpg)
-
-Zotac 5060Ti 15GB<br>
+[原價屋線上估價](https://www.coolpc.com.tw/evaluate.php)<br>
+* Giga 5090OC 32GB<br>
+* MSI 5080OC 16GB<br>
+* Giga 5070Ti 16GB<br>
+* Zotac 5060Ti 16GB<br>
 ![](https://www.coolpc.com.tw/eval/12/zotac5060ti16gteoc.jpg)
 
 ---
