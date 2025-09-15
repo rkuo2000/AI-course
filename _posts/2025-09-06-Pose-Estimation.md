@@ -90,8 +90,8 @@ Pose Estimation includes Applications, Human Pose Estimation, Head Pose Estimati
 
 ---
 ### [YOLO Pose](https://docs.ultralytics.com/tasks/pose/)
-* **Kaggle**: [https://www.kaggle.com/rkuo2000/yolov8-pose](https://www.kaggle.com/code/rkuo2000/yolov8-pose)<br>
-* **Kaggle**: [https://www.kaggle.com/rkuo2000/yolov11-pose](https://www.kaggle.com/code/rkuo2000/yolov11-pose)<br>
+* **Kaggle**: [https://www.kaggle.com/code/rkuo2000/yolov8-pose](https://www.kaggle.com/code/rkuo2000/yolov8-pose)<br>
+* **Kaggle**: [https://www.kaggle.com/code/rkuo2000/yolov11-pose](https://www.kaggle.com/code/rkuo2000/yolov11-pose)<br>
 
 ---
 ### ViTPose
