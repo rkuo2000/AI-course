@@ -89,8 +89,9 @@ Pose Estimation includes Applications, Human Pose Estimation, Head Pose Estimati
 ![](https://github.com/kevinlin311tw/CDCL-human-part-segmentation/blob/master/cdcl_teaser.jpg?raw=true)
 
 ---
-### YOLO-Pose
-**Paper:** [YOLO-Pose: Enhancing YOLO for Multi Person Pose Estimation Using Object Keypoint Similarity Loss](https://arxiv.org/abs/2204.06806)<br>
+### [YOLO Pose](https://docs.ultralytics.com/tasks/pose/)
+* **Kaggle**: [https://www.kaggle.com/rkuo2000/yolov8-pose](https://www.kaggle.com/code/rkuo2000/yolov8-pose)<br>
+* **Kaggle**: [https://www.kaggle.com/rkuo2000/yolov11-pose](https://www.kaggle.com/code/rkuo2000/yolov11-pose)<br>
 
 ---
 ### ViTPose
@@ -138,11 +139,6 @@ Pose Estimation includes Applications, Human Pose Estimation, Head Pose Estimati
 **Paper:** [Group Pose: A Simple Baseline for End-to-End Multi-person Pose Estimation](https://arxiv.org/abs/2308.07313)<br>
 **Code:** [https://github.com/Michel-liu/GroupPose](https://github.com/Michel-liu/GroupPose)<br>
 ![](https://github.com/Michel-liu/GroupPose/blob/main/.github/overview.jpg?raw=true)
-
----
-### [YOLOv8 Pose](https://docs.ultralytics.com/tasks/pose/)
-**Kaggle:** [https://www.kaggle.com/rkuo2000/yolov8-pose](https://www.kaggle.com/code/rkuo2000/yolov8-pose)<br>
-**Kaggle:** [https://www.kaggle.com/rkuo2000/yolov11-pose](https://www.kaggle.com/code/rkuo2000/yolov11-pose)<br>
 
 ---
 ### MMPose
