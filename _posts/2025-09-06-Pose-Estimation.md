@@ -62,7 +62,7 @@ Pose Estimation includes Applications, Human Pose Estimation, Head Pose Estimati
 ### PoseNet
 **Paper:**  [arxiv.org/abs/1505.07427](https://arxiv.org/abs/1505.07427)<br>
 **Code:** [rwightman/posenet-pytorch](https://github.com/rwightman/posenet-pytorch)<br>
-**Kaggle:** [PoseNet Pytorch](https://www.kaggle.com/code/rkuo2000/posenet-pytorch)<br>
+**Kaggle:** [PoseNet](https://www.kaggle.com/code/rkuo2000/posenet)<br>
 
 ![](https://debuggercafe.com/wp-content/uploads/2020/10/keypoint_exmp.jpg)
 ![](https://www.researchgate.net/profile/Soroush-Seifi/publication/335989945/figure/fig2/AS:806499555233793@1569295886946/The-Posenet-architecture-Yellow-modules-are-shared-with-GoogleNet-while-green-modules.ppm)
@@ -72,9 +72,9 @@ Pose Estimation includes Applications, Human Pose Estimation, Head Pose Estimati
 ### OpenPose
 **Paper:** [arxiv.org/abs/1812.08008](https://arxiv.org/abs/1812.08008)<br>
 **Code:** [CMU-Perceptual-Computing-Lab/openpose](https://github.com/CMU-Perceptual-Computing-Lab/openpose)<br>
-**Kaggle:** [OpenPose Pytorch](https://www.kaggle.com/code/rkuo2000/openpose-pytorch)<br>
+**Kaggle:** [OpenPose](https://www.kaggle.com/code/rkuo2000/openpose)<br>
 
-<p><img src="https://viso.ai/wp-content/uploads/2021/01/Keypoints-Detected-by-OpenPose-on-the-COCO-Dataset.jpg"><img src="https://media.arxiv-vanity.com/render-output/5509832/x2.png"></p>
+![](https://viso.ai/wp-content/uploads/2021/01/Keypoints-Detected-by-OpenPose-on-the-COCO-Dataset.jpg)
 
 ---
 ### DensePose
@@ -142,6 +142,7 @@ Pose Estimation includes Applications, Human Pose Estimation, Head Pose Estimati
 ---
 ### [YOLOv8 Pose](https://docs.ultralytics.com/tasks/pose/)
 **Kaggle:** [https://www.kaggle.com/rkuo2000/yolov8-pose](https://www.kaggle.com/code/rkuo2000/yolov8-pose)<br>
+**Kaggle:** [https://www.kaggle.com/rkuo2000/yolov11-pose](https://www.kaggle.com/code/rkuo2000/yolov11-pose)<br>
 
 ---
 ### MMPose
