@@ -57,7 +57,7 @@ You will need mel-spectrogram prediction model (such as Tacotron2) to use the pr
 ### Audiobox Aesthetics
 **Paper**: [Meta Audiobox Aesthetics: Unified Automatic Quality Assessment for Speech, Music, and Sound]()<br>
 **Github**: [https://github.com/facebookresearch/audiobox-aesthetics](https://github.com/facebookresearch/audiobox-aesthetics)<br>
-![](https://github.com/facebookresearch/audiobox-aesthetics/raw/main/assets/aes_model.png)
+<img width="50%" height="50%" src="https://github.com/facebookresearch/audiobox-aesthetics/raw/main/assets/aes_model.png">
 
 ---
 ### Spark-TTS
