@@ -30,12 +30,6 @@ You will need mel-spectrogram prediction model (such as Tacotron2) to use the pr
 ![](https://github.com/NVIDIA/tacotron2/blob/master/tensorboard.png?raw=true)
 
 ---
-### Forward Tacotron
-**Blog:** [利用 ForwardTacotron 創造穩健的神經語言合成](https://blogs.nvidia.com.tw/2021/03/31/creating-robust-neural-speech-synthesis-with-forwardtacotron/)<br>
-**Code:** [https://github.com/as-ideas/ForwardTacotron](https://github.com/as-ideas/ForwardTacotron)<br>
-![](https://github.com/as-ideas/ForwardTacotron/blob/master/assets/model.png?raw=true)
-
----
 ### Few-shot Transformer TTS
 **Paper:** [Multilingual Byte2Speech Models for Scalable Low-resource Speech Synthesis](https://arxiv.org/abs/2103.03541)<br>
 **Code:** [https://github.com/mutiann/few-shot-transformer-tts](https://github.com/mutiann/few-shot-transformer-tts)<br>
@@ -84,40 +78,17 @@ You will need mel-spectrogram prediction model (such as Tacotron2) to use the pr
 **Kaggle**: [https://www.kaggle.com/code/rkuo2000/spark-tts](https://www.kaggle.com/code/rkuo2000/spark-tts)<br>
 
 ---
-## Speech Seperation
-
-### Looking to Listen
-**Paper:** [Looking to Listen at the Cocktail Party: A Speaker-Independent Audio-Visual Model for Speech Separation](https://arxiv.org/abs/1804.03619)<br>
-**Blog:** [Looking to Listen: Audio-Visual Speech Separation](https://ai.googleblog.com/2018/04/looking-to-listen-audio-visual-speech.html)<br>
-
-![](https://3.bp.blogspot.com/-i8yGQmRfu6k/Ws03pWxgp2I/AAAAAAAACiM/3KgklbbHIvsYo4Tyw3N1TKa7Eywagr4eACLcBGAs/s640/image6.jpg)
-<iframe width="640" height="360" src="https://www.youtube.com/embed/Z_ogAiVoE1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/uKwUL7vt03M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-<iframe width="640" height="360" src="https://www.youtube.com/embed/_7aMiqXubWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
-### VoiceFilter
-**Paper:** [VoiceFilter: Targeted Voice Separation by Speaker-Conditioned Spectrogram Masking](https://arxiv.org/abs/1810.04826)<br>
-**Code:** [mindslab-ai/voicefilter](https://github.com/mindslab-ai/voicefilter)<br>
-Training took about 20 hours on AWS p3.2xlarge(NVIDIA V100)<br>
-**Code:** [jain-abhinav02/VoiceFilter](https://github.com/jain-abhinav02/VoiceFilter)<br>
-The model was trained on Google Colab for 30 epochs. Training took about 37 hours on NVIDIA Tesla P100 GPU.<br>
-
-![](https://github.com/jain-abhinav02/VoiceFilter/raw/master/assets/images/model_workflow.PNG)
-<iframe width="600" height="338" src="https://www.youtube.com/embed/2BF_1X7bmds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
-### VoiceFilter-Lite
-**Paper:** [VoiceFilter-Lite: Streaming Targeted Voice Separation for On-Device Speech Recognition](https://arxiv.org/abs/2009.04323)<br>
-**Blog:** [](https://google.github.io/speaker-id/publications/VoiceFilter-Lite/)<br>
-
-![](https://google.github.io/speaker-id/publications/VoiceFilter-Lite/resources/architecture.png)
-<iframe width="800" height="450" src="https://www.youtube.com/embed/BiWMZdnHuVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
-### Voice Filter
-**Paper:** [Voice Filter: Few-shot text-to-speech speaker adaptation using voice conversion as a post-processing module](https://arxiv.org/abs/2202.08164)<br>
-
+### FireRedTTS-2
+**Paper**: [FireRedTTS-2: Towards Long Conversational Speech Generation for Podcast and Chatbot](https://arxiv.org/abs/2509.02020)<br>
+**HuggingFace**: [FireRedTeam/FireRedTTS2https](https://huggingface.co/FireRedTeam/FireRedTTS2)
+**Github**: [https://github.com/FireRedTeam/FireRedTTS2](https://github.com/FireRedTeam/FireRedTTS2)<br>
+FireRedTTS‑2 is a long-form streaming TTS system for multi-speaker dialogue generation, delivering stable, natural speech with reliable speaker switching and context-aware prosody<br>
+* Long Conversational Speech Generation
+* Multilingual Support
+* Ultra-Low Latency (on an L20 GPU, our first-packet latency as low as 140ms)
+* Strong Stability
+* Random Timbre Generation
+  
 ---
 ## Voice Conversion
 **Paper:** [An Overview of Voice Conversion and its Challenges: From Statistical Modeling to Deep Learning](https://arxiv.org/abs/2008.03648)<br>
@@ -189,6 +160,33 @@ Variational Inference with adversarial learning for end-to-end Singing Voice Con
 **Paper:** [BreezyVoice: Adapting TTS for Taiwanese Mandarin with Enhanced Polyphone Disambiguation -- Challenges and Insights](https://arxiv.org/abs/2501.17790)<br>
 **Code:** [https://github.com/mtkresearch/BreezyVoice](https://github.com/mtkresearch/BreezyVoice)<br>
 ![](https://raw.githubusercontent.com/mtkresearch/BreezyVoice/main/images/flowchart.png)
+
+---
+## Speech Seperation
+
+### Looking to Listen
+**Paper:** [Looking to Listen at the Cocktail Party: A Speaker-Independent Audio-Visual Model for Speech Separation](https://arxiv.org/abs/1804.03619)<br>
+**Blog:** [Looking to Listen: Audio-Visual Speech Separation](https://ai.googleblog.com/2018/04/looking-to-listen-audio-visual-speech.html)<br>
+
+![](https://3.bp.blogspot.com/-i8yGQmRfu6k/Ws03pWxgp2I/AAAAAAAACiM/3KgklbbHIvsYo4Tyw3N1TKa7Eywagr4eACLcBGAs/s640/image6.jpg)
+<iframe width="640" height="360" src="https://www.youtube.com/embed/Z_ogAiVoE1g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/uKwUL7vt03M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="640" height="360" src="https://www.youtube.com/embed/_7aMiqXubWo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+### VoiceFilter
+**Paper:** [VoiceFilter: Targeted Voice Separation by Speaker-Conditioned Spectrogram Masking](https://arxiv.org/abs/1810.04826)<br>
+**Github**: [https://github.com/maum-ai/voicefilter](https://github.com/maum-ai/voicefilter)<br>
+Training took about 20 hours on AWS p3.2xlarge(NVIDIA V100)<br>
+![](https://github.com/maum-ai/voicefilter/raw/master/assets/voicefilter.png)
+
+---
+### VoiceFilter-Lite
+**Paper:** [VoiceFilter-Lite: Streaming Targeted Voice Separation for On-Device Speech Recognition](https://arxiv.org/abs/2009.04323)<br>
+**Blog:** [](https://google.github.io/speaker-id/publications/VoiceFilter-Lite/)<br>
+
+![](https://google.github.io/speaker-id/publications/VoiceFilter-Lite/resources/architecture.png)
+<iframe width="800" height="450" src="https://www.youtube.com/embed/BiWMZdnHuVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 ## Automatic Speech Recognition (ASR)
