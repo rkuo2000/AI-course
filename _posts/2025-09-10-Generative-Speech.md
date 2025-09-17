@@ -60,12 +60,6 @@ You will need mel-spectrogram prediction model (such as Tacotron2) to use the pr
 ![](https://github.com/facebookresearch/audiobox-aesthetics/raw/main/assets/aes_model.png)
 
 ---
-### Index-TTS
-**Paper**: [IndexTTS: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System](https://arxiv.org/abs/2502.05512)<br>
-**Github**: [https://github.com/index-tts/index-tts](https://github.com/index-tts/index-tts)<br>
-![](https://github.com/index-tts/index-tts/raw/main/assets/IndexTTS2.png)
-
----
 ### Spark-TTS
 **Paper**: [Spark-TTS: An Efficient LLM-Based Text-to-Speech Model with Single-Stream Decoupled Speech Tokens](https://arxiv.org/abs/2503.01710)<br>
 **Github**: [https://github.com/SparkAudio/Spark-TTS](https://github.com/SparkAudio/Spark-TTS)<br>
@@ -76,6 +70,15 @@ You will need mel-spectrogram prediction model (such as Tacotron2) to use the pr
 ![](https://github.com/SparkAudio/Spark-TTS/raw/main/src/figures/infer_control.png)
 
 **Kaggle**: [https://www.kaggle.com/code/rkuo2000/spark-tts](https://www.kaggle.com/code/rkuo2000/spark-tts)<br>
+
+---
+### Index-TTS
+**Paper**: [IndexTTS2: A Breakthrough in Emotionally Expressive and Duration-Controlled Auto-Regressive Zero-Shot Text-to-Speech](https://arxiv.org/abs/2506.21619)<br>
+![](https://arxiv.org/html/2506.21619v2/x1.png)
+![](https://arxiv.org/html/2506.21619v2/x2.png)
+**Paper**: [IndexTTS: An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System](https://arxiv.org/abs/2502.05512)<br>
+**Github**: [https://github.com/index-tts/index-tts](https://github.com/index-tts/index-tts)<br>
+![](https://github.com/index-tts/index-tts/raw/main/assets/IndexTTS2.png)
 
 ---
 ### FireRedTTS-2
