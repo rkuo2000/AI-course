@@ -240,6 +240,21 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 **Code:** [https://github.com/SignLLM/Prompt2Sign](https://github.com/SignLLM/Prompt2Sign)<br>
 
 ---
+### Wan2.2
+**Arxiv**: [Wan: Open and Advanced Large-Scale Video Generative Models](https://arxiv.org/abs/2503.20314)<br>
+**Github**: [https://github.com/Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2)<br>
+
+### [Wan-S2V](https://humanaigc.github.io/wan-s2v-webpage/)
+**HuggingFace**: [Wan-AI/Wan2.2-S2V-14B](https://huggingface.co/Wan-AI/Wan2.2-S2V-14B)<br>
+**Arxiv**: [Wan-S2V: Audio-Driven Cinematic Video Generation](https://arxiv.org/abs/2508.18621)<br>
+**Demo**: [https://huggingface.co/spaces/Wan-AI/Wan2.2-S2V](https://huggingface.co/spaces/Wan-AI/Wan2.2-S2V)<br>
+
+### Wan-Animate
+**HuggingFace:** [Wan-AI/Wan2.2-Animate-14B](https://huggingface.co/Wan-AI/Wan2.2-Animate-14B)<br>
+**Arxiv**: [Wan-Animate: Unified Character Animation and Replacement with Holistic Replication](https://arxiv.org/abs/2509.14055)<br>
+**Demo**: [https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate](https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate)<br>
+
+---
 ## Text-to-3D
 
 ### Shap-E
@@ -314,3 +329,4 @@ Stable Diffusion in Blender<br>
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
 
 
+M
