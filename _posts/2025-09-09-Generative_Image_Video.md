@@ -253,6 +253,7 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 **HuggingFace:** [Wan-AI/Wan2.2-Animate-14B](https://huggingface.co/Wan-AI/Wan2.2-Animate-14B)<br>
 **Arxiv**: [Wan-Animate: Unified Character Animation and Replacement with Holistic Replication](https://arxiv.org/abs/2509.14055)<br>
 **Demo**: [https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate](https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate)<br>
+![](https://humanaigc.github.io/wan-animate/content/aa/arch.png)
 
 ---
 ## Text-to-3D
