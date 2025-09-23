@@ -77,7 +77,6 @@ You will need mel-spectrogram prediction model (such as Tacotron2) to use the pr
 ![](https://arxiv.org/html/2506.21619v2/x1.png)
 ![](https://arxiv.org/html/2506.21619v2/x2.png)
 **Github**: [https://github.com/index-tts/index-tts](https://github.com/index-tts/index-tts)<br>
-![](https://github.com/index-tts/index-tts/raw/main/assets/IndexTTS2.png)
 
 ---
 ### FireRedTTS-2
