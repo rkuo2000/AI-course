@@ -110,6 +110,7 @@ Taiwan AI Cloud operates based on the strength of Taiwania 2, the supercomputer,
 
 ---
 ### MediaTek
+[天璣9500](https://www.mediatek.tw/products/smartphones-2/mediatek-dimensity-9500)<br>
 [天璣9400+](https://www.mediatek.tw/products/smartphones-2/mediatek-dimensity-9400plus)<br>
 
 ---
