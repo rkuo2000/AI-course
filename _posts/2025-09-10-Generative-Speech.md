@@ -72,6 +72,11 @@ You will need mel-spectrogram prediction model (such as Tacotron2) to use the pr
 **Kaggle**: [https://www.kaggle.com/code/rkuo2000/spark-tts](https://www.kaggle.com/code/rkuo2000/spark-tts)<br>
 
 ---
+### T2S
+**Paper**: [T2S: High-resolution Time Series Generation with Text-to-Series Diffusion Models](https://arxiv.org/html/2505.02417v2)<br>
+![](https://arxiv.org/html/2505.02417v2/extracted/6421416/figure/method.png)
+
+---
 ### IndexTTS2
 **Paper**: [IndexTTS2: A Breakthrough in Emotionally Expressive and Duration-Controlled Auto-Regressive Zero-Shot Text-to-Speech](https://arxiv.org/abs/2506.21619)<br>
 ![](https://arxiv.org/html/2506.21619v2/x1.png)
@@ -228,6 +233,7 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
+
 
 
 
