@@ -109,6 +109,12 @@ Taiwan AI Cloud operates based on the strength of Taiwania 2, the supercomputer,
 ![](https://shoplineimg.com/6486dbe2afaddb00694ea79f/689d830ae7138100146a8ab2/800x.webp?source_format=jpg)
 
 ---
+### RPi 5 + Hailo-8L 
+![](https://i.gzn.jp/img/2024/06/04/raspberry-pi-ai-kit-npu-m2/00.jpg)
+* Hailo-8L (13 TOPs)
+* Broadcom BCM2712 2.4GHz quad-core 64-bit Arm Cortex-A76 CPU, with Cryptographic Extension, 512KB per-core L2 caches, and a 2MB shared L3 cache
+
+---
 ### MediaTek
 [天璣9500](https://www.mediatek.tw/products/smartphones-2/mediatek-dimensity-9500)<br>
 [天璣9400+](https://www.mediatek.tw/products/smartphones-2/mediatek-dimensity-9400plus)<br>
@@ -116,15 +122,10 @@ Taiwan AI Cloud operates based on the strength of Taiwania 2, the supercomputer,
 ---
 ### [Kinara](https://kinara.ai/)
 [Ara-2](https://kinara.ai/products/kinara-ara-2/)<br>
-the Kinara Ara-2 AI processor, the leader in Edge AI acceleration. This 40 TOPS powerhouse tackles the massive compute demands of Generative AI and transformer-based models with unmatched cost-effectiveness.<br>
+Kinara Ara-2 AI processor (40 TOPS)<br>
 
 ---
-### Kneron
-
-#### KNEO300 EdgeGPT
-<p><img src="https://image-cdn.learnin.tw/bnextmedia/image/album/2023-11/img-1701333658-39165.jpg" width="50%" height="50%"></p>
-
-#### [KL730 AI Soc](https://www.kneron.com/tw/page/soc/)
+### Kneron [KL730 AI Soc](https://www.kneron.com/tw/page/soc/)
 * Quad ARM® Cortex™ A55 CPU。
 * 內建DSP，可以加速AI模型後處理，語音處理。
 * Linux和RTOS、TSMC 12 納米工藝。
@@ -134,9 +135,26 @@ the Kinara Ara-2 AI processor, the leader in Edge AI acceleration. This 40 TOPS 
 * 并兼容CNN、Transformer、RNN Hybrid等多種AI模型， 有更高的處理效率和精度。
 
 ---
-### Realtek
+### Infineon [PSOC Edge](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm)
+![](https://www.mouser.tw/images/marketingid/2025/img/122911023.png)
 
-#### [AMB82-MINI](https://www.amebaiot.com/en/amebapro2/#rtk_amb82_mini)
+* Cortex-M55 + Helium DSP @500MHz
+* Cortex-M33 @200MHz
+* NNLite + Ethos™ U55-128 (4 TOPS)
+* SRAM up to 5/6MB
+* 2.5D GPU, MIPI-DSI/DBI
+* USB, 10/100 Ethernet, CAN, SPI, UART, I2C
+* Security: EPC/PSA 2 and 4
+  
+![](https://www.mouser.tw/images/marketingid/2023/microsites/158771261/2025-09-11_16-34-32.png)
+
+---
+### Nuvoton [M55M1](https://www.nuvoton.com/ai/product/)
+* Cortex-M55 + Ethos U55 @220MHz  (0.11 TOPS)
+![](https://www.nuvoton.com/export/sites/nuvoton/ai/.galleries/product/NuMaker-M55M1.png)
+
+---
+### Realtek [AMB82-MINI](https://www.amebaiot.com/en/amebapro2/#rtk_amb82_mini)
 <p><img src="https://www.amebaiot.com/wp-content/uploads/2023/03/amb82_mini.png" width="50%" height="50%"></p>
 * MCU
   - Part Number: RTL8735B
@@ -149,33 +167,8 @@ the Kinara Ara-2 AI processor, the leader in Edge AI acceleration. This 40 TOPS 
 * KEY FEATURES
   - Integrated 802.11 a/b/g/n Wi-Fi, 2.4GHz/5GHz
   - Bluetooth Low Energy (BLE) 5.1
-  - Integrated Intelligent Engine @ 0.4 TOPS
+  - Integrated Intelligent Engine (0.4 TOPS)
 <iframe width="580" height="327" src="https://www.youtube.com/embed/_Kzqh6JXndo" title="AIoT: AmebaPro2 vs ESP32" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
----
-### [Infineon PSOC Edge](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm)
-![](https://www.mouser.tw/images/marketingid/2025/img/122911023.png)
-
-* Cortex-M55 + Helium DSP @500MHz
-* Cortex-M33 @200MHz
-* NNLite + Ethos™ U55-128
-* SRAM up to 5/6MB
-* 2.5D GPU, MIPI-DSI/DBI
-* USB, 10/100 Ethernet, CAN, SPI, UART, I2C
-* Security: EPC/PSA 2 and 4
-  
-![](https://www.mouser.tw/images/marketingid/2023/microsites/158771261/2025-09-11_16-34-32.png)
-
----
-### [Nuvoton M55M1](https://www.nuvoton.com/ai/product/)
-
-![](https://www.nuvoton.com/export/sites/nuvoton/ai/.galleries/product/NuMaker-M55M1.png)
-
----
-### RPi 5 + Hailo-8L 
-![](https://i.gzn.jp/img/2024/06/04/raspberry-pi-ai-kit-npu-m2/00.jpg)
-Hailo-8L = 13 TOPs<br>
-Broadcom BCM2712 2.4GHz quad-core 64-bit Arm Cortex-A76 CPU, with Cryptographic Extension, 512KB per-core L2 caches, and a 2MB shared L3 cache<br>
 
 ---
 ## Benchmarks
@@ -194,29 +187,6 @@ Broadcom BCM2712 2.4GHz quad-core 64-bit Arm Cortex-A76 CPU, with Cryptographic 
 ---
 ### [NVIDIA’s MLPerf Benchmark Results](https://www.nvidia.com/en-us/data-center/resources/mlperf-benchmarks/)
 ![](https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/resources/mlperf/hpc-charts-mlperf-training-sdchart-june.svg)
-
----
-## Frameworks
-
-### [PyTorch](https://pytorch.org)
-
-### [Tensorflow](https://www.tensorflow.org)
-
-### [Keras 3.0](https://keras.io/keras_3/)
-![](https://s3.amazonaws.com/keras.io/img/keras_3/cross_framework_keras_3.jpg)
-
----
-### [MLX](https://github.com/ml-explore/mlx)
-MLX is an array framework for machine learning on Apple silicon, brought to you by Apple machine learning research.<br>
-[MLX documentation](https://ml-explore.github.io/mlx/build/html/index.html)<br>
-
----
-### TinyML
-[EloquentTinyML](https://github.com/eloquentarduino/EloquentTinyML)
-
-### [Tensorflow.js](https://www.tensorflow.org/js/demos)
-
-### [MediaPipe](https://google.github.io/mediapipe/)
 
 <br>
 <br>
