@@ -154,6 +154,8 @@ the Kinara Ara-2 AI processor, the leader in Edge AI acceleration. This 40 TOPS 
 
 ---
 ### [Infineon PSOC Edge](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm)
+![](https://www.mouser.tw/images/marketingid/2025/img/122911023.png)
+
 * Cortex-M55 + Helium DSP @500MHz
 * Cortex-M33 @200MHz
 * NNLite + Ethos™ U55-128
@@ -161,11 +163,12 @@ the Kinara Ara-2 AI processor, the leader in Edge AI acceleration. This 40 TOPS 
 * 2.5D GPU, MIPI-DSI/DBI
 * USB, 10/100 Ethernet, CAN, SPI, UART, I2C
 * Security: EPC/PSA 2 and 4
-![](https://www.mouser.tw/images/marketingid/2025/img/122911023.png)
+  
 ![](https://www.mouser.tw/images/marketingid/2023/microsites/158771261/2025-09-11_16-34-32.png)
 
 ---
 ### [Nuvoton M55M1](https://www.nuvoton.com/ai/product/)
+
 ![](https://www.nuvoton.com/export/sites/nuvoton/ai/.galleries/product/NuMaker-M55M1.png)
 
 ---
