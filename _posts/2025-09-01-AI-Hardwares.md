@@ -149,11 +149,6 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 ![](https://www.mouser.tw/images/marketingid/2023/microsites/158771261/2025-09-11_16-34-32.png)
 
 ---
-### Nuvoton [M55M1](https://www.nuvoton.com/ai/product/)
-* Cortex-M55 + Ethos U55 @220MHz  (0.11 TOPS)
-![](https://www.nuvoton.com/export/sites/nuvoton/ai/.galleries/product/NuMaker-M55M1.png)
-
----
 ### Realtek [AMB82-MINI](https://www.amebaiot.com/en/amebapro2/#rtk_amb82_mini)
 <p><img src="https://www.amebaiot.com/wp-content/uploads/2023/03/amb82_mini.png" width="50%" height="50%"></p>
 * MCU
@@ -168,6 +163,11 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
   - Integrated 802.11 a/b/g/n Wi-Fi, 2.4GHz/5GHz
   - Bluetooth Low Energy (BLE) 5.1
   - Integrated Intelligent Engine (0.4 TOPS)
+  
+---
+### Nuvoton [M55M1](https://www.nuvoton.com/ai/product/)
+* Cortex-M55 + Ethos U55 @220MHz  (0.11 TOPS)
+![](https://www.nuvoton.com/export/sites/nuvoton/ai/.galleries/product/NuMaker-M55M1.png)
 
 ---
 ### Himax [WiseEye 2 AI Processor (WE2)](https://himaxwiseeyeplus.github.io/)
