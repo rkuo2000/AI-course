@@ -37,7 +37,7 @@ Introduction to Text to Song.
 **Paper**: [Instruct-MusicGen: Unlocking Text-to-Music Editing for Music Language Models via Instruction Tuning](https://arxiv.org/abs/2405.18386)<br>
 **Code**: [https://github.com/ldzhangyx/instruct-MusicGen](https://github.com/ldzhangyx/instruct-MusicGen)<br>
 **Demo**: [https://bit.ly/instruct-musicgen](https://bit.ly/instruct-musicgen)<br>
-![](https://arxiv.org/html/2405.18386v3/x2.png)
+<img width="50%" height="50%" src="https://arxiv.org/html/2405.18386v3/x2.png">
 
 ---
 ### [Stable Audio Open](https://stability.ai/news/stable-audio-open-research-paper)
@@ -84,6 +84,7 @@ The DSLM can utilize specific attention mask strategy to achieve different song 
 **Paper**: [JAM: A Tiny Flow-based Song Generator with Fine-grained Controllability and Aesthetic Alignment](https://arxiv.org/html/2507.20880v1)<br>
 **Code**: [https://github.com/declare-lab/jamify](https://github.com/declare-lab/jamify)<br>
 ![](https://github.com/declare-lab/jamify/raw/main/jam-teaser.png)
+
 ![](https://github.com/declare-lab/jamify/raw/main/jam.png)
 
 ---
