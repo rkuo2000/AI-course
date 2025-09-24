@@ -150,6 +150,7 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 **Paper**: [Uni-cot: Towards Unified Chain-of-Thought Reasoning Across Text and Vision](https://arxiv.org/html/2508.05606v2)
 **Code**: [https://github.com/Fr0zenCrane/UniCoT](https://github.com/Fr0zenCrane/UniCoT)<br>
 <img width="50%" height="50%" src="https://github.com/Fr0zenCrane/UniCoT/raw/main/assets/qualitative_results_geo.png">
+![](https://github.com/Fr0zenCrane/UniCoT/raw/main/assets/teaser.png)
 
 ---
 ### [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
