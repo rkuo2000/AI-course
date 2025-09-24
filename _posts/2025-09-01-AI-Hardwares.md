@@ -84,13 +84,6 @@ Built on the 4th Gen AMD CDNA™ architecture, AMD Instinct™ MI355X GPUs deliv
 #### [Google Cloud推第6代TPU為基礎的新版Hypercomputer](https://www.ithome.com.tw/news/165785)
 
 ---
-### [Taiwan AI Cloud - 台智雲](https://tws.twcc.ai/)
-Taiwan AI Cloud operates based on the strength of Taiwania 2, the supercomputer, which consists of 2,016 NVIDIA Tesla V100 32GB GPUs, delivering 9 PFLOPS of superior performance. 
-![](https://tws.twcc.ai/wp-content/uploads/2023/09/Taiwania2-small.png)
-
-![](https://tws.twcc.ai/wp-content/uploads/2025/07/AFS-Model-Service-1024x342.png)
-
----
 ## Edge AI
 
 ### [Nvidia Jetson](https://developer.nvidia.com/embedded/jetson-modules)
