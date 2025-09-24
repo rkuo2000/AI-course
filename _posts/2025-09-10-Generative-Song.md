@@ -21,7 +21,7 @@ Introduction to Text to Song.
 ### [AudioCraft](https://ai.meta.com/resources/models-and-libraries/audiocraft/)
 **Paper**: [Simple and Controllable Music Generation](https://arxiv.org/abs/2306.05284)<br>
 **Code**: [https://github.com/facebookresearch/audiocraft](https://github.com/facebookresearch/audiocraft)<br>
-<p><img width="25%" height="25%" src="https://scontent.ftpe3-2.fna.fbcdn.net/v/t39.8562-6/365142288_613456157305462_5962896439559438515_n.png?_nc_cat=108&ccb=1-7&_nc_sid=f537c7&_nc_ohc=D5_PDaYntuYQ7kNvwGVjLYN&_nc_oc=AdnxiWuoCqZxI5f2cCLZL-_MAYzQkAEx43-_8jZLsU4MjvT4Y-dl9mcFNqfSf64rkcE&_nc_zt=14&_nc_ht=scontent.ftpe3-2.fna&_nc_gid=fCC7Z7uXtL8oG5yOF4RHHg&oh=00_AfYo2cGlVSsx2xVFU3fWsc33cxhAUai0tijP9D6nQx6TyQ&oe=68D8E58B"></p>
+![](https://scontent.ftpe3-2.fna.fbcdn.net/v/t39.8562-6/365142288_613456157305462_5962896439559438515_n.png?_nc_cat=108&ccb=1-7&_nc_sid=f537c7&_nc_ohc=D5_PDaYntuYQ7kNvwGVjLYN&_nc_oc=AdnxiWuoCqZxI5f2cCLZL-_MAYzQkAEx43-_8jZLsU4MjvT4Y-dl9mcFNqfSf64rkcE&_nc_zt=14&_nc_ht=scontent.ftpe3-2.fna&_nc_gid=fCC7Z7uXtL8oG5yOF4RHHg&oh=00_AfYo2cGlVSsx2xVFU3fWsc33cxhAUai0tijP9D6nQx6TyQ&oe=68D8E58B)
 
 ---
 ### LLM2Vec
@@ -77,7 +77,7 @@ The DSLM can utilize specific attention mask strategy to achieve different song 
 ![](https://arxiv.org/html/2507.12890v2/x1.png)
 
 #### [ComfyUI DiffRhythm](https://github.com/billwuhao/ComfyUI_DiffRhythm)
-<img width="50%" height="50%" src="https://github.com/billwuhao/ComfyUI_DiffRhythm/blob/master/images/2025-05-13_01-51-00.png?raw=true">
+![](https://github.com/billwuhao/ComfyUI_DiffRhythm/blob/master/images/2025-05-13_01-51-00.png?raw=true)
 
 ---
 ### JAM
@@ -93,7 +93,7 @@ The DSLM can utilize specific attention mask strategy to achieve different song 
 ![](https://github.com/ace-step/ACE-Step/raw/main/assets/ACE-Step_framework.png)
 
 #### [https://github.com/billwuhao/ComfyUI_ACE-Step](https://github.com/billwuhao/ComfyUI_ACE-Step)<br>
-<img width="50%" height="50%" src="https://github.com/billwuhao/ComfyUI_ACE-Step/raw/main/images/2025-05-14_14-23-50.png">
+![](https://github.com/billwuhao/ComfyUI_ACE-Step/raw/main/images/2025-05-14_14-23-50.png)
 
 <br>
 <br>
