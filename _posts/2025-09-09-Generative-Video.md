@@ -6,7 +6,7 @@ category: [Lecture]
 tags: [jekyll, ai]
 ---
 
-Introduction to Image-to-Video, Text-to-Video
+Introduction to Image-to-Video, Text-to-Video, Audio-to-Video.
 
 ---
 ## Image-to-Video
@@ -104,6 +104,7 @@ Introduction to Image-to-Video, Text-to-Video
 **Paper**: [Improving Dynamic Object Interactions in Text-to-Video Generation with AI Feedback](https://arxiv.org/abs/2412.02617)<br>
 ![](https://arxiv.org/html/2412.02617v1/x2.png)
 
+
 ---
 ### VEO3
 <iframe width="865" height="487" src="https://www.youtube.com/embed/pHWYdt78PwY" title="【超級簡單】2025最火爆AI影片神器！Google Veo3 普通人也能收割百萬流量😱" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -121,12 +122,6 @@ Introduction to Image-to-Video, Text-to-Video
 #### [ComfyUI + WAN2.2](https://docs.comfy.org/tutorials/video/wan/wan2_2)
 
 ---
-### [Wan-S2V](https://humanaigc.github.io/wan-s2v-webpage/)
-**HuggingFace**: [Wan-AI/Wan2.2-S2V-14B](https://huggingface.co/Wan-AI/Wan2.2-S2V-14B)<br>
-**Arxiv**: [Wan-S2V: Audio-Driven Cinematic Video Generation](https://arxiv.org/abs/2508.18621)<br>
-**Demo**: [https://huggingface.co/spaces/Wan-AI/Wan2.2-S2V](https://huggingface.co/spaces/Wan-AI/Wan2.2-S2V)<br>
-
----
 ### Wan-Animate
 **HuggingFace:** [Wan-AI/Wan2.2-Animate-14B](https://huggingface.co/Wan-AI/Wan2.2-Animate-14B)<br>
 **Arxiv**: [Wan-Animate: Unified Character Animation and Replacement with Holistic Replication](https://arxiv.org/abs/2509.14055)<br>
@@ -134,9 +129,24 @@ Introduction to Image-to-Video, Text-to-Video
 ![](https://humanaigc.github.io/wan-animate/content/aa/arch.png)
 
 ---
+## Audio-to-Video
+
+### InfiniteTalk
+**Paper**: [InfiniteTalk: Audio-driven Video Generation for Sparse-Frame Video Dubbing](https://arxiv.org/abs/2508.14033)<br>
+**Code**: [https://github.com/MeiGen-AI/InfiniteTalk](https://github.com/MeiGen-AI/InfiniteTalk)<br>
+![](https://github.com/MeiGen-AI/InfiniteTalk/raw/main/assets/pipeline.png)
+
+---
+### [Wan-S2V](https://humanaigc.github.io/wan-s2v-webpage/)
+**HuggingFace**: [Wan-AI/Wan2.2-S2V-14B](https://huggingface.co/Wan-AI/Wan2.2-S2V-14B)<br>
+**Arxiv**: [Wan-S2V: Audio-Driven Cinematic Video Generation](https://arxiv.org/abs/2508.18621)<br>
+**Demo**: [https://huggingface.co/spaces/Wan-AI/Wan2.2-S2V](https://huggingface.co/spaces/Wan-AI/Wan2.2-S2V)<br>
+
+---
 ### UniVerse-1
 **Paper**: [UniVerse-1: Unified Audio-Video Generation via Stitching of Experts](https://www.arxiv.org/abs/2509.06155)<br>
 ![](https://arxiv.org/html/2509.06155v1/x1.png)
+**Code**: [https://github.com/Dorniwang/UniVerse-1-code/](https://github.com/Dorniwang/UniVerse-1-code/)<br>
 
 <br>
 <br>
