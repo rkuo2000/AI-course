@@ -153,6 +153,18 @@ the Kinara Ara-2 AI processor, the leader in Edge AI acceleration. This 40 TOPS 
 <iframe width="580" height="327" src="https://www.youtube.com/embed/_Kzqh6JXndo" title="AIoT: AmebaPro2 vs ESP32" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
+### [Infineon PSOC Edge](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm)
+* Cortex-M55 + Helium DSP @500MHz
+* Cortex-M33 @200MHz
+* NNLite + Ethos™ U55-128
+* SRAM up to 5/6MB
+* 2.5D GPU, MIPI-DSI/DBI
+* USB, 10/100 Ethernet, CAN, SPI, UART, I2C
+* Security: EPC/PSA 2 and 4
+![](https://www.mouser.tw/images/marketingid/2025/img/122911023.png)
+![](https://www.mouser.tw/images/marketingid/2023/microsites/158771261/2025-09-11_16-34-32.png)
+
+---
 ### [Nuvoton M55M1](https://www.nuvoton.com/ai/product/)
 ![](https://www.nuvoton.com/export/sites/nuvoton/ai/.galleries/product/NuMaker-M55M1.png)
 
@@ -207,6 +219,3 @@ MLX is an array framework for machine learning on Apple silicon, brought to you 
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
-
-
-
