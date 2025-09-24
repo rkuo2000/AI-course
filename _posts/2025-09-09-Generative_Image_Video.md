@@ -126,16 +126,30 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 * Improved Performance: FLUX1.1 [pro] has been introduced and tested under the codename “blueberry” into the Artificial Analysis image arena (https://artificialanalysis.ai/text-to-image), a popular benchmark for text-to-image models. It surpasses all other models on the leaderboard, achieving the highest overall Elo score.
 
 ---
-### [ComfyGen](https://comfygen-paper.github.io/)
-**Paper:** [ComfyGen: Prompt-Adaptive Workflows for Text-to-Image Generation](https://arxiv.org/abs/2410.01731)<br>
-![](https://arxiv.org/html/2410.01731v1/x1.png)
-![](https://arxiv.org/html/2410.01731v1/extracted/5894234/figures/flow_example/pipeline_image_thin.jpg)
-![](https://comfygen-paper.github.io/static/images/grids/grid_1.jpg)
-
----
 ### [SD 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5)
 **model:** [stabilityai/stable-diffusion-3-medium](https://huggingface.co/stabilityai/stable-diffusion-3-medium)<br>
 **blog:** [ComfyUI Now Supports Stable Diffusion 3.5!](https://blog.comfy.org/sd3-5-comfyui/)<br>
+
+---
+## Deep Generative Models - Survey
+**Paper**: [Personalized Image Generation with Deep Generative Models: A Decade Survey](https://arxiv.org/html/2502.13081v1)<br>
+![](https://arxiv.org/html/2502.13081v1/x3.png)
+
+---
+### [OpenAI 4o Image Generation](https://openai.com/index/introducing-4o-image-generation/)
+**Paper**: [An Empirical Study of GPT-4o Image Generation Capabilities](rxiv.org/abs/2504.05979)<br>
+
+---
+### [DeepMind Imagen](https://deepmind.google/models/imagen/)
+
+---
+### [Gemini NanoBanana](https://gemini.google/overview/image-generation/)
+
+---
+### Uni-COT
+**Paper**: [Uni-cot: Towards Unified Chain-of-Thought Reasoning Across Text and Vision](https://arxiv.org/html/2508.05606v2)
+**Code**: [https://github.com/Fr0zenCrane/UniCoT](https://github.com/Fr0zenCrane/UniCoT)<br>
+<img width="50%" height="50%" src="https://github.com/Fr0zenCrane/UniCoT/raw/main/assets/qualitative_results_geo.png">
 
 ---
 ### [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
@@ -350,3 +364,4 @@ Stable Diffusion in Blender<br>
 
 
 M
+
