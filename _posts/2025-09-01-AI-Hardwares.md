@@ -128,6 +128,13 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 * 并兼容CNN、Transformer、RNN Hybrid等多種AI模型， 有更高的處理效率和精度。
 
 ---
+### STMicro STM32N6
+<p><img width="50%" height="50%" src="https://blog.st.com/wp-content/uploads/ST36104_STM32N6570-DK-with-camera-perspective-with-nappeCV-1-copy.jpg"></p>
+* Cortex-M55 @800MHz
+* Neural-ART1 (1~5 TOPS)
+* Neural-ART2 (20~40 TOPS)
+
+---
 ### Infineon [PSOC Edge](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm)
 ![](https://www.mouser.tw/images/marketingid/2025/img/122911023.png)
 
@@ -161,8 +168,14 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
   - Integrated 802.11 a/b/g/n Wi-Fi, 2.4GHz/5GHz
   - Bluetooth Low Energy (BLE) 5.1
   - Integrated Intelligent Engine (0.4 TOPS)
-<iframe width="580" height="327" src="https://www.youtube.com/embed/_Kzqh6JXndo" title="AIoT: AmebaPro2 vs ESP32" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+---
+### Himax [WiseEye 2 AI Processor (WE2)](https://himaxwiseeyeplus.github.io/)
+![](https://hackster.imgix.net/uploads/attachments/1671436/image_8vGCB6xEjo.png?auto=compress%2Cformat&w=830&h=466.875&fit=min&dpr=1)
+* Cortex-M55 + Ethos-U55 @400MHz (0.05 TOPS)
+* Internal 2MB SRAMs and 512KB TCM
+* External 100MHz QSPI Flash, Max 16MB(128Mb)
+  
 ---
 ## Benchmarks
 
