@@ -240,6 +240,20 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 **Code:** [https://github.com/SignLLM/Prompt2Sign](https://github.com/SignLLM/Prompt2Sign)<br>
 
 ---
+### [AIF for Dynamic T2V](https://sites.google.com/view/aif-dynamic-t2v/)
+**Paper**: [Improving Dynamic Object Interactions in Text-to-Video Generation with AI Feedback](https://arxiv.org/abs/2412.02617)<br>
+![](https://arxiv.org/html/2412.02617v1/x2.png)
+
+---
+### VEO3
+<iframe width="865" height="487" src="https://www.youtube.com/embed/pHWYdt78PwY" title="【超級簡單】2025最火爆AI影片神器！Google Veo3 普通人也能收割百萬流量😱" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+### Flow
+[Meet Flow: AI-powered filmmaking with Veo 3](https://blog.google/technology/ai/google-flow-veo-ai-filmmaking-tool/)<br>
+<iframe width="1046" height="588" src="https://www.youtube.com/embed/A0VttaLy4sU" title="Introducing Flow | Google’s New AI Filmmaking Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 ### Wan2.2
 **Arxiv**: [Wan: Open and Advanced Large-Scale Video Generative Models](https://arxiv.org/abs/2503.20314)<br>
 **Github**: [https://github.com/Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2)<br>
@@ -254,6 +268,11 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 **Arxiv**: [Wan-Animate: Unified Character Animation and Replacement with Holistic Replication](https://arxiv.org/abs/2509.14055)<br>
 **Demo**: [https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate](https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate)<br>
 ![](https://humanaigc.github.io/wan-animate/content/aa/arch.png)
+
+---
+### UniVerse-1
+**Paper**: [UniVerse-1: Unified Audio-Video Generation via Stitching of Experts](https://www.arxiv.org/abs/2509.06155)<br>
+![](https://arxiv.org/html/2509.06155v1/x1.png)
 
 ---
 ## Text-to-3D
