@@ -21,7 +21,7 @@ Introduction to Text to Song.
 ### [AudioCraft](https://ai.meta.com/resources/models-and-libraries/audiocraft/)
 **Paper**: [Simple and Controllable Music Generation](https://arxiv.org/abs/2306.05284)<br>
 **Code**: [https://github.com/facebookresearch/audiocraft](https://github.com/facebookresearch/audiocraft)<br>
-<img width="50%" height="50%" src="https://scontent.ftpe3-2.fna.fbcdn.net/v/t39.8562-6/365142288_613456157305462_5962896439559438515_n.png?_nc_cat=108&ccb=1-7&_nc_sid=f537c7&_nc_ohc=D5_PDaYntuYQ7kNvwGVjLYN&_nc_oc=AdnxiWuoCqZxI5f2cCLZL-_MAYzQkAEx43-_8jZLsU4MjvT4Y-dl9mcFNqfSf64rkcE&_nc_zt=14&_nc_ht=scontent.ftpe3-2.fna&_nc_gid=fCC7Z7uXtL8oG5yOF4RHHg&oh=00_AfYo2cGlVSsx2xVFU3fWsc33cxhAUai0tijP9D6nQx6TyQ&oe=68D8E58B">
+![](https://miro.medium.com/v2/resize:fit:720/format:webp/0*Zka1L3btnQbmyZwK)
 
 ---
 ### LLM2Vec
