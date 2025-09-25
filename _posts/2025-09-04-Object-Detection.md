@@ -132,7 +132,7 @@ Introduction to Image Datasets, Object Detection, Object Tracking, and its Appli
 **Code:** [matterport/Mask_RCNN](https://github.com/matterport/Mask_RCNN)<br>
 <p align="center"><img width="50%" height="50%" src="https://github.com/matterport/Mask_RCNN/blob/master/assets/street.png?raw=true"></p>
 <p align="center"><img width="50%" height="50%" src="https://github.com/matterport/Mask_RCNN/blob/master/assets/images_to_osm.png?raw=true"></p>
-<p align="center"><img width="50%" height="50%" src="https://github.com/matterport/Mask_RCNN/blob/master/assets/nucleus_segmentation.png?raw=true"></p>)
+<p align="center"><img width="50%" height="50%" src="https://github.com/matterport/Mask_RCNN/blob/master/assets/nucleus_segmentation.png?raw=true"></p>
 
 ---
 ### SSD: Single Shot MultiBox Detector
