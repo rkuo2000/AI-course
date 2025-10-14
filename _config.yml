@@ -1,0 +1,72 @@
+# Jekyll 設定檔
+
+# 站台設定
+# 這些變數會影響您整個網站的行為和顯示
+# 您可以透過 {{ site.variable_name }} 在模板中訪問它們
+
+remote_theme: zivong/jekyll-theme-hydure # <-- 關鍵！從 GitHub 遠端載入主題
+#theme: jekyll-theme-hydure # <-- 刪除這行，與 remote_theme 衝突
+
+lang: zh-TW # 網站語言，例如 zh-TW, zh-CN, en
+title: AI course # 您的網站標題
+tagline: 人工智慧教材 # 網站的簡短標語
+description: >- # 網站的完整描述，會用於 SEO 和 Feed
+  這是一個使用 Jekyll 和 Hydure 主題建立的教材網頁 。
+baseurl: "/AI-course" # 如果您的網站是 yourusername.github.io/my-blog/，請設定為 "/my-blog"
+            # 如果是 yourusername.github.io/，則留空 ""
+url: "" # 您的網站基礎網址，例如 http://example.com (通常留空，GitHub Pages 會自動處理)
+
+# 作者資訊 (請根據 jekyll-theme-hydure 的 README 填寫)
+author:
+  name: Richard Kuo # 您的名字
+  email: rkuo2000@gmail.com # 您的電子郵件
+  github: rkuo2000 # 您的 GitHub 用戶名
+  linkedin: your_linkedin_profile # 您的 LinkedIn 個人資料名稱 (例如 moray-li-kai)
+  # 您可以根據主題的 README 添加其他社群連結
+
+# 評論系統設定
+#disqus_shortname: your_disqus_shortname # 您的 Disqus 短名稱，用於啟用評論 (如果沒有，留空或註釋掉)
+
+# 網站分析追蹤 (Google Analytics 4)
+#google_analytics_4_measurement_id: G-XXXXXXXXXX # 您的 Google Analytics 4 測量 ID (如果沒有，留空或註釋掉)
+
+# 分類和標籤頁面路徑 (重要，請確保已複製 _layouts/category.html 和 _layouts/tag.html 並創建 /categories/index.html, /tags/index.html)
+tag_path: /tags
+category_path: /categories
+
+# 插件設定
+# 確保這些插件也存在於您的 Gemfile 中
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag # 推薦加入，用於 SEO 優化
+  - jekyll-archives # <-- 添加這一行
+  - jekyll-mermaid
+
+# Sass 設定 (通常不需要修改，除非您知道自己在做什麼)
+sass:
+  sass_dir: _sass
+  style: compressed # 輸出 CSS 格式，compressed 更小，expanded 更易讀
+
+
+# jekyll-archives configuration
+jekyll-archives:
+  enabled:
+    - tags  
+    - categories  
+  layout: "archive" # Jekyll-archives 會使用這個佈局來渲染標籤/分類頁面。
+                    # 您需要確保 _layouts/archive.html (或您自訂的佈局) 存在。
+  #permalink: "/:collection/:name/" # 預設的永久連結格式
+                                   # 這會生成類似 /tags/入門/ 和 /categories/指南/ 的網址
+# 排除處理的項目
+# 這些檔案或資料夾在建構時會被忽略
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
