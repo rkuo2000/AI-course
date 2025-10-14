@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+<div class="category-page-container">
+  <header class="category-header">
+    <h1 class="category-title">所有分類</h1>
+  </header>
+
+  <div class="category-list">
+    {% assign categories = site.categories | sort %}
+    {% if categories.size > 0 %}
+      <p>點擊以下分類查看相關文章：</p>
+      <ul>
+        {% for category_name in categories %}
+          {% assign category_slug = category_name[0] | slugify %}
+          <li>
+            <a href="{{ site.baseurl | append: site.category_path | append: '/' | append: category_slug }}/">
+              {{ category_name[0] }} ({{ category_name[1].size }})
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p>目前沒有任何分類。</p>
+    {% endif %}
+  </div>
+
+
+  {% if page.category %}
+    <hr>
+    <h2 class="category-articles-title">分類：{{ page.category | capitalize }} 的文章</h2>
+    <div class="post-list">
+      {% assign posts = site.categories[page.category] %}
+      {% for post in posts %}
+        <article class="post-item">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <div class="post-meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}" class="post-date">{{ post.date | date: "%Y年%m月%d日" }}</time>
+            {% if post.author %}
+              <span class="post-author">作者：{{ post.author }}</span>
+            {% endif %}
+          </div>
+          <div class="post-excerpt">
+            {{ post.excerpt | strip_html | truncatewords: 50 }}
+            <a href="{{ post.url | relative_url }}" class="read-more">閱讀更多 &raquo;</a>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
