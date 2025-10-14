@@ -1,0 +1,9 @@
+- title: Email
+  url: mailto:rkuo2000@gmail.com
+  icon: fas fa-envelope
+- title: FaceBook
+  url: https://www.facebook.com/richard.kuo.168
+  icon: fab fa-facebook
+- title: GitHub
+  url: https://github.com/rkuo2000/AI-course
+  icon: fab fa-github
