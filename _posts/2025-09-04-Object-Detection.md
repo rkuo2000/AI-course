@@ -232,10 +232,9 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 
 ---
 ### [YOLOv5](https://docs.ultralytics.com/yolov5/)
-<p><img src="https://user-images.githubusercontent.com/4210061/107134685-4b249480-692f-11eb-93b1-619708d95441.png" width="50%" height="50%"></p>
-**Code:** [ultralytics/yolov5/](https://github.com/ultralytics/yolov5/)<br>
-<p><img src="https://user-images.githubusercontent.com/26833433/127574988-6a558aa1-d268-44b9-bf6b-62d4c605cc72.jpg"></p>
-<p><img src="https://user-images.githubusercontent.com/26833433/136901921-abcfcd9d-f978-4942-9b97-0e3f202907df.png"></p>
+**Code**: [ultralytics/yolov5/](https://github.com/ultralytics/yolov5/)<br>
+<p><img width="50%" height="50%" src="https://user-images.githubusercontent.com/4210061/107134685-4b249480-692f-11eb-93b1-619708d95441.png">
+<img width="50%" height="50%" src="https://user-images.githubusercontent.com/26833433/136901921-abcfcd9d-f978-4942-9b97-0e3f202907df.png"></p>
 
 ---
 ### Scaled-YOLOv4
