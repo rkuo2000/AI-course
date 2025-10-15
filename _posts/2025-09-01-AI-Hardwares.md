@@ -41,14 +41,21 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://www.fibermall.com/blog/wp-content/uploads/2024/04/GB200-uses-the-full-B200-chip-1024x338.png)
 
 ---
-### [DGX-Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
+#### [DGX-Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
 ![](https://s4.itho.me/sites/default/files/styles/picture_size_large/public/field/image/0319-nvidia_dgx_personal_ai_supercomputers-spark-9601.jpg?itok=xkbEiLyr)
 
 Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tensor Cores及FP4精度支援的Nvidia Blackwell GPU，使DGX具備128GB記憶體，並支援最高1000 TOPS<br>
 ![](https://img.technews.tw/wp-content/uploads/2025/01/07130136/NVIDIA-Project-Digits-3.png)
 
-[ASUS Ascent GX10](https://www.asus.com/tw/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/)
+#### [ASUS Ascent GX10](https://www.asus.com/tw/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/)<br>
 搭載 NVIDIA® GB10 Grace Blackwell 超級晶片，提供高達 1 petaFLOP 的 AI 運算效能，並配備 **128GB** 記憶體，足以支援 2000 億（200B）參數模型的微調。
+<p>
+<img width="50%" height="50%" src="https://www.dreamcore.com.sg/wp-content/uploads/01-ASUS_Ascent_GX10.MAIN_-1440x1440.jpg">
+<img src="https://i0.wp.com/linuxgizmos.com/files/ASUS-Ascent-GX10-Peripherals.jpg?resize=450%2C209&ssl=1">
+</p>
+
+#### [GIGABYTE AI TOP ATOM](https://www.gigabyte.com/tw/AI-TOP-PC/GIGABYTE-AI-TOP-ATOM)
+<img width="50%" height="50%" src="https://img.unikoshardware.com/wp-content/uploads/2025/10/GIGABYTE-AI-TOP-ATOM.webp">
 
 ---
 ### [Geforce RTX 50 series](https://www.nvidia.com/zh-tw/geforce/graphics-cards/50-series/)<br>
