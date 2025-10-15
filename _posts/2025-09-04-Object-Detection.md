@@ -12,7 +12,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ## Datasets
 
 ### [COCO Dataset](https://cocodataset.org/)
-![](https://cocodataset.org/images/coco-examples.jpg)
 * Object segmentation
 * Recognition in context
 * Superpixel stuff segmentation
@@ -23,14 +22,17 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 * 5 captions per image
 * 250,000 people with keypoints 
 
+![](https://cocodataset.org/images/coco-examples.jpg)
+
 ---
 ###  [Open Images Dataset](https://storage.googleapis.com/openimages/web/index.html)
-* 15,851,536 boxes on **600** categories
-* 2,785,498 instance segmentations on **350** categories
-* 3,284,280 relationship annotations on 1,466 relationships
-* 66,391,027 point-level annotations on 5,827 classes
-* 61,404,966 image-level labels on 20,638 classes
-* Extension - 478,000 crowdsourced images with 6,000+ categories
+Open Images is a dataset of ~9M images annotated with image-level labels, object bounding boxes, object segmentation masks, visual relationships, and localized narratives:<br>
+* 16M bounding boxes for 600 object classes on 1.9M images
+* 3.3M annotations from 1,466 distinct relationship triplets
+* 66.4M point-level labels over 1.4M images, covering 5,827 classes
+* annotated with 61.4M image-level labels spanning 20,638 classes
+  
+![](https://storage.googleapis.com/openimages/web/images/oid_thumbnail.png)
 
 ---
 ### [Roboflow](https://www.roboflow.com/)
@@ -275,29 +277,23 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ### YOLOv7
 **Paper:** [YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors](https://arxiv.org/abs/2207.02696)<br>
 * Extended efficient layer aggregation networks
-![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/YOLOv7_E-ELAN.png?raw=true)
 * Model scaling for concatenation-based models
-![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/YOLOv7_model_scaling.png?raw=true)
 * Planned re-parameterized convolution
-![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/YOLOv7_planned_reparameterized_model.png?raw=true)
 * Coarse for auxiliary and fine for lead head label assigner
-![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/YOLOv7_coarse_to_fine_lead_guided_assigner.png?raw=true)
+![](https://blog.roboflow.com/content/images/2022/07/Efficient_layer_aggregation.webp)
+![](https://www.researchgate.net/publication/371511115/figure/fig1/AS:11431281167434826@1686658203438/Structure-diagram-of-the-YOLOv7-tiny.png)
 
 **Code:** [WongKinYiu/yolov7](https://github.com/WongKinYiu/yolov7)<br>
-<p><img src="https://github.com/WongKinYiu/yolov7/raw/main/figure/performance.png" width="50%" height="50%"></p>
+<p><img width="50%" height="50%" src="https://github.com/WongKinYiu/yolov7/raw/main/figure/performance.png"></p>
 
 ---
 ### YOLOv8
-[Ultralytics YOLOv8](https://www.ultralytics.com/) is a cutting-edge, state-of-the-art (SOTA) model that builds upon the success of previous YOLO versions and introduces new features and improvements to further boost performance and flexibility. YOLOv8 is designed to be fast, accurate, and easy to use, making it an excellent choice for a wide range of object detection and tracking, instance segmentation, image classification and pose estimation tasks.
-
 **Blog:** [Dive into YOLOv8](https://openmmlab.medium.com/dive-into-yolov8-how-does-this-state-of-the-art-model-work-10f18f74bab1)<br>
 **Paper:** [Real-Time Flying Object Detection with YOLOv8](https://arxiv.org/abs/2305.09972)<br>
 ![](https://user-images.githubusercontent.com/27466624/239739723-57391d0f-1848-4388-9f30-88c2fb79233f.jpg)
 
 **Code:** [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)<br>
-**Kaggle:** <br>
-* [https://www.kaggle.com/code/rkuo2000/yolov8](https://www.kaggle.com/code/rkuo2000/yolov8)
-* [https://www.kaggle.com/code/rkuo2000/yolov8-pothole-detection](https://www.kaggle.com/code/rkuo2000/yolov8-pothole-detection)
+**Kaggle:** [rkuo2000/YOLOv8](https://www.kaggle.com/code/rkuo2000/yolov8), [rkuo2000/YOLOv8-Pothole-detection](https://www.kaggle.com/code/rkuo2000/yolov8-pothole-detection)<br>
 
 ---
 ### UAV-YOLOv8
