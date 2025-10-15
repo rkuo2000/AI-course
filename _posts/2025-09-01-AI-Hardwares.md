@@ -52,12 +52,8 @@ Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tenso
 
 ---
 ### [Geforce RTX 50 series](https://www.nvidia.com/zh-tw/geforce/graphics-cards/50-series/)<br>
-[原價屋線上估價](https://www.coolpc.com.tw/evaluate.php)<br>
-* Giga 5090OC 32GB<br>
-* MSI 5080OC 16GB<br>
-* Giga 5070Ti 16GB<br>
-* Zotac 5060Ti 16GB<br>
-![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/GPU-Gigabyte-RTX5060Ti-OC-16GB.png?raw=true)
+![](https://wp-cdn.pugetsystems.com/2025/01/Screenshot-2025-01-16-094012.png)
+![](https://static.gigabyte.com/StaticFile/Image/Global/2c9319cda29065cc30ac66c4838790a6/Product/43906/png/300)
 
 ---
 ### [AMD Instinct™ MI355X GPUs](https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html)
