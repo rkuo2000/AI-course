@@ -93,7 +93,7 @@ Built on the 4th Gen AMD CDNA™ architecture, AMD Instinct™ MI355X GPUs deliv
 
 ---
 ### RPi 5 + Hailo-8L 
-![](https://i.gzn.jp/img/2024/06/04/raspberry-pi-ai-kit-npu-m2/00.jpg)
+<p><img width="50%" height="50%" src="https://i.gzn.jp/img/2024/06/04/raspberry-pi-ai-kit-npu-m2/00.jpg"></p>
 * Hailo-8L (13 TOPs)
 * Broadcom BCM2712 2.4GHz quad-core 64-bit Arm Cortex-A76 CPU, with Cryptographic Extension, 512KB per-core L2 caches, and a 2MB shared L3 cache
 
