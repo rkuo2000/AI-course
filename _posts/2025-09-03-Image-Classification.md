@@ -47,7 +47,7 @@ This dataset spans **1000 object** classes and contains 1,281,167 training image
 The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.<br>
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/CIFAR-10.png?raw=true)
 
-**Kaggle:** [rkuo2000/cifar10-cnn](https://www.kaggle.com/rkuo2000/cifar10-cnn)<br>
+**Kaggle:** [rkuo2000/CIFAR10-CNN](https://www.kaggle.com/rkuo2000/cifar10-cnn)<br>
 
 ---
 ### Traffic Sign Classifier (交通號誌辨識)
@@ -60,10 +60,10 @@ The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6
 ---
 ### Emotion Detection (情緒偵測)
 **Dataset:** [FER-2013 (Facial Expression Recognition)](https://www.kaggle.com/datasets/msambare/fer2013)<br>
-![](https://www.researchgate.net/profile/Chaudhary-Aqdus/publication/349055345/figure/fig3/AS:987834383085568@1612529478973/FER-2013-sample-images-for-facial-emotion-recognition.jpg)
-
 7 facial expression, 28709 training images, 7178 test images<br>
 labels = ["angry", "disgusted", "fearful", "happy", "neutral", "sad", "surprised"]<br>
+![](https://www.researchgate.net/profile/Chaudhary-Aqdus/publication/349055345/figure/fig3/AS:987834383085568@1612529478973/FER-2013-sample-images-for-facial-emotion-recognition.jpg)
+
 **Kaggle:** [rkuo2000/FER2013-CNN](https://www.kaggle.com/rkuo2000/fer2013-cnn)<br>
 
 ---
@@ -91,14 +91,14 @@ labels = ["angry", "disgusted", "fearful", "happy", "neutral", "sad", "surprised
 ### Garbage Classification (垃圾分類)
 **Dataset:** https://www.kaggle.com/asdasdasasdas/garbage-classification (42MB)<br>
 6 categories : cardboard(403), glass(501), metal(410), paper (594), plastic(482), trash(137)<br>
-<img widtih="50%" height="50%" src="https://miro.medium.com/max/2920/1*mJipx8yxeI_JW36jDAuM9A.png">
+<img widtih="25%" height="25%" src="https://miro.medium.com/max/2920/1*mJipx8yxeI_JW36jDAuM9A.png">
 
 **Kaggle:** [rkuo2000/Garbage-CNN](https://www.kaggle.com/rkuo2000/garbage-cnn)<br>
 
 ---
 ### Food Classification  (食物分類)
 **Dataset:** [Food-11](https://mmspg.epfl.ch/downloads/food-image-datasets/)<br>
-![](https://929687.smushcdn.com/2633864/wp-content/uploads/2019/06/fine_tuning_keras_food11.jpg?lossy=1&strip=1&webp=1)
+![](https://pyimagesearch.com/wp-content/uploads/2019/06/fine_tuning_keras_food11.jpg)
 The dataset consists of 16,643 images belonging to 11 major food categories:<br>
 * Bread (1724 images)
 * Dairy product (721 images)
