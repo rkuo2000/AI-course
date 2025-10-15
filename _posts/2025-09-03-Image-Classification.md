@@ -14,7 +14,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ### [PASCAL VOC (Visual Ojbect Classes)](http://host.robots.ox.ac.uk/pascal/VOC/)
 VOC2007 train/val/test 9,963張標註圖片，有24,640個標註物件<br> 
 VOC2012 train/val/test11,530張標註圖片，有27,450個ROI 標註物件<br>
-![](https://github.com/ultralytics/docs/releases/download/0/mosaiced-voc-dataset-sample.avif)
+<img width="50%" height="50%" src="https://github.com/ultralytics/docs/releases/download/0/mosaiced-voc-dataset-sample.avif">
 **20** classes:
 * Person: person
 * Animal: bird, cat, cow, dog, horse, sheep
