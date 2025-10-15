@@ -8,8 +8,6 @@ description: Human-Pose, Head-Pose, Hand-Pose, Object-Pose Estimation (姿態估
 mathjax: false # 如果這篇文章不需要顯示數學公式，請設false
 comments: false # 如果這篇文章需要啟用評論，請設為 true
 
-Pose Estimation includes Applications, Human Pose Estimation, Head Pose Estimation & VTuber, Hand Pose Estimation , Object Pose Estimation.
-
 ---
 ## Pose Estimation Applications
 
