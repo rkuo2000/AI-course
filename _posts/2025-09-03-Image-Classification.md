@@ -14,8 +14,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ### [PASCAL VOC (Visual Ojbect Classes)](http://host.robots.ox.ac.uk/pascal/VOC/)
 VOC2007 train/val/test 9,963張標註圖片，有24,640個標註物件<br> 
 VOC2012 train/val/test11,530張標註圖片，有27,450個ROI 標註物件<br>
-![](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/segexamples/images/006585_object.png)
-![](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/layoutexamples/images/08_parts.jpg)
+![](https://github.com/ultralytics/docs/releases/download/0/mosaiced-voc-dataset-sample.avif)
 **20** classes:
 * Person: person
 * Animal: bird, cat, cow, dog, horse, sheep
@@ -48,7 +47,7 @@ This dataset spans **1000 object** classes and contains 1,281,167 training image
 The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6000 images per class. There are 50000 training images and 10000 test images.<br>
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/CIFAR-10.png?raw=true)
 
-**Kaggle:** [https://www.kaggle.com/rkuo2000/cifar10-cnn](https://www.kaggle.com/rkuo2000/cifar10-cnn)<br>
+**Kaggle:** [rkuo2000/cifar10-cnn](https://www.kaggle.com/rkuo2000/cifar10-cnn)<br>
 
 ---
 ### Traffic Sign Classifier (交通號誌辨識)
@@ -56,37 +55,37 @@ The CIFAR-10 dataset consists of 60000 32x32 colour images in 10 classes, with 6
 34 traffic signs, 39209 training images, 12630 test images<br>
 ![](https://assets-global.website-files.com/5d7b77b063a9066d83e1209c/61e9ce225148f6519be6c034_GTSRB-0000000633-9ce3c5f6_Dki5Rsf.jpeg)
 
-**Kaggle:** /rkuo2000/gtsrb-cnn](https://www.kaggle.com/rkuo2000/gtsrb-cnn)<br>
+**Kaggle:** [rkuo2000/GTSRB-CNN](https://www.kaggle.com/rkuo2000/gtsrb-cnn)<br>
 
 ---
 ### Emotion Detection (情緒偵測)
 **Dataset:** [FER-2013 (Facial Expression Recognition)](https://www.kaggle.com/datasets/msambare/fer2013)<br>
-![](https://production-media.paperswithcode.com/datasets/FER2013-0000001434-01251bb8_415HDzL.jpg)
+![](https://www.researchgate.net/profile/Chaudhary-Aqdus/publication/349055345/figure/fig3/AS:987834383085568@1612529478973/FER-2013-sample-images-for-facial-emotion-recognition.jpg)
 
 7 facial expression, 28709 training images, 7178 test images<br>
 labels = ["angry", "disgusted", "fearful", "happy", "neutral", "sad", "surprised"]<br>
-**Kaggle:** [rkuo2000/fer2013-cnn](https://www.kaggle.com/rkuo2000/fer2013-cnn)<br>
+**Kaggle:** [rkuo2000/FER2013-CNN](https://www.kaggle.com/rkuo2000/fer2013-cnn)<br>
 
 ---
 ### Pneumonia Detection (肺炎偵測)
 **Dataset:** [https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia](https://www.kaggle.com/paultimothymooney/chest-xray-pneumonia)<br>
 ![](https://raw.githubusercontent.com/anjanatiha/Pneumonia-Detection-from-Chest-X-Ray-Images-with-Deep-Learning/master/demo/sample/sample.png)
 
-**Kaggle:** [rkuo2000/pneumonia-cnn](https://www.kaggle.com/rkuo2000/pneumonia-cnn)<br>
+**Kaggle:** [rkuo2000/Pneumonia-CNN](https://www.kaggle.com/rkuo2000/pneumonia-cnn)<br>
 
 ---
 ### COVID19 Detection (新冠肺炎偵測)
 **Dataset:** [https://www.kaggle.com/bachrr/covid-chest-xray](https://www.kaggle.com/bachrr/covid-chest-xray)<br>
 ![](https://i.imgur.com/jZqpV51.png)
 
-**Kaggle:** [rkuo2000/covid19-vgg16](https://www.kaggle.com/rkuo2000/covid19-vgg16)<br>
+**Kaggle:** [rkuo2000/COVID19-VGG16](https://www.kaggle.com/rkuo2000/covid19-vgg16)<br>
 
 ---
 ### FaceMask Classification (人臉口罩辨識)
 **Dataset:** [Face Mask ~12K Images dataset](https://www.kaggle.com/datasets/ashishjangra27/face-mask-12k-images-dataset)<br>
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/facemask_12k_dataset.png?raw=true)
 
-**Kaggle:** [rkuo2000/facemask-cnn](https://www.kaggle.com/rkuo2000/facemask-cnn)<br>
+**Kaggle:** [rkuo2000/Facemask-CNN](https://www.kaggle.com/rkuo2000/facemask-cnn)<br>
 
 ---
 ### Garbage Classification (垃圾分類)
@@ -94,7 +93,7 @@ labels = ["angry", "disgusted", "fearful", "happy", "neutral", "sad", "surprised
 6 categories : cardboard(403), glass(501), metal(410), paper (594), plastic(482), trash(137)<br>
 <img widtih="50%" height="50%" src="https://miro.medium.com/max/2920/1*mJipx8yxeI_JW36jDAuM9A.png">
 
-**Kaggle:** [rkuo2000/garbage-cnn](https://www.kaggle.com/rkuo2000/garbage-cnn)<br>
+**Kaggle:** [rkuo2000/Garbage-CNN](https://www.kaggle.com/rkuo2000/garbage-cnn)<br>
 
 ---
 ### Food Classification  (食物分類)
@@ -113,12 +112,12 @@ The dataset consists of 16,643 images belonging to 11 major food categories:<br>
 * Soup (2,500 images)
 * Vegetable/fruit (1,172 images)
 
-**Kaggle:** [rkuo2000/food11-classification](https://www.kaggle.com/rkuo2000/food11-classification)<br>
+**Kaggle:** [rkuo2000/Food11-Classification](https://www.kaggle.com/rkuo2000/food11-classification)<br>
 
 ---
 ### Mango Classification (芒果分類)
 **Dataset:** [台灣高經濟作物 - 愛文芒果影像辨識正式賽](https://aidea-web.tw/aicup_mango)<br>
-**Kaggle:** [rkuo2000/mango-classification](https://www.kaggle.com/rkuo2000/mango-classification), [rkuo2000/mango-efficientnet](https://www.kaggle.com/rkuo2000/mango-efficientnet) <br>
+**Kaggle:** [rkuo2000/Mango-Classification](https://www.kaggle.com/rkuo2000/mango-classification), [rkuo2000/mango-efficientnet](https://www.kaggle.com/rkuo2000/mango-efficientnet) <br>
 
 ---
 ## Transer Learning
@@ -128,7 +127,7 @@ The dataset consists of 16,643 images belonging to 11 major food categories:<br>
 用Google搜尋照片, 下載各20/30張照片，放入資料夾birds後，壓縮成birds.zip, 再上傳Kaggle.com/datasets<br>
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/birds_dataset.png?raw=true)
 
-**Kaggle:** [rkuo2000/birds-classification](https://www.kaggle.com/rkuo2000/birds-classification)<br>
+**Kaggle:** [rkuo2000/Birds-Classification](https://www.kaggle.com/rkuo2000/birds-classification)<br>
 
 ---
 ### Animes Classification (卡通人物分類)
@@ -136,21 +135,20 @@ The dataset consists of 16,643 images belonging to 11 major food categories:<br>
 用Google搜尋照片, 下載卡通人物各約20/30張照片，放入資料夾animes後，壓縮成animes.zip, 再上傳Kaggle.com/datasets<br>
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/animes_dataset.png?raw=true)
 
-**Kaggle:** [https://www.kaggle.com/rkuo2000/anime-classification](https://www.kaggle.com/rkuo2000/anime-classification)<br>
+**Kaggle:** [rkuo2000/Anime-Classification](https://www.kaggle.com/rkuo2000/anime-classification)<br>
 
 ---
 ### Worms Classification(害蟲分類)
 **Dataset:** [worms4](https://www.kaggle.com/datasets/rkuo2000/worms4)<br>
+用Google搜尋照片, 下載各20/30張照片，放入資料夾worms後，壓縮成worms.zip, 再上傳Kaggle.com/datasets<br>
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/worms4_dataset.png?raw=true)
 
-用Google搜尋照片, 下載各20/30張照片，放入資料夾worms後，壓縮成worms.zip, 再上傳Kaggle.com/datasets<br>
-
-**Kaggle:** [rkuo2000/worms-classification](https://www.kaggle.com/rkuo2000/worms-classification)<br>
+**Kaggle:** [rkuo2000/Worms-Classification](https://www.kaggle.com/rkuo2000/worms-classification)<br>
 
 ---
 ### Railway Track Fault Detection (鐵軌故障偵測)
 **Dataset:** [Railway Track Fault Detection](https://www.kaggle.com/salmaneunus/railway-track-fault-detection)<br>
-**Kaggle:** [rkuo2000/railtrack-resnet50v2](https://www.kaggle.com/code/rkuo2000/railtrack-resnet50v2), [rkuo2000/railtrack-efficientnet](https://www.kaggle.com/code/rkuo2000/railtrack-efficientnet)<br>
+**Kaggle:** [rkuo2000/Railtrack-ResNet50v2](https://www.kaggle.com/code/rkuo2000/railtrack-resnet50v2), [rkuo2000/railtrack-efficientnet](https://www.kaggle.com/code/rkuo2000/railtrack-efficientnet)<br>
 
 ---
 ### Skin Lesion Classification (皮膚病變分類)
@@ -166,7 +164,7 @@ The dataset consists of 16,643 images belonging to 11 major food categories:<br>
 * Melanocytic Nevi (黑素細胞痣)
 * Vascular Lesions (血管病變)
 <br>
-**Kaggle:** [rkuo2000/skin-lesion-classification](https://www.kaggle.com/code/rkuo2000/skin-lesion-classification)<br>
+**Kaggle:** [rkuo2000/Skin-Lesion-Classification](https://www.kaggle.com/code/rkuo2000/skin-lesion-classification)<br>
 
 <br>
 <br>
