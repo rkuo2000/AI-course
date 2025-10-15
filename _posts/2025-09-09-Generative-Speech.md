@@ -88,7 +88,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Paper**: [VibeVoice Technical Report](https://arxiv.org/abs/2508.19205)<br>
 **model**: [microsoft/VibeVoice-1.5B](https://huggingface.co/microsoft/VibeVoice-1.5B)<br>
 **Code**: [https://github.com/microsoft/VibeVoice](https://github.com/microsoft/VibeVoice)<br>
-![](https://github.com/microsoft/VibeVoice/raw/main/Figures/MOS-preference.png)
+<img width="50%" height="50%" src="https://github.com/microsoft/VibeVoice/raw/main/Figures/MOS-preference.png">
 
 **ComfyUI**: [https://github.com/Enemyx-net/VibeVoice-ComfyUI](https://github.com/Enemyx-net/VibeVoice-ComfyUI)
 
