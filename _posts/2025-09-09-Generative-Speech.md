@@ -168,13 +168,13 @@ Training took about 20 hours on AWS p3.2xlarge(NVIDIA V100)<br>
 ---
 ### Qwen-Audio
 **Paper**: [Qwen-Audio: Advancing Universal Audio Understanding via Unified Large-Scale Audio-Language Models](https://arxiv.org/abs/2311.07919)<br>
-**Github**: [https://github.com/QwenLM/Qwen-Audio](https://github.com/QwenLM/Qwen-Audio)<br>
+**Code**: [https://github.com/QwenLM/Qwen-Audio](https://github.com/QwenLM/Qwen-Audio)<br>
 ![](https://github.com/QwenLM/Qwen-Audio/raw/main/assets/framework.png)
 
 ---
 ### [Faster-Whisper](https://github.com/SYSTRAN/faster-whisper)
 faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2, which is a fast inference engine for Transformer models.<br>
-**Kaggle:** [https://www.kaggle.com/code/rkuo2000/faster-whisper](https://www.kaggle.com/code/rkuo2000/faster-whisper)<br>
+**Kaggle:** [rkuo2000/faster-whisper](https://www.kaggle.com/code/rkuo2000/faster-whisper)<br>
 
 ---
 ### [Open Whisper-style Speech Models (OWSM)](https://www.wavlab.org/activities/2024/owsm/)
