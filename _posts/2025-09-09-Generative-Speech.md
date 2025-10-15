@@ -70,7 +70,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 **ComfyUI**: [https://github.com/billwuhao/ComfyUI_SparkTTS](https://github.com/billwuhao/ComfyUI_SparkTTS)<br>
 
-**Kaggle**: [https://www.kaggle.com/code/rkuo2000/Spark-TTS](https://www.kaggle.com/code/rkuo2000/spark-tts)<br>
+**Kaggle**: [rkuo2000/Spark-TTS](https://www.kaggle.com/code/rkuo2000/spark-tts)<br>
 
 ---
 ### IndexTTS2
@@ -81,7 +81,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 **ComfyUI**: [https://github.com/billwuhao/ComfyUI_IndexTTS](https://github.com/billwuhao/ComfyUI_IndexTTS)<br>
 
-**Kaggle**: [https://www.kaggle.com/code/rkuo2000/Index-TTS2](https://www.kaggle.com/code/rkuo2000/index-tts2)<br>
+**Kaggle**: [rkuo2000/Index-TTS2](https://www.kaggle.com/code/rkuo2000/index-tts2)<br>
 
 ---
 ### VibeVoice
@@ -119,12 +119,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ### GPT-SoVITS
 **Blog:** [GPT-SoVITS 用 AI 快速複製你的聲音，搭配 Colab 免費入門](https://medium.com/dean-lin/gpt-sovits-%E7%94%A8-ai-%E5%BF%AB%E9%80%9F%E8%A4%87%E8%A3%BD%E4%BD%A0%E7%9A%84%E8%81%B2%E9%9F%B3-%E6%90%AD%E9%85%8D-colab-%E5%85%8D%E8%B2%BB%E5%85%A5%E9%96%80-f6a620cf7fc6)<br>
 **Code:** [https://github.com/RVC-Boss/GPT-SoVITS/](https://github.com/RVC-Boss/GPT-SoVITS/)<br>
-**Kaggle:** [https://www.kaggle.com/code/rkuo2000/so-vits-svc-5-0](https://www.kaggle.com/code/rkuo2000/so-vits-svc-5-0)<br>
+**Kaggle:** [rkuo2000/so-vits-svc-5-0](https://www.kaggle.com/code/rkuo2000/so-vits-svc-5-0)<br>
 
 ---
 ### VITS SVC
 Variational Inference with adversarial learning for end-to-end Singing Voice Conversion based on VITS<br>
-**Github**: [https://github.com/PlayVoice/whisper-vits-svc](https://github.com/PlayVoice/whisper-vits-svc)<br>
+**Code**: [https://github.com/PlayVoice/whisper-vits-svc](https://github.com/PlayVoice/whisper-vits-svc)<br>
 
 ---
 ## Speech Seperation
@@ -141,7 +141,7 @@ Variational Inference with adversarial learning for end-to-end Singing Voice Con
 ---
 ### VoiceFilter
 **Paper:** [VoiceFilter: Targeted Voice Separation by Speaker-Conditioned Spectrogram Masking](https://arxiv.org/abs/1810.04826)<br>
-**Github**: [https://github.com/maum-ai/voicefilter](https://github.com/maum-ai/voicefilter)<br>
+**Code**: [https://github.com/maum-ai/voicefilter](https://github.com/maum-ai/voicefilter)<br>
 Training took about 20 hours on AWS p3.2xlarge(NVIDIA V100)<br>
 ![](https://github.com/maum-ai/voicefilter/raw/master/assets/voicefilter.png)
 
@@ -163,7 +163,7 @@ Training took about 20 hours on AWS p3.2xlarge(NVIDIA V100)<br>
 ### Whisper
 **Paper:** [Robust Speech Recognition via Large-Scale Weak Supervision](https://arxiv.org/abs/2212.04356)<br>
 ![](https://www.researchgate.net/profile/Zhanibek_Kozhirbayev/publication/376675691/figure/fig2/AS:11431281213642924@1703085158954/Whisper-architecture-representation.png)
-**Kaggle:** [https://www.kaggle.com/code/rkuo2000/asr-whisper](https://www.kaggle.com/code/rkuo2000/asr-whisper)<br>
+**Kaggle:** [rkuo2000/asr-whisper](https://www.kaggle.com/code/rkuo2000/asr-whisper)<br>
 
 ---
 ### Qwen-Audio
@@ -184,13 +184,13 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 ### Canary
 **Paper**: [Less is More: Accurate Speech Recognition & Translation without Web-Scale Data](https://arxiv.org/abs/2406.19674)<br>
 **model**: [nvidia/canary-1b-v2](https://huggingface.co/nvidia/canary-1b-v2)<br>
-**Kaggle**: [https://www.kaggle.com/code/rkuo2000/asr-canary-1b](https://www.kaggle.com/code/rkuo2000/asr-canary-1b)<br>
+**Kaggle**: [rkuo2000/asr-canary-1b](https://www.kaggle.com/code/rkuo2000/asr-canary-1b)<br>
 
 ---
 ### [Whisper Large-v3](https://huggingface.co/openai/whisper-large-v3)
 **model:** openai/whisper-large-v3<br>
 **model:** openai/whisper-large-v3-turbo<br>
-**Kaggle:** [https://www.kaggle.com/code/rkuo2000/whisper-large-v3-turbo](https://www.kaggle.com/code/rkuo2000/whisper-large-v3-turbo)<br>
+**Kaggle:** [rkuo2000/whisper-large-v3-turbo](https://www.kaggle.com/code/rkuo2000/whisper-large-v3-turbo)<br>
 
 <br>
 <br>
