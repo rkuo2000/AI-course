@@ -197,6 +197,9 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 ![](https://camo.githubusercontent.com/f0c80711512aacc0c1423a64e1036608a773f61c0bb6480ec0d57614ce3e7ccc/68747470733a2f2f696d6775722e636f6d2f3579554a4350562e6a7067)
 
 ---
+### [YOLO Evolution](https://arxiv.org/html/2411.00201v3)<br>
+![](https://arxiv.org/html/2411.00201v3/extracted/6233011/figs/yolo_evolution.png)
+
 ### [YOLO- You Only Look Once](https://pjreddie.com/darknet/yolo/)
 **Code:** [pjreddie/darknet](https://github.com/pjreddie/darknet)<br>
 ![](https://pyimagesearch.com/wp-content/uploads/2018/11/yolo_design.jpg)
@@ -311,14 +314,8 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 ---
 ### YOLOv9
 **Paper:** [YOLOv9: Learning What You Want to Learn Using Programmable Gradient Information](https://arxiv.org/abs/2402.13616)<br>
-
-**Blog:** [YOLOv9: Advancing the YOLO Legacy](https://learnopencv.com/yolov9-advancing-the-yolo-legacy/)<br>
-![](https://learnopencv.com/wp-content/uploads/2024/02/feature-1.gif)
-**Programmable Gradient Information (PGI)**
-![](https://learnopencv.com/wp-content/uploads/2024/02/pgi1-1024x434.png)
-**GELAN architecture**<br>
-![](https://learnopencv.com/wp-content/uploads/2024/02/glean-1024x432.png)
-
+![](https://lh7-us.googleusercontent.com/sW3-seCqTYm9hN9wSCUBL0HznCLQtsXnCh2yN5Uv3oDZB1CUKkmIzT3W-LuOCKBVHGYmzWO35U8z13eYrKR3z2gaDZivzNExVVEC7DM0ljZt-MsTF_SOUZCy9_2QVtdzy3T9mF_MGjl7q1uBhL26cCM)
+![](https://lh7-us.googleusercontent.com/CSn0YuWDCsCFYu__bL8xmd5kM2oKjkYmiCLubDeJW5U9CapaVNgXsCd5rwh-0bwk7gtYTF9Y4NqhJh7Yv8yl5GvScMpKUm51unMQrMQW1dyjnJjIjMDW9Aoyo6H_K5jYOKcIZ7TyvvfHRAQbNi5srxc)
 **Code:** [https://github.com/WongKinYiu/yolov9](https://github.com/WongKinYiu/yolov9)<br>
 ![](https://github.com/WongKinYiu/yolov9/raw/main/figure/performance.png)
 
@@ -329,12 +326,9 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 ![](https://github.com/ultralytics/ultralytics/assets/26833433/e0360eb4-3589-4cd1-b362-a8970bceada6)
 
 ---
-### YOLOv1 ~ YOLOv10
-**Paper:** [YOLOv1 to YOLOv10: The fastest and most accurate real-time object detection systems](https://arxiv.org/abs/2408.09332)<br>
-
----
 ### YOLOv11
-**Github:** [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)<br>
+**Paper**: [YOLOv11: An Overview of the Key Architectural Enhancements](https://arxiv.org/html/2410.17725v1)<br>
+**Code**: [https://github.com/ultralytics/ultralytics](https://github.com/ultralytics/ultralytics)<br>
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*BsErwdZQJ93Dn-Yt.png)
 ![](https://github.com/user-attachments/assets/a311a4ed-bbf2-43b5-8012-5f183a28a845)
 
@@ -342,6 +336,7 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 ### YOLOv12
 **Paper:** [YOLOv12: Attention-Centric Real-Time Object Detectors](https://www.arxiv.org/abs/2502.12524)<br>
 **Code:** [https://github.com/sunsmarterjie/yolov12](https://github.com/sunsmarterjie/yolov12)<br>
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*jAryyoCzG6pr_lSb.png)
 ![](https://github.com/sunsmarterjie/yolov12/raw/main/assets/tradeoff.svg)
 
 ---
@@ -349,6 +344,17 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 **Paper:** [YOLOv13: Real-Time Object Detection with Hypergraph-Enhanced Adaptive Visual Perception](https://arxiv.org/abs/2506.17733)<br>
 **Code:** [https://github.com/iMoonLab/yolov13](https://github.com/iMoonLab/yolov13)<br>
 ![](https://github.com/iMoonLab/yolov13/raw/main/assets/framework.png)
+
+---
+### RF-DETR
+RF-DETR: SOTA Real-Time Detection and Segmentation Model<br>
+**Paper**: [DETRs Beat YOLOs on Real-time Object Detection](https://arxiv.org/abs/2304.08069)<br>
+![](https://zhao-yian.github.io/RTDETR/static/images/overview.jpg)
+
+**Paper**: [RF-DETR Object Detection vs YOLOv12](https://arxiv.org/html/2504.13099v1)<br>
+![](https://miro.medium.com/v2/resize:fit:720/format:webp/0*fHlI1stZyiWMKLST.png)
+
+**Code**: [https://github.com/roboflow/rf-detr](https://github.com/roboflow/rf-detr)<br>
 
 ---
 ## Trash Detection
