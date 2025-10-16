@@ -359,6 +359,11 @@ RF-DETR: SOTA Real-Time Detection and Segmentation Model<br>
 **Blog**: [How to Deploy RF-DETR to an NVIDIA Jetson](https://blog.roboflow.com/how-to-deploy-rf-detr-to-an-nvidia-jetson/)
 
 ---
+### RF-DETR v2
+**Paper**: [RT-DETRv2: Improved Baseline with Bag-of-Freebies for Real-Time Detection Transformer](https://arxiv.org/abs/2407.17140)<br>
+**Code**: [https://github.com/lyuwenyu/RT-DETR](https://github.com/lyuwenyu/RT-DETR)<br>
+
+---
 ## Trash Detection
 ### Localize and Classify Wastes on the Streets
 **Paper:** [arxiv.org/abs/1710.11374](https://arxiv.org/abs/1710.11374)<br>
