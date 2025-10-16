@@ -104,10 +104,16 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Paper**: [Improving Dynamic Object Interactions in Text-to-Video Generation with AI Feedback](https://arxiv.org/abs/2412.02617)<br>
 ![](https://arxiv.org/html/2412.02617v1/x2.png)
 
+---
+### OpenAI [Sora2](https://sora.chatgpt.com)
+<iframe width="676" height="380" src="https://www.youtube.com/embed/5XgvjKV1iEw" title="必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼、免VPN、邀請碼分享、Grok免費影片製作）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<iframe width="690" height="388" src="https://www.youtube.com/embed/sGS1JwnD6Ik" title="實測用Sora 2一天內瘋狂創作，這效果太驚人了！超棒的概念創作工具" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
-### VEO3
-<iframe width="865" height="487" src="https://www.youtube.com/embed/pHWYdt78PwY" title="【超級簡單】2025最火爆AI影片神器！Google Veo3 普通人也能收割百萬流量😱" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### Google [VEO3.1](https://aistudio.google.com/models/veo-3)
+**Blog**: [Introducing Veo 3.1 and new creative capabilities in the Gemini API](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/)<br>
+<iframe width="790" height="444" src="https://www.youtube.com/embed/orcRl82lGLc" title="Veo 3.1 in the Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 ### Flow
