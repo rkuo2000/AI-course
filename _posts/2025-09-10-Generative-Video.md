@@ -160,6 +160,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://arxiv.org/html/2509.06155v1/x1.png)
 **Code**: [https://github.com/Dorniwang/UniVerse-1-code/](https://github.com/Dorniwang/UniVerse-1-code/)<br>
 
+---
+### FlashVSR
+**Paper**: [FlashVSR: Towards Real-Time Diffusion-Based Streaming Video Super-Resolution](https://arxiv.org/abs/2510.12747)<br>
+**Code**: [https://github.com/OpenImagingLab/FlashVSR](https://github.com/OpenImagingLab/FlashVSR)<br>
+![](https://github.com/OpenImagingLab/FlashVSR/raw/main/examples/WanVSR/assets/flowchart.jpg)
+
 <br>
 <br>
 
