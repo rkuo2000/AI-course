@@ -90,9 +90,19 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://github.com/GongyeLiu/StyleCrafter/blob/main/docs/showcase_1.gif?raw=true)
 
 ---
-### [Outfit Anyone](https://humanaigc.github.io/outfit-anyone/)
+### Outfit Anyone
+**Paper**: [OutfitAnyone: Ultra-high Quality Virtual Try-On for Any Clothing and Any Person](https://arxiv.org/abs/2407.16224)<br>
 **Code:** [https://github.com/HumanAIGC/OutfitAnyone](https://github.com/HumanAIGC/OutfitAnyone)<br>
-<iframe width="1103" height="620" src="https://www.youtube.com/embed/jnNHcLdoxNk" title="Outfit Anyone + Animate Anyone" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+![](https://humanaigc.github.io/outfit-anyone/content/images/framework/fm.jpg)
+<p>
+<img width="50%" height="50%" src="https://humanaigc.github.io/outfit-anyone/content/gifs/1.gif">
+<img width="50%" height="50%" src="https://humanaigc.github.io/outfit-anyone/content/gifs/2.gif">
+</p>
+
+---
+### Sora
+**Paper**: [Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models](https://arxiv.org/html/2402.17177v3)<br>
+![](https://arxiv.org/html/2402.17177v3/extracted/2402.17177v3/fig_yx/dit-uvit.png)
 
 ---
 ### [SignLLM](https://signllm.github.io/Prompt2Sign/)
@@ -111,18 +121,15 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <iframe width="690" height="388" src="https://www.youtube.com/embed/sGS1JwnD6Ik" title="實測用Sora 2一天內瘋狂創作，這效果太驚人了！超棒的概念創作工具" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
-### Google [VEO3.1](https://aistudio.google.com/models/veo-3)
-**Blog**: [Introducing Veo 3.1 and new creative capabilities in the Gemini API](https://developers.googleblog.com/en/introducing-veo-3-1-and-new-creative-capabilities-in-the-gemini-api/)<br>
-<iframe width="790" height="444" src="https://www.youtube.com/embed/orcRl82lGLc" title="Veo 3.1 in the Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### Open-Sora
+**Paper**: [Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k](https://arxiv.org/abs/2503.09642)<br>
+**Code**: [https://github.com/hpcaitech/Open-Sora](https://github.com/hpcaitech/Open-Sora)<br>
+![](https://arxiv.org/html/2503.09642v1/x3.png)
+![](https://arxiv.org/html/2503.09642v1/extracted/6273005/figs/open-sora-2.0-dit.png)
 
 ---
-### Flow
-[Meet Flow: AI-powered filmmaking with Veo 3](https://blog.google/technology/ai/google-flow-veo-ai-filmmaking-tool/)<br>
-<iframe width="1046" height="588" src="https://www.youtube.com/embed/A0VttaLy4sU" title="Introducing Flow | Google’s New AI Filmmaking Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
----
-### Wan2.2
-**Arxiv**: [Wan: Open and Advanced Large-Scale Video Generative Models](https://arxiv.org/abs/2503.20314)<br>
+### WAN 2.2
+**Paper**: [Wan: Open and Advanced Large-Scale Video Generative Models](https://arxiv.org/abs/2503.20314)<br>
 **Github**: [https://github.com/Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2)<br>
 
 #### [ComfyUI + WAN2.2](https://docs.comfy.org/tutorials/video/wan/wan2_2)
@@ -161,13 +168,24 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Code**: [https://github.com/Dorniwang/UniVerse-1-code/](https://github.com/Dorniwang/UniVerse-1-code/)<br>
 
 ---
+### [VEO 3](https://aistudio.google.com/models/veo-3)
+**Paper**: [Video models are zero-shot learners and reasoners](https://arxiv.org/html/2509.20328v2)<br>
+<iframe width="790" height="444" src="https://www.youtube.com/embed/orcRl82lGLc" title="Veo 3.1 in the Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[Meet Flow: AI-powered filmmaking with Veo 3](https://blog.google/technology/ai/google-flow-veo-ai-filmmaking-tool/)<br>
+<iframe width="1046" height="588" src="https://www.youtube.com/embed/A0VttaLy4sU" title="Introducing Flow | Google’s New AI Filmmaking Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 ### FlashVSR
 **Paper**: [FlashVSR: Towards Real-Time Diffusion-Based Streaming Video Super-Resolution](https://arxiv.org/abs/2510.12747)<br>
 **Code**: [https://github.com/OpenImagingLab/FlashVSR](https://github.com/OpenImagingLab/FlashVSR)<br>
 ![](https://github.com/OpenImagingLab/FlashVSR/raw/main/examples/WanVSR/assets/flowchart.jpg)
 
+---
+### [Wan 2.5](https://www.wan-ai.co/wan-2-5)
+Wan 2.5 AI Video Generator with Audio Sync<br>
+
 <br>
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
-
