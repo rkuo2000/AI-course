@@ -94,10 +94,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Paper**: [OutfitAnyone: Ultra-high Quality Virtual Try-On for Any Clothing and Any Person](https://arxiv.org/abs/2407.16224)<br>
 **Code:** [https://github.com/HumanAIGC/OutfitAnyone](https://github.com/HumanAIGC/OutfitAnyone)<br>
 ![](https://humanaigc.github.io/outfit-anyone/content/images/framework/fm.jpg)
-<p>
-<img width="50%" height="50%" src="https://humanaigc.github.io/outfit-anyone/content/gifs/1.gif">
-<img width="50%" height="50%" src="https://humanaigc.github.io/outfit-anyone/content/gifs/2.gif">
-</p>
+<img width="50%" height="50%" src="https://humanaigc.github.io/outfit-anyone/content/gifs/1.gif"><img width="50%" height="50%" src="https://humanaigc.github.io/outfit-anyone/content/gifs/2.gif">
 
 ---
 ### Sora
