@@ -37,7 +37,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Paper**: [Instruct-MusicGen: Unlocking Text-to-Music Editing for Music Language Models via Instruction Tuning](https://arxiv.org/abs/2405.18386)<br>
 **Code**: [https://github.com/ldzhangyx/instruct-MusicGen](https://github.com/ldzhangyx/instruct-MusicGen)<br>
 **Demo**: [https://bit.ly/instruct-musicgen](https://bit.ly/instruct-musicgen)<br>
-<img width="50%" height="50%" src="https://arxiv.org/html/2405.18386v3/x2.png">
+![](https://arxiv.org/html/2405.18386v3/x2.png)
 
 ---
 ### [Stable Audio Open](https://stability.ai/news/stable-audio-open-research-paper)
