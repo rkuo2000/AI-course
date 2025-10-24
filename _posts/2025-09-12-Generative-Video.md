@@ -102,11 +102,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://arxiv.org/html/2402.17177v3/extracted/2402.17177v3/fig_yx/dit-uvit.png)
 
 ---
-### [SignLLM](https://signllm.github.io/Prompt2Sign/)
-**Paper:** [SignLLM: Sign Languages Production Large Language Models](https://arxiv.org/abs/2405.10718)<br>
-**Code:** [https://github.com/SignLLM/Prompt2Sign](https://github.com/SignLLM/Prompt2Sign)<br>
-
----
 ### [AIF for Dynamic T2V](https://sites.google.com/view/aif-dynamic-t2v/)
 **Paper**: [Improving Dynamic Object Interactions in Text-to-Video Generation with AI Feedback](https://arxiv.org/abs/2412.02617)<br>
 ![](https://arxiv.org/html/2412.02617v1/x2.png)
