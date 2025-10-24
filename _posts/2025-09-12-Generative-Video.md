@@ -165,12 +165,16 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Code**: [https://github.com/Dorniwang/UniVerse-1-code/](https://github.com/Dorniwang/UniVerse-1-code/)<br>
 
 ---
-### [VEO 3](https://aistudio.google.com/models/veo-3)
+### [VEO 3](https://aistudio.google.com/models/veo-3) 
 **Paper**: [Video models are zero-shot learners and reasoners](https://arxiv.org/html/2509.20328v2)<br>
 <iframe width="790" height="444" src="https://www.youtube.com/embed/orcRl82lGLc" title="Veo 3.1 in the Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 [Meet Flow: AI-powered filmmaking with Veo 3](https://blog.google/technology/ai/google-flow-veo-ai-filmmaking-tool/)<br>
 <iframe width="1046" height="588" src="https://www.youtube.com/embed/A0VttaLy4sU" title="Introducing Flow | Google’s New AI Filmmaking Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+### Sora2
+<iframe width="877" height="493" src="https://www.youtube.com/embed/5XgvjKV1iEw" title="必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼、免VPN、邀請碼分享、Grok免費影片製作）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 ### FlashVSR
