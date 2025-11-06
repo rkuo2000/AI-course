@@ -222,11 +222,18 @@ Stable Diffusion in Blender<br>
 
 ---
 ### TripoSR
-**Blog:** [Introducing TripoSR: Fast 3D Object Generation from Single Images](https://stability.ai/news/triposr-3d-generation)<br>
-**Paper:** [LRM: Large Reconstruction Model for Single Image to 3D](https://yiconghong.me/LRM/)<br>
-**Github:** [https://github.com/VAST-AI-Research/TripoSR](https://github.com/VAST-AI-Research/TripoSR)<br>
+**Blog**: [Introducing TripoSR: Fast 3D Object Generation from Single Images](https://stability.ai/news/triposr-3d-generation)<br>
+**Paper**: [LRM: Large Reconstruction Model for Single Image to 3D](https://yiconghong.me/LRM/)<br>
+**Code**: [https://github.com/VAST-AI-Research/TripoSR](https://github.com/VAST-AI-Research/TripoSR)<br>
 `python run.py examples/chair.png --output-dir output/`<br>
 ![](https://yiconghong.me/LRM/static/images/img2nerf_model_figure.jpg)
+
+---
+### Hi3D
+**Paper**: [Hi3D: Pursuing High-Resolution Image-to-3D Generation with Video Diffusion Models](https://arxiv.org/html/2409.07452v1)<br>
+**Code**: [https://github.com/yanghb22-fdu/Hi3D-Official](https://github.com/yanghb22-fdu/Hi3D-Official)<br>
+![](https://github.com/yanghb22-fdu/Hi3D-Official/raw/main/asserts/pipeline.png)
+![](https://github.com/yanghb22-fdu/Hi3D-Official/raw/main/asserts/demo01.gif)
 
 ---
 ### Depth Pro
@@ -238,4 +245,3 @@ Stable Diffusion in Blender<br>
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
-
