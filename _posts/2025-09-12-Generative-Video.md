@@ -178,8 +178,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://github.com/OpenImagingLab/FlashVSR/raw/main/examples/WanVSR/assets/flowchart.jpg)
 
 ---
-### [Wan 2.5](https://www.wan-ai.co/wan-2-5)
-Wan 2.5 AI Video Generator with Audio Sync<br>
+### [ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)
+**Paper**: [ChronoEdit: Towards Temporal Reasoning for Image Editing and World Simulation](https://arxiv.org/abs/2510.04290)<br>
+**Code**: [https://github.com/nv-tlabs/ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)<br>
+
+<iframe width="970" height="546" src="https://www.youtube.com/embed/76XDPC_E4mI" title="AI真的在思考了！NVIDIA Chrono Edit深度教程：从图片编辑到世界模拟" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 
 <br>
 <br>
