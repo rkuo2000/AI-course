@@ -153,6 +153,12 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 ![](https://github.com/Fr0zenCrane/UniCoT/raw/main/assets/teaser.png)
 
 ---
+### [DiT w/ RAE](https://rae-dit.github.io/)
+**model**: [nyu-visionx/RAE-collections](https://huggingface.co/nyu-visionx/RAE-collections)<br>
+**Paper**: [Diffusion Transformers with Representation Autoencoders](https://arxiv.org/abs/2510.11690)<br>
+![](https://arxiv.org/html/2510.11690v1/x2.png)
+
+---
 ### [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
 [ComfyUI download](https://www.comfy.org/zh-cn/download)<br>
 
@@ -206,7 +212,7 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 ### AI-Render 
 Stable Diffusion in Blender<br>
 **Code:** [https://github.com/benrugg/AI-Render](https://github.com/benrugg/AI-Render)<br>
-<iframe width="1115" height="627" src="https://www.youtube.com/embed/PXBXix2WzX4" title="AI Render - Stable Diffusion in Blender - FREE Add-on" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="1115" height="627" src="https://www.youtube.com/embed/PXBXix2WzX4" title="AI Render - Stable Diffusion in Blender - FREE Add-on" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-shareDiffusion Transformers with Representation Autoencoders" allowfullscreen></iframe>
 <iframe width="1115" height="627" src="https://www.youtube.com/embed/tmyln5bwnO8" title="AI Render Tutorial - Stable Diffusion Add-on for Blender" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 <iframe width="1115" height="627" src="https://www.youtube.com/embed/zPqJUrfKuqs" title="AI Is Getting Out of Control in Blender | ControlNet" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
