@@ -247,6 +247,15 @@ Stable Diffusion in Blender<br>
 **Code:** [https://github.com/apple/ml-depth-pro](https://github.com/apple/ml-depth-pro)<br>
 ![](https://github.com/apple/ml-depth-pro/raw/main/data/depth-pro-teaser.jpg)
 
+---
+### Hunyuan3D
+**Paper**: [Hunyuan3D 2.5: Towards High-Fidelity 3D Assets Generation with Ultimate Details](https://arxiv.org/abs/2506.16504)<br>
+**Code**: [https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)<br>
+![](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/raw/main/assets/images/pipeline.png)
+
+**[ComfyUI - Hunyuan3D 2.1](https://docs.comfy.org/tutorials/3d/hunyuan3D-2)** <br>
+![](https://mintcdn.com/dripart/NmGUk_QSXQXRVtZP/images/tutorial/3d/hunyuan3d-2mv/hunyuan3d_2_non_multiview.jpg?fit=max&auto=format&n=NmGUk_QSXQXRVtZP&q=85&s=33c158fcfb133560674aa56bfdb5087d)
+
 <br>
 <br>
 
