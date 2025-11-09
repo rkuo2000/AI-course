@@ -94,7 +94,7 @@ The DSLM can utilize specific attention mask strategy to achieve different song 
 ![](https://ace-step.github.io/raw/fig/ACE-Step_framework.png)
 
 **ComfyUI**: [https://github.com/billwuhao/ComfyUI_ACE-Step](https://github.com/billwuhao/ComfyUI_ACE-Step)<br>
-![](https://github.com/billwuhao/ComfyUI_ACE-Step/raw/main/images/2025-05-14_14-23-50.png)
+![](https://github.com/billwuhao/ComfyUI_ACE-Step/blob/main/images/2025-05-10_19-26-46.png?raw=true)
 
 <br>
 <br>
