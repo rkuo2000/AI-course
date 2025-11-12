@@ -192,6 +192,11 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 **model:** openai/whisper-large-v3-turbo<br>
 **Kaggle:** [rkuo2000/whisper-large-v3-turbo](https://www.kaggle.com/code/rkuo2000/whisper-large-v3-turbo)<br>
 
+---
+### Omnilingual-ASR
+**Paper**: [Omnilingual ASR: Open-Source Multilingual Speech Recognition for 1600+ Languages](https://ai.meta.com/research/publications/omnilingual-asr-open-source-multilingual-speech-recognition-for-1600-languages/)<br>
+**Code**: [https://github.com/facebookresearch/omnilingual-asr](https://github.com/facebookresearch/omnilingual-asr)<br>
+
 <br>
 <br>
 
