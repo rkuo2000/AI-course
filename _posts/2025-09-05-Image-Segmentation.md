@@ -206,8 +206,8 @@ The Segment Anything Model (SAM) produces high quality object masks from input p
 **Code**: [https://github.com/facebookresearch/sam3](https://github.com/facebookresearch/sam3)<br>
 ![](https://github.com/facebookresearch/sam3/raw/main/assets/model_diagram.png?raw=true)
 <p>
-<img src="https://github.com/facebookresearch/sam3/raw/main/assets/dog.gif">
-<img src="https://github.com/facebookresearch/sam3/raw/main/assets/player.gif">
+<img width="50%" height="50%" src="https://github.com/facebookresearch/sam3/raw/main/assets/dog.gif">
+<img width="50%" height="50%" src="https://github.com/facebookresearch/sam3/raw/main/assets/player.gif">
 </p>
 
 ---
