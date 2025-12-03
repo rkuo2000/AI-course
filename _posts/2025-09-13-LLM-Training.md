@@ -32,6 +32,8 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
 ### [Build a Large Language Model (From Scratch)](https://github.com/rasbt/LLMs-from-scratch)
+**Book**: [讓 AI 好好說話！從頭打造 LLM (大型語言模型) 實戰秘笈](https://www.tenlong.com.tw/products/9789863128236?list_name=srh)<br>
+![](https://cf-assets2.tenlong.com.tw/products/images/000/233/229/webp/9789863128236_%E5%A4%A9%E7%93%8F.webp?1736397148)
 
 ### [Build A Reasoning Model (From Scratch)](https://github.com/rasbt/reasoning-from-scratch)
 
