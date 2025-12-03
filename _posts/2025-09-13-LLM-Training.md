@@ -30,6 +30,11 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 <iframe width="1264" height="711" src="https://www.youtube.com/embed/Z6b5-77EfGk?list=PLJV_el3uVTsNZEFAdQsDeOdzAaHTca2Gi" title="【生成式AI時代下的機器學習(2025)】第六講：生成式人工智慧的後訓練(Post-Training)與遺忘問題" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+---
+### [Build a Large Language Model (From Scratch)](https://github.com/rasbt/LLMs-from-scratch)
+
+### [Build A Reasoning Model (From Scratch)](https://github.com/rasbt/reasoning-from-scratch)
+
 <br>
 <br>
 
