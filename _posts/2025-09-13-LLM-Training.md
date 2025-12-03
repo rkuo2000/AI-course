@@ -13,11 +13,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ### Three Phases of Model Training
 **Blog**: [解密 LLM 訓練三部曲：深入解析 SFT 與關鍵的 RLHF 技術](https://datasciocean.com/ai-concept/llm-fine-tuning-rlhf/)<br>
-![](https://datasciocean.com/ai-concept/llm-fine-tuning-rlhf/llm-training-stages.png)
-
 * 第一階段 (Self-Supervised Pre-Training)：Pre-trained LLM
 * 第二階段 (Supervised Fine-Tuning)：SFT LLM
 * 第三階段 (Reinforcement Learning from Human Feedback)：Reward Model 與 Final Model
+  
+**Blog**: [RLHF: Reinforcement Learning from Human Feedback](https://huyenchip.com/2023/05/02/rlhf.html)
+![](https://huyenchip.com/assets/pics/rlhf/1-chatgpt-training.png)
 
 ---
 ### Pre-Train & Alignment (SFT, RLHF)
