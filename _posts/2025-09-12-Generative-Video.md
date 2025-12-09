@@ -9,6 +9,13 @@ mathjax: false # 如果這篇文章不需要顯示數學公式，請設false
 comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
+## [李宏毅_生成式導論 2024](https://www.youtube.com/playlist?list=PLJV_el3uVTsPz6CTopeRp2L2t4aL_KgiI)
+[李宏毅_生成式導論 2024_第17講：有關影像的生成式AI (上) — AI 如何產生圖片和影片 (Sora 背後可能用的原理)](https://hackmd.io/@shaoeChen/rJQ89maVR)<br>
+<iframe width="1026" height="578" src="https://www.youtube.com/embed/5H2bVEmYDNg" title="【生成式AI導論 2024】第17講：有關影像的生成式AI (上) — AI 如何產生圖片和影片 (Sora 背後可能用的原理)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+[李宏毅_生成式導論 2024_第18講：有關影像的生成式AI (下) — 快速導讀經典影像生成方法 (VAE, Flow, Diffusion, GAN) 以及與生成的影片互動](https://hackmd.io/@shaoeChen/HJBNLFqV0)<br>
+<iframe width="1026" height="578" src="https://www.youtube.com/embed/OYN_GvAqv-A" title="【生成式AI導論 2024】第18講：有關影像的生成式AI (下) — 快速導讀經典影像生成方法 (VAE, Flow, Diffusion, GAN) 以及與生成的影片互動" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ## Image-to-Video
 
 ### Turn-A-Video
