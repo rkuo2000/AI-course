@@ -41,15 +41,16 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ## Model Fine-Tuning
 **[Open-Source AI Cookbook](https://huggingface.co/learn/cookbook/en/index)** <br>
 
-### DPO VLM
+### SmolVLM with TRL
+**Blog**: [Fine-tuning SmolVLM with TRL on a consumer GPU](https://huggingface.co/learn/cookbook/en/fine_tuning_smol_vlm_sft_trl)<br>
+
+### VLM with DPO
 **Blog**: [使用 TRL 對視覺語言模型進行偏好最佳化](https://huggingface.tw/blog/dpo_vlm)<br>
 **Dataset**:  [openbmb/RLAIF-V-Dataset](https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset)<br>
-![](https://huggingface.tw/datasets/huggingface/documentation-images/resolve/main/blog/dpo_vlm/how-many-families.jpg)
 
 ---
-### GRPO LLM for GSM8K with Multi-Reward
+### LLM with GRPO & Multi-Reward
 **Blog**: [Advanced GRPO Fine-tuning for Mathematical Reasoning with Multi-Reward Training](https://huggingface.co/learn/cookbook/en/trl_grpo_reasoning_advanced_reward)<br>
-
 
 <br>
 <br>
