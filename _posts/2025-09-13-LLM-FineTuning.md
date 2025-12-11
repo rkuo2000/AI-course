@@ -41,16 +41,28 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ## Model Fine-Tuning
 **[Open-Source AI Cookbook](https://huggingface.co/learn/cookbook/en/index)** <br>
 
-### SmolVLM with TRL
+### SmolVLM with TRL (ChartQA)
 **Blog**: [Fine-tuning SmolVLM with TRL on a consumer GPU](https://huggingface.co/learn/cookbook/en/fine_tuning_smol_vlm_sft_trl)<br>
-
-### VLM with DPO
-**Blog**: [使用 TRL 對視覺語言模型進行偏好最佳化](https://huggingface.tw/blog/dpo_vlm)<br>
-**Dataset**:  [openbmb/RLAIF-V-Dataset](https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset)<br>
+**Model**: [HuggingFaceTB/SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct)<br>
+**Dataset**: [HuggingFaceM4/ChartQA](https://huggingface.co/datasets/HuggingFaceM4/ChartQA)<br>
 
 ---
-### LLM with GRPO & Multi-Reward
+### SmolVLM with TRL (Invoice Parser)
+**Prompt**: [Fine-tuning Invoice Parser](https://chatgpt.com/share/682f9f18-7048-8010-90bb-7b27b8373a7e)<br>
+**Model**: [HuggingFaceTB/SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct)<br>
+**Dataset**: [mychen76/invoices-and-receipts_ocr_v1](https://huggingface.co/datasets/mychen76/invoices-and-receipts_ocr_v1)<br>
+
+---
+### VLM with DPO
+**Blog**: [使用 TRL 對視覺語言模型進行偏好最佳化](https://huggingface.tw/blog/dpo_vlm)<br>
+**Model**: [HuggingFaceM4/idefics2-8b](https://huggingface.co/HuggingFaceM4/idefics2-8b)<br>
+**Dataset**: [openbmb/RLAIF-V-Dataset](https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset)<br>
+
+---
+### LLM with GRPO (for GSM8K)
 **Blog**: [Advanced GRPO Fine-tuning for Mathematical Reasoning with Multi-Reward Training](https://huggingface.co/learn/cookbook/en/trl_grpo_reasoning_advanced_reward)<br>
+**Model**: [Qwen/Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct)<br>
+**Dataset**: [openai/gsm8k](https://huggingface.co/datasets/openai/gsm8k)<br>
 
 <br>
 <br>
