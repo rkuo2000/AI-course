@@ -75,6 +75,40 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ---
 ## Intelligence Benchmarks
 
+### [OpenAI Evals](https://evals.openai.com/)
+
+---
+### SWE-Bench
+**Paper**: [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)<br>
+**Code**: [https://github.com/SWE-bench/SWE-bench](https://github.com/SWE-bench/SWE-bench)<br>
+
+---
+### MLE-Bench
+**Paper**: [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)<br>
+**Code**: [https://github.com/openai/mle-bench](https://github.com/openai/mle-bench)<br>
+
+---
+### SWE-Lancer
+**Paper**: [SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?](https://arxiv.org/abs/2502.12115)<br>
+
+### PaperBench
+**Paper**: [PaperBench: Evaluating AI's Ability to Replicate AI Research](https://arxiv.org/abs/2504.01848)<br>
+**Code**: [https://github.com/openai/frontier-evals](https://github.com/openai/frontier-evals)<br>
+
+---
+### SWE-Bench Pro
+**Paper**: [SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?](https://arxiv.org/abs/2509.16941)<br>
+**Code**: [https://github.com/scaleapi/SWE-bench_Pro-os](https://github.com/scaleapi/SWE-bench_Pro-os)<br>
+
+---
+### GPDval
+**Paper**: [GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks](https://arxiv.org/abs/2510.04374)<br>
+![](https://arxiv.org/html/2510.04374v1/exampletasksscreenshot.png)
+**Dataset**: [https://huggingface.co/datasets/openai/gdpval](https://huggingface.co/datasets/openai/gdpval)<br>
+* 220 real-world knowledge tasks across 44 occupations.
+* Each task consists of a text prompt and a set of supporting reference files.
+
+---
 ### ToolOrchestra
 **Paper**: [ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration](https://arxiv.org/abs/2511.21689)<br>
 **Code**: [https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)<br>
