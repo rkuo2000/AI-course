@@ -4,7 +4,7 @@ title: Model FineTuning
 date: 2025-09-13 12:00:00 +0800 # 發表日期和時間 (請根據您當前的時區調整 +0800 代表 UTC+8)
 categories: [Lecture] # 文章分類，您可以自訂
 tags: [LLM] # 文章標籤，您可以自訂
-description: Model FineTuning
+description: Model FineTuning,  Intelligence Benchmarks
 mathjax: false # 如果這篇文章不需要顯示數學公式，請設false
 comments: false # 如果這篇文章需要啟用評論，請設為 true
 
@@ -71,6 +71,14 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Model**: [Qwen/Qwen2.5-VL-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct)<br>
 **Dataset**: [lmms-lab/multimodal-open-r1-8k-verified](https://huggingface.co/datasets/lmms-lab/multimodal-open-r1-8k-verified)<br>
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/PPO_vs_GRPO.jpg?raw=true)
+
+---
+## Intelligence Benchmarks
+
+### ToolOrchestra
+**Paper**: [ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration](https://arxiv.org/abs/2511.21689)<br>
+**Code**: [https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)<br>
+![](https://raw.githubusercontent.com/NVlabs/ToolOrchestra/main/assets/method.png)
 
 <br>
 <br>
