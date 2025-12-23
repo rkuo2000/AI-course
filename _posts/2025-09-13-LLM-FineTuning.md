@@ -114,6 +114,10 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Code**: [https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)<br>
 ![](https://raw.githubusercontent.com/NVlabs/ToolOrchestra/main/assets/method.png)
 
+---
+### RLVR
+**Paper**: [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/html/2506.14245v2)<br>
+
 <br>
 <br>
 
