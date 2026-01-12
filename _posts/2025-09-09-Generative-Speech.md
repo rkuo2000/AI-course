@@ -100,6 +100,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 **ComfyUI**: [https://github.com/1038lab/ComfyUI-FireRedTTS](https://github.com/1038lab/ComfyUI-FireRedTTS)<br>
 
+
 ---
 ## Voice Cloning
 **Paper:** [Voice Cloning: Comprehensive Survey](https://arxiv.org/abs/2505.00579)<br>
@@ -184,6 +185,7 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 ### Canary
 **Paper**: [Less is More: Accurate Speech Recognition & Translation without Web-Scale Data](https://arxiv.org/abs/2406.19674)<br>
 **model**: [nvidia/canary-1b-v2](https://huggingface.co/nvidia/canary-1b-v2)<br>
+**model**: [nvidia/canary-qwen-2.5b](https://huggingface.co/nvidia/canary-qwen-2.5b)<br>
 **Kaggle**: [rkuo2000/asr-canary-1b](https://www.kaggle.com/code/rkuo2000/asr-canary-1b)<br>
 
 ---
@@ -196,6 +198,12 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 ### Omnilingual-ASR
 **Paper**: [Omnilingual ASR: Open-Source Multilingual Speech Recognition for 1600+ Languages](https://ai.meta.com/research/publications/omnilingual-asr-open-source-multilingual-speech-recognition-for-1600-languages/)<br>
 **Code**: [https://github.com/facebookresearch/omnilingual-asr](https://github.com/facebookresearch/omnilingual-asr)<br>
+
+---
+### Granite-Speech
+**model**: [ibm-granite/granite-speech-3.3-8b](https://huggingface.co/ibm-granite/granite-speech-3.3-8b)<br>
+**Paper**: [Granite-speech: open-source speech-aware LLMs with strong English ASR capabilities](https://arxiv.org/abs/2505.08699)<br>
+![](https://arxiv.org/html/2505.08699v2/x1.png)
 
 <br>
 <br>
