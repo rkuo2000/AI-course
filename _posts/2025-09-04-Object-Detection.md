@@ -339,6 +339,8 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 ![](https://miro.medium.com/v2/resize:fit:4800/format:webp/0*jAryyoCzG6pr_lSb.png)
 ![](https://github.com/sunsmarterjie/yolov12/raw/main/assets/tradeoff.svg)
 
+**Kaggle**: [yolov12](https://www.kaggle.com/code/rkuo2000/yolov12), [yolov12-tank](https://www.kaggle.com/code/rkuo2000/yolov12-tank), [yolov12-face](https://www.kaggle.com/code/rkuo2000/yolov12-face)<br>
+
 ---
 ### [YOLOv13](https://arxiv.org/html/2506.17733v2)
 **Paper:** [YOLOv13: Real-Time Object Detection with Hypergraph-Enhanced Adaptive Visual Perception](https://arxiv.org/abs/2506.17733)<br>
@@ -350,6 +352,8 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 **Paper**: [YOLO26: Key Architectural Enhancements and Performance Benchmarking for Real-Time Object Detection](https://arxiv.org/abs/2509.25164)<br>
 **Paper**: [YOLO26: An Analysis of NMS-Free End to End Framework for Real-Time Object Detection](https://arxiv.org/abs/2601.12882)<br>
 ![](https://arxiv.org/html/2601.12882v1/dfl.png)
+
+**Kaggle**: [https://www.kaggle.com/code/rkuo2000/yolo26](https://www.kaggle.com/code/rkuo2000/yolo26)<br>
 
 ---
 ### RF-DETR
