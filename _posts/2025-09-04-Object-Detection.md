@@ -348,9 +348,10 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 ![](https://arxiv.org/html/2506.17733v2/x2.png)
 
 ---
-### YOLO26
+### [YOLO26](https://arxiv.org/html/2509.25164v3)
 **Paper**: [YOLO26: Key Architectural Enhancements and Performance Benchmarking for Real-Time Object Detection](https://arxiv.org/abs/2509.25164)<br>
 **Paper**: [YOLO26: An Analysis of NMS-Free End to End Framework for Real-Time Object Detection](https://arxiv.org/abs/2601.12882)<br>
+![](https://arxiv.org/html/2509.25164v3/x3.png)
 ![](https://arxiv.org/html/2601.12882v1/dfl.png)
 
 **Kaggle**: [https://www.kaggle.com/code/rkuo2000/yolo26](https://www.kaggle.com/code/rkuo2000/yolo26)<br>
