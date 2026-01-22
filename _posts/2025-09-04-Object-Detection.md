@@ -340,10 +340,16 @@ Open Images is a dataset of ~9M images annotated with image-level labels, object
 ![](https://github.com/sunsmarterjie/yolov12/raw/main/assets/tradeoff.svg)
 
 ---
-### YOLOv13
+### [YOLOv13](https://arxiv.org/html/2506.17733v2)
 **Paper:** [YOLOv13: Real-Time Object Detection with Hypergraph-Enhanced Adaptive Visual Perception](https://arxiv.org/abs/2506.17733)<br>
 **Code:** [https://github.com/iMoonLab/yolov13](https://github.com/iMoonLab/yolov13)<br>
-![](https://github.com/iMoonLab/yolov13/raw/main/assets/framework.png)
+![](https://arxiv.org/html/2506.17733v2/x2.png)
+
+---
+### YOLO26
+**Paper**: [YOLO26: Key Architectural Enhancements and Performance Benchmarking for Real-Time Object Detection](https://arxiv.org/abs/2509.25164)<br>
+**Paper**: [YOLO26: An Analysis of NMS-Free End to End Framework for Real-Time Object Detection](https://arxiv.org/abs/2601.12882)<br>
+![](https://arxiv.org/html/2601.12882v1/dfl.png)
 
 ---
 ### RF-DETR
@@ -694,3 +700,4 @@ The Lightweight Integrated Tracking-Feature Extraction (LITE) paradigm is introd
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
+
