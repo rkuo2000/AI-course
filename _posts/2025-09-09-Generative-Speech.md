@@ -100,6 +100,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 **ComfyUI**: [https://github.com/1038lab/ComfyUI-FireRedTTS](https://github.com/1038lab/ComfyUI-FireRedTTS)<br>
 
+---
+### [Qwen3-TTS](https://qwen.ai/blog?id=qwen3tts-0115)
+**Paper**: [Qwen3-TTS Technical Report](https://arxiv.org/html/2601.15621v1)<br>
+**Code**: [https://github.com/QwenLM/Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS)<br>
+![](https://arxiv.org/html/2601.15621v1/figures/Tokenizer.png)
+![](https://arxiv.org/html/2601.15621v1/figures/Qwen3TTS_1104.png)
 
 ---
 ## Voice Cloning
