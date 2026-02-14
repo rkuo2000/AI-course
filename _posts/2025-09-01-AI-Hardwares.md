@@ -112,7 +112,7 @@ Built on the 4th Gen AMD CDNA™ architecture, AMD Instinct™ MI355X GPUs deliv
 Kinara Ara-2 AI processor (40 TOPS)<br>
 
 ---
-### Kneron [KL730 AI Soc](https://www.kneron.com/tw/page/soc/)
+### 耐能 Kneron [KL730 AI Soc](https://www.kneron.com/tw/page/soc/)
 * Quad ARM® Cortex™ A55 CPU。
 * 內建DSP，可以加速AI模型後處理，語音處理。
 * Linux和RTOS、TSMC 12 納米工藝。
@@ -121,6 +121,22 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 * 支持Cafee、Tensorflow、Tensorflowlite、Pytorch、Keras、ONNX框架。
 * 并兼容CNN、Transformer、RNN Hybrid等多種AI模型， 有更高的處理效率和精度。
 
+---
+### 堪智 Kendryte 
+#### K230
+* CPU : 1.6GHz & 0.8GHz Dual-core 64-bit RISC-V
+* VPU: H.264/H.265 encoding/decoding up to 
+* Memory & Storage: 32-bit LPDDR4/DDR4/LPDDR3/DDR3, SD3.01, eMMC 5.0.
+* Display Output: 1-lane MIPI DSI, max @ 60fps.
+* 3D Depth Engine (DPU): Up to resolution.
+* Peripherals: 2x USB 2.0 OTG, 5x UART, 5x I2C, 6x PWM, 4-ch PDM (digital mic).
+  
+#### K210
+* CPU : 400MHz Dual-Core 64-bit RISC-V RV64IMAFDC (RV64GC) CPU
+* SRAM: 8MB Total On-Chip SRAM (6MB General Purpose + 2MB AI SRAM)
+* NPU : 0.6TOPS
+* APU : Supports Microphone Array (up to 8 microphones)
+* 
 ---
 ### STMicro STM32N6
 <p><img width="50%" height="50%" src="https://blog.st.com/wp-content/uploads/ST36104_STM32N6570-DK-with-camera-perspective-with-nappeCV-1-copy.jpg"></p>
