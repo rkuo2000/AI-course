@@ -172,6 +172,13 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 <iframe width="994" height="528" src="https://www.youtube.com/embed/Y99_C0C28UE" title="FLUX.1[dev]模型在Krita完美整合:安裝和使用教學&quot;FLUX.1[dev] in Krita: Step-by-Step Installation and Usage Tutorial&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
+### [ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)
+**Paper**: [ChronoEdit: Towards Temporal Reasoning for Image Editing and World Simulation](https://arxiv.org/abs/2510.04290)<br>
+**Code**: [https://github.com/nv-tlabs/ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)<br>
+
+<iframe width="970" height="546" src="https://www.youtube.com/embed/76XDPC_E4mI" title="AI真的在思考了！NVIDIA Chrono Edit深度教程：从图片编辑到世界模拟" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 ## Text-to-3D
 
 ### Shap-E
