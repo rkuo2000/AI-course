@@ -171,9 +171,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Paper**: [Video models are zero-shot learners and reasoners](https://arxiv.org/html/2509.20328v2)<br>
 <iframe width="790" height="444" src="https://www.youtube.com/embed/orcRl82lGLc" title="Veo 3.1 in the Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-[Meet Flow: AI-powered filmmaking with Veo 3](https://blog.google/technology/ai/google-flow-veo-ai-filmmaking-tool/)<br>
-<iframe width="1046" height="588" src="https://www.youtube.com/embed/A0VttaLy4sU" title="Introducing Flow | Google’s New AI Filmmaking Tool" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 ---
 ### Sora2
 <iframe width="877" height="493" src="https://www.youtube.com/embed/5XgvjKV1iEw" title="必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼、免VPN、邀請碼分享、Grok免費影片製作）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -183,13 +180,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Paper**: [FlashVSR: Towards Real-Time Diffusion-Based Streaming Video Super-Resolution](https://arxiv.org/abs/2510.12747)<br>
 **Code**: [https://github.com/OpenImagingLab/FlashVSR](https://github.com/OpenImagingLab/FlashVSR)<br>
 ![](https://github.com/OpenImagingLab/FlashVSR/raw/main/examples/WanVSR/assets/flowchart.jpg)
-
----
-### [ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)
-**Paper**: [ChronoEdit: Towards Temporal Reasoning for Image Editing and World Simulation](https://arxiv.org/abs/2510.04290)<br>
-**Code**: [https://github.com/nv-tlabs/ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)<br>
-
-<iframe width="970" height="546" src="https://www.youtube.com/embed/76XDPC_E4mI" title="AI真的在思考了！NVIDIA Chrono Edit深度教程：从图片编辑到世界模拟" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 ### [Runway Gen-4.5](https://runwayml.com/research/introducing-runway-gen-4.5)
