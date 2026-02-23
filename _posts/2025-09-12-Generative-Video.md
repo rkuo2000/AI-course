@@ -191,6 +191,17 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 <iframe width="970" height="546" src="https://www.youtube.com/embed/76XDPC_E4mI" title="AI真的在思考了！NVIDIA Chrono Edit深度教程：从图片编辑到世界模拟" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+---
+### [Runway Gen-4.5](https://runwayml.com/research/introducing-runway-gen-4.5)
+<iframe width="1560" height="878" src="https://www.youtube.com/embed/ei2PsDpPbB4" title="Introducing Gen-4.5 | Runway" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+### [Kling 3.0](https://klingai.com/global/)
+<iframe width="1364" height="767" src="https://www.youtube.com/embed/z84WQAn6U0I" title="KLING 3.0 - Ultimate Guide with Pro tips and 50 creative Prompts to try!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+### [SeedDance 2.0](https://seed.bytedance.com/en/?view_from=homepage_tab)
+<iframe width="1364" height="767" src="https://www.youtube.com/embed/BQXxywxTidU" title="Seedance 2.0 vs Kling 3.0 – The Results Shocked Me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br>
 <br>
