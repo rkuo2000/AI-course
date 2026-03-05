@@ -79,10 +79,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://empowerment-for-llms.github.io/figures/overview.svg)
 
 We train all models using a dataset of 4,138 unique questions from Codeforces, each of which is paired with one attempted solution by Gemma-3-27B-it. <br>
-**Assistant models**: Llama-3.1-8B-Instruct, Qwen3-8B, and Qwen3-14B <br>
-**Human model**: Gemma-3-27B-it <br>
-**Dataset**: all based on [MatrixStudio/Codeforces-Python_submissions](https://huggingface.co/datasets/MatrixStudio/Codeforces-Python-Submissions)<br>
+* **Assistant models**: Llama-3.1-8B-Instruct, Qwen3-8B, and Qwen3-14B <br>
+* **Human model**: Gemma-3-27B-it <br>
+* **Dataset**: all based on [MatrixStudio/Codeforces-Python_submissions](https://huggingface.co/datasets/MatrixStudio/Codeforces-Python-Submissions)<br>
 This dataset comes with actual human submissions, which we do not need. All we use are the problems themselves. <br>
+* **Algorithm**: Logit Threshold Empowerment <br>
+* **Prompts**: See Section D in paper<br>
 
 ---
 ## Intelligence Benchmarks
