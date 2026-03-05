@@ -73,6 +73,18 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/PPO_vs_GRPO.jpg?raw=true)
 
 ---
+### [Codegen Enmpowerment](https://empowerment-for-llms.github.io/)
+**Paper**: [Training LLM Agents to Empower Humans](https://arxiv.org/abs/2510.13709)<br>
+**Code**: [https://github.com/festusev/codegen_empowerment](https://github.com/festusev/codegen_empowerment)<br>
+![](https://empowerment-for-llms.github.io/figures/overview.svg)
+
+We train all models using a dataset of 4,138 unique questions from Codeforces, each of which is paired with one attempted solution by Gemma-3-27B-it. <br>
+**Assistant models**: Llama-3.1-8B-Instruct, Qwen3-8B, and Qwen3-14B <br>
+**Human model**: Gemma-3-27B-it <br>
+**Dataset**: all based on [MatrixStudio/Codeforces-Python_submissions](https://huggingface.co/datasets/MatrixStudio/Codeforces-Python-Submissions)<br>
+This dataset comes with actual human submissions, which we do not need. All we use are the problems themselves. <br>
+
+---
 ## Intelligence Benchmarks
 
 ### [OpenAI Evals](https://evals.openai.com/)
