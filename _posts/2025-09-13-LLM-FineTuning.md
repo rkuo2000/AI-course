@@ -83,8 +83,9 @@ We train all models using a dataset of 4,138 unique questions from Codeforces, e
 * **Human model**: Gemma-3-27B-it <br>
 * **Dataset**: all based on [MatrixStudio/Codeforces-Python_submissions](https://huggingface.co/datasets/MatrixStudio/Codeforces-Python-Submissions)<br>
 This dataset comes with actual human submissions, which we do not need. All we use are the problems themselves. <br>
-* **Algorithm**: Logit Threshold Empowerment <br>
 * **Prompts**: See Section D in paper<br>
+* **Algorithm**: Logit Threshold Empowerment <br>
+![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/Logit_Threshold_Empowerment.png?raw=true)
 
 ---
 ## Intelligence Benchmarks
