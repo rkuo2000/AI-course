@@ -146,17 +146,21 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 ### [Gemini NanoBanana](https://gemini.google/overview/image-generation/)
 
 ---
-### Uni-COT
-**Paper**: [Uni-cot: Towards Unified Chain-of-Thought Reasoning Across Text and Vision](https://arxiv.org/html/2508.05606v2)
-**Code**: [https://github.com/Fr0zenCrane/UniCoT](https://github.com/Fr0zenCrane/UniCoT)<br>
-<img width="50%" height="50%" src="https://github.com/Fr0zenCrane/UniCoT/raw/main/assets/qualitative_results_geo.png">
-![](https://github.com/Fr0zenCrane/UniCoT/raw/main/assets/teaser.png)
-
----
 ### [DiT w/ RAE](https://rae-dit.github.io/)
 **model**: [nyu-visionx/RAE-collections](https://huggingface.co/nyu-visionx/RAE-collections)<br>
 **Paper**: [Diffusion Transformers with Representation Autoencoders](https://arxiv.org/abs/2510.11690)<br>
 ![](https://arxiv.org/html/2510.11690v1/x2.png)
+
+---
+### Z-Image
+**Paper**: [Z-Image: An Efficient Image Generation Foundation Model with Single-Stream Diffusion Transformer](https://arxiv.org/abs/2511.22699)<br>
+**Github**: [https://github.com/Tongyi-MAI/Z-Image](https://github.com/Tongyi-MAI/Z-Image)<br>
+Scalable Single-Stream DiT (S3-DiT) architecture<br>
+![](https://github.com/Tongyi-MAI/Z-Image/raw/main/assets/architecture.webp)
+
+**Blog**: [Z-Image-Turbo 深度實測與技術解說（與 FLUX 系列比較）](https://vocus.cc/article/692fbbb5fd897800016693b3)<br>
+* Z-Image 提出的 S3-DiT （Scalable Single-Stream Diffusion Transformer）架構，有效的減少模型所需參數量。
+* Z-Image 提出的 D-DMD（Decoupled Distribution Matching Distillation）演算法，實現高品質的少步數生成 。
 
 ---
 ### [ComfyUI](https://github.com/comfyanonymous/ComfyUI)
