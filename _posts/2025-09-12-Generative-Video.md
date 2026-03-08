@@ -193,6 +193,16 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ### [SeedDance 2.0](https://seed.bytedance.com/en/?view_from=homepage_tab)
 <iframe width="1364" height="767" src="https://www.youtube.com/embed/BQXxywxTidU" title="Seedance 2.0 vs Kling 3.0 – The Results Shocked Me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+---
+### [LTX-2.3](https://ltx.io/model/ltx-2-3)
+**Blog**: [Lightricks 發布 LTX 2.3 開源影片生成模型，可在本地端製作 4K 50FPS 同步音訊 AI 影片](https://www.koc.com.tw/archives/633673)<br>
+* 首先，文字編碼器規模擴大 4 倍，大幅提升提示詞理解能力，能精確呈現攝影機運動、構圖和角色動作，讓生成結果更符合創作者的預期。
+* 全新設計的 VAE（變分自編碼器）提供更清晰的細節和更穩定的運動畫質，有效改善前代作品常見的畫面模糊問題。也支援 Lora 可進行影片風格轉換功能。
+* 圖像轉影片（I2V）功能從訓練階段即整合至模型架構中，顯著減少畫面停滯現象，並降低所謂的「肯納伯斯效應」（can nabs effect），使連續幀之間的過渡更加自然，而且也支援首尾幀功能與原生直橫格式影片生成。
+* 音訊品質同步提升，是目前開源模型中少數支援音畫同時生成的本地端模型。新型 vocoder 降低背景雜音並強化音畫同步，解決過往 AI 生成的影片常見的音訊延遲或不同步問題。大家可以看看官方所釋出的宣傳影片，效果相當驚艷（以開源模型來說）
+  
+<iframe width="750" height="422" src="https://www.youtube.com/embed/o-7us-BR_gQ" title="LTX-2.3 Is Here: Sharper Detail, Native Portrait, Cleaner Audio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 <br>
 <br>
 
