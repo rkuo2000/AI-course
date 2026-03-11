@@ -9,9 +9,11 @@ mathjax: false # 如果這篇文章不需要顯示數學公式，請設false
 comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
-## Claws
+## Agentic Engineer
 
-### [如何成為世界級的 Agentic 工程師](https://tools.wingzero.tw/article/sn/3809)
+**Blog**: [Claude Code 之父 Boris Cherny 親授！13 條 AI 開發心法，效率翻 10 倍](https://tenten.co/learning/claude-code-13-tips-by-boris-cherny)
+
+**[如何成為世界級的 Agentic 工程師](https://tools.wingzero.tw/article/sn/3809)**<br>
 * 理解世界正在快速前進: 每一代 agent 都會迫使你重新思考什麼是最佳做法 ～**越簡單越好**
 * Context 就是一切: 你應該給 agent 的資訊只有 完成任務所需的最少資訊 ～**移除所有不必要的依賴**
 * 把研究與實作分開: 先建立 research 任務, 選定方案 ～**用新的 agent context 進行實作**
@@ -24,6 +26,8 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 *結論 秘訣其實很簡單： 保持系統簡單，用 rules 和 skills，控制 context*
 
 ---
+## Claws
+
 ### OpenClaw tutorials
 <iframe width="1051" height="591" src="https://www.youtube.com/embed/daXOXSSyudM" title="🚀实测Clawdbot彻底改变我的工作方式！一条命令部署，WhatsApp远程控制电脑，自动编程开发，2026年最强个人AI员工来了！自我进化+无限记忆+浏览器自动化！保姆级教程！" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -59,7 +63,7 @@ sudo ufw status
 [.openclaw/openclaw.json](https://github.com/rkuo2000/GenAI/blob/main/Agent/openclaw.json)<br>
 
 ---
-## Use Cases
+## Openclaw Use Cases
 
 ###  [10 Real OpenClaw Use Cases](https://hellopm.co/openclaw-for-product-managers/#openclaw-use-cases)
 
