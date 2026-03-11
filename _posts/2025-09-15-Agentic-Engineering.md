@@ -32,6 +32,33 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <iframe width="1051" height="591" src="https://www.youtube.com/embed/MjzndFrxQOo" title="500個 OpenClaw 使用範例，複製貼上馬上安裝 | OpenClaw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
+### OpenClaw Installation
+
+#### setup VPN : Tailscale
+```
+curl -fsSL <https://tailscale.com/install.sh> | sh
+sudo tailscale up
+```
+
+#### setup Firewall
+```
+sudo apt install ufw -y
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+sudo ufw allow in on tailscale0 to any port 22
+sudo ufw enable #Type 『y』 to confirm`
+sudo ufw status
+```
+
+#### install [OpenClaw](https://github.com/openclaw/openclaw)
+1. `npm install -g openclaw@latest` <br>
+2. `openclaw onboard --install-daemon` <br>
+3. `openclaw gateway restart` <br>
+4. open browser `http://127.0.0.1:18789` <br>
+
+[.openclaw/openclaw.json](https://github.com/rkuo2000/GenAI/blob/main/Agent/openclaw.json)<br>
+
+---
 ## Use Cases
 
 ###  [10 Real OpenClaw Use Cases](https://hellopm.co/openclaw-for-product-managers/#openclaw-use-cases)
