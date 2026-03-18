@@ -267,6 +267,12 @@ Stable Diffusion in Blender<br>
 **[ComfyUI - Hunyuan3D 2.1](https://docs.comfy.org/tutorials/3d/hunyuan3D-2)** <br>
 ![](https://mintcdn.com/dripart/NmGUk_QSXQXRVtZP/images/tutorial/3d/hunyuan3d-2mv/hunyuan3d_2_non_multiview.jpg?fit=max&auto=format&n=NmGUk_QSXQXRVtZP&q=85&s=33c158fcfb133560674aa56bfdb5087d)
 
+---
+### AnyDepth
+**Paper**: [AnyDepth: Depth Estimation Made Easy](https://arxiv.org/html/2601.02760v1)<br>
+**Github**: [https://github.com/AIGeeksGroup/AnyDepth](https://github.com/AIGeeksGroup/AnyDepth)<br>
+![](https://github.com/AIGeeksGroup/AnyDepth/raw/main/assets/teaser.png)
+
 <br>
 <br>
 
