@@ -264,8 +264,12 @@ Stable Diffusion in Blender<br>
 **Code**: [https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1)<br>
 ![](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1/raw/main/assets/images/pipeline.png)
 
-**[ComfyUI - Hunyuan3D 2.1](https://docs.comfy.org/tutorials/3d/hunyuan3D-2)** <br>
-![](https://mintcdn.com/dripart/NmGUk_QSXQXRVtZP/images/tutorial/3d/hunyuan3d-2mv/hunyuan3d_2_non_multiview.jpg?fit=max&auto=format&n=NmGUk_QSXQXRVtZP&q=85&s=33c158fcfb133560674aa56bfdb5087d)
+---
+### Depth Anything
+**Paper**: [Depth Anything 3: Recovering the Visual Space from Any Views](https://arxiv.org/abs/2511.10647)<br>
+**Github**: [https://github.com/ByteDance-Seed/depth-anything-3](https://github.com/ByteDance-Seed/depth-anything-3)<br>
+![](https://github.com/ByteDance-Seed/Depth-Anything-3/raw/main/assets/images/demo320-2.gif)
+![](https://arxiv.org/html/2511.10647v1/figs/pdfs/pipeline.png)
 
 ---
 ### AnyDepth
