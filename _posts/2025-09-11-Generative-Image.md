@@ -272,6 +272,7 @@ Stable Diffusion in Blender<br>
 **Paper**: [AnyDepth: Depth Estimation Made Easy](https://arxiv.org/html/2601.02760v1)<br>
 **Github**: [https://github.com/AIGeeksGroup/AnyDepth](https://github.com/AIGeeksGroup/AnyDepth)<br>
 ![](https://github.com/AIGeeksGroup/AnyDepth/raw/main/assets/teaser.png)
+![](https://github.com/AIGeeksGroup/AnyDepth/raw/main/assets/anydepth.png)
 
 <br>
 <br>
