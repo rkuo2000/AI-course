@@ -120,6 +120,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <iframe width="690" height="388" src="https://www.youtube.com/embed/sGS1JwnD6Ik" title="實測用Sora 2一天內瘋狂創作，這效果太驚人了！超棒的概念創作工具" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
+### LTX-Video
+**Paper**: [LTX-Video: Realtime Video Latent Diffusion](https://arxiv.org/html/2501.00103v1)<br>
+![](https://arxiv.org/html/2501.00103v1/extracted/6102773/assets/figures/vae_encoder.png)
+![](https://arxiv.org/html/2501.00103v1/extracted/6102773/assets/figures/transformer_architecture.png)
+
+---
 ### Open-Sora
 **Paper**: [Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k](https://arxiv.org/abs/2503.09642)<br>
 **Code**: [https://github.com/hpcaitech/Open-Sora](https://github.com/hpcaitech/Open-Sora)<br>
@@ -205,3 +211,4 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
+
