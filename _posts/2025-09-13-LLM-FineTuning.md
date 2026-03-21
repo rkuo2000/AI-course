@@ -133,6 +133,17 @@ This dataset comes with actual human submissions, which we do not need. All we u
 ### RLVR
 **Paper**: [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/html/2506.14245v2)<br>
 
+---
+### [Nemotron-Cascade 2](https://research.nvidia.com/labs/nemotron/nemotron-cascade-2/)
+**Paper**: [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](https://arxiv.org/abs/2603.19220)<br>
+![](https://research.nvidia.com/labs/nemotron/images/nemotron-cascade-2/pipeline.png)
+* **Cascade RL Framework**<br>
+* **Multi-domain On-policy Distillation**<br>
+
+**Data**:<br>
+* [Nemotron-Cascade-2 SFT Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data): the data used for the SFT stage of Nemotron-Cascade-2 training pipeline.
+* [Nemotron-Cascade-2 RL Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-RL-data): the data used for our Nemotron-Cascade 2 RL training pipeline.
+  
 <br>
 <br>
 
