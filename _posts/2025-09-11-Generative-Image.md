@@ -281,7 +281,7 @@ Stable Diffusion in Blender<br>
 ---
 ### SAM 3D
 **Code**: [https://github.com/facebookresearch/sam-3d-objects](https://github.com/facebookresearch/sam-3d-objects)<br>
-![](https://github.com/facebookresearch/sam-3d-objects/raw/main/notebook/images/shutterstock_stylish_kidsroom_1640806567/image.png)
+![](https://github.com/facebookresearch/sam-3d-objects/raw/main/doc/kidsroom_transparent.gif)
 
 <br>
 <br>
