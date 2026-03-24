@@ -278,7 +278,13 @@ Stable Diffusion in Blender<br>
 ![](https://github.com/AIGeeksGroup/AnyDepth/raw/main/assets/teaser.png)
 ![](https://github.com/AIGeeksGroup/AnyDepth/raw/main/assets/anydepth.png)
 
+---
+### SAM 3D
+**Code**: [https://github.com/facebookresearch/sam-3d-objects](https://github.com/facebookresearch/sam-3d-objects)<br>
+![](https://github.com/facebookresearch/sam-3d-objects/raw/main/notebook/images/shutterstock_stylish_kidsroom_1640806567/image.png)
+
 <br>
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
+
