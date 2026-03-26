@@ -68,6 +68,13 @@ Various applications in autonomous driving, medical segmentation, remote sensing
   </tr>
 </table>
 
+---
+### MatAnyone 2
+**Paper**: [MatAnyone 2: Scaling Video Matting via a Learned Quality Evaluator](https://arxiv.org/abs/2512.11782)<br>
+**Github**: [https://github.com/pq-yang/MatAnyone2](https://github.com/pq-yang/MatAnyone2)<br>
+![](https://github.com/pq-yang/MatAnyone2/raw/main/assets/teaser.jpg)
+
+---
 ## Semantic Segmentation (意義分割）
 
 ### FCN - Fully Convolutional Networks
