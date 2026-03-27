@@ -88,6 +88,10 @@ This dataset comes with actual human submissions, which we do not need. All we u
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/Logit_Threshold_Empowerment.png?raw=true)
 
 ---
+### TurboQuant
+**Paper**: [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](https://arxiv.org/abs/2504.19874)<br>
+
+---
 ## Intelligence Benchmarks
 
 ### [OpenAI Evals](https://evals.openai.com/)
