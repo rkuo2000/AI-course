@@ -45,29 +45,10 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tensor Cores及FP4精度支援的Nvidia Blackwell GPU，使DGX具備128GB記憶體，並支援最高1000 TOPS<br>
 <img width="50%" height="50%" src="https://img.technews.tw/wp-content/uploads/2025/01/07130136/NVIDIA-Project-Digits-3.png">
 
-#### [ASUS Ascent GX10](https://www.asus.com/tw/networking-iot-servers/desktop-ai-supercomputer/ultra-small-ai-supercomputers/asus-ascent-gx10/)<br>
-<p>
-<img width="30%" height="30%" src="https://www.dreamcore.com.sg/wp-content/uploads/01-ASUS_Ascent_GX10.MAIN_-1440x1440.jpg">
-<img src="https://i0.wp.com/linuxgizmos.com/files/ASUS-Ascent-GX10-Peripherals.jpg?resize=450%2C209&ssl=1">
-</p>
-
-#### [GIGABYTE AI TOP ATOM](https://www.gigabyte.com/tw/AI-TOP-PC/GIGABYTE-AI-TOP-ATOM)
-<img width="50%" height="50%" src="https://img.unikoshardware.com/wp-content/uploads/2025/10/GIGABYTE-AI-TOP-ATOM.webp">
-
 ---
 ### [Geforce RTX 50 series](https://www.nvidia.com/zh-tw/geforce/graphics-cards/50-series/)<br>
 ![](https://wp-cdn.pugetsystems.com/2025/01/Screenshot-2025-01-16-094012.png)
 ![](https://static.gigabyte.com/StaticFile/Image/Global/2c9319cda29065cc30ac66c4838790a6/Product/43906/png/300)
-
----
-### [AMD Instinct™ MI355X GPUs](https://www.amd.com/en/products/accelerators/instinct/mi350/mi355x.html)
-Built on the 4th Gen AMD CDNA™ architecture, AMD Instinct™ MI355X GPUs deliver leadership AI and HPC performance enabling high density infrastructures with 288GB HBM3E memory, 8TB/s bandwidth, and expanded FP6 and FP4 datatype support.
-
-#### [AMD 7 GHz Zen 6 Clock Speed Target “Confirmed” – Leaker Claims](https://overclock3d.net/news/cpu_mainboard/amd-7-ghz-zen-6-clock-speed-target-confirmed-leaker-claims/)
-
----
-### Intel Gaudi 3
-#### [Intel® Gaudi® 3 AI Accelerators on IBM Cloud](https://www.ibm.com/products/gpu-ai-accelerator/intel-gaudi3)
 
 ---
 ### [Groq LPU](https://wow.groq.com/lpu-inference-engine/)
@@ -188,6 +169,7 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 
 ---
 ## Agent Harewares comparison
+[NVIDIA® Jetson Comparison / Module Specification from Jetson Orin Series to Jetson AGX Thor Series](https://www.forecr.io/blogs/embedded-systems/nvidia-jetson-comparison)<br>
 
 ### RPi5 vs RPi4
 <table>
