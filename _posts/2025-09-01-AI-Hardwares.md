@@ -376,7 +376,7 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 </table>
 
 ---
-###🛸 NVIDIA Jetson Thor vs. 🌌 NVIDIA DGX Blackwell (GB200)
+### 🛸 NVIDIA Jetson Thor vs. 🌌 NVIDIA DGX Blackwell (GB200)
 
 <table>
   <thead>
