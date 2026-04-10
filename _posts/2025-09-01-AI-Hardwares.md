@@ -149,8 +149,6 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 
 ---
 ### Infineon [PSOC Edge](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm)
-![](https://www.mouser.tw/images/marketingid/2025/img/122911023.png)
-
 * Cortex-M55 + Helium DSP @500MHz
 * Cortex-M33 @200MHz
 * NNLite + Ethos™ U55-128 (4 TOPS)
@@ -158,12 +156,11 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 * 2.5D GPU, MIPI-DSI/DBI
 * USB, 10/100 Ethernet, CAN, SPI, UART, I2C
 * Security: EPC/PSA 2 and 4
-  
-![](https://www.mouser.tw/images/marketingid/2023/microsites/158771261/2025-09-11_16-34-32.png)
 
 ---
 ### Realtek [AMB82-MINI](https://www.amebaiot.com/en/amebapro2/#rtk_amb82_mini)
-<p><img src="https://www.amebaiot.com/wp-content/uploads/2023/03/amb82_mini.png" width="50%" height="50%"></p>
+<p><img src="https://www.amebaiot.com/wp-content/uploads/2023/03/amb82_mini.png" width="50%" height="50%"></p><br>
+
 * MCU
   - Part Number: RTL8735B
   - 32-bit Arm v8M, up to 500MHz
@@ -179,7 +176,7 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
   
 ---
 ### Nuvoton [M55M1](https://www.nuvoton.com/ai/product/)
-* Cortex-M55 + Ethos U55 @220MHz  (0.11 TOPS)
+#### Cortex-M55 + Ethos U55 @220MHz  (0.11 TOPS)
 ![](https://www.nuvoton.com/export/sites/nuvoton/ai/.galleries/product/NuMaker-M55M1.png)
 
 ---
