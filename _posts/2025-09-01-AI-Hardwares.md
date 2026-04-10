@@ -120,8 +120,6 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 
 ---
 ### [STMicro STM32N6 series](https://www.edomtech.com/zh-tw/product-detail/STM32N6-high-performance-microcontroller/)
-![](https://www.st.com/content/dam/category-pages/stm32n6x7-catalog-item/stm32n6x7-ai-portfolio.jpg)
-
 #### 效能
 * 1280 DMIPS / 3360 CoreMark
 * Helium（M-Profile 向量延伸，MVE）：新增約 150 條指令，專為高速執行進階 DSP 與機器學習程式碼而設計
