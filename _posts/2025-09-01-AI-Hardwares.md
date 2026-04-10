@@ -351,6 +351,61 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
   </tr>
 </table>
 
+---
+###🛸 NVIDIA Jetson Thor vs. 🌌 NVIDIA DGX Blackwell (GB200)
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Feature</th>
+      <th style="text-align: left">NVIDIA Jetson Thor</th>
+      <th style="text-align: left">NVIDIA DGX GB200 (Blackwell)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><strong>Primary Target</strong></td>
+      <td style="text-align: left">Humanoid Robots &amp; Autonomous Machines</td>
+      <td style="text-align: left">LLM Training &amp; Generative AI Inference</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Architecture</strong></td>
+      <td style="text-align: left">Blackwell GPU + Grace CPU</td>
+      <td style="text-align: left">Blackwell GPU + Grace CPU</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Form Factor</strong></td>
+      <td style="text-align: left">System-on-Module (Edge)</td>
+      <td style="text-align: left">Full Rack / Data Center Node</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>AI Performance</strong></td>
+      <td style="text-align: left">~800 TFLOPS (FP8)</td>
+      <td style="text-align: left">Up to 1.4 Exaflops (FP4 in NVL72)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Memory Architecture</strong></td>
+      <td style="text-align: left">Unified LPDDR5X (High Bandwidth)</td>
+      <td style="text-align: left">HBM3e (High Bandwidth Memory)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Power Consumption</strong></td>
+      <td style="text-align: left">~100W - 200W (Estimated)</td>
+      <td style="text-align: left">Up to 120kW per Rack</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Cooling</strong></td>
+      <td style="text-align: left">Air or Passive (Integrated)</td>
+      <td style="text-align: left">Liquid Cooled</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><strong>Key Interface</strong></td>
+      <td style="text-align: left">MIPI, GMSL, Ethernet (Robotics I/O)</td>
+      <td style="text-align: left">5th Gen NVLink (1.8TB/s per GPU)</td>
+    </tr>
+  </tbody>
+</table>
+
 <br>
 <br>
 
