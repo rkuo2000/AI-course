@@ -117,13 +117,37 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 * SRAM: 8MB Total On-Chip SRAM (6MB General Purpose + 2MB AI SRAM)
 * NPU : 0.6TOPS
 * APU : Supports Microphone Array (up to 8 microphones)
-* 
+
 ---
-### STMicro STM32N6
-<p><img width="50%" height="50%" src="https://blog.st.com/wp-content/uploads/ST36104_STM32N6570-DK-with-camera-perspective-with-nappeCV-1-copy.jpg"></p>
-* Cortex-M55 @800MHz
-* Neural-ART1 (1~5 TOPS)
-* Neural-ART2 (20~40 TOPS)
+### [STMicro STM32N6 series](https://www.edomtech.com/zh-tw/product-detail/STM32N6-high-performance-microcontroller/)
+![](https://www.st.com/content/dam/category-pages/stm32n6x7-catalog-item/stm32n6x7-ai-portfolio.jpg)
+
+#### 效能
+* 1280 DMIPS / 3360 CoreMark
+* Helium（M-Profile 向量延伸，MVE）：新增約 150 條指令，專為高速執行進階 DSP 與機器學習程式碼而設計
+* ST Neural-ART Accelerator™：
+* 針對高效能、低功耗 AI 演算法最佳化
+* 運作時脈 1 GHz，提供 600 GOPS，平均能源效率達 3 TOPS/W
+#### 記憶體
+* 無 Flash 架構設計
+* 4.2 MB 連續式內嵌 RAM
+* 高速序列介面支援外部記憶體：以低腳位數、具成本效益的方式，透過 8 或 16 位元介面存取外部記憶體
+* 彈性記憶體控制器（PSRAM、SDRAM、NOR、NAND）
+#### 進階圖形與多媒體功能
+* Chrom-ART Accelerator：2D 圖形加速
+* Chrom-GRC：適用於非方形顯示器的圖形資源裁切器
+* NeoChrom™ Accelerator：
+* 2.5D 圖形加速，支援進階繪圖功能
+* 透視校正與材質貼圖
+* H.264 編碼器：720p / 1080p @ 30 fps
+#### JPEG 硬體加速器：
+* JPEG 壓縮與解壓縮
+* 高畫質 Motion JPEG 影片播放
+#### 專用影像訊號處理器（ISP）：
+* 支援 500 萬畫素攝影機 @ 30 fps
+* 可由同一攝影機輸入影像產生 3 種不同輸出影像
+* 多種攝影機介面：MIPI CSI-2（2 lanes）、16 位元平行介面
+* STM32-ISP-IQTune 工具，用於管理 ISP 調校
 
 ---
 ### Infineon [PSOC Edge](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm)
