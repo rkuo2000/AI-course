@@ -222,6 +222,10 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 #### Paper: [Granite-speech: open-source speech-aware LLMs with strong English ASR capabilities](https://arxiv.org/abs/2505.08699)
 ![](https://arxiv.org/html/2505.08699v2/x1.png)
 
+---
+### [GPT-Realtime-2](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/)
+![](https://images.ctfassets.net/kftzwdyauwt9/5g3jmKsvFQRQqiQxY1spLs/b5f6f2a97ddc5e124f365e7ab4525e93/OAI_GPT-Realtime-2_Three_ways_to_build_with_voice_AI_desktop-dark.svg?w=1920&q=80)
+
 <br>
 <br>
 
