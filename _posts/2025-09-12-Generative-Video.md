@@ -4,7 +4,7 @@ title: Generative Video
 date: 2025-09-12 08:00:00 +0800 # 發表日期和時間 (請根據您當前的時區調整 +0800 代表 UTC+8)
 categories: [Lecture] # 文章分類，您可以自訂
 tags: [AIGC] # 文章標籤，您可以自訂
-description: Image-to-Video, Text-to-Video, Audio-to-Video
+description: Image-to-Video, Text-to-Video, World-Model
 mathjax: false # 如果這篇文章不需要顯示數學公式，請設false
 comments: false # 如果這篇文章需要啟用評論，請設為 true
 
@@ -139,16 +139,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 #### [ComfyUI + WAN2.2](https://docs.comfy.org/tutorials/video/wan/wan2_2)
 
----
-### Wan-Animate
-**HuggingFace:** [Wan-AI/Wan2.2-Animate-14B](https://huggingface.co/Wan-AI/Wan2.2-Animate-14B)<br>
-**Arxiv**: [Wan-Animate: Unified Character Animation and Replacement with Holistic Replication](https://arxiv.org/abs/2509.14055)<br>
-**Demo**: [https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate](https://huggingface.co/spaces/Wan-AI/Wan2.2-Animate)<br>
-![](https://humanaigc.github.io/wan-animate/content/aa/arch.png)
-
----
-## Audio-to-Video
-
 ### Multi-Talk
 **Paper**: [Let Them Talk: Audio-Driven Multi-Person Conversational Video Generation](https://arxiv.org/html/2505.22647v1)<br>
 **Code**: [https://github.com/MeiGen-AI/MultiTalk](https://github.com/MeiGen-AI/MultiTalk)<br>
@@ -156,25 +146,29 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
 ### InfiniteTalk
-**Paper**: [InfiniteTalk: Audio-driven Video Generation for Sparse-Frame Video Dubbing](https://arxiv.org/abs/2508.14033)<br>
-**Code**: [https://github.com/MeiGen-AI/InfiniteTalk](https://github.com/MeiGen-AI/InfiniteTalk)<br>
+#### Paper: [InfiniteTalk: Audio-driven Video Generation for Sparse-Frame Video Dubbing](https://arxiv.org/abs/2508.14033)
+#### Code: [https://github.com/MeiGen-AI/InfiniteTalk](https://github.com/MeiGen-AI/InfiniteTalk)
 ![](https://github.com/MeiGen-AI/InfiniteTalk/raw/main/assets/pipeline.png)
 
 ---
 ### [Wan-S2V](https://humanaigc.github.io/wan-s2v-webpage/)
-**HuggingFace**: [Wan-AI/Wan2.2-S2V-14B](https://huggingface.co/Wan-AI/Wan2.2-S2V-14B)<br>
-**Arxiv**: [Wan-S2V: Audio-Driven Cinematic Video Generation](https://arxiv.org/abs/2508.18621)<br>
-**Demo**: [https://huggingface.co/spaces/Wan-AI/Wan2.2-S2V](https://huggingface.co/spaces/Wan-AI/Wan2.2-S2V)<br>
+#### HuggingFace: [Wan-AI/Wan2.2-S2V-14B](https://huggingface.co/Wan-AI/Wan2.2-S2V-14B)
+#### Paper: [Wan-S2V: Audio-Driven Cinematic Video Generation](https://arxiv.org/abs/2508.18621)
 
 ---
 ### UniVerse-1
-**Paper**: [UniVerse-1: Unified Audio-Video Generation via Stitching of Experts](https://www.arxiv.org/abs/2509.06155)<br>
+#### Paper: [UniVerse-1: Unified Audio-Video Generation via Stitching of Experts](https://www.arxiv.org/abs/2509.06155)
+#### Code: [https://github.com/Dorniwang/UniVerse-1-code/](https://github.com/Dorniwang/UniVerse-1-code/)
 ![](https://arxiv.org/html/2509.06155v1/x1.png)
-**Code**: [https://github.com/Dorniwang/UniVerse-1-code/](https://github.com/Dorniwang/UniVerse-1-code/)<br>
+
+---
+### Wan-Animate
+#### Paper: [Wan-Animate: Unified Character Animation and Replacement with Holistic Replication](https://arxiv.org/abs/2509.14055)
+![](https://humanaigc.github.io/wan-animate/content/aa/arch.png)
 
 ---
 ### [VEO 3](https://aistudio.google.com/models/veo-3) 
-**Paper**: [Video models are zero-shot learners and reasoners](https://arxiv.org/html/2509.20328v2)<br>
+#### Paper: [Video models are zero-shot learners and reasoners](https://arxiv.org/html/2509.20328v2)
 <iframe width="790" height="444" src="https://www.youtube.com/embed/orcRl82lGLc" title="Veo 3.1 in the Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
@@ -183,8 +177,8 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
 ### FlashVSR
-**Paper**: [FlashVSR: Towards Real-Time Diffusion-Based Streaming Video Super-Resolution](https://arxiv.org/abs/2510.12747)<br>
-**Code**: [https://github.com/OpenImagingLab/FlashVSR](https://github.com/OpenImagingLab/FlashVSR)<br>
+#### Paper: [FlashVSR: Towards Real-Time Diffusion-Based Streaming Video Super-Resolution](https://arxiv.org/abs/2510.12747)
+#### Code: [https://github.com/OpenImagingLab/FlashVSR](https://github.com/OpenImagingLab/FlashVSR)
 ![](https://github.com/OpenImagingLab/FlashVSR/raw/main/examples/WanVSR/assets/flowchart.jpg)
 
 ---
@@ -206,6 +200,14 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 * 音訊品質同步提升，是目前開源模型中少數支援音畫同時生成的本地端模型。新型 vocoder 降低背景雜音並強化音畫同步，解決過往 AI 生成的影片常見的音訊延遲或不同步問題。大家可以看看官方所釋出的宣傳影片，效果相當驚艷（以開源模型來說）
   
 <iframe width="750" height="422" src="https://www.youtube.com/embed/o-7us-BR_gQ" title="LTX-2.3 Is Here: Sharper Detail, Native Portrait, Cleaner Audio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+## World Models
+
+### SANA-WM
+#### Paper: [SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer](https://arxiv.org/abs/2605.15178)
+#### Code: [https://github.com/NVlabs/Sana](https://github.com/NVlabs/Sana)
+![](https://arxiv.org/html/2605.15178v1/x2.png)
 
 <br>
 <br>
