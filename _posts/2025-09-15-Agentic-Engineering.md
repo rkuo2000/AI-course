@@ -26,6 +26,10 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 *結論 秘訣其實很簡單： 保持系統簡單，用 rules 和 skills，控制 context*
 
 ---
+### Claude Opus 4.8
+<iframe width="804" height="452" src="https://www.youtube.com/embed/5HVPeux24WU" title="Embrace long-running tasks with Opus 4.8 and Claude Code" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 ## Claws
 
 ### OpenClaw tutorials
