@@ -64,6 +64,8 @@ Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tenso
 ### [Nvidia Jetson](https://developer.nvidia.com/embedded/jetson-modules)
 ![](https://developer.nvidia.com/sites/default/files/akamai/embedded/images/jetson-agx-orin-family-4c25-p@2x.jpg)
 
+[NVIDIA® Jetson Comparison / Module Specification from Jetson Orin Series to Jetson AGX Thor Series](https://www.forecr.io/blogs/embedded-systems/nvidia-jetson-comparison)<br>
+
 ---
 ### Jetson Thor
 [Introducing NVIDIA Jetson Thor, the Ultimate Platform for Physical AI](https://developer.nvidia.com/blog/introducing-nvidia-jetson-thor-the-ultimate-platform-for-physical-ai/)<br>
@@ -188,7 +190,6 @@ Kinara Ara-2 AI processor (40 TOPS)<br>
 
 ---
 ## Agent Harewares comparison
-[NVIDIA® Jetson Comparison / Module Specification from Jetson Orin Series to Jetson AGX Thor Series](https://www.forecr.io/blogs/embedded-systems/nvidia-jetson-comparison)<br>
 
 | Feature |	Pi-5 |	Mini PC (N100) |	Jetson-Super-Nano |	Mac-Mini M4 |
 |---------|------|-----------------|--------------------|-------------|
