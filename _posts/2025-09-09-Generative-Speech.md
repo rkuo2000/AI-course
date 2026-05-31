@@ -223,6 +223,10 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 ![](https://arxiv.org/html/2505.08699v2/x1.png)
 
 ---
+### [Breeze 3](https://www.mediatek.com/zh-tw/tek-talk-blogs/mediatek-research-breeze-3)
+#### Paper: [Breeze Taigi: Benchmarks and Models for Taiwanese Hokkien Speech Recognition and Synthesis](https://arxiv.org/abs/2603.19259)
+
+---
 ### [GPT-Realtime-2](https://openai.com/index/advancing-voice-intelligence-with-new-models-in-the-api/)
 OpenAI發布三款可透過Realtime API使用的新音訊模型，分別是GPT-Realtime-2, GPT-Realtime-Translate與GPT-Realtime-Whisper<br>
 ![](https://images.ctfassets.net/kftzwdyauwt9/5g3jmKsvFQRQqiQxY1spLs/b5f6f2a97ddc5e124f365e7ab4525e93/OAI_GPT-Realtime-2_Three_ways_to_build_with_voice_AI_desktop-dark.svg?w=1920&q=80)
