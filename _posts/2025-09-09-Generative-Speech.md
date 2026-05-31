@@ -223,7 +223,8 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 ![](https://arxiv.org/html/2505.08699v2/x1.png)
 
 ---
-### [Breeze 3](https://www.mediatek.com/zh-tw/tek-talk-blogs/mediatek-research-breeze-3)
+### [Breeze-ASR-26](https://huggingface.co/MediaTek-Research/Breeze-ASR-26)
+#### Blog: [MediaTek Research Breeze 3](https://www.mediatek.com/zh-tw/tek-talk-blogs/mediatek-research-breeze-3)
 #### Paper: [Breeze Taigi: Benchmarks and Models for Taiwanese Hokkien Speech Recognition and Synthesis](https://arxiv.org/abs/2603.19259)
 
 ---
