@@ -41,18 +41,23 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://www.fibermall.com/blog/wp-content/uploads/2024/04/GB200-uses-the-full-B200-chip-1024x338.png)
 
 ---
+### [Groq LPU](https://wow.groq.com/lpu-inference-engine/)
+<p><img width="80%" height="80%" src="https://imageio.forbes.com/specials-images/imageserve/6037f9e640b8dd29ddc0607d/The-Groq-node-has-four-chips-per-card--similar-to-most-AI-startups-/960x0.png"></p>
+
+---
 #### [DGX-Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
 Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tensor Cores及FP4精度支援的Nvidia Blackwell GPU，使DGX具備128GB記憶體，並支援最高1000 TOPS<br>
 <img width="50%" height="50%" src="https://img.technews.tw/wp-content/uploads/2025/01/07130136/NVIDIA-Project-Digits-3.png">
 
 ---
+### RTX Spark
+![](https://i.pcmag.com/imagery/articles/011fPR30kjbZAfV4vrdQVxI-3.fit_lim.size_768x.jpg)
+![](https://i.pcmag.com/imagery/articles/011fPR30kjbZAfV4vrdQVxI-10.fit_lim.size_768x.png)
+
+---
 ### [Geforce RTX 50 series](https://www.nvidia.com/zh-tw/geforce/graphics-cards/50-series/)<br>
 ![](https://wp-cdn.pugetsystems.com/2025/01/Screenshot-2025-01-16-094012.png)
 ![](https://static.gigabyte.com/StaticFile/Image/Global/2c9319cda29065cc30ac66c4838790a6/Product/43906/png/300)
-
----
-### [Groq LPU](https://wow.groq.com/lpu-inference-engine/)
-<p><img width="80%" height="80%" src="https://imageio.forbes.com/specials-images/imageserve/6037f9e640b8dd29ddc0607d/The-Groq-node-has-four-chips-per-card--similar-to-most-AI-startups-/960x0.png"></p>
 
 ---
 ### [Google TPU v6e](https://cloud.google.com/tpu/docs/v6e?hl=zh-tw)
@@ -86,8 +91,7 @@ Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tenso
 
 ---
 ### MediaTek
-[天璣9500](https://www.mediatek.tw/products/smartphones-2/mediatek-dimensity-9500)<br>
-[天璣9400+](https://www.mediatek.tw/products/smartphones-2/mediatek-dimensity-9400plus)<br>
+[RTX Spark](https://www.mediatek.com/products/personal-computing/nvidia-rtx-spark)<br>
 
 ---
 ### [Kinara](https://kinara.ai/)
