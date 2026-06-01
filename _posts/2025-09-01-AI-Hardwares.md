@@ -11,10 +11,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ---
 ## AI chips
 
-### [Top10 AI Chip Makers](https://research.aimultiple.com/ai-chip-makers/)
-![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/Top10_AI_Chip_Makers.png?raw=true)
-
----
 ### Nvidia
 
 #### [NVIDIA GTC 2026 Maps Out a New Blueprint: Rubin, Feynman, and CPO Emerge as Three Key Pillars](https://eii.nat.gov.tw/ipoforum/en/news/85)
