@@ -37,9 +37,11 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://eii.nat.gov.tw/ipoforum/backend/storage/images/2734ea00-b650-4e9b-8dd0-bdfbe3d44cc3.jpg)
 
 #### [Vera Rubin](https://www.nvidia.com/en-us/data-center/technologies/rubin/)
+![](https://image.nextplatform.com/215971.webp?imageId=215971&width=960&height=492&format=jpg)
+![](https://www.ithome.com.tw/sites/default/files/field/image/0106-nvidia_rubin_platform_chips-960.jpg)
 
-#### [Groq LPU](https://wow.groq.com/lpu-inference-engine/)
-<p><img width="80%" height="80%" src="https://imageio.forbes.com/specials-images/imageserve/6037f9e640b8dd29ddc0607d/The-Groq-node-has-four-chips-per-card--similar-to-most-AI-startups-/960x0.png"></p>
+#### Groq-3 LPU
+![](https://developer-blogs.nvidia.com/wp-content/uploads/2026/03/Groq-3-Architecture.webp)
 
 #### [DGX-Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
 Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tensor Cores及FP4精度支援的Nvidia Blackwell GPU，使DGX具備128GB記憶體，並支援最高1000 TOPS<br>
