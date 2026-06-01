@@ -37,8 +37,21 @@ Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tenso
 ![](https://static.gigabyte.com/StaticFile/Image/Global/2c9319cda29065cc30ac66c4838790a6/Product/43906/png/300)
 
 ---
-### [Google TPU v6e](https://cloud.google.com/tpu/docs/v6e?hl=zh-tw)
-![](https://cloud.google.com/static/tpu/docs/images/v6e-tpu-host.png?hl=zh-tw)
+### [Google TPU-8](https://cloud.google.com/blog/products/compute/tpu-8t-and-tpu-8i-technical-deep-dive)
+#### TPU 8t ASIC block diagram
+![](https://storage.googleapis.com/gweb-cloudblog-publish/images/1_v4.max-1600x1600.png)
+
+#### TPU 8i ASIC block diagram
+![](https://storage.googleapis.com/gweb-cloudblog-publish/images/4_v1_nUZDsJM.max-1800x1800.png)
+
+---
+### [AWS Neuron](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/about-neuron/index.html)
+
+#### [Inferential2](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/about-neuron/arch/neuron-hardware/inferentia2.html)
+![](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/_images/inferentia2.png)
+
+#### [Trainium3](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/about-neuron/arch/neuron-hardware/trainium3.html)
+![](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/_images/neuroncore-v4-overview.png)
 
 ---
 ### Tesla
