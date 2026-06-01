@@ -32,25 +32,20 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
 ### Nvidia
-![](https://miro.medium.com/v2/resize:fit:720/format:webp/0*gPajGtDQ-yPGgyFj.gif)
 
-#### [Nvidia Draws GPU System Roadmap Out To 2028](https://www.nextplatform.com/2025/03/19/nvidia-draws-gpu-system-roadmap-out-to-2028/)
-![](https://www.nextplatform.com/wp-content/uploads/2025/03/nvidia-roadmap-2025-to-2028.jpg)
+#### [NVIDIA GTC 2026 Maps Out a New Blueprint: Rubin, Feynman, and CPO Emerge as Three Key Pillars](https://eii.nat.gov.tw/ipoforum/en/news/85)
+![](https://eii.nat.gov.tw/ipoforum/backend/storage/images/2734ea00-b650-4e9b-8dd0-bdfbe3d44cc3.jpg)
 
-#### [Analysis of NVIDIA’s Latest Hardware: B100/B200/GH200/NVL72/SuperPod](https://www.fibermall.com/blog/nvidia-b100-b200-gh200-nvl72-superpod.htm)
-![](https://www.fibermall.com/blog/wp-content/uploads/2024/04/GB200-uses-the-full-B200-chip-1024x338.png)
+#### [Vera Rubin](https://www.nvidia.com/en-us/data-center/technologies/rubin/)
 
----
-### [Groq LPU](https://wow.groq.com/lpu-inference-engine/)
+#### [Groq LPU](https://wow.groq.com/lpu-inference-engine/)
 <p><img width="80%" height="80%" src="https://imageio.forbes.com/specials-images/imageserve/6037f9e640b8dd29ddc0607d/The-Groq-node-has-four-chips-per-card--similar-to-most-AI-startups-/960x0.png"></p>
 
----
 #### [DGX-Spark](https://www.nvidia.com/en-us/products/workstations/dgx-spark/)
 Nvidia GB10 Grace Blackwell Superchip單系統晶片。GB10包含具第5代Tensor Cores及FP4精度支援的Nvidia Blackwell GPU，使DGX具備128GB記憶體，並支援最高1000 TOPS<br>
 <img width="50%" height="50%" src="https://img.technews.tw/wp-content/uploads/2025/01/07130136/NVIDIA-Project-Digits-3.png">
 
----
-### RTX Spark
+#### [RTX Spark](https://www.pcmag.com/news/nvidia-rtx-spark-reinvent-pc-computex-2026)
 ![](https://i.pcmag.com/imagery/articles/011fPR30kjbZAfV4vrdQVxI-3.fit_lim.size_768x.jpg)
 ![](https://i.pcmag.com/imagery/articles/011fPR30kjbZAfV4vrdQVxI-10.fit_lim.size_768x.png)
 
