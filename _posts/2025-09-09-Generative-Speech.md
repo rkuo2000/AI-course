@@ -111,6 +111,29 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://arxiv.org/html/2601.15621v1/figures/Qwen3TTS_1104.png)
 
 ---
+### [Edge-TTS](https://github.com/rany2/edge-tts)
+`$ edge-tts --text "Hello, world!" --write-media hello.mp3 --write-subtitles hello.srt`<br>
+```
+$ edge-tts --list-voices
+Name                               Gender    ContentCategories      VoicePersonalities
+---------------------------------  --------  ---------------------  --------------------------------------
+af-ZA-AdriNeural                   Female    General                Friendly, Positive
+af-ZA-WillemNeural                 Male      General                Friendly, Positive
+am-ET-AmehaNeural                  Male      General                Friendly, Positive
+am-ET-MekdesNeural                 Female    General                Friendly, Positive
+ar-AE-FatimaNeural                 Female    General                Friendly, Positive
+ar-AE-HamdanNeural                 Male      General                Friendly, Positive
+ar-BH-AliNeural                    Male      General                Friendly, Positive
+ar-BH-LailaNeural                  Female    General                Friendly, Positive
+ar-DZ-AminaNeural                  Female    General                Friendly, Positive
+ar-DZ-IsmaelNeural                 Male      General                Friendly, Positive
+ar-EG-SalmaNeural                  Female    General                Friendly, Positive
+...
+
+$ edge-tts --voice ar-EG-SalmaNeural --text "مرحبا كيف حالك؟" --write-media hello_in_arabic.mp3 --write-subtitles hello_in_arabic.srt
+```
+
+---
 ### PersonaPlex
 #### Paper: [PersonaPlex: Voice and Role Control for Full Duplex Conversational Speech Models](https://arxiv.org/abs/2602.06053)
 #### Blog: [NVIDIA PersonaPlex：開源全雙工語音新紀元，打造零停頓的真正 AI 對話](https://tools.wingzero.tw/article/sn/3777)
