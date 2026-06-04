@@ -48,7 +48,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### TPU 8i ASIC block diagram
 ![](https://storage.googleapis.com/gweb-cloudblog-publish/images/4_v1_nUZDsJM.max-1800x1800.png)
 
----
+--- KL730 AI Soc
 ### [AWS Neuron](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/about-neuron/index.html)
 
 #### [Inferential2](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/about-neuron/arch/neuron-hardware/inferentia2.html)
@@ -101,8 +101,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 * Hailo-8L HAT (13 TOPs)
 
 ---
-### [耐能 Kneron](https://www.kneron.com/tw/page/soc/)
-#### KL730 AI Soc
+### 耐能 Kneron [KL730 AI Soc](https://www.kneron.com/tw/page/soc/)
 * Quad ARM® Cortex™ A55 CPU,  高達3.6eTOPS@int8 / 7.2eTops@int4
 * 內建DSP，可以加速AI模型後處理，語音處理
 
