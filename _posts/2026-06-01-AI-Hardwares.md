@@ -48,7 +48,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### TPU 8i ASIC block diagram
 ![](https://storage.googleapis.com/gweb-cloudblog-publish/images/4_v1_nUZDsJM.max-1800x1800.png)
 
---- KL730 AI Soc
 ### [AWS Neuron](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/about-neuron/index.html)
 
 #### [Inferential2](https://awsdocs-neuron.readthedocs-hosted.com/en/latest/about-neuron/arch/neuron-hardware/inferentia2.html)
