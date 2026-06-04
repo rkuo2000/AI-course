@@ -90,8 +90,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://developer-blogs.nvidia.com/wp-content/uploads/2025/08/humanoid-robot-hardware-software-png.webp)
 
 ---
-### [NVIDIA Jetson Orin Nano Developer Kit Gets a “Super” Boost](https://developer.nvidia.com/blog/nvidia-jetson-orin-nano-developer-kit-gets-a-super-boost/)
-**[NVIDIA® Jetson Orin Nano™ Super 入門套件包](https://www.icshop.com.tw/products/368030200911)**<br>
+### NVIDIA® [Jetson Orin Nano™ Super 入門套件包](https://www.icshop.com.tw/products/368030200911)
 ![](https://shoplineimg.com/6486dbe2afaddb00694ea79f/689d830ae7138100146a8ab2/800x.webp?source_format=jpg)
 
 ---
@@ -124,12 +123,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <p><img src="https://www.amebaiot.com/wp-content/uploads/2023/03/amb82_mini.png" width="50%" height="50%"></p><br>
 * RTL8735B: 32-bit ARM v8M, @500MHz, 768KB ROM, 512KB RAM, 16MB Flash, DDR2/DDR3L up to 128MB, NN Engine (0.4 TOPs)
 * 802.11 a/b/g/n Wi-Fi 2.4GHz/5GHz, BLE 5.1
-
----
-### Himax [WiseEye 2 AI Processor (WE2)](https://himaxwiseeyeplus.github.io/)
-* Cortex-M55 + Ethos-U55 @400MHz (0.05 TOPS)
-* Internal 2MB SRAMs & 512KB TCM, External 100MHz QSPI Flash, Max 16MB(128Mb)
-![](https://hackster.imgix.net/uploads/attachments/1671436/image_8vGCB6xEjo.png?auto=compress%2Cformat&w=830&h=466.875&fit=min&dpr=1)
 
 ---
 ## Agent Harewares comparison
