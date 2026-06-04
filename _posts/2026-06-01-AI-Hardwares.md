@@ -94,7 +94,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
 ### 樹莓派 RPi-5
-<p><img width="50%" height="50%" src="https://i.gzn.jp/img/2024/06/04/raspberry-pi-ai-kit-npu-m2/00.jpg"></p>
+<p><img width="50%" height="50%" src="https://i.gzn.jp/img/2024/06/04/raspberry-pi-ai-kit-npu-m2/00.jpg"></p><br>
 * Broadcom BCM2712 2.4GHz quad-core 64-bit ARM Cortex-A76 CPU, with Cryptographic Extension, 512KB per-core L2 caches, and a 2MB shared L3 cache
 * Hailo-8L HAT (13 TOPs)
 
