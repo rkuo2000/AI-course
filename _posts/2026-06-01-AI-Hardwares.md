@@ -145,7 +145,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 | Local LLM |	❌	 | Barely	      |✅ (quantized)	      | ✅ (up to 13B) |
 | Storage |SD/NVMe HAT |	NVMe | 512GB NVMe |	256GB-2TB |
 
-![]()
+![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/RPi5_vs_RPi4B_comparison.png?raw=true)
 
 <br>
 <br>
