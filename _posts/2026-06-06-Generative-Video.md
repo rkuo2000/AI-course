@@ -186,6 +186,10 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <iframe width="750" height="422" src="https://www.youtube.com/embed/o-7us-BR_gQ" title="LTX-2.3 Is Here: Sharper Detail, Native Portrait, Cleaner Audio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
+### [JoyAI-Echo](https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/)
+#### Code: [https://github.com/jd-opensource/JoyAI-Echo](https://github.com/jd-opensource/JoyAI-Echo)
+
+---
 ## World Models
 
 ### Phantom
