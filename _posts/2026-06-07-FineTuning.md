@@ -9,7 +9,7 @@ mathjax: false # 如果這篇文章不需要顯示數學公式，請設false
 comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
-## Model Training
+## Overview
 
 ### Three Phases of Model Training
 **Blog**: [解密 LLM 訓練三部曲：深入解析 SFT 與關鍵的 RLHF 技術](https://datasciocean.com/ai-concept/llm-fine-tuning-rlhf/)<br>
@@ -38,44 +38,58 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ### [Build A Reasoning Model (From Scratch)](https://github.com/rasbt/reasoning-from-scratch)
 
 ---
-## Model Fine-Tuning
-**[Open-Source AI Cookbook](https://huggingface.co/learn/cookbook/en/index)** <br>
+## Fine-Tuning Examples
+
+### LlamaFactory
+#### Code: [https://github.com/hiyouga/LlamaFactory](https://github.com/hiyouga/LlamaFactory)
+https://github.com/user-attachments/assets/3991a3a8-4276-4d30-9cab-4cb0c4b9b99e
+
+#### Colab: [Finetune Llama-3 with LLaMA Factory](https://colab.research.google.com/drive/1eRTPn37ltBbYsISy9Aw2NuI2Aq5CQrD9?usp=sharing)
+
+---
+### [Open-Source AI Cookbook](https://huggingface.co/learn/cookbook/en/index)
+* [Concurrent Multi-Config SFT Training with RapidFire AI](https://huggingface.co/learn/cookbook/en/rapidfire_sft_multiconfig_training)
+* [Optimizing Language Models with DSPy GEPA](https://huggingface.co/learn/cookbook/en/dspy_gepa)
+* [Efficient Online Training with GRPO and vLLM in TRL](https://huggingface.co/learn/cookbook/en/grpo_vllm_online_training)
+* [Fine-tuning LLMs for Function Calling with the xLAM Dataset](https://huggingface.co/learn/cookbook/en/function_calling_fine_tuning_llms_on_xlam)
+* [Post training an VLM for reasoning with GRPO using TRL](https://huggingface.co/learn/cookbook/en/fine_tuning_vlm_grpo_trl)
+* [TRL GRPO Reasoning with Advanced Reward](https://huggingface.co/learn/cookbook/en/trl_grpo_reasoning_advanced_reward)
 
 ---
 ### SmolVLM with TRL (for ChartQA)
-**Blog**: [Fine-tuning SmolVLM with TRL on a consumer GPU](https://huggingface.co/learn/cookbook/en/fine_tuning_smol_vlm_sft_trl)<br>
-**Model**: [HuggingFaceTB/SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct)<br>
-**Dataset**: [HuggingFaceM4/ChartQA](https://huggingface.co/datasets/HuggingFaceM4/ChartQA)<br>
+#### Blog: [Fine-tuning SmolVLM with TRL on a consumer GPU](https://huggingface.co/learn/cookbook/en/fine_tuning_smol_vlm_sft_trl)
+#### Model: [HuggingFaceTB/SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct)
+#### Dataset: [HuggingFaceM4/ChartQA](https://huggingface.co/datasets/HuggingFaceM4/ChartQA)
 
 ---
 ### SmolVLM with TRL (for Invoice Parser)
-**Prompt**: [Fine-tuning Invoice Parser](https://chatgpt.com/share/682f9f18-7048-8010-90bb-7b27b8373a7e)<br>
-**Model**: [HuggingFaceTB/SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct)<br>
-**Dataset**: [mychen76/invoices-and-receipts_ocr_v1](https://huggingface.co/datasets/mychen76/invoices-and-receipts_ocr_v1)<br>
+#### Prompt: [Fine-tuning Invoice Parser](https://chatgpt.com/share/682f9f18-7048-8010-90bb-7b27b8373a7e)
+#### Model: [HuggingFaceTB/SmolVLM-Instruct](https://huggingface.co/HuggingFaceTB/SmolVLM-Instruct)
+#### Dataset: [mychen76/invoices-and-receipts_ocr_v1](https://huggingface.co/datasets/mychen76/invoices-and-receipts_ocr_v1)
 
 ---
 ### VLM with DPO (for Super GPT-4V)
-**Blog**: [使用 TRL 對視覺語言模型進行偏好最佳化](https://huggingface.tw/blog/dpo_vlm)<br>
-**Model**: [HuggingFaceM4/idefics2-8b](https://huggingface.co/HuggingFaceM4/idefics2-8b)<br>
-**Dataset**: [openbmb/RLAIF-V-Dataset](https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset)<br>
+#### Blog: [使用 TRL 對視覺語言模型進行偏好最佳化](https://huggingface.tw/blog/dpo_vlm)
+#### Model: [HuggingFaceM4/idefics2-8b](https://huggingface.co/HuggingFaceM4/idefics2-8b)
+#### Dataset: [openbmb/RLAIF-V-Dataset](https://huggingface.co/datasets/openbmb/RLAIF-V-Dataset)
 
 ---
 ### LLM with GRPO (for GSM8K)
-**Blog**: [Advanced GRPO Fine-tuning for Mathematical Reasoning with Multi-Reward Training](https://huggingface.co/learn/cookbook/en/trl_grpo_reasoning_advanced_reward)<br>
-**Model**: [Qwen/Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct)<br>
-**Dataset**: [openai/gsm8k](https://huggingface.co/datasets/openai/gsm8k)<br>
+#### Blog: [Advanced GRPO Fine-tuning for Mathematical Reasoning with Multi-Reward Training](https://huggingface.co/learn/cookbook/en/trl_grpo_reasoning_advanced_reward)
+#### Model: [Qwen/Qwen2.5-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-3B-Instruct)
+#### Dataset: [openai/gsm8k](https://huggingface.co/datasets/openai/gsm8k)
 
 ---
 ### VLM with GRPO (for Reasoning)
-**Blog**: [Post training a VLM for reasoning with GRPO using TRL](https://huggingface.co/learn/cookbook/en/fine_tuning_vlm_grpo_trl)<br>
-**Model**: [Qwen/Qwen2.5-VL-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct)<br>
-**Dataset**: [lmms-lab/multimodal-open-r1-8k-verified](https://huggingface.co/datasets/lmms-lab/multimodal-open-r1-8k-verified)<br>
+#### Blog: [Post training a VLM for reasoning with GRPO using TRL](https://huggingface.co/learn/cookbook/en/fine_tuning_vlm_grpo_trl)
+#### Model: [Qwen/Qwen2.5-VL-3B-Instruct](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct)
+#### Dataset: [lmms-lab/multimodal-open-r1-8k-verified](https://huggingface.co/datasets/lmms-lab/multimodal-open-r1-8k-verified)
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/PPO_vs_GRPO.jpg?raw=true)
 
 ---
 ### [Codegen Enmpowerment](https://empowerment-for-llms.github.io/)
-**Paper**: [Training LLM Agents to Empower Humans](https://arxiv.org/abs/2510.13709)<br>
-**Code**: [https://github.com/festusev/codegen_empowerment](https://github.com/festusev/codegen_empowerment)<br>
+#### Paper: [Training LLM Agents to Empower Humans](https://arxiv.org/abs/2510.13709)
+#### Code: [https://github.com/festusev/codegen_empowerment](https://github.com/festusev/codegen_empowerment)
 ![](https://empowerment-for-llms.github.io/figures/overview.svg)
 
 We train all models using a dataset of 4,138 unique questions from Codeforces, each of which is paired with one attempted solution by Gemma-3-27B-it. <br>
@@ -88,63 +102,59 @@ This dataset comes with actual human submissions, which we do not need. All we u
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/Logit_Threshold_Empowerment.png?raw=true)
 
 ---
-### TurboQuant
-**Paper**: [TurboQuant: Online Vector Quantization with Near-optimal Distortion Rate](https://arxiv.org/abs/2504.19874)<br>
-
----
 ## Intelligence Benchmarks
 
 ### [OpenAI Evals](https://evals.openai.com/)
 
 ---
 ### SWE-Bench
-**Paper**: [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)<br>
-**Code**: [https://github.com/SWE-bench/SWE-bench](https://github.com/SWE-bench/SWE-bench)<br>
+#### Paper: [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)
+#### Code: [https://github.com/SWE-bench/SWE-bench](https://github.com/SWE-bench/SWE-bench)
 
 ---
 ### MLE-Bench
-**Paper**: [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)<br>
-**Code**: [https://github.com/openai/mle-bench](https://github.com/openai/mle-bench)<br>
+#### Paper: [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)
+#### Code: [https://github.com/openai/mle-bench](https://github.com/openai/mle-bench)
 
 ---
 ### SWE-Lancer
-**Paper**: [SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?](https://arxiv.org/abs/2502.12115)<br>
+#### Paper: [SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?](https://arxiv.org/abs/2502.12115)
 
 ### PaperBench
-**Paper**: [PaperBench: Evaluating AI's Ability to Replicate AI Research](https://arxiv.org/abs/2504.01848)<br>
-**Code**: [https://github.com/openai/frontier-evals](https://github.com/openai/frontier-evals)<br>
+#### Paper: [PaperBench: Evaluating AI's Ability to Replicate AI Research](https://arxiv.org/abs/2504.01848)
+#### Code: [https://github.com/openai/frontier-evals](https://github.com/openai/frontier-evals)
 
 ---
 ### SWE-Bench Pro
-**Paper**: [SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?](https://arxiv.org/abs/2509.16941)<br>
-**Code**: [https://github.com/scaleapi/SWE-bench_Pro-os](https://github.com/scaleapi/SWE-bench_Pro-os)<br>
+#### Paper: [SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?](https://arxiv.org/abs/2509.16941)
+#### Code: [https://github.com/scaleapi/SWE-bench_Pro-os](https://github.com/scaleapi/SWE-bench_Pro-os)
 
 ---
 ### GPDval
-**Paper**: [GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks](https://arxiv.org/abs/2510.04374)<br>
+#### Paper: [GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks](https://arxiv.org/abs/2510.04374)
 ![](https://arxiv.org/html/2510.04374v1/exampletasksscreenshot.png)
-**Dataset**: [https://huggingface.co/datasets/openai/gdpval](https://huggingface.co/datasets/openai/gdpval)<br>
+#### Dataset: [https://huggingface.co/datasets/openai/gdpval](https://huggingface.co/datasets/openai/gdpval)
 * 220 real-world knowledge tasks across 44 occupations.
 * Each task consists of a text prompt and a set of supporting reference files.
 
 ---
 ### ToolOrchestra
-**Paper**: [ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration](https://arxiv.org/abs/2511.21689)<br>
-**Code**: [https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)<br>
+#### Paper: [ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration](https://arxiv.org/abs/2511.21689)
+#### Code: [https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)
 ![](https://raw.githubusercontent.com/NVlabs/ToolOrchestra/main/assets/method.png)
 
 ---
 ### RLVR
-**Paper**: [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/html/2506.14245v2)<br>
+#### Paper: [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/html/2506.14245v2)
 
 ---
 ### [Nemotron-Cascade 2](https://research.nvidia.com/labs/nemotron/nemotron-cascade-2/)
-**Paper**: [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](https://arxiv.org/abs/2603.19220)<br>
+#### Paper: [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](https://arxiv.org/abs/2603.19220)
 ![](https://research.nvidia.com/labs/nemotron/images/nemotron-cascade-2/pipeline.png)
 * **Cascade RL Framework**<br>
 * **Multi-domain On-policy Distillation**<br>
 
-**Data**:<br>
+#### Data:
 * [Nemotron-Cascade-2 SFT Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data): the data used for the SFT stage of Nemotron-Cascade-2 training pipeline.
 * [Nemotron-Cascade-2 RL Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-RL-data): the data used for our Nemotron-Cascade 2 RL training pipeline.
   
