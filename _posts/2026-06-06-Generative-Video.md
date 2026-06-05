@@ -16,132 +16,85 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 [李宏毅_生成式導論 2024_第18講：有關影像的生成式AI (下) — 快速導讀經典影像生成方法 (VAE, Flow, Diffusion, GAN) 以及與生成的影片互動](https://hackmd.io/@shaoeChen/HJBNLFqV0)<br>
 <iframe width="1026" height="578" src="https://www.youtube.com/embed/OYN_GvAqv-A" title="【生成式AI導論 2024】第18講：有關影像的生成式AI (下) — 快速導讀經典影像生成方法 (VAE, Flow, Diffusion, GAN) 以及與生成的影片互動" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-## Image-to-Video
-
-### Turn-A-Video
-**Paper:** [Tune-A-Video: One-Shot Tuning of Image Diffusion Models for Text-to-Video Generation](https://arxiv.org/abs/2212.11565)<br>
-**Code:** [https://github.com/showlab/Tune-A-Video](https://github.com/showlab/Tune-A-Video)<br>
-<p align="center">
-<img src="https://tuneavideo.github.io/assets/teaser.gif" width="1080px"/>  
-<br>
-<em>Given a video-text pair as input, our method, Tune-A-Video, fine-tunes a pre-trained text-to-image diffusion model for text-to-video generation.</em>
-</p>
-
 ---
 ### Open-VCLIP
-**Paper:** [Open-VCLIP: Transforming CLIP to an Open-vocabulary Video Model via Interpolated Weight Optimization](https://arxiv.org/abs/2302.00624)<br>
-**Paper:** [Building an Open-Vocabulary Video CLIP Model with Better Architectures, Optimization and Data](https://arxiv.org/abs/2310.05010)<br>
-**Code:** [https://github.com/wengzejia1/Open-VCLIP/](https://github.com/wengzejia1/Open-VCLIP/)<br>
+#### Paper: [Open-VCLIP: Transforming CLIP to an Open-vocabulary Video Model via Interpolated Weight Optimization](https://arxiv.org/abs/2302.00624)
+#### Paper: [Building an Open-Vocabulary Video CLIP Model with Better Architectures, Optimization and Data](https://arxiv.org/abs/2310.05010)
+#### Code: [https://github.com/wengzejia1/Open-VCLIP/](https://github.com/wengzejia1/Open-VCLIP/)
 ![](https://github.com/wengzejia1/Open-VCLIP/blob/main/figures/firstpage.png?raw=true)
-
----
-### [DyST](https://dyst-paper.github.io/)
-**Paper:** [DyST: Towards Dynamic Neural Scene Representations on Real-World Videos]()<br>
-<video controls><source src="https://dyst-paper.github.io/data/teaser.mp4" type="video/mp4"></video>
-  
----
-## Text-to-Motion
-
-### TMR
-**Paper:** [TMR: Text-to-Motion Retrieval Using Contrastive 3D Human Motion Synthesis](https://arxiv.org/abs/2305.00976)<br>
-**Code:** [https://github.com/Mathux/TMR](https://github.com/Mathux/TMR)<br>
-
----
-### Text-to-Motion Retrieval
-**Paper:** [Text-to-Motion Retrieval: Towards Joint Understanding of Human Motion Data and Natural Language](https://arxiv.org/abs/2305.15842)<br>
-**Code:** [https://github.com/mesnico/text-to-motion-retrieval](https://github.com/mesnico/text-to-motion-retrieval)<br>
-`A person walks in a counterclockwise circle`<br>
-![](https://github.com/mesnico/text-to-motion-retrieval/blob/main/teaser/example_74.gif?raw=true)
-`A person is kneeling down on all four legs and begins to crawl`<br>
-![](https://github.com/mesnico/text-to-motion-retrieval/raw/main/teaser/example_243.gif?raw=true)
-
----
-### MotionDirector
-**Paper:** [MotionDirector: Motion Customization of Text-to-Video Diffusion Models](https://arxiv.org/abs/2310.08465)<br>
-
----
-### [GPT4Motion](https://gpt4motion.github.io/)
-**Paper:** [GPT4Motion: Scripting Physical Motions in Text-to-Video Generation via Blender-Oriented GPT Planning](https://arxiv.org/abs/2311.12631)<br>
-<video width="320" height="240" controls><src="https://gpt4motion.github.io/static/24videos/1.0_1.0_A%20basketball%20spins%20out%20of%20the%20air%20and%20falls.mp4" type="video/mp4">GPT4Motion BasketBall</video>
-
----
-### Motion Editing
-**Paper:** [Iterative Motion Editing with Natural Language](https://arxiv.org/abs/2312.11538)<br>
 
 --- 
 ## Text-to-Video
+![](https://arxiv.org/html/2402.17177v3/extracted/2402.17177v3/figures/history.png)
 
-### [Awesome Video Diffusion Models](https://github.com/ChenHsing/Awesome-Video-Diffusion-Models)
-
----
-### Stable Diffusion Video
-**Paper:** [Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets](https://arxiv.org/abs/2311.15127)<br>
-**Code:** [https://github.com/nateraw/stable-diffusion-videos](https://github.com/nateraw/stable-diffusion-videos)<br>
-![](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/resolve/main/output_tile.gif)
+[Awesome Video Diffusion Models](https://github.com/ChenHsing/Awesome-Video-Diffusion-Models)<br>
 
 ---
 ### AnimateDiff
-**Paper:** [AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning](https://arxiv.org/abs/2307.04725)<br>
-**Paper:** [SparseCtrl: Adding Sparse Controls to Text-to-Video Diffusion Models](https://arxiv.org/abs/2311.16933)<br>
-**Code:** [https://github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)<br>
+#### Paper: [AnimateDiff: Animate Your Personalized Text-to-Image Diffusion Models without Specific Tuning](https://arxiv.org/abs/2307.04725)
+#### Code: [https://github.com/guoyww/AnimateDiff](https://github.com/guoyww/AnimateDiff)
 ![](https://github.com/guoyww/AnimateDiff/raw/main/__assets__/figs/adapter_explain.png)
 
 ---
-### Animate Anyone
-**Paper:** [Animate Anyone: Consistent and Controllable Image-to-Video Synthesis for Character Animation](https://arxiv.org/abs/2311.17117)<br>
+### Stable Diffusion Video
+#### Paper: [Stable Video Diffusion: Scaling Latent Video Diffusion Models to Large Datasets](https://arxiv.org/abs/2311.15127)
+#### Code: [https://github.com/nateraw/stable-diffusion-videos](https://github.com/nateraw/stable-diffusion-videos)
+![](https://huggingface.co/stabilityai/stable-video-diffusion-img2vid/resolve/main/output_tile.gif)
 
 ---
-### StyleCrafter
-**Paper:** [StyleCrafter: Enhancing Stylized Text-to-Video Generation with Style Adapter](https://arxiv.org/abs/2312.00330)<br>
-**Code:** [https://github.com/GongyeLiu/StyleCrafter](https://github.com/GongyeLiu/StyleCrafter)<br>
+### [Animate Anyone](https://humanaigc.github.io/animate-anyone/)
+#### Paper: [Animate Anyone: Consistent and Controllable Image-to-Video Synthesis for Character Animation](https://arxiv.org/abs/2311.17117)<br>
+![](https://arxiv.org/html/2311.17117v3/x1.png)
+![](https://arxiv.org/html/2311.17117v3/x2.png)
+
+---
+### [StyleCrafter](https://gongyeliu.github.io/StyleCrafter.github.io/)
+#### Paper: [StyleCrafter: Enhancing Stylized Text-to-Video Generation with Style Adapter](https://arxiv.org/abs/2312.00330)
+#### Code: [https://github.com/GongyeLiu/StyleCrafter](https://github.com/GongyeLiu/StyleCrafter)
 ![](https://github.com/GongyeLiu/StyleCrafter/blob/main/docs/showcase_1.gif?raw=true)
-
----
-### Outfit Anyone
-**Paper**: [OutfitAnyone: Ultra-high Quality Virtual Try-On for Any Clothing and Any Person](https://arxiv.org/abs/2407.16224)<br>
-**Code:** [https://github.com/HumanAIGC/OutfitAnyone](https://github.com/HumanAIGC/OutfitAnyone)<br>
-![](https://humanaigc.github.io/outfit-anyone/content/images/framework/fm.jpg)
-<img width="50%" height="50%" src="https://humanaigc.github.io/outfit-anyone/content/gifs/1.gif"><img width="50%" height="50%" src="https://humanaigc.github.io/outfit-anyone/content/gifs/2.gif">
+![](https://gongyeliu.github.io/StyleCrafter.github.io/pics/overview.png)
+![](https://arxiv.org/html/2312.00330v2/x2.png)
 
 ---
 ### Sora
-**Paper**: [Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models](https://arxiv.org/html/2402.17177v3)<br>
+### Paper: [Sora: A Review on Background, Technology, Limitations, and Opportunities of Large Vision Models](https://arxiv.org/html/2402.17177v3)
 ![](https://arxiv.org/html/2402.17177v3/extracted/2402.17177v3/fig_yx/dit-uvit.png)
 
 ---
-### [AIF for Dynamic T2V](https://sites.google.com/view/aif-dynamic-t2v/)
-**Paper**: [Improving Dynamic Object Interactions in Text-to-Video Generation with AI Feedback](https://arxiv.org/abs/2412.02617)<br>
-![](https://arxiv.org/html/2412.02617v1/x2.png)
-
----
-### OpenAI [Sora2](https://sora.chatgpt.com)
-<iframe width="676" height="380" src="https://www.youtube.com/embed/5XgvjKV1iEw" title="必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼、免VPN、邀請碼分享、Grok免費影片製作）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-<iframe width="690" height="388" src="https://www.youtube.com/embed/sGS1JwnD6Ik" title="實測用Sora 2一天內瘋狂創作，這效果太驚人了！超棒的概念創作工具" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+### [Outfit Anyone](https://humanaigc.github.io/outfit-anyone/)
+#### Paper: [OutfitAnyone: Ultra-high Quality Virtual Try-On for Any Clothing and Any Person](https://arxiv.org/abs/2407.16224)
+#### Code: [https://github.com/HumanAIGC/OutfitAnyone](https://github.com/HumanAIGC/OutfitAnyone)
+![](https://humanaigc.github.io/outfit-anyone/content/images/framework/fm.jpg)
+![](https://arxiv.org/html/2407.16224v1/extracted/5749086/fig/method/framework2.png)
 
 ---
 ### LTX-Video
-**Paper**: [LTX-Video: Realtime Video Latent Diffusion](https://arxiv.org/html/2501.00103v1)<br>
+#### Paper: [LTX-Video: Realtime Video Latent Diffusion](https://arxiv.org/abs/2501.00103)
 ![](https://arxiv.org/html/2501.00103v1/extracted/6102773/assets/figures/vae_encoder.png)
 ![](https://arxiv.org/html/2501.00103v1/extracted/6102773/assets/figures/transformer_architecture.png)
 
 ---
 ### Open-Sora
-**Paper**: [Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k](https://arxiv.org/abs/2503.09642)<br>
-**Code**: [https://github.com/hpcaitech/Open-Sora](https://github.com/hpcaitech/Open-Sora)<br>
+#### Paper: [Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k](https://arxiv.org/abs/2503.09642)
+#### Code: [https://github.com/hpcaitech/Open-Sora](https://github.com/hpcaitech/Open-Sora)
 ![](https://arxiv.org/html/2503.09642v1/x3.png)
 ![](https://arxiv.org/html/2503.09642v1/extracted/6273005/figs/open-sora-2.0-dit.png)
 
 ---
-### WAN 2.2
-**Paper**: [Wan: Open and Advanced Large-Scale Video Generative Models](https://arxiv.org/abs/2503.20314)<br>
-**Github**: [https://github.com/Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2)<br>
+### Step-Video-TI2V
+#### Paper: [Step-Video-TI2V Technical Report: A State-of-the-Art Text-Driven Image-to-Video Generation Model](https://arxiv.org/abs/2503.11251)
+#### Code: [https://github.com/stepfun-ai/Step-Video-TI2V](https://github.com/stepfun-ai/Step-Video-TI2V)
+![](https://arxiv.org/html/2503.11251v1/extracted/6280203/figure/ti2v-arch.png)
 
+---
+### WAN 2.2
+#### Paper: [Wan: Open and Advanced Large-Scale Video Generative Models](https://arxiv.org/abs/2503.20314)
+#### Code: [https://github.com/Wan-Video/Wan2.2](https://github.com/Wan-Video/Wan2.2)
 #### [ComfyUI + WAN2.2](https://docs.comfy.org/tutorials/video/wan/wan2_2)
 
 ### Multi-Talk
-**Paper**: [Let Them Talk: Audio-Driven Multi-Person Conversational Video Generation](https://arxiv.org/html/2505.22647v1)<br>
-**Code**: [https://github.com/MeiGen-AI/MultiTalk](https://github.com/MeiGen-AI/MultiTalk)<br>
+#### Paper: [Let Them Talk: Audio-Driven Multi-Person Conversational Video Generation](https://arxiv.org/html/2505.22647v1)
+#### Code: [https://github.com/MeiGen-AI/MultiTalk](https://github.com/MeiGen-AI/MultiTalk)
 ![](https://github.com/MeiGen-AI/MultiTalk/raw/main/assets/pipe.png)
 
 ---
@@ -172,28 +125,59 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <iframe width="790" height="444" src="https://www.youtube.com/embed/orcRl82lGLc" title="Veo 3.1 in the Gemini API" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
-### Sora2
-<iframe width="877" height="493" src="https://www.youtube.com/embed/5XgvjKV1iEw" title="必學！OpenAI Sora 2 影片製作全攻略（免付費、全平台可用、免邀請碼、免VPN、邀請碼分享、Grok免費影片製作）" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
----
 ### FlashVSR
 #### Paper: [FlashVSR: Towards Real-Time Diffusion-Based Streaming Video Super-Resolution](https://arxiv.org/abs/2510.12747)
 #### Code: [https://github.com/OpenImagingLab/FlashVSR](https://github.com/OpenImagingLab/FlashVSR)
 ![](https://github.com/OpenImagingLab/FlashVSR/raw/main/examples/WanVSR/assets/flowchart.jpg)
 
 ---
-### [Runway Gen-4.5](https://runwayml.com/research/introducing-runway-gen-4.5)
+### TiDAR
+#### [TiDAR: Think in Diffusion, Talk in Autoregression](https://arxiv.org/abs/2511.08923)
+![](https://arxiv.org/html/2511.08923v1/x2.png)
 
 ---
-### [Kling 3.0](https://klingai.com/global/)
+### DiffusionVL
+#### [DiffusionVL: Translating Any Autoregressive Models into Diffusion Vision Language Models](https://arxiv.org/abs/2512.15713)
+![](https://arxiv.org/html/2512.15713v3/x2.png)
+![](https://arxiv.org/html/2512.15713v3/x3.png)
+
+---
+### SRENDER
+#### Paper: [Efficient Camera-Controlled Video Generation of Static Scenes via Sparse Diffusion and 3D Rendering](https://arxiv.org/abs/2601.09697)
+![](https://arxiv.org/html/2601.09697v1/x1.png)
+![](https://arxiv.org/html/2601.09697v1/x2.png)
+
+---
+### LTX-2
+#### Paper: [LTX-2: Efficient Joint Audio-Visual Foundation Model](https://arxiv.org/abs/2601.03233)
+![](https://arxiv.org/html/2601.03233v1/assets/figures/fig-1-overview-v2.png)
+
+---
+### daVinci-MagiHuman
+#### Paper: [Speed by Simplicity: A Single-Stream Architecture for Fast Audio-Video Generative Foundation Model](https://arxiv.org/abs/2603.21986)
+#### Code: [https://github.com/GAIR-NLP/daVinci-MagiHuman](https://github.com/GAIR-NLP/daVinci-MagiHuman)
+![](https://arxiv.org/html/2603.21986v1/x1.png)
+![](https://arxiv.org/html/2603.21986v1/figures/arch.png)
+
+---
+### [Runway](https://runwayml.com/)
+#### [GWM-1](https://runwayml.com/research/introducing-runway-gwm-1)
+#### [Gen-4.5](https://runwayml.com/research/introducing-runway-gen-4.5)
+
+---
+### [Kling](https://klingai.com/)
+#### Paper: [Kling-MotionControl Technical Report](https://arxiv.org/abs/2603.03160)
+![](https://arxiv.org/html/2603.03160v1/x1.png)
+![](https://arxiv.org/html/2603.03160v1/x2.png)
 
 ---
 ### [SeedDance 2.0](https://seed.bytedance.com/en/?view_from=homepage_tab)
+#### Paper: [Seedance 2.0: Advancing Video Generation for World Complexity](https://arxiv.org/abs/2604.14148)
 <iframe width="1364" height="767" src="https://www.youtube.com/embed/BQXxywxTidU" title="Seedance 2.0 vs Kling 3.0 – The Results Shocked Me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 ### [LTX-2.3](https://ltx.io/model/ltx-2-3)
-**Blog**: [Lightricks 發布 LTX 2.3 開源影片生成模型，可在本地端製作 4K 50FPS 同步音訊 AI 影片](https://www.koc.com.tw/archives/633673)<br>
+#### Blog: [Lightricks 發布 LTX 2.3 開源影片生成模型，可在本地端製作 4K 50FPS 同步音訊 AI 影片](https://www.koc.com.tw/archives/633673)
 * 首先，文字編碼器規模擴大 4 倍，大幅提升提示詞理解能力，能精確呈現攝影機運動、構圖和角色動作，讓生成結果更符合創作者的預期。
 * 全新設計的 VAE（變分自編碼器）提供更清晰的細節和更穩定的運動畫質，有效改善前代作品常見的畫面模糊問題。也支援 Lora 可進行影片風格轉換功能。
 * 圖像轉影片（I2V）功能從訓練階段即整合至模型架構中，顯著減少畫面停滯現象，並降低所謂的「肯納伯斯效應」（can nabs effect），使連續幀之間的過渡更加自然，而且也支援首尾幀功能與原生直橫格式影片生成。
@@ -204,6 +188,11 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ---
 ## World Models
 
+### Phantom
+#### Paper: [Phantom: Physics-Infused Video Generation via Joint Modeling of Visual and Latent Physical Dynamics](https://arxiv.org/abs/2604.08503)
+![](https://arxiv.org/html/2604.08503v1/x2.png)
+
+---
 ### SANA-WM
 #### Paper: [SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer](https://arxiv.org/abs/2605.15178)
 #### Code: [https://github.com/NVlabs/Sana](https://github.com/NVlabs/Sana)
@@ -213,4 +202,5 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
+
 
