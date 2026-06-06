@@ -1,6 +1,6 @@
 ---
 layout: post # 指定文章佈局，通常是 post
-title: Generative Song
+title: Generative Music
 date: 2026-06-06 10:00:00 +0800 # 發表日期和時間 (請根據您當前的時區調整 +0800 代表 UTC+8)
 categories: [Lecture] # 文章分類，您可以自訂
 tags: [AIGC] # 文章標籤，您可以自訂
@@ -89,18 +89,22 @@ The DSLM can utilize specific attention mask strategy to achieve different song 
 
 ---
 ### [ACE-Step](https://ace-step.github.io/)
-**Paper**: [ACE-Step: A Step Towards Music Generation Foundation Model](https://arxiv.org/html/2506.00045v1)<br>
-**Code**: [https://github.com/ace-step/ACE-Step](https://github.com/ace-step/ACE-Step)<br>
+#### Paper: [ACE-Step: A Step Towards Music Generation Foundation Model](https://arxiv.org/html/2506.00045v1)
+#### Code: [https://github.com/ace-step/ACE-Step](https://github.com/ace-step/ACE-Step)
 ![](https://ace-step.github.io/raw/fig/ACE-Step_framework.png)
-
-**ComfyUI**: [https://github.com/billwuhao/ComfyUI_ACE-Step](https://github.com/billwuhao/ComfyUI_ACE-Step)<br>
+#### ComfyUI**: [https://github.com/billwuhao/ComfyUI_ACE-Step](https://github.com/billwuhao/ComfyUI_ACE-Step)<br>
 ![](https://github.com/billwuhao/ComfyUI_ACE-Step/blob/main/images/2025-05-10_19-26-46.png?raw=true)
+
+---
+### [ACE-Step 1.5](https://ace-step.github.io/ace-step-v1.5.github.io/)
+#### Paper: [ACE-Step 1.5: Pushing the Boundaries of Open-Source Music Generation](https://arxiv.org/abs/2602.00744)
+#### Code: [https://github.com/ace-step/ACE-Step-1.5](https://github.com/ace-step/ACE-Step-1.5)
+#### ComfyUI: [https://github.com/ace-step/ACE-Step-ComfyUI](https://github.com/ace-step/ACE-Step-ComfyUI)
+![](https://arxiv.org/html/2602.00744v3/figures/ace-stepv1.5_framework.png)
+![](https://arxiv.org/html/2602.00744v3/figures/application_map.png)
+![](https://arxiv.org/html/2602.00744v3/figures/model_zoo.png)
 
 <br>
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
-
-
-
-
