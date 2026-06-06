@@ -90,19 +90,20 @@ The DSLM can utilize specific attention mask strategy to achieve different song 
 ---
 ### [ACE-Step](https://ace-step.github.io/)
 #### Paper: [ACE-Step: A Step Towards Music Generation Foundation Model](https://arxiv.org/html/2506.00045v1)
-#### Code: [https://github.com/ace-step/ACE-Step](https://github.com/ace-step/ACE-Step)
 ![](https://ace-step.github.io/raw/fig/ACE-Step_framework.png)
-#### ComfyUI**: [https://github.com/billwuhao/ComfyUI_ACE-Step](https://github.com/billwuhao/ComfyUI_ACE-Step)<br>
+
+#### Code: [https://github.com/ace-step/ACE-Step](https://github.com/ace-step/ACE-Step)
+#### ComfyUI: [https://github.com/billwuhao/ComfyUI_ACE-Step](https://github.com/billwuhao/ComfyUI_ACE-Step)
 ![](https://github.com/billwuhao/ComfyUI_ACE-Step/blob/main/images/2025-05-10_19-26-46.png?raw=true)
 
 ---
 ### [ACE-Step 1.5](https://ace-step.github.io/ace-step-v1.5.github.io/)
 #### Paper: [ACE-Step 1.5: Pushing the Boundaries of Open-Source Music Generation](https://arxiv.org/abs/2602.00744)
+![](https://arxiv.org/html/2602.00744v3/figures/ace-stepv1.5_framework.png)
+![](https://arxiv.org/html/2602.00744v3/figures/model_zoo.png)
+
 #### Code: [https://github.com/ace-step/ACE-Step-1.5](https://github.com/ace-step/ACE-Step-1.5)
 #### ComfyUI: [https://github.com/ace-step/ACE-Step-ComfyUI](https://github.com/ace-step/ACE-Step-ComfyUI)
-![](https://arxiv.org/html/2602.00744v3/figures/ace-stepv1.5_framework.png)
-![](https://arxiv.org/html/2602.00744v3/figures/application_map.png)
-![](https://arxiv.org/html/2602.00744v3/figures/model_zoo.png)
 
 <br>
 <br>
