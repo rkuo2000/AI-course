@@ -34,11 +34,9 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ## Textbooks
 
 ### Code: [Build a Large Language Model (From Scratch)](https://github.com/rasbt/LLMs-from-scratch)
-
 ### Code: [Build A Reasoning Model (From Scratch)](https://github.com/rasbt/reasoning-from-scratch)
-<figure markdown><img width="50%" height="50%" src="https://camo.githubusercontent.com/4855c189bb8ec13863420ec6fe41ffe08edcc96bc44659d562bc5a4288fa41b2/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636f7665722e6a70673f313233">
+<img width="50%" height="50%" src="https://camo.githubusercontent.com/4855c189bb8ec13863420ec6fe41ffe08edcc96bc44659d562bc5a4288fa41b2/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f4c4c4d732d66726f6d2d736372617463682d696d616765732f636f7665722e6a70673f313233">
 <img width="50%" height="50%" src="https://camo.githubusercontent.com/cff2374972b333d530911fe10f8e10a6ceb84d1bf4ad907b532b8a5881639d09/68747470733a2f2f73656261737469616e72617363686b612e636f6d2f696d616765732f726561736f6e696e672d66726f6d2d736372617463682d696d616765732f636f7665722e776562703f313233">
-</figure>
 
 #### [讓 AI 好好說話！從頭打造 LLM (大型語言模型) 實戰秘笈](https://www.tenlong.com.tw/products/9789863128236?list_name=srh)
 ![](https://cf-assets2.tenlong.com.tw/products/images/000/233/229/webp/9789863128236_%E5%A4%A9%E7%93%8F.webp?1736397148)
