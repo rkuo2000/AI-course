@@ -51,8 +51,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ### [StyleCrafter](https://gongyeliu.github.io/StyleCrafter.github.io/)
 #### Paper: [StyleCrafter: Enhancing Stylized Text-to-Video Generation with Style Adapter](https://arxiv.org/abs/2312.00330)
 #### Code: [https://github.com/GongyeLiu/StyleCrafter](https://github.com/GongyeLiu/StyleCrafter)
-![](https://github.com/GongyeLiu/StyleCrafter/blob/main/docs/showcase_1.gif?raw=true)
-![](https://gongyeliu.github.io/StyleCrafter.github.io/pics/overview.png)
 ![](https://arxiv.org/html/2312.00330v2/x2.png)
 
 ---
@@ -188,6 +186,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ---
 ### [JoyAI-Echo](https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/)
 #### Code: [https://github.com/jd-opensource/JoyAI-Echo](https://github.com/jd-opensource/JoyAI-Echo)
+#### [ComfyUI_JoyAI_Echo](https://github.com/zhuang2002/ComfyUI_JoyAI_Echo)
 
 ---
 ## World Models
