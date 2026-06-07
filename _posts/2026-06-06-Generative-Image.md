@@ -85,59 +85,58 @@ Diffusion models are transformer-based generative models. They take a piece of d
 
 ---
 ### [DALL.E-3](https://openai.com/dall-e-3)
-**Paper:** [Improving Image Generation with Better Captions](https://cdn.openai.com/papers/dall-e-3.pdf)<br>
-**Dataset Recaptioning**<br>
+#### Paper: [Improving Image Generation with Better Captions](https://cdn.openai.com/papers/dall-e-3.pdf)
+Dataset Recaptioning<br>
 ![](https://github.com/rkuo2000/AI-course/raw/main/images/DALL-E3_Descriptive_Synthetic_Captions.png)
 
 ---
 ### [Stability.ai](https://stability.ai/)
-**Code:** [Stable Diffusion](https://github.com/CompVis/stable-diffusion)
+#### Code: [Stable Diffusion](https://github.com/CompVis/stable-diffusion)
 ![](https://github.com/CompVis/stable-diffusion/raw/main/assets/stable-samples/txt2img/merged-0005.png)
 ![](https://github.com/CompVis/stable-diffusion/raw/main/assets/stable-samples/txt2img/merged-0007.png)
 
 ---
 ### [Imagen](https://imagen.research.google/)
-**Paper:** [Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding](https://arxiv.org/abs/2205.11487)<br>
-**Blog:** [How Imagen Actually Works](https://www.assemblyai.com/blog/how-imagen-actually-works/)<br>
+#### Paper: [Photorealistic Text-to-Image Diffusion Models with Deep Language Understanding](https://arxiv.org/abs/2205.11487)
+#### Blog: [How Imagen Actually Works](https://www.assemblyai.com/blog/how-imagen-actually-works/)
 ![](https://www.assemblyai.com/blog/content/images/size/w1000/2022/06/imagen_examples.png)
  
 ---
-### SDXL
-**Paper:** [SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis](https://arxiv.org/abs/2307.01952)<br>
-**Code:** [Generative Models by Stability AI](https://github.com/stability-ai/generative-models)<br>
+### [SDXL](https://github.com/stability-ai/generative-models)
+#### Paper: [SDXL: Improving Latent Diffusion Models for High-Resolution Image Synthesis](https://arxiv.org/abs/2307.01952)<br>
 ![](https://github.com/Stability-AI/generative-models/blob/main/assets/000.jpg?raw=true)
-![](https://github.com/Stability-AI/generative-models/blob/main/assets/tile.gif?raw=true)
 
-**Huggingface:** [stable-diffusion-xl-base-1.0](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0)<br>
-![](https://huggingface.co/stabilityai/stable-diffusion-xl-base-1.0/blob/main/pipeline.png)
-SDXL consists of an ensemble of experts pipeline for latent diffusion: In a first step, the base model is used to generate (noisy) latents, which are then further processed with a refinement model (available here: https://huggingface.co/stabilityai/stable-diffusion-xl-refiner-1.0/) specialized for the final denoising steps. Note that the base model can be used as a standalone module.<br>
-
-**Kaggle:** [https://www.kaggle.com/code/rkuo2000/sdxl-base-1-0](https://www.kaggle.com/code/rkuo2000/sdxl-base-1-0)<br>
+#### Kaggle: [https://www.kaggle.com/code/rkuo2000/sdxl-base-1-0](https://www.kaggle.com/code/rkuo2000/sdxl-base-1-0)
 
 ---
 ### [Transfusion](https://arxiv.org/html/2408.11039v1)
-**Paper:** [Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model](https://www.arxiv.org/abs/2408.11039)<br>
-**Code:** [https://github.com/lucidrains/transfusion-pytorch](https://github.com/lucidrains/transfusion-pytorch)<br>
+#### Paper: [Transfusion: Predict the Next Token and Diffuse Images with One Multi-Modal Model](https://www.arxiv.org/abs/2408.11039)
+#### Code: [https://github.com/lucidrains/transfusion-pytorch](https://github.com/lucidrains/transfusion-pytorch)
 ![](https://github.com/lucidrains/transfusion-pytorch/raw/main/transfusion.png)
 
 ---
-### [FLUX1.1 pro](https://blackforestlabs.ai/announcing-flux-1-1-pro-and-the-bfl-api/)
-* Superior Speed and Efficiency: Faster generation times and reduced latency, enabling more efficient workflows. FLUX1.1 [pro] is three times faster than the currently available FLUX.1 [pro]. 
-* Improved Performance: FLUX1.1 [pro] has been introduced and tested under the codename “blueberry” into the Artificial Analysis image arena (https://artificialanalysis.ai/text-to-image), a popular benchmark for text-to-image models. It surpasses all other models on the leaderboard, achieving the highest overall Elo score.
+### [SD 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5)
+SD3.5-Medium Model<br>
+![](https://huggingface.co/stabilityai/stable-diffusion-3.5-medium/resolve/main/mmdit-x.png)
+SD3.5-Large Model<br>
+![](https://huggingface.co/stabilityai/stable-diffusion-3.5-large/media/main/mmdit.png)
 
 ---
-### [SD 3.5](https://stability.ai/news/introducing-stable-diffusion-3-5)
-**model:** [stabilityai/stable-diffusion-3-medium](https://huggingface.co/stabilityai/stable-diffusion-3-medium)<br>
-**blog:** [ComfyUI Now Supports Stable Diffusion 3.5!](https://blog.comfy.org/sd3-5-comfyui/)<br>
+### [FLUX1.1 pro](https://blackforestlabs.ai/announcing-flux-1-1-pro-and-the-bfl-api/)
+#### Code: [https://github.com/black-forest-labs/flux](https://github.com/black-forest-labs/flux)
+
+#### [Flux.1-dev](https://huggingface.co/black-forest-labs/FLUX.1-dev)
+#### [Flux.2-dev](https://huggingface.co/black-forest-labs/FLUX.2-dev)
+![](https://huggingface.co/black-forest-labs/FLUX.2-dev/media/main/teaser_editing.png)
 
 ---
 ## Deep Generative Models - Survey
-**Paper**: [Personalized Image Generation with Deep Generative Models: A Decade Survey](https://arxiv.org/html/2502.13081v1)<br>
+#### Paper: [Personalized Image Generation with Deep Generative Models: A Decade Survey](https://arxiv.org/html/2502.13081v1)
 ![](https://arxiv.org/html/2502.13081v1/x3.png)
 
 ---
 ### [OpenAI 4o Image Generation](https://openai.com/index/introducing-4o-image-generation/)
-**Paper**: [An Empirical Study of GPT-4o Image Generation Capabilities](rxiv.org/abs/2504.05979)<br>
+#### Paper: [An Empirical Study of GPT-4o Image Generation Capabilities](rxiv.org/abs/2504.05979)
 
 ---
 ### [DeepMind Imagen](https://deepmind.google/models/imagen/)
@@ -147,18 +146,18 @@ SDXL consists of an ensemble of experts pipeline for latent diffusion: In a firs
 
 ---
 ### [DiT w/ RAE](https://rae-dit.github.io/)
-**model**: [nyu-visionx/RAE-collections](https://huggingface.co/nyu-visionx/RAE-collections)<br>
-**Paper**: [Diffusion Transformers with Representation Autoencoders](https://arxiv.org/abs/2510.11690)<br>
+#### model: [nyu-visionx/RAE-collections](https://huggingface.co/nyu-visionx/RAE-collections)
+#### Paper: [Diffusion Transformers with Representation Autoencoders](https://arxiv.org/abs/2510.11690)
 ![](https://arxiv.org/html/2510.11690v1/x2.png)
 
 ---
 ### Z-Image
-**Paper**: [Z-Image: An Efficient Image Generation Foundation Model with Single-Stream Diffusion Transformer](https://arxiv.org/abs/2511.22699)<br>
-**Github**: [https://github.com/Tongyi-MAI/Z-Image](https://github.com/Tongyi-MAI/Z-Image)<br>
+#### Paper: [Z-Image: An Efficient Image Generation Foundation Model with Single-Stream Diffusion Transformer](https://arxiv.org/abs/2511.22699)
+#### Code: [https://github.com/Tongyi-MAI/Z-Image](https://github.com/Tongyi-MAI/Z-Image)
 Scalable Single-Stream DiT (S3-DiT) architecture<br>
 ![](https://github.com/Tongyi-MAI/Z-Image/raw/main/assets/architecture.webp)
 
-**Blog**: [Z-Image-Turbo 深度實測與技術解說（與 FLUX 系列比較）](https://vocus.cc/article/692fbbb5fd897800016693b3)<br>
+#### Blog: [Z-Image-Turbo 深度實測與技術解說（與 FLUX 系列比較）](https://vocus.cc/article/692fbbb5fd897800016693b3)
 * Z-Image 提出的 S3-DiT （Scalable Single-Stream Diffusion Transformer）架構，有效的減少模型所需參數量。
 * Z-Image 提出的 D-DMD（Decoupled Distribution Matching Distillation）演算法，實現高品質的少步數生成 。
 
@@ -177,8 +176,8 @@ Scalable Single-Stream DiT (S3-DiT) architecture<br>
 
 ---
 ### [ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)
-**Paper**: [ChronoEdit: Towards Temporal Reasoning for Image Editing and World Simulation](https://arxiv.org/abs/2510.04290)<br>
-**Code**: [https://github.com/nv-tlabs/ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)<br>
+#### Paper: [ChronoEdit: Towards Temporal Reasoning for Image Editing and World Simulation](https://arxiv.org/abs/2510.04290)
+#### Code: [https://github.com/nv-tlabs/ChronoEdit](https://github.com/nv-tlabs/ChronoEdit)
 
 <iframe width="970" height="546" src="https://www.youtube.com/embed/76XDPC_E4mI" title="AI真的在思考了！NVIDIA Chrono Edit深度教程：从图片编辑到世界模拟" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
