@@ -82,13 +82,8 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### Kaggle: [rkuo2000/Index-TTS2](https://www.kaggle.com/code/rkuo2000/index-tts2)
 
 ---
-### VibeVoice
-#### Paper: [VibeVoice Technical Report](https://arxiv.org/abs/2508.19205)
-#### model: [microsoft/VibeVoice-1.5B](https://huggingface.co/microsoft/VibeVoice-1.5B)
+### [VibeVoice](ModuleNotFoundError: No module named 'vibevoice.modular.lora_loading')
 #### Code: [https://github.com/microsoft/VibeVoice](https://github.com/microsoft/VibeVoice)
-<img width="50%" height="50%" src="https://github.com/microsoft/VibeVoice/raw/main/Figures/MOS-preference.png">
-
-#### ComfyUI: [https://github.com/Enemyx-net/VibeVoice-ComfyUI](https://github.com/Enemyx-net/VibeVoice-ComfyUI)
 
 ---
 ### FireRedTTS-2
