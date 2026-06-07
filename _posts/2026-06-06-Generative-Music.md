@@ -102,8 +102,9 @@ The DSLM can utilize specific attention mask strategy to achieve different song 
 ![](https://arxiv.org/html/2602.00744v3/figures/ace-stepv1.5_framework.png)
 ![](https://arxiv.org/html/2602.00744v3/figures/model_zoo.png)
 
-#### Code: [https://github.com/ace-step/ACE-Step-1.5](https://github.com/ace-step/ACE-Step-1.5)
 #### ComfyUI: [https://github.com/ace-step/ACE-Step-ComfyUI](https://github.com/ace-step/ACE-Step-ComfyUI)
+
+<iframe width="1021" height="574" src="https://www.youtube.com/embed/ho30R7W01I4" title="Ace Step 1.5 in ComfyUI: Free &amp; Local AI Music Generate Full AI Songs in 4 Seconds!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br>
 <br>
