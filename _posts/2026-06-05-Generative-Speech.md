@@ -250,6 +250,11 @@ faster-whisper is a reimplementation of OpenAI's Whisper model using CTranslate2
 OpenAI發布三款可透過Realtime API使用的新音訊模型，分別是GPT-Realtime-2, GPT-Realtime-Translate與GPT-Realtime-Whisper<br>
 ![](https://images.ctfassets.net/kftzwdyauwt9/5g3jmKsvFQRQqiQxY1spLs/b5f6f2a97ddc5e124f365e7ab4525e93/OAI_GPT-Realtime-2_Three_ways_to_build_with_voice_AI_desktop-dark.svg?w=1920&q=80)
 
+---
+### [Nemotron-3.5-ASR](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b)
+![](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b/resolve/main/model_architecture.png)
+
+
 <br>
 <br>
 
