@@ -252,6 +252,7 @@ OpenAI發布三款可透過Realtime API使用的新音訊模型，分別是GPT-R
 
 ---
 ### [Nemotron-3.5-ASR](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b)
+![](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b/resolve/main/model_overview.png)
 ![](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b/resolve/main/model_architecture.png)
 
 
