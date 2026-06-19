@@ -185,6 +185,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### [ComfyUI_JoyAI_Echo](https://github.com/zhuang2002/ComfyUI_JoyAI_Echo) *need 48GB VRAM!*
 
 ---
+### [SCAIL-2](https://github.com/zai-org/SCAIL-2)
+#### Paper: [SCAIL-2: Unifying Controlled Character Animation with End-to-end In-Context Conditioning](https://arxiv.org/abs/2606.10804)
+![](https://arxiv.org/html/2606.10804v2/x2.png)
+![](https://arxiv.org/html/2606.10804v2/x3.png)
+
+---
 ## World Models
 
 ### Phantom
@@ -201,5 +207,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <br>
 
 *This site was last updated {{ site.time | date: "%B %d, %Y" }}.*
+
 
 
