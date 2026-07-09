@@ -4,7 +4,7 @@ title: Generative Speech
 date: 2026-06-05 09:00:00 +0800 # 發表日期和時間 (請根據您當前的時區調整 +0800 代表 UTC+8)
 categories: [Lecture] # 文章分類，您可以自訂
 tags: [AIGC] # 文章標籤，您可以自訂
-description: Text-to-Speech, Voice Cloning, Speech Seperation, ASR
+description: TTS, Voice Cloning, STT(ASR)
 mathjax: false # 如果這篇文章不需要顯示數學公式，請設false
 comments: false # 如果這篇文章需要啟用評論，請設為 true
 
@@ -195,7 +195,8 @@ Training took about 20 hours on AWS p3.2xlarge(NVIDIA V100)<br>
 <iframe width="800" height="450" src="https://www.youtube.com/embed/BiWMZdnHuVs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
-## Automatic Speech Recognition (ASR)
+## Speech-To-Text (STT)
+**Automatic Speech Recognition (ASR)** <br>
 
 ### [NeMO](https://github.com/NVIDIA/NeMo)
 #### Paper: [NeMo: a toolkit for building AI applications using Neural Modules](https://arxiv.org/abs/1909.09577)
