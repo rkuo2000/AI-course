@@ -1,2 +1,2 @@
 # AI-course
-NTOUEE
+NTOUEE @2026
