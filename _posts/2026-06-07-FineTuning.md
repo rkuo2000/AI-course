@@ -20,6 +20,13 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 **Blog**: [RLHF: Reinforcement Learning from Human Feedback](https://huyenchip.com/2023/05/02/rlhf.html)
 ![](https://huyenchip.com/assets/pics/rlhf/1-chatgpt-training.png)
 
+### Supervised Fine-Tuning (SFT)
+![](https://i.imgur.com/0akg8cN.png)
+
+#### SFT techniques
+The three most popular SFT techniques are full fine-tuning, LoRA, and QLoRA.<br>
+![](https://i.imgur.com/P6sLsxl.png)
+
 ---
 ### Pre-Train & Alignment (SFT, RLHF)
 
