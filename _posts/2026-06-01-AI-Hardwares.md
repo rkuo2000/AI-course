@@ -127,7 +127,8 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ---
 ### STMicro [STM32N6 series](https://www.edomtech.com/zh-tw/product-detail/STM32N6-high-performance-microcontroller/)
 * Cortext-M55 800MHz, Neural-ART (0.6TOPs / 3TOPs), 4.2MB Flash, H.264, JPEG
-
+* [STM32 model zoo](https://stm32ai.st.com/model-zoo/)
+  
 ---
 ### Infineon [PSOC Edge](https://www.infineon.com/products/microcontroller/32-bit-psoc-arm-cortex/32-bit-psoc-edge-arm)
 * Cortex-M55 + Helium DSP @500MHz, Cortex-M33 @200MHz, NNLite + Ethos™ U55-128 (4 TOPS), SRAM up to 5/6MB
