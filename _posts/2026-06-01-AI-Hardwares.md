@@ -107,6 +107,13 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 * Hailo-8L HAT (13 TOPs)
 
 ---
+### 瑞芯微 RK3588
+* CPU 架構： 4 核 Cortex-A76 (2.4GHz) + 4 核 Cortex-A55 (1.8GHz)，兼具高效能與低功耗。
+* GPU： ARM Mali-G610 MC4，支援 OpenGL ES 1.1、2.0、3.2 等。
+* AI 算力： 內建 6 TOPS 的 NPU，支援多種 AI 深度學習框架。
+* 多媒體： 支援 8K@60fps 影音解碼與 8K@30fps 編碼，具備強大影像處理能力（ISP）。
+
+---
 ### 耐能 Kneron [KL730 AI Soc](https://www.kneron.com/tw/page/soc/)
 * Quad ARM® Cortex™ A55 CPU,  高達3.6eTOPS@int8 / 7.2eTops@int4
 * 內建DSP，可以加速AI模型後處理，語音處理
