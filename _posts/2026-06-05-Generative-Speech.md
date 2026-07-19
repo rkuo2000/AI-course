@@ -118,6 +118,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://arxiv.org/html/2604.00688v3/x1.png)
 
 ---
+### T5Gemma-TTS
+#### Paper: [T5Gemma-TTS Technical Report](https://arxiv.org/html/2604.01760)
+#### Code: [https://github.com/Aratako/T5Gemma-TTS](https://github.com/Aratako/T5Gemma-TTS)
+![](https://arxiv.org/html/2604.01760v1/x1.png)
+
+---
 ### [VoxCPM2](https://openbmb.github.io/voxcpm2-demopage/)
 Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life Cloning <br>
 #### Blog: [VoxCPM2 開源語音模型實測：清華團隊 20 億參數 TTS 在相似度基準上大幅領先 ElevenLabs](https://tenten.co/learning/voxcpm2-voice-ai-model/)
