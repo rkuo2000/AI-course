@@ -101,17 +101,30 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ![](https://shoplineimg.com/6486dbe2afaddb00694ea79f/689d830ae7138100146a8ab2/800x.webp?source_format=jpg)
 
 ---
+### 瑞芯微 RK3588
+* CPU： 4核 Cortex-A76 (2.4GHz) + 4 核 Cortex-A55 (1.8GHz)，兼具高效能與低功耗。
+* GPU： ARM Mali-G610 MC4，支援 OpenGL ES 1.1、2.0、3.2 等。
+* AI 算力： 內建 6 TOPS 的 NPU，支援多種 AI 深度學習框架。
+* 多媒體： 支援 8K@60fps 影音解碼與 8K@30fps 編碼，具備強大影像處理能力（ISP）。
+
+---
+### MediaTek Genio 1200 
+* CPU: ARM Cortex A55 + ARM Cortes A78
+* NPU: 4.8 TOPS
+* LPDDR4 8GB, eMMC 32GB
+* Power : 10.68W
+
+---
+### MYiR 米爾電子 MYC-LT527
+* CPU: 1.8GHz 8-core ARM Cortex-A55 MPU with GPU
+* NPU: 2 TOPS
+* 4GB LPDDR4, 32GB eMMC
+
+---
 ### 樹莓派 RPi-5
 <p><img width="50%" height="50%" src="https://i.gzn.jp/img/2024/06/04/raspberry-pi-ai-kit-npu-m2/00.jpg"></p><br>
 * Broadcom BCM2712 2.4GHz quad-core 64-bit ARM Cortex-A76 CPU, with Cryptographic Extension, 512KB per-core L2 caches, and a 2MB shared L3 cache
 * Hailo-8L HAT (13 TOPs)
-
----
-### 瑞芯微 RK3588
-* CPU 架構： 4 核 Cortex-A76 (2.4GHz) + 4 核 Cortex-A55 (1.8GHz)，兼具高效能與低功耗。
-* GPU： ARM Mali-G610 MC4，支援 OpenGL ES 1.1、2.0、3.2 等。
-* AI 算力： 內建 6 TOPS 的 NPU，支援多種 AI 深度學習框架。
-* 多媒體： 支援 8K@60fps 影音解碼與 8K@30fps 編碼，具備強大影像處理能力（ISP）。
 
 ---
 ### 耐能 Kneron [KL730 AI Soc](https://www.kneron.com/tw/page/soc/)
