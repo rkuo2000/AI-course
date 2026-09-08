@@ -174,21 +174,26 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 <iframe width="1364" height="767" src="https://www.youtube.com/embed/BQXxywxTidU" title="Seedance 2.0 vs Kling 3.0 – The Results Shocked Me" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
-### [LTX-2.3](https://ltx.io/model/ltx-2-3)
-#### Blog: [Lightricks 發布 LTX 2.3 開源影片生成模型，可在本地端製作 4K 50FPS 同步音訊 AI 影片](https://www.koc.com.tw/archives/633673)
-
-<iframe width="750" height="422" src="https://www.youtube.com/embed/o-7us-BR_gQ" title="LTX-2.3 Is Here: Sharper Detail, Native Portrait, Cleaner Audio" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
----
-### [JoyAI-Echo](https://echo-team-joy-future-academy-jd.github.io/Echo-LongVideo-Page/)
-#### Code: [https://github.com/jd-opensource/JoyAI-Echo](https://github.com/jd-opensource/JoyAI-Echo)
-#### [ComfyUI_JoyAI_Echo](https://github.com/zhuang2002/ComfyUI_JoyAI_Echo) *need 48GB VRAM!*
-
----
 ### [SCAIL-2](https://github.com/zai-org/SCAIL-2)
 #### Paper: [SCAIL-2: Unifying Controlled Character Animation with End-to-end In-Context Conditioning](https://arxiv.org/abs/2606.10804)
 ![](https://arxiv.org/html/2606.10804v2/x2.png)
 ![](https://arxiv.org/html/2606.10804v2/x3.png)
+
+---
+### MiniMax H3
+#### Code: [https://github.com/MiniMax-AI/MiniMax-H3](https://github.com/MiniMax-AI/MiniMax-H3)
+#### ComfyUI: [https://docs.comfy.org/tutorials/video/minimax/minimax-h3](https://docs.comfy.org/tutorials/video/minimax/minimax-h3)
+<iframe width="1057" height="595" src="https://www.youtube.com/embed/8s-0CdYHwA0" title="MiniMax H3 轻松解决画面油腻、模糊、高动态、一致性问题" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+### [LTX 2.5](https://huggingface.co/Lightricks/LTX-2.5)
+#### Code: [https://github.com/Lightricks/LTX-2](https://github.com/Lightricks/LTX-2)
+#### ComfyUI: [https://docs.comfy.org/tutorials/video/ltx/ltx-2-5](https://docs.comfy.org/tutorials/video/ltx/ltx-2-5)
+
+---
+### [JoyAI-Echo 1.5](https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/)
+#### Paper: [Long-Horizon Audio-Visual Generation for Persistent Stories and Interactive Worlds](https://arxiv.org/html/2608.23383v2)
+#### Code: [https://github.com/jd-opensource/JoyAI-Echo](https://github.com/jd-opensource/JoyAI-Echo)
 
 ---
 ## World Models
@@ -202,6 +207,10 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### Paper: [SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer](https://arxiv.org/abs/2605.15178)
 #### Code: [https://github.com/NVlabs/Sana](https://github.com/NVlabs/Sana)
 ![](https://arxiv.org/html/2605.15178v1/x2.png)
+
+---
+### [Echo-WM](https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/wm/)
+#### Paper: [EchoWM: Open and Enterable Omnimodal World Models](https://arxiv.org/html/2608.23189v1)
 
 <br>
 <br>
