@@ -216,10 +216,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 
 ---
 ### [Atlas](https://www.worldlabs.ai/blog/atlas)
-<video width="320" height="240" controls>
-  <source src="https://wlt-ai-cdn.art/atlas/assets-0831/hero/optimized/atlas-1080.mp4" type="video/mp4">
-  Atlas : A World Model for Spatial Intelligence
-</video>
+<iframe width="1289" height="725" src="https://www.youtube.com/embed/hzvXRHBInx0" title="Introducing Atlas; A Foundation Model for Spatial Intelligence" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 <br>
 <br>
