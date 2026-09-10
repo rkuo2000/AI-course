@@ -185,6 +185,8 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### ComfyUI: [https://docs.comfy.org/tutorials/video/minimax/minimax-h3](https://docs.comfy.org/tutorials/video/minimax/minimax-h3)
 <iframe width="1057" height="595" src="https://www.youtube.com/embed/8s-0CdYHwA0" title="MiniMax H3 轻松解决画面油腻、模糊、高动态、一致性问题" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<iframe width="1289" height="640" src="https://www.youtube.com/embed/41R-wFwEVIM" title="MiniMax H3 Director - The Bugs Are FIXED 🔧 - V1.2 Update" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ---
 ### [LTX 2.5](https://huggingface.co/Lightricks/LTX-2.5)
 #### Code: [https://github.com/Lightricks/LTX-2](https://github.com/Lightricks/LTX-2)
