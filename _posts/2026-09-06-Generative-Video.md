@@ -184,7 +184,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### Code: [https://github.com/MiniMax-AI/MiniMax-H3](https://github.com/MiniMax-AI/MiniMax-H3)
 #### ComfyUI: [https://docs.comfy.org/tutorials/video/minimax/minimax-h3](https://docs.comfy.org/tutorials/video/minimax/minimax-h3)
 <iframe width="1057" height="595" src="https://www.youtube.com/embed/8s-0CdYHwA0" title="MiniMax H3 轻松解决画面油腻、模糊、高动态、一致性问题" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<br>
 <iframe width="1289" height="640" src="https://www.youtube.com/embed/41R-wFwEVIM" title="MiniMax H3 Director - The Bugs Are FIXED 🔧 - V1.2 Update" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
@@ -213,6 +213,13 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 ---
 ### [Echo-WM](https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/wm/)
 #### Paper: [EchoWM: Open and Enterable Omnimodal World Models](https://arxiv.org/html/2608.23189v1)
+
+---
+### [Atlas](https://www.worldlabs.ai/blog/atlas)
+<video width="320" height="240" controls>
+  <source src="https://wlt-ai-cdn.art/atlas/assets-0831/hero/optimized/atlas-1080.mp4" type="video/mp4">
+  Atlas : A World Model for Spatial Intelligence
+</video>
 
 <br>
 <br>
