@@ -197,27 +197,6 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### Paper: [Long-Horizon Audio-Visual Generation for Persistent Stories and Interactive Worlds](https://arxiv.org/html/2608.23383v2)
 #### Code: [https://github.com/jd-opensource/JoyAI-Echo](https://github.com/jd-opensource/JoyAI-Echo)
 
----
-## World Models
-
-### Phantom
-#### Paper: [Phantom: Physics-Infused Video Generation via Joint Modeling of Visual and Latent Physical Dynamics](https://arxiv.org/abs/2604.08503)
-![](https://arxiv.org/html/2604.08503v1/x2.png)
-
----
-### SANA-WM
-#### Paper: [SANA-WM: Efficient Minute-Scale World Modeling with Hybrid Linear Diffusion Transformer](https://arxiv.org/abs/2605.15178)
-#### Code: [https://github.com/NVlabs/Sana](https://github.com/NVlabs/Sana)
-![](https://arxiv.org/html/2605.15178v1/x2.png)
-
----
-### [Echo-WM](https://echo-team-joy-future-academy-jd.github.io/Echo-1.5-Page/wm/)
-#### Paper: [EchoWM: Open and Enterable Omnimodal World Models](https://arxiv.org/html/2608.23189v1)
-
----
-### [Atlas](https://www.worldlabs.ai/blog/atlas)
-<iframe width="1289" height="725" src="https://www.youtube.com/embed/hzvXRHBInx0" title="Introducing Atlas; A Foundation Model for Spatial Intelligence" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 <br>
 <br>
 
