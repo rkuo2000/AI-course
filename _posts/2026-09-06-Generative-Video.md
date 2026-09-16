@@ -202,6 +202,7 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### Paper: [LongCat-Video-Avatar 1.5 Technical Report](https://arxiv.org/html/2605.26486v1)
 #### Code: [https://github.com/meituan-longcat/LongCat-Video](https://github.com/meituan-longcat/LongCat-Video)
 ![](https://arxiv.org/html/2605.26486v1/imgs/pipeline.png)
+#### HuggingFace: [meituan-longcat/LongCat-Video-Avatar-1.5](https://huggingface.co/meituan-longcat/LongCat-Video-Avatar-1.5)
 
 <br>
 <br>
