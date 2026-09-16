@@ -197,6 +197,12 @@ comments: false # 如果這篇文章需要啟用評論，請設為 true
 #### Paper: [Long-Horizon Audio-Visual Generation for Persistent Stories and Interactive Worlds](https://arxiv.org/html/2608.23383v2)
 #### Code: [https://github.com/jd-opensource/JoyAI-Echo](https://github.com/jd-opensource/JoyAI-Echo)
 
+---
+### [LongCat](https://meigen-ai.github.io/LongCat-Video-Avatar-1.5-Page/)
+#### Paper: [LongCat-Video-Avatar 1.5 Technical Report](https://arxiv.org/html/2605.26486v1)
+#### Code: [https://github.com/meituan-longcat/LongCat-Video](https://github.com/meituan-longcat/LongCat-Video)
+![](https://arxiv.org/html/2605.26486v1/imgs/pipeline.png)
+
 <br>
 <br>
 
