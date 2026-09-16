@@ -130,7 +130,7 @@ Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, an
 #### Code: [https://github.com/OpenBMB/VoxCPM](https://github.com/OpenBMB/VoxCPM)
 ![](https://github.com/OpenBMB/VoxCPM/raw/main/assets/voxcpm_model.png)
 
---
+---
 ### [Edge-TTS](https://github.com/rany2/edge-tts)
 `$ edge-tts --text "Hello, world!" --write-media hello.mp3 --write-subtitles hello.srt`<br>
 ```
@@ -162,18 +162,13 @@ $ edge-tts --voice ar-EG-SalmaNeural --text "مرحبا كيف حالك؟" --wri
 
 ---
 ## Voice Cloning
-**Paper**: [Voice Cloning: Comprehensive Survey](https://arxiv.org/abs/2505.00579)<br>
+#### Paper: [Voice Cloning: Comprehensive Survey](https://arxiv.org/abs/2505.00579)
 ![](https://arxiv.org/html/2505.00579v1/x2.png)
 
 ---
 ### RVC-WebUI
+Retrieval-based-Voice-Conversion-WebUI<br>
 #### Code: [https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI](https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI)
-
-<iframe width="562" height="351" src="https://www.youtube.com/embed/1txQuGFEGQ0" title="真假分不清！最新版rvc变声器太牛了！实时变声，音色真实！无需训练，500+声音模型随便选！AI变声器分享！" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
----
-### AI 用你的聲音創建歌詞曲
-<iframe width="994" height="491" src="https://www.youtube.com/embed/9nHbw0eUJeE" title="AI 用你的聲音創建歌詞曲 五音不全的人也可以靠AI實現當歌手的夢想 SunoAI + RVC WebUI + ChatGPT" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ---
 ### GPT-SoVITS
@@ -274,7 +269,6 @@ OpenAI發布三款可透過Realtime API使用的新音訊模型，分別是GPT-R
 ### [Nemotron-3.5-ASR](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b)
 ![](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b/resolve/main/model_overview.png)
 ![](https://huggingface.co/nvidia/nemotron-3.5-asr-streaming-0.6b/resolve/main/model_architecture.png)
-
 
 <br>
 <br>
