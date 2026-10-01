@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>GEN AI ODYSSEY · 生成式 AI 學習航線</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Saira:wdth,wght@75..125,300..700&family=Noto+Sans+TC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg0:#02060D; --bg1:#07111F; --bg2:#0B1A2E;
+  --ice:#A9E8FF; --cyan:#3FD3F5; --violet:#A994FF; --green:#72E3A6; --warn:#FFB86B; --red:#FF7A85;
+  --text:#DCE8F5; --mute:#7F95AE; --dim:#4A5D75;
+  --line:rgba(169,232,255,.16); --line2:rgba(169,232,255,.32);
+  --glass:rgba(8,19,34,.78);
+  --display:"Saira","Noto Sans TC",system-ui,sans-serif;
+  --body:"Noto Sans TC","Saira",system-ui,-apple-system,"PingFang TC","Microsoft JhengHei",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --bg0:#02060D; --bg1:#07111F; --text:#DCE8F5; } }
+:root[data-theme="dark"]{ --bg0:#02060D; --bg1:#07111F; --text:#DCE8F5; }
+:root{ box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px); }
+html{ scroll-padding-top:env(safe-area-inset-top,0px); }
+*,*::before,*::after{ box-sizing:inherit; }
+html,body{ height:100%; margin:0; }
+body{ background:var(--bg0); color:var(--text); font-family:var(--body); font-size:15px; line-height:1.6; overflow:hidden; -webkit-font-smoothing:antialiased; }
+button{ font:inherit; color:inherit; cursor:pointer; }
+a{ color:var(--ice); }
+:focus-visible{ outline:2px solid var(--cyan); outline-offset:3px; border-radius:4px; }
+.mono{ font-family:var(--mono); }
+
+/* ---------- stage ---------- */
+#app{ position:fixed; inset:0; overflow:hidden; background:radial-gradient(120% 90% at 15% 10%, #0d1230 0%, transparent 55%), radial-gradient(110% 90% at 90% 95%, #04202c 0%, transparent 60%), linear-gradient(160deg,var(--bg1),var(--bg0)); }
+#bg{ position:absolute; inset:0; width:100%; height:100%; }
+#viewport{ position:absolute; inset:0; cursor:grab; touch-action:none; }
+#viewport.dragging{ cursor:grabbing; }
+#world{ position:absolute; left:0; top:0; width:5200px; height:3100px; transform-origin:0 0; will-change:transform; }
+#routeSvg{ position:absolute; inset:0; width:100%; height:100%; overflow:visible; pointer-events:none; }
+.zoneWord{ position:absolute; font-family:var(--display); font-weight:300; font-stretch:125%; letter-spacing:.3em; color:rgba(169,232,255,.05); font-size:150px; white-space:nowrap; pointer-events:none; user-select:none; }
+.phase{ position:absolute; font-family:var(--mono); font-size:12px; letter-spacing:.25em; color:rgba(169,232,255,.42); pointer-events:none; white-space:nowrap; }
+.phase::before{ content:""; display:inline-block; width:28px; height:1px; background:currentColor; vertical-align:middle; margin-right:10px; opacity:.6; }
+
+/* ---------- nodes ---------- */
+.node{ position:absolute; width:240px; margin-left:-120px; margin-top:-40px; text-align:center; background:none; border:0; padding:0; transition:opacity .5s, filter .5s; }
+.node .core{ position:relative; width:80px; height:80px; border-radius:50%; display:grid; place-items:center; margin:0 auto 12px; transition:transform .35s cubic-bezier(.2,.8,.2,1); }
+.node .core::before{ content:""; position:absolute; inset:0; border-radius:50%; background:radial-gradient(circle, rgba(var(--rgb),.30), rgba(var(--rgb),.05) 62%, transparent 70%); border:1px solid rgba(var(--rgb),.55); box-shadow:0 0 22px rgba(var(--rgb),.25), inset 0 0 18px rgba(var(--rgb),.18); transition:box-shadow .35s; }
+.node .core::after{ content:""; position:absolute; inset:-10px; border-radius:50%; border:1px dashed rgba(var(--rgb),.28); animation:spin 30s linear infinite; }
+.node svg.ic{ position:relative; width:34px; height:34px; stroke:rgb(var(--rgb)); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.node .num{ position:absolute; top:-6px; right:-26px; font-family:var(--mono); font-size:12px; color:rgb(var(--rgb)); }
+.node .orbit{ position:absolute; inset:-22px; border-radius:50%; opacity:0; transition:opacity .3s; animation:spin 4s linear infinite; }
+.node .orbit i{ position:absolute; width:4px; height:4px; border-radius:50%; background:rgb(var(--rgb)); box-shadow:0 0 8px rgb(var(--rgb)); }
+.node .orbit i:nth-child(1){ left:50%; top:0; } .node .orbit i:nth-child(2){ right:4px; bottom:20%; } .node .orbit i:nth-child(3){ left:6px; bottom:24%; }
+.node .label{ display:block; text-align:center; }
+.node .t-en{ display:block; font-family:var(--display); font-weight:600; font-stretch:112%; font-size:17px; letter-spacing:.06em; color:#EEF6FF; line-height:1.2; }
+.node .t-zh{ display:block; font-size:13px; color:var(--mute); margin-top:2px; letter-spacing:.08em; }
+.node .desc{ display:block; font-size:12.5px; color:var(--text); opacity:0; max-height:0; overflow:hidden; transition:opacity .3s, max-height .3s; line-height:1.5; margin-top:4px; }
+.node .bar{ display:flex; justify-content:center; align-items:center; gap:8px; margin-top:8px; font-family:var(--mono); font-size:11px; color:var(--mute); }
+.node .bar b{ position:relative; flex:0 0 120px; height:3px; background:rgba(169,232,255,.12); border-radius:2px; overflow:hidden; }
+.node .bar b i{ position:absolute; inset:0 auto 0 0; background:rgb(var(--rgb)); border-radius:2px; }
+.node:hover .core, .node:focus-visible .core, .node.active .core{ transform:scale(1.14); }
+.node:hover .core::before, .node.active .core::before{ box-shadow:0 0 44px rgba(var(--rgb),.55), inset 0 0 22px rgba(var(--rgb),.3); }
+.node:hover .orbit, .node.active .orbit{ opacity:1; }
+.node:hover .desc, .node:focus-visible .desc, .node.active .desc{ opacity:.85; max-height:60px; }
+.node:focus-visible{ outline:none; } .node:focus-visible .core{ outline:2px solid var(--cyan); outline-offset:8px; }
+.node.ai{ --rgb:169,148,255; } .node.media{ --rgb:63,211,245; } .node.edge{ --rgb:255,184,107; }
+.node.done{ --rgb:114,227,166; }
+.node.done .num::after{ content:" ✓"; }
+#world.focus .node:not(.active), #world.focus .final:not(.active){ opacity:.38; filter:saturate(.6); }
+.node.hidden-intro, .final.hidden-intro{ opacity:0 !important; transform:scale(.8); }
+
+/* final destination */
+.final{ position:absolute; width:620px; height:620px; margin-left:-310px; margin-top:-310px; transition:opacity .5s; --rgb:63,211,245; }
+.final svg{ width:100%; height:100%; overflow:visible; }
+.final .hit{ position:absolute; left:50%; top:50%; width:170px; height:170px; margin:-85px 0 0 -85px; border-radius:50%; background:transparent; border:0; }
+.final .ft{ position:absolute; left:50%; top:calc(50% + 320px); transform:translateX(-50%); text-align:center; width:680px; pointer-events:none; }
+.final .ft b{ display:block; font-family:var(--display); font-stretch:120%; font-weight:600; font-size:24px; letter-spacing:.1em; color:#F2FAFF; }
+.final .ft span{ display:block; color:var(--mute); font-size:14px; letter-spacing:.1em; }
+.final .ft em{ display:inline-block; margin-top:8px; font-style:normal; font-family:var(--mono); font-size:12px; color:var(--green); letter-spacing:.3em; min-height:1.4em; }
+
+/* companion */
+#companion{ position:absolute; width:96px; height:96px; margin:-48px 0 0 -48px; pointer-events:none; filter:drop-shadow(0 0 14px rgba(63,211,245,.35)); }
+#companion svg{ width:100%; height:100%; animation:bob 3.2s ease-in-out infinite; overflow:visible; }
+#companion .part{ opacity:0; transition:opacity .8s; } 
+#companion.s2 .p2, #companion.s3 .p2, #companion.s3 .p3, #companion.s4 .p2, #companion.s4 .p3, #companion.s4 .p4, #companion.s5 .part{ opacity:1; }
+#companion .say{ position:absolute; left:84px; top:-6px; white-space:nowrap; font-family:var(--mono); font-size:11px; color:var(--ice); background:rgba(8,19,34,.8); border:1px solid var(--line); padding:3px 8px; border-radius:10px 10px 10px 2px; }
+@keyframes bob{ 50%{ transform:translateY(-6px); } }
+@keyframes spin{ to{ transform:rotate(360deg); } }
+
+/* ---------- HUD ---------- */
+.hud{ position:absolute; z-index:5; pointer-events:none; }
+.hud > *{ pointer-events:auto; }
+#hudTL{ top:calc(18px + env(safe-area-inset-top,0px)); left:22px; }
+#hudTC{ top:calc(22px + env(safe-area-inset-top,0px)); left:50%; transform:translateX(-50%); }
+#hudTR{ top:calc(18px + env(safe-area-inset-top,0px)); right:22px; text-align:right; }
+#hudBL{ bottom:calc(18px + env(safe-area-inset-bottom,0px)); left:22px; }
+#hudBC{ bottom:calc(20px + env(safe-area-inset-bottom,0px)); left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:10px; }
+#hudBR{ bottom:calc(18px + env(safe-area-inset-bottom,0px)); right:22px; }
+.brand{ display:flex; gap:12px; align-items:center; }
+.brand .mark{ width:38px; height:38px; }
+.brand h1{ margin:0; font-family:var(--display); font-weight:600; font-stretch:125%; font-size:17px; letter-spacing:.16em; line-height:1.1; }
+.brand small{ display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.2em; color:var(--mute); margin-top:4px; }
+.chip-btn{ margin-top:12px; display:inline-flex; gap:8px; align-items:center; background:rgba(8,19,34,.6); border:1px solid var(--line); border-radius:20px; padding:5px 12px; font-family:var(--mono); font-size:11px; letter-spacing:.12em; color:var(--ice); backdrop-filter:blur(8px); }
+.chip-btn:hover{ border-color:var(--line2); }
+.flow{ font-family:var(--mono); font-size:12px; letter-spacing:.28em; color:var(--mute); white-space:nowrap; }
+.flow span{ transition:color .4s, text-shadow .4s; } .flow span.on{ color:var(--ice); text-shadow:0 0 12px rgba(63,211,245,.7); }
+.flow i{ font-style:normal; color:var(--dim); margin:0 8px; }
+.stat{ font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--mute); }
+.stat b{ display:block; font-family:var(--display); font-stretch:115%; font-weight:500; font-size:22px; letter-spacing:.06em; color:#EEF6FF; }
+.pbar{ width:180px; height:3px; background:rgba(169,232,255,.12); border-radius:2px; margin:8px 0 0 auto; overflow:hidden; }
+.pbar i{ display:block; height:100%; width:0; background:linear-gradient(90deg,var(--violet),var(--cyan),var(--green)); transition:width .8s; }
+.cur{ background:rgba(8,19,34,.6); border:1px solid var(--line); border-radius:14px; padding:10px 16px; text-align:left; backdrop-filter:blur(8px); min-width:220px; }
+.cur:hover{ border-color:var(--line2); }
+.cur small{ display:block; font-family:var(--mono); font-size:10.5px; letter-spacing:.2em; color:var(--mute); }
+.cur b{ display:block; font-family:var(--display); font-stretch:115%; font-weight:600; font-size:16px; letter-spacing:.08em; }
+.cur span{ font-family:var(--mono); font-size:12px; color:var(--cyan); }
+.drag{ font-family:var(--mono); font-size:11px; letter-spacing:.3em; color:var(--mute); }
+.zbtn{ width:30px; height:30px; border-radius:50%; background:rgba(8,19,34,.6); border:1px solid var(--line); color:var(--ice); font-family:var(--mono); display:grid; place-items:center; padding:0; }
+.zbtn:hover{ border-color:var(--line2); }
+.next{ background:linear-gradient(135deg,rgba(63,211,245,.18),rgba(169,148,255,.14)); border:1px solid rgba(63,211,245,.45); color:#EAF8FF; border-radius:24px; padding:11px 20px; font-family:var(--display); font-stretch:115%; font-weight:600; letter-spacing:.14em; font-size:13px; }
+.next:hover{ background:linear-gradient(135deg,rgba(63,211,245,.3),rgba(169,148,255,.22)); }
+
+/* ---------- drawer (journey) ---------- */
+#drawer{ position:absolute; z-index:8; top:0; left:0; bottom:0; width:340px; max-width:88vw; background:var(--glass); backdrop-filter:blur(18px); border-right:1px solid var(--line); transform:translateX(-102%); transition:transform .45s cubic-bezier(.2,.8,.2,1); padding:calc(22px + env(safe-area-inset-top,0px)) 22px 22px; overflow:auto; }
+#drawer.open{ transform:none; }
+#drawer h2{ font-family:var(--display); font-stretch:120%; font-weight:600; font-size:15px; letter-spacing:.2em; margin:0 0 4px; }
+#drawer .big{ font-family:var(--display); font-size:44px; font-weight:300; font-stretch:110%; line-height:1; margin:12px 0 4px; }
+#drawer .pbar{ width:100%; margin:8px 0 18px; height:4px; }
+#drawer ol{ list-style:none; margin:0; padding:0; }
+#drawer li button{ width:100%; display:grid; grid-template-columns:26px 28px 1fr auto; align-items:center; gap:6px; text-align:left; background:none; border:0; border-bottom:1px solid rgba(169,232,255,.07); padding:9px 2px; }
+#drawer li button:hover{ background:rgba(169,232,255,.04); }
+#drawer .st{ font-family:var(--mono); color:var(--dim); }
+#drawer .st.ok{ color:var(--green); } #drawer .st.now{ color:var(--cyan); } #drawer .st.star{ color:var(--warn); }
+#drawer .n{ font-family:var(--mono); font-size:12px; color:var(--mute); }
+#drawer .nm{ font-size:14px; } #drawer .nm small{ display:block; color:var(--mute); font-size:11.5px; }
+#drawer .pc{ font-family:var(--mono); font-size:11px; color:var(--mute); }
+.ghost{ background:none; border:1px solid var(--line); border-radius:8px; padding:6px 12px; color:var(--mute); font-size:12px; }
+.ghost:hover{ color:var(--text); border-color:var(--line2); }
+
+/* ---------- learning panel ---------- */
+#panel{ position:absolute; z-index:9; top:calc(12px + env(safe-area-inset-top,0px)); right:12px; bottom:calc(12px + env(safe-area-inset-bottom,0px)); width:min(600px,48vw); background:var(--glass); backdrop-filter:blur(22px) saturate(1.2); -webkit-backdrop-filter:blur(22px) saturate(1.2); border:1px solid var(--line); border-radius:20px; box-shadow:0 30px 80px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.04); display:flex; flex-direction:column; transform:translateX(calc(100% + 30px)); transition:transform .55s cubic-bezier(.2,.8,.2,1); overflow:hidden; }
+#panel.open{ transform:none; }
+#panel header{ padding:22px 26px 0; position:relative; }
+#panel .idx{ font-family:var(--mono); font-size:12px; letter-spacing:.2em; color:var(--cyan); }
+#panel h2{ margin:6px 0 0; font-family:var(--display); font-weight:600; font-stretch:120%; font-size:30px; letter-spacing:.05em; line-height:1.1; }
+#panel .zh{ font-size:16px; color:var(--mute); letter-spacing:.12em; margin-top:4px; }
+#panel .lead{ margin:10px 0 0; color:var(--text); opacity:.9; max-width:60ch; }
+#panel .x{ position:absolute; top:18px; right:18px; width:34px; height:34px; border-radius:50%; background:none; border:1px solid var(--line); color:var(--mute); font-size:18px; line-height:1; }
+#panel .x:hover{ color:#fff; border-color:var(--line2); }
+.steps{ display:flex; gap:4px; margin:18px 0 0; padding:0; list-style:none; border-bottom:1px solid var(--line); }
+.steps button{ flex:1; background:none; border:0; border-bottom:2px solid transparent; padding:8px 2px 10px; font-family:var(--mono); font-size:10.5px; letter-spacing:.14em; color:var(--mute); position:relative; }
+.steps button.on{ color:#EEF6FF; border-bottom-color:var(--cyan); }
+.steps button .ck{ display:block; width:16px; height:16px; margin:0 auto 4px; border-radius:50%; border:1px solid var(--dim); font-size:10px; line-height:14px; color:transparent; }
+.steps button.done .ck{ background:var(--green); border-color:var(--green); color:#03140b; }
+.pbody{ flex:1; overflow:auto; padding:20px 26px 26px; overscroll-behavior:contain; }
+.pfoot{ border-top:1px solid var(--line); padding:12px 26px; display:flex; justify-content:space-between; align-items:center; gap:10px; }
+.sec{ margin:0 0 22px; }
+.sec h3{ font-family:var(--mono); font-weight:500; font-size:11px; letter-spacing:.24em; color:var(--mute); margin:0 0 10px; }
+.cards{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.card{ border:1px solid var(--line); border-radius:12px; padding:12px 14px; background:rgba(169,232,255,.025); }
+.card b{ display:block; font-family:var(--display); font-weight:600; font-stretch:110%; letter-spacing:.03em; font-size:15px; }
+.card b small{ font-family:var(--body); font-weight:400; color:var(--mute); font-size:12px; margin-left:6px; letter-spacing:.06em; }
+.card p{ margin:4px 0 0; font-size:13.5px; color:#C3D3E4; line-height:1.55; }
+.tags{ display:flex; flex-wrap:wrap; gap:6px; }
+.tag{ font-size:12.5px; padding:3px 10px; border-radius:20px; border:1px solid var(--line); color:#CFE2F3; }
+.tag.v{ border-color:rgba(169,148,255,.35); } .tag.c{ border-color:rgba(63,211,245,.35); }
+.links{ display:flex; flex-direction:column; gap:6px; }
+.links a{ display:flex; justify-content:space-between; gap:10px; text-decoration:none; border:1px solid var(--line); border-radius:10px; padding:9px 12px; color:var(--text); font-size:13.5px; }
+.links a:hover{ border-color:rgba(63,211,245,.5); background:rgba(63,211,245,.05); }
+.links a span{ color:var(--mute); font-size:12px; text-align:right; }
+.btn{ background:rgba(63,211,245,.12); border:1px solid rgba(63,211,245,.5); color:#EAF8FF; border-radius:10px; padding:9px 16px; font-family:var(--display); font-stretch:110%; font-weight:600; letter-spacing:.1em; font-size:13px; }
+.btn:hover{ background:rgba(63,211,245,.22); }
+.btn.v{ background:rgba(169,148,255,.12); border-color:rgba(169,148,255,.5); }
+.btn.sm{ padding:6px 11px; font-size:12px; }
+.btn:disabled{ opacity:.4; cursor:default; }
+.row{ display:flex; flex-wrap:wrap; gap:8px; align-items:center; }
+.note{ font-size:12.5px; color:var(--mute); }
+.done-banner{ border:1px solid rgba(114,227,166,.4); background:rgba(114,227,166,.07); color:var(--green); border-radius:12px; padding:10px 14px; font-size:14px; margin-top:12px; }
+.lab{ border:1px solid var(--line); border-radius:14px; padding:14px; background:rgba(2,6,13,.45); }
+.lab canvas{ display:block; width:100%; height:auto; border-radius:10px; background:#040b16; }
+.readout{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; margin-top:10px; }
+.readout div{ border:1px solid var(--line); border-radius:10px; padding:6px 10px; }
+.readout small{ display:block; font-family:var(--mono); font-size:10px; letter-spacing:.16em; color:var(--mute); }
+.readout b{ font-family:var(--mono); font-weight:500; font-size:15px; color:#EEF6FF; }
+textarea, input[type=text], select{ width:100%; background:rgba(2,6,13,.7); color:var(--text); border:1px solid var(--line); border-radius:10px; padding:9px 12px; font:inherit; font-size:14px; }
+textarea{ resize:vertical; min-height:60px; }
+input[type=range]{ accent-color:var(--cyan); width:100%; }
+label.inl{ display:flex; gap:10px; align-items:center; font-size:13px; color:var(--mute); }
+.tok{ display:inline-flex; flex-direction:column; align-items:center; margin:0 4px 6px 0; padding:3px 8px; border-radius:8px; background:rgba(169,148,255,.12); border:1px solid rgba(169,148,255,.3); font-size:13px; }
+.tok small{ font-family:var(--mono); font-size:9.5px; color:var(--mute); }
+.prob{ display:grid; grid-template-columns:90px 1fr 46px; gap:8px; align-items:center; font-size:13px; margin:3px 0; }
+.prob i{ display:block; height:8px; border-radius:4px; background:linear-gradient(90deg,var(--violet),var(--cyan)); transition:width .5s; }
+.prob span{ font-family:var(--mono); font-size:11px; color:var(--mute); text-align:right; }
+.out{ margin-top:10px; padding:12px 14px; border-radius:10px; border:1px dashed var(--line2); min-height:48px; font-size:14.5px; }
+.log{ font-family:var(--mono); font-size:12px; line-height:1.7; max-height:180px; overflow:auto; padding:8px 10px; background:rgba(2,6,13,.6); border-radius:10px; border:1px solid var(--line); margin-top:10px; color:#B9CCE0; }
+.log .ok{ color:var(--green); } .log .w{ color:var(--warn); } .log .v{ color:var(--violet); } .log .c{ color:var(--cyan); }
+.plan li{ margin:6px 0; opacity:.25; transition:opacity .4s; } .plan li.on{ opacity:1; }
+.plan code{ font-family:var(--mono); font-size:11.5px; color:var(--cyan); background:rgba(63,211,245,.08); padding:1px 6px; border-radius:6px; }
+.toggles{ display:grid; grid-template-columns:repeat(3,1fr); gap:6px; }
+.toggles button{ border:1px solid var(--line); background:rgba(63,211,245,.1); border-radius:8px; padding:7px 6px; font-size:12px; color:#DDF4FF; }
+.toggles button.off{ background:none; color:var(--dim); text-decoration:line-through; }
+.wm li{ display:flex; justify-content:space-between; font-size:13px; padding:3px 0; border-bottom:1px solid rgba(169,232,255,.06); }
+.wm li span{ font-family:var(--mono); font-size:11px; } .wm .lost{ color:var(--red); } .wm .okk{ color:var(--green); }
+.pad{ display:grid; grid-template-columns:repeat(3,44px); grid-template-rows:repeat(2,44px); gap:6px; }
+.pad button{ border:1px solid var(--line2); background:rgba(63,211,245,.08); border-radius:10px; font-size:18px; touch-action:none; }
+.pad button.on{ background:rgba(63,211,245,.35); }
+.blocks{ display:flex; flex-wrap:wrap; gap:8px; min-height:44px; }
+.blocks button{ border:1px solid var(--line2); background:rgba(169,232,255,.05); border-radius:10px; padding:8px 12px; font-size:13px; }
+.blocks button:hover{ border-color:var(--cyan); }
+.blocks button.bad{ animation:shake .35s; border-color:var(--red); }
+@keyframes shake{ 25%{ transform:translateX(-5px);} 75%{ transform:translateX(5px);} }
+.chain{ display:flex; flex-direction:column; align-items:flex-start; gap:0; margin-top:12px; }
+.chain div{ border:1px solid rgba(114,227,166,.45); background:rgba(114,227,166,.06); border-radius:10px; padding:7px 12px; font-size:13px; }
+.chain div + div{ position:relative; margin-top:18px; }
+.chain div + div::before{ content:""; position:absolute; left:22px; top:-18px; height:18px; border-left:1px dashed var(--green); }
+.quiz button{ display:block; width:100%; text-align:left; border:1px solid var(--line); background:rgba(169,232,255,.03); border-radius:10px; padding:10px 14px; margin:6px 0; font-size:14px; }
+.quiz button:hover{ border-color:var(--line2); }
+.quiz button.right{ border-color:var(--green); background:rgba(114,227,166,.1); }
+.quiz button.wrong{ border-color:var(--red); background:rgba(255,122,133,.08); }
+.mission-card{ border:1px solid rgba(169,148,255,.4); border-radius:14px; padding:14px 16px; background:linear-gradient(135deg,rgba(169,148,255,.08),rgba(63,211,245,.05)); margin-bottom:16px; }
+.mission-card small{ font-family:var(--mono); letter-spacing:.24em; font-size:10.5px; color:var(--violet); }
+.mission-card b{ display:block; font-family:var(--display); font-stretch:110%; font-size:19px; margin-top:4px; letter-spacing:.03em; }
+.diagram svg{ width:100%; height:auto; display:block; }
+.flowanim{ stroke-dasharray:4 6; animation:dash 1.2s linear infinite; }
+@keyframes dash{ to{ stroke-dashoffset:-20; } }
+.ddiag text{ font-family:var(--mono); }
+
+#app.panel-open #hudTR, #app.panel-open #hudBR, #app.panel-open #hudBC{ opacity:0; pointer-events:none; }
+#hudTR,#hudBR,#hudBC,#hudTC{ transition:opacity .4s, left .55s cubic-bezier(.2,.8,.2,1); }
+#app.panel-open #hudTC{ opacity:0; pointer-events:none; }
+/* intro */
+#intro{ position:absolute; inset:0; z-index:20; pointer-events:none; display:grid; place-items:center; }
+#intro .veil{ position:absolute; inset:0; background:var(--bg0); }
+#intro .title{ position:relative; text-align:center; }
+#intro h1{ margin:0; font-family:var(--display); font-weight:300; font-stretch:125%; letter-spacing:.32em; font-size:clamp(28px,5.4vw,72px); color:#F2FAFF; opacity:0; text-indent:.32em; }
+#intro .zh{ font-size:clamp(15px,1.8vw,22px); letter-spacing:.3em; color:var(--ice); opacity:0; margin-top:10px; }
+#intro .sub{ font-family:var(--mono); font-size:12px; letter-spacing:.4em; color:var(--mute); margin-top:18px; opacity:0; }
+#intro .skip{ position:absolute; bottom:calc(90px + env(safe-area-inset-bottom,0px)); left:50%; transform:translateX(-50%); font-family:var(--mono); font-size:11px; letter-spacing:.2em; color:var(--dim); pointer-events:auto; background:none; border:0; }
+
+/* mobile journey */
+#mobile{ display:none; }
+@media (max-width: 760px){
+  body{ overflow:auto; }
+  #app{ position:relative; min-height:100%; overflow:visible; }
+  #viewport, #hudTC, #hudBC, #hudBR, #bgWrap{ display:none; }
+  #bg{ position:fixed; }
+  #hudTL, #hudTR{ position:relative; top:auto; left:auto; right:auto; text-align:left; padding:0 18px; }
+  #hudTL{ padding-top:20px; } #hudTR{ margin-top:14px; } #hudTR .pbar{ margin-left:0; width:100%; }
+  #hudBL{ display:none; }
+  #mobile{ display:block; position:relative; z-index:2; padding:20px 18px 60px; }
+  #panel, #drawer{ position:fixed; }
+  #panel{ inset:0; width:auto; border-radius:0; top:0; right:0; bottom:0; padding-top:env(safe-area-inset-top,0px); }
+  .cards{ grid-template-columns:1fr; }
+  .readout{ grid-template-columns:repeat(2,1fr); }
+  .toggles{ grid-template-columns:repeat(2,1fr); }
+}
+.mj{ display:flex; flex-direction:column; align-items:stretch; }
+.mj .m{ position:relative; text-align:left; background:rgba(8,19,34,.65); border:1px solid var(--line); border-radius:16px; padding:14px 16px 14px 72px; min-height:84px; --rgb:63,211,245; }
+.mj .m.ai{ --rgb:169,148,255; } .mj .m.done{ --rgb:114,227,166; } .mj .m.edge{ --rgb:255,184,107; }
+.mj .m .dot{ position:absolute; left:14px; top:16px; width:44px; height:44px; border-radius:50%; border:1px solid rgba(var(--rgb),.6); display:grid; place-items:center; box-shadow:0 0 16px rgba(var(--rgb),.3); }
+.mj .m .dot svg{ width:22px; height:22px; stroke:rgb(var(--rgb)); fill:none; stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.mj .m b{ font-family:var(--display); font-stretch:112%; letter-spacing:.06em; display:block; }
+.mj .m small{ color:var(--mute); }
+.mj .m .bar{ height:3px; background:rgba(169,232,255,.12); border-radius:2px; margin-top:8px; overflow:hidden; } .mj .m .bar i{ display:block; height:100%; background:rgb(var(--rgb)); }
+.mj .link{ height:34px; margin-left:36px; border-left:1px dashed rgba(169,232,255,.35); position:relative; }
+.mj .link::after{ content:"▼"; position:absolute; left:-6px; bottom:-6px; font-size:9px; color:var(--ice); }
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <div id="viewport" aria-label="Generative AI learning map. Drag to explore, scroll to pan, pinch or Ctrl+scroll to zoom.">
+    <div id="world">
+      <svg id="routeSvg" viewBox="0 0 5200 3100" aria-hidden="true"></svg>
+      <div id="nodes"></div>
+      <div id="companion" aria-hidden="true">
+        <svg viewBox="-50 -50 100 100">
+          <defs><radialGradient id="cg"><stop offset="0" stop-color="#F4EEFF"/><stop offset=".45" stop-color="#A994FF"/><stop offset="1" stop-color="#3FD3F5" stop-opacity="0"/></radialGradient></defs>
+          <g class="part p5"><circle r="44" fill="none" stroke="#72E3A6" stroke-opacity=".55" stroke-dasharray="3 5"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/></circle></g>
+          <g class="part p4" fill="none" stroke="#3FD3F5" stroke-linecap="round"><path d="M-26 -8 v12 M-32 -12 v20 M-38 -6 v8"/><path d="M26 -8 v12 M32 -12 v20 M38 -6 v8"/></g>
+          <g class="part p2"><g><animateTransform attributeName="transform" type="rotate" from="0" to="-360" dur="10s" repeatCount="indefinite"/><rect x="-6" y="-36" width="12" height="7" rx="2" fill="#07111F" stroke="#A994FF"/><rect x="22" y="12" width="12" height="7" rx="2" fill="#07111F" stroke="#A994FF"/><rect x="-34" y="14" width="12" height="7" rx="2" fill="#07111F" stroke="#A994FF"/></g></g>
+          <circle r="18" fill="url(#cg)"/>
+          <circle r="7" fill="#F4EEFF"/>
+          <g class="part p3"><path d="M-12 0 Q0 -10 12 0 Q0 10 -12 0z" fill="#07111F" stroke="#A9E8FF"/><circle r="3.2" fill="#3FD3F5"/></g>
+        </svg>
+        <span class="say" id="say">hello, creator</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hud" id="hudTL">
+    <div class="brand">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18" fill="none" stroke="#3FD3F5" stroke-opacity=".5"/><circle cx="20" cy="20" r="6" fill="#3FD3F5"/><path d="M4 26 C12 18, 26 30, 36 14" fill="none" stroke="#A994FF" stroke-width="1.5"/></svg>
+      <div><h1>GEN AI ODYSSEY</h1><small>生成式 AI 學習航線</small></div>
+    </div>
+    <button class="chip-btn" id="journeyBtn" aria-controls="drawer" aria-expanded="false">☰ JOURNEY LOG</button>
+  </div>
+  <div class="hud" id="hudTC"><div class="flow" id="flow"><span>LEARN</span><i>→</i><span>PROMPT</span><i>→</i><span>GENERATE</span><i>→</i><span>CREATE</span></div></div>
+  <div class="hud" id="hudTR">
+    <div class="stat">10 MISSIONS</div>
+    <div class="stat" style="margin-top:4px">PROGRESS <b id="pct" style="display:inline;font-size:22px">0%</b></div>
+    <div class="pbar"><i id="pbar"></i></div>
+  </div>
+  <div class="hud" id="hudBL"><button class="cur" id="curBtn"><small>CURRENT MISSION</small><span id="curIdx">01 / 10</span><b id="curName">GENERATIVE AI BASICS</b></button></div>
+  <div class="hud" id="hudBC"><button class="zbtn" id="zOut" aria-label="Zoom out">−</button><span class="drag">DRAG TO EXPLORE</span><button class="zbtn" id="zIn" aria-label="Zoom in">+</button><button class="zbtn" id="zFit" aria-label="Show the whole map" title="Show whole map">⤢</button></div>
+  <div class="hud" id="hudBR"><button class="next" id="nextBtn">NEXT MISSION →</button></div>
+
+  <div id="mobile"><div class="mj" id="mj"></div></div>
+
+  <aside id="drawer" aria-label="Journey log">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h2>GEN AI JOURNEY</h2><button class="ghost" id="drawerClose" aria-label="Close journey log">✕</button></div>
+    <div class="big" id="dPct">0%</div>
+    <div class="pbar"><i id="dBar"></i></div>
+    <ol id="dList"></ol>
+    <p class="note" style="margin-top:18px">Progress is saved in this browser. Each station has five steps: Learn, Visualize, Experiment, Build, Mission.</p>
+    <p class="note">Course material: <a href="https://rkuo2000.github.io/AI-course/" target="_blank" rel="noopener">rkuo2000 · AI course 人工智慧教材</a></p>
+    <button class="ghost" id="resetBtn">Reset my progress</button>
+  </aside>
+
+  <section id="panel" aria-label="Learning panel" aria-hidden="true">
+    <header>
+      <div class="idx" id="pIdx">04 / 10</div>
+      <h2 id="pTitle"></h2>
+      <div class="zh" id="pZh"></div>
+      <p class="lead" id="pLead"></p>
+      <button class="x" id="pClose" aria-label="Close panel">×</button>
+      <ul class="steps" id="pSteps" role="tablist"></ul>
+    </header>
+    <div class="pbody" id="pBody"></div>
+    <div class="pfoot"><button class="ghost" id="pPrev">← Previous</button><span class="note" id="pStepNote"></span><button class="btn" id="pNext">Continue →</button></div>
+  </section>
+
+  <div id="intro">
+    <div class="veil"></div>
+    <div class="title">
+      <h1>GEN AI ODYSSEY</h1>
+      <div class="zh">生成式 AI 學習航線</div>
+      <div class="sub">FROM TOKENS TO CREATIVE AGENTS</div>
+    </div>
+    <button class="skip" id="skipIntro">CLICK TO SKIP</button>
+  </div>
+</div>
+<script>
+"use strict";
+/* =========================================================
+   missions.js — Generative AI route, mapped to rkuo2000 AI-course
+   ========================================================= */
+const C = "https://rkuo2000.github.io/AI-course/lecture/";
+const L = {
+  brief:  [C+"2026/09/01/AI-Brief.html","AI Brief","AI 簡介：演進、應用、趨勢"],
+  rnn:    [C+"2026/09/04/RNN.html","RNN","Recurrent neural networks 遞歸神經網路"],
+  gan:    [C+"2026/09/05/GAN.html","VAE / GAN","Style transfer, VAE, GAN, NeRF, lip-sync"],
+  llm:    [C+"2026/09/07/LLM.html","LLM","Transformer, scaling law, LLM timeline, frameworks"],
+  ft:     [C+"2026/09/07/FineTuning.html","Model FineTuning","SFT, LoRA/QLoRA, RLHF, DPO, GRPO, benchmarks"],
+  bio:    [C+"2026/09/07/BioLLM.html","BioLLM","Sparse autoencoders, transcoders (interpretability)"],
+  vlm:    [C+"2026/09/07/VLM.html","VLM / MLLMs","Vision-language & multimodal LLMs"],
+  speech: [C+"2026/09/05/Generative-Speech.html","Generative Speech","TTS, voice cloning, speech separation, STT"],
+  img:    [C+"2026/09/06/Generative-Image.html","Generative Image","Diffusion, Text-to-Image, Text/Image-to-3D"],
+  video:  [C+"2026/09/06/Generative-Video.html","Generative Video","Text/Image-to-Video, audio-driven video"],
+  music:  [C+"2026/09/06/Generative-Music.html","Generative Music","Text-to-Music, Text-to-Song"],
+  agent:  [C+"2026/09/08/Agent.html","Agent","Agentic engineering, MCP, Skills, OpenClaw, Hermes"],
+  hw:     [C+"2026/09/01/AI-Hardwares.html","AI Hardwares","GPUs, DGX Spark, Jetson, edge boards"],
+};
+
+const ICONS = {
+  base:'<svg class="ic" viewBox="0 0 24 24"><path d="M4 7h4M4 12h7M4 17h5"/><path d="M14 6l2 2-2 2M17 12l2 2-2 2"/><circle cx="20" cy="7" r="1.4"/></svg>',
+  vae:'<svg class="ic" viewBox="0 0 24 24"><path d="M3 5l6 4v6l-6 4z"/><path d="M21 5l-6 4v6l6 4z"/><circle cx="12" cy="12" r="1.8"/></svg>',
+  llm:'<svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6M7 17h8"/></svg>',
+  prompt:'<svg class="ic" viewBox="0 0 24 24"><path d="M4 6l5 6-5 6"/><path d="M12 18h8"/></svg>',
+  ft:'<svg class="ic" viewBox="0 0 24 24"><path d="M5 4v16M12 4v16M19 4v16"/><circle cx="5" cy="9" r="2"/><circle cx="12" cy="15" r="2"/><circle cx="19" cy="7" r="2"/></svg>',
+  vlm:'<svg class="ic" viewBox="0 0 24 24"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.5"/></svg>',
+  speech:'<svg class="ic" viewBox="0 0 24 24"><path d="M3 12h2M7 8v8M11 5v14M15 8v8M19 10v4M21 12h0"/></svg>',
+  image:'<svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M3 18l6-5 4 3 3-2 5 4"/></svg>',
+  avm:'<svg class="ic" viewBox="0 0 24 24"><rect x="2" y="6" width="13" height="12" rx="2"/><path d="M15 10l5-3v10l-5-3"/><path d="M6 15V10l4-1v5"/></svg>',
+  agent:'<svg class="ic" viewBox="0 0 24 24"><path d="M12 2l2.9 6.2 6.6.8-4.9 4.5 1.3 6.6L12 16.8 6.1 20.1l1.3-6.6L2.5 9l6.6-.8z"/></svg>',
+  local:'<svg class="ic" viewBox="0 0 24 24"><rect x="6" y="6" width="12" height="12" rx="1.5"/><rect x="9.5" y="9.5" width="5" height="5"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>'
+};
+
+const STATIONS = [
+{ id:"base", n:1, kind:"ai", x:420, y:620, icon:"base",
+  en:"GENERATIVE AI BASICS", zh:"生成式 AI 入門", short:"From predicting labels to generating new data.",
+  lead:"A generative model learns the probability of data, then samples from it to create something new: the next word, the next pixel, the next note.",
+  mission:"Teach a machine to generate.",
+  topics:["Discriminative vs generative","Probability & sampling","Sequence models","RNN / LSTM","Language modeling","Evolution of AI"],
+  cards:[
+    {t:"Discriminative",zh:"判別式",p:"Learns P(label | data): is this a cat? Classifiers, detectors and spam filters live here."},
+    {t:"Generative",zh:"生成式",p:"Learns P(data) itself, so it can sample brand-new examples that look like the training data."},
+    {t:"Sequences",zh:"序列",p:"Text, speech and music are sequences. Predict the next item, append it, repeat: that is autoregression."},
+    {t:"RNN → Transformer",zh:"演進",p:"RNNs read one step at a time and forget long contexts; attention later let models see the whole sequence at once."}
+  ],
+  course:[L.brief,L.rnn,L.llm],
+  models:["n-gram","RNN","LSTM","GRU","seq2seq","Transformer"],
+  diagram:{type:"flow", stages:["TRAINING DATA","COUNT / LEARN PATTERNS","P(next | context)",["SAMPLE","APPEND"],"NEW SEQUENCE"]},
+  build:["Collect training text","Split into tokens","Learn next-token probabilities","Sample one token","Append and repeat"],
+  quiz:{q:"What makes a model generative rather than discriminative?",opts:["It models the data distribution and can sample new examples","It only outputs a class label","It needs a GPU","It has more layers"],a:0,why:"Generative models learn P(data) (or P(next | context)) and sample from it to create new content."},
+  lab:"base", labTitle:"Train a tiny language model"
+},
+{ id:"vae", n:2, kind:"ai", x:1030, y:520, icon:"vae",
+  en:"VAE & GAN", zh:"變分自編碼器與生成對抗網路", short:"Latent spaces, generators and critics.",
+  lead:"A VAE squeezes data into a smooth latent space and decodes it back; a GAN trains a generator against a discriminator until fakes look real.",
+  mission:"Navigate a latent space.",
+  topics:["Autoencoder","Latent space","VAE","GAN: generator vs discriminator","StyleGAN","CycleGAN / pix2pix","Style transfer","Inpainting"],
+  cards:[
+    {t:"Latent space",zh:"潛在空間",p:"Every point is a compressed description. Nearby points decode into similar images, so you can walk smoothly between them."},
+    {t:"VAE",zh:"變分自編碼器",p:"The encoder outputs a mean and variance; sampling from them forces the latent space to stay smooth and fillable."},
+    {t:"GAN",zh:"生成對抗網路",p:"G turns noise z into an image G(z); D outputs the probability an image is real. They improve by competing."},
+    {t:"Image-to-image",zh:"影像轉換",p:"pix2pix, CycleGAN, cartoonization and super-resolution map one image domain to another."}
+  ],
+  course:[L.gan,L.img],
+  models:["VAE","DCGAN","StyleGAN2-ADA","CycleGAN","pix2pix","Toonify","SRGAN","LaMa","DragGAN","NeRF"],
+  diagram:{type:"flow", stages:[["IMAGE","NOISE z"],["ENCODER","GENERATOR G"],"LATENT SPACE",["DECODER","DISCRIMINATOR D"],"NEW IMAGE · REAL OR FAKE?"]},
+  build:["Input image","Encoder","Latent vector (μ, σ)","Sample z","Decoder","Reconstructed / new image"],
+  quiz:{q:"In a GAN, what does the discriminator D output?",opts:["The probability that an image is real","A new image","The latent vector z","The text prompt"],a:0,why:"D(x) scores realism; the generator is trained to push D(G(z)) toward 'real'."},
+  lab:"vae", labTitle:"Latent space explorer"
+},
+{ id:"llm", n:3, kind:"ai", x:1480, y:900, icon:"llm",
+  en:"TRANSFORMER & LLM", zh:"大型語言模型", short:"Attention, tokens and next-token prediction at scale.",
+  lead:"Large language models are Transformers trained on huge text corpora to predict the next token. Scale turns that simple goal into broad ability.",
+  mission:"See what the model pays attention to.",
+  topics:["Tokens","Embeddings","Self-attention","Positional encoding (RoPE)","Scaling law","Mixture of Experts","Reasoning models","Sampling"],
+  cards:[
+    {t:"Self-attention",zh:"自注意力",p:"Each token builds a query and compares it with every other token's key. The softmax scores decide what to blend in."},
+    {t:"Scaling law",zh:"縮放定律",p:"Loss falls predictably with parameters, data and compute. Chinchilla showed how to balance model size and data."},
+    {t:"Mixture of Experts",zh:"專家混合",p:"Only a few expert blocks run per token, so models like Mixtral or DeepSeek are huge but cheap to run."},
+    {t:"Sampling",zh:"取樣",p:"Temperature and top-k reshape the next-token distribution: safe and repetitive, or creative and risky."}
+  ],
+  course:[L.llm,L.bio],
+  models:["Transformer","LLaMA","Mistral / Mixtral","DeepSeek-R1","Qwen3","Gemma 4","Phi-4","TAIDE","Breeze","Kimi K2.5","GLM-5"],
+  diagram:{type:"flow", stages:["TEXT","TOKENIZER",["TOKEN EMBEDDING","POSITION (RoPE)"],"SELF-ATTENTION × N","FEED-FORWARD / MoE","SOFTMAX OVER VOCABULARY","NEXT TOKEN"]},
+  build:["Text input","Tokenizer","Embeddings + positions","Self-attention layers","Feed-forward layers","Softmax → next token"],
+  quiz:{q:"In self-attention, how does a token decide which other tokens matter?",opts:["It compares its query with their keys and softmaxes the scores","It always looks only at the previous word","It picks tokens at random","It reads them from a database"],a:0,why:"Attention weights = softmax(q·k / √d). High-scoring tokens contribute more of their values."},
+  lab:"llm", labTitle:"Attention & sampling"
+},
+{ id:"prompt", n:4, kind:"ai", x:1960, y:1080, icon:"prompt",
+  en:"PROMPT & CONTEXT ENGINEERING", zh:"提示與情境工程", short:"Shape what the model sees, not just what you ask.",
+  lead:"The same model gives very different answers depending on its context. Engineering that context is the first and cheapest way to improve output.",
+  mission:"Engineer a prompt that reliably works.",
+  topics:["Role & instructions","Few-shot examples","Output formats","Chain of thought","Retrieval (RAG)","Context engineering","Harness engineering"],
+  cards:[
+    {t:"Prompt engineering",zh:"提示工程",p:"A single, hand-written instruction: be clear, give examples, specify the format you want back."},
+    {t:"Context engineering",zh:"情境工程",p:"Assemble everything the model sees: retrieved documents, memory, tool results, previous turns."},
+    {t:"Harness engineering",zh:"駕馭工程",p:"Tools, guardrails and evaluators around the model. Planner, generator and evaluator agents check each other."},
+    {t:"Context window",zh:"上下文長度",p:"Every token costs attention and money. Relevant context beats more context."}
+  ],
+  course:[L.llm,L.agent],
+  models:["Few-shot","Chain-of-thought","RAG","BookRAG","DSPy","Thinking prompts","Planner–Generator–Evaluator"],
+  diagram:{type:"flow", stages:[["ROLE","TASK","EXAMPLES"],["RETRIEVED DOCS","MEMORY","TOOL RESULTS"],"ASSEMBLED CONTEXT","LLM","EVALUATOR CHECK","RELIABLE OUTPUT"]},
+  build:["Define role","State the task","Add retrieved context","Show examples","Specify output format","Check with an evaluator"],
+  quiz:{q:"How does context engineering differ from prompt engineering?",opts:["It manages all the information the model sees, not just one instruction","It means writing longer prompts","It retrains the model","It is only for images"],a:0,why:"Prompt engineering optimises one instruction; context engineering assembles retrieval, memory and state for every step."},
+  lab:"prompt", labTitle:"Prompt builder"
+},
+{ id:"ft", n:5, kind:"ai", x:2380, y:1460, icon:"ft",
+  en:"FINE-TUNING & ALIGNMENT", zh:"模型微調與對齊", short:"Specialise a model with SFT, LoRA and RL.",
+  lead:"Pre-training gives knowledge; fine-tuning gives skills and manners. LoRA makes it affordable on one GPU.",
+  mission:"Fit a fine-tuning job on your GPU.",
+  topics:["Pre-training","SFT","Full fine-tuning","LoRA","QLoRA","RLHF","DPO","GRPO","Benchmarks"],
+  cards:[
+    {t:"Three phases",zh:"訓練三部曲",p:"Self-supervised pre-training → supervised fine-tuning (SFT) → learning from human or verifiable feedback."},
+    {t:"LoRA",zh:"低秩適應",p:"Freeze the weights; learn two thin matrices A·B per layer. Rank r controls how many parameters you train."},
+    {t:"QLoRA",zh:"量化 LoRA",p:"Load the frozen base in 4-bit, train LoRA on top. A 7–8B model fits on a single consumer GPU."},
+    {t:"RLHF, DPO, GRPO",zh:"偏好與強化",p:"Reward human-preferred or verifiably correct answers. GRPO compares a group of answers instead of training a critic."}
+  ],
+  course:[L.ft,L.llm],
+  models:["LlamaFactory","TRL","SmolVLM + ChartQA","Qwen2.5-3B + GSM8K (GRPO)","DPO","SWE-Bench","GDPval"],
+  diagram:{type:"flow", stages:["BASE MODEL (pre-trained)",["SFT DATA","LoRA ADAPTERS"],"SUPERVISED FINE-TUNING",["REWARD / PREFERENCES","VERIFIABLE REWARDS"],"RLHF · DPO · GRPO","ALIGNED MODEL","BENCHMARK"]},
+  build:["Pre-trained base model","Prepare instruction data","Attach LoRA adapters","Supervised fine-tuning","Preference / RL alignment","Evaluate on benchmarks"],
+  quiz:{q:"Why does LoRA need far less GPU memory than full fine-tuning?",opts:["It freezes the base weights and trains only small low-rank matrices","It deletes half the layers","It trains on fewer tokens","It runs on the CPU"],a:0,why:"Gradients and optimizer states are only kept for the tiny A and B matrices, not billions of base weights."},
+  lab:"ft", labTitle:"LoRA & VRAM calculator"
+},
+{ id:"vlm", n:6, kind:"media", x:2880, y:1500, icon:"vlm",
+  en:"VISION-LANGUAGE MODELS", zh:"視覺語言模型", short:"Give language models eyes.",
+  lead:"Multimodal LLMs turn image patches into tokens, so one model can read charts, describe scenes and answer questions about pictures.",
+  mission:"Ask a model about an image.",
+  topics:["Vision encoder (ViT/CLIP)","Projection","Image tokens","OCR & charts","Visual QA","Omni models"],
+  cards:[
+    {t:"CLIP",zh:"圖文對齊",p:"Trained on image–text pairs so matching pictures and captions land close together in one vector space."},
+    {t:"Image tokens",zh:"影像詞元",p:"An image is split into patches, encoded, and projected into the LLM's embedding space as extra tokens."},
+    {t:"Documents & charts",zh:"文件與圖表",p:"VLMs read receipts, invoices and charts; the course fine-tunes SmolVLM on ChartQA and invoices."},
+    {t:"Omni models",zh:"全模態",p:"Qwen3-Omni, Phi-4-multimodal and Nemotron Omni take text, image, audio and video in one network."}
+  ],
+  course:[L.vlm,L.ft,L.llm],
+  models:["CLIP","Llama 3.2 Vision","NVLM","SmolVLM","Qwen2.5-VL","Qwen3-Omni","Phi-4-multimodal","Gemma 4"],
+  diagram:{type:"flow", stages:[["IMAGE","QUESTION"],["VISION ENCODER","TOKENIZER"],"PROJECTION → SHARED TOKENS","MULTIMODAL LLM","ANSWER"]},
+  build:["Image + question","Split image into patches","Vision encoder","Project to LLM tokens","LLM reasons over both","Text answer"],
+  quiz:{q:"How does a VLM feed an image to a language model?",opts:["Image patches are encoded and projected into tokens the LLM attends to","The image is converted into a long caption first","It stores pixels in a database","It doesn't, VLMs only read text"],a:0,why:"A vision encoder plus projector turns patches into embeddings in the same space as word tokens."},
+  lab:"vlm", labTitle:"Show an image to the model"
+},
+{ id:"speech", n:7, kind:"media", x:3280, y:1900, icon:"speech",
+  en:"GENERATIVE SPEECH", zh:"生成式語音", short:"Text-to-speech, voice cloning and speech-to-text.",
+  lead:"Speech models turn text into mel-spectrograms and waveforms, clone voices from seconds of audio, and transcribe speech back into text.",
+  mission:"Make the machine speak.",
+  topics:["Text-to-speech","Mel spectrogram","Vocoder","Voice cloning","Speech separation","Speech-to-text (ASR)","Full-duplex voice"],
+  cards:[
+    {t:"Mel spectrogram",zh:"梅爾頻譜",p:"A picture of sound: time on x, frequency on y, energy as brightness. Tacotron-style models predict it from text."},
+    {t:"Vocoder",zh:"聲碼器",p:"Turns a spectrogram into a waveform. WaveNet started it; modern codecs use speech tokens."},
+    {t:"Voice cloning",zh:"聲音複製",p:"A speaker embedding from a few seconds of audio conditions the TTS. Powerful, so consent matters."},
+    {t:"ASR",zh:"語音辨識",p:"Whisper-style encoder–decoders transcribe and translate; Breeze-ASR targets Taiwanese Mandarin and Hokkien."}
+  ],
+  course:[L.speech],
+  models:["WaveNet","Tacotron 2","Spark-TTS","IndexTTS2","Qwen3-TTS","VoxCPM2","Kokoro","GPT-SoVITS","Whisper","Breeze-ASR-26"],
+  diagram:{type:"flow", stages:["TEXT","NORMALIZE + PHONEMES",["SPEAKER EMBEDDING","ACOUSTIC MODEL"],"MEL SPECTROGRAM","VOCODER","WAVEFORM","(ASR) → TEXT AGAIN"]},
+  build:["Input text","Text normalization","Phonemes / speech tokens","Acoustic model → mel spectrogram","Vocoder","Audio waveform"],
+  quiz:{q:"What does a vocoder do in a TTS pipeline?",opts:["Converts a spectrogram (or speech tokens) into an audio waveform","Translates text to another language","Detects the speaker's emotion","Removes background noise"],a:0,why:"The acoustic model predicts how sound should look; the vocoder makes the actual waveform you hear."},
+  lab:"speech", labTitle:"Text → speech"
+},
+{ id:"image", n:8, kind:"media", x:3780, y:1960, icon:"image",
+  en:"GENERATIVE IMAGE & 3D", zh:"生成式影像與 3D", short:"Diffusion: from noise to picture.",
+  lead:"Diffusion models learn to remove noise step by step. Guided by a text encoder, they turn random static into the picture you described.",
+  mission:"Denoise an image into existence.",
+  topics:["Forward & reverse diffusion","Latent diffusion","CLIP text encoder","Classifier-free guidance","DiT","Text-to-3D","Image-to-3D","ComfyUI"],
+  cards:[
+    {t:"Diffusion",zh:"擴散模型",p:"Training adds Gaussian noise until only static remains; the model learns to predict and remove that noise."},
+    {t:"Latent diffusion",zh:"潛在擴散",p:"Stable Diffusion denoises a small latent and decodes it with a VAE, which is far cheaper than working on pixels."},
+    {t:"Guidance (CFG)",zh:"引導強度",p:"Higher guidance follows the prompt more literally; too high and colors burn out."},
+    {t:"Into 3D",zh:"走向 3D",p:"Multi-view diffusion and reconstruction models (Zero123++, TripoSR, Hunyuan3D) lift images into meshes."}
+  ],
+  course:[L.img,L.gan],
+  models:["DALL·E 2/3","Stable Diffusion / SDXL","SD 3.5","Imagen","FLUX.1 / FLUX.2","Z-Image","ComfyUI","Shap-E","TripoSR","Hunyuan3D"],
+  diagram:{type:"flow", stages:[["TEXT PROMPT","RANDOM NOISE"],["TEXT ENCODER","LATENT 64×64"],"U-NET / DiT DENOISER × T STEPS","CLASSIFIER-FREE GUIDANCE","VAE DECODER","IMAGE"]},
+  build:["Text prompt","Text encoder","Start from random latent noise","Denoise step by step","VAE decode","Final image"],
+  quiz:{q:"What does a diffusion model learn during training?",opts:["To predict and remove the noise added to images","To copy training images exactly","To classify images","To compress images into JPEG"],a:0,why:"Learning to undo noise lets it start from pure noise at generation time and denoise into a new image."},
+  lab:"image", labTitle:"Diffusion studio"
+},
+{ id:"avm", n:9, kind:"media", x:4130, y:2360, icon:"avm",
+  en:"GENERATIVE VIDEO & MUSIC", zh:"生成式影片與音樂", short:"Add time: moving pictures and melodies.",
+  lead:"Video and music models generate sequences that must stay consistent over time, from Sora-style video diffusion to text-to-song.",
+  mission:"Compose a scene in time.",
+  topics:["Text-to-video","Image-to-video","Temporal consistency","Audio-driven video","World models","Text-to-music","Text-to-song"],
+  cards:[
+    {t:"Video diffusion",zh:"影片擴散",p:"Denoise many frames together with attention across time, so objects keep their shape and position."},
+    {t:"Audio-driven video",zh:"語音驅動",p:"MultiTalk, InfiniteTalk and Wan-S2V animate faces and bodies from a soundtrack."},
+    {t:"Music LMs",zh:"音樂語言模型",p:"MusicLM and MusicGen predict audio tokens from text; ACE-Step and DiffRhythm make full songs with lyrics."},
+    {t:"World models",zh:"世界模型",p:"Long, controllable video becomes a simulator you can interact with."}
+  ],
+  course:[L.video,L.music,L.speech],
+  models:["Sora","Stable Video Diffusion","AnimateDiff","Wan 2.2","LTX-2","Veo 3","Kling","MusicLM","MusicGen (AudioCraft)","ACE-Step 1.5","DiffRhythm"],
+  diagram:{type:"flow", stages:[["TEXT","IMAGE","AUDIO"],"CONDITION ENCODERS","SPATIO-TEMPORAL DENOISER",["VIDEO FRAMES","AUDIO TOKENS"],["VIDEO DECODER","AUDIO CODEC"],"CLIP WITH SOUND"]},
+  build:["Text / image / audio prompt","Condition encoders","Denoise across time","Keep frames consistent","Decode video & audio","Final clip"],
+  quiz:{q:"What is the hardest new problem when moving from image to video generation?",opts:["Keeping objects consistent from frame to frame","Choosing colors","Writing the prompt","Saving the file"],a:0,why:"Each frame must agree with the last; video models attend across time to avoid flicker and morphing."},
+  lab:"avm", labTitle:"Music & video lab"
+},
+{ id:"agent", n:10, kind:"final", x:4650, y:2560, icon:"agent",
+  en:"FINAL MISSION", zh:"生成式 AI 代理人專題", short:"BUILD YOUR GENERATIVE AI AGENT",
+  lead:"Put it all together: an agent that plans with an LLM, remembers with RAG, and calls image, speech, music and video generators as tools.",
+  mission:"Build an AI agent that understands a request, plans, calls generative tools, checks its own work, and delivers a finished creation.",
+  topics:["AI agents","Tool calling","MCP","Skills","Memory & RAG","Multi-agent","Evaluation","Responsible use"],
+  cards:[
+    {t:"Agent = model + harness",zh:"代理架構",p:"The LLM decides; the harness supplies tools, memory and guardrails, and runs the loop."},
+    {t:"MCP",zh:"模型上下文協定",p:"An open standard for plugging tools and data into AI apps: generators, files, calendars, design tools."},
+    {t:"Skills",zh:"技能",p:"A folder with SKILL.md and scripts that teaches an agent a repeatable workflow, like text-to-CAD."},
+    {t:"Responsible GenAI",zh:"負責任使用",p:"Label AI media, get consent before cloning voices or faces, and keep a human in the loop."}
+  ],
+  course:[L.agent,L.llm,L.img,L.speech,L.music,L.video],
+  models:["Claude Code","Codex","OpenCode","OpenClaw","Hermes-Agent","MCP servers","Agent Skills","ComfyUI workflows"],
+  diagram:{type:"radial"},
+  build:["User request","Agent plans with LLM","Recall memory / RAG","Call generators via MCP","Evaluate and revise","Deliver the creation"],
+  quiz:{q:"In a generative agent, what is MCP used for?",opts:["Connecting the agent to external tools and data in a standard way","Training the diffusion model","Compressing audio","Rendering 3D meshes"],a:0,why:"MCP lets one agent discover and call many tools, such as image, speech or music generators, through one protocol."},
+  lab:"agent", labTitle:"Run your creative agent"
+}
+];
+
+const EDGE = { id:"local", n:"E", kind:"edge", x:2620, y:2160, icon:"local",
+  en:"RUN IT LOCALLY", zh:"本地端部署生成式 AI", short:"Optional branch: llama.cpp, Ollama, vLLM on your own hardware.",
+  lead:"Open-weight models can run on your own GPU, Mac or edge board. Memory size and bandwidth decide what fits and how fast it talks.",
+  mission:"Pick a model and quantization that fits your hardware.",
+  topics:["Quantization (Q8, Q4, Q2)","GGUF","KV cache","Memory bandwidth","llama.cpp","Ollama","vLLM","LM Studio"],
+  cards:[
+    {t:"Quantization",zh:"量化",p:"Store weights in fewer bits. 4-bit cuts memory to about a quarter of FP16 with modest quality loss."},
+    {t:"KV cache",zh:"鍵值快取",p:"Every token of context stores keys and values per layer. Long contexts can need several extra GB."},
+    {t:"Bandwidth = speed",zh:"頻寬決定速度",p:"Generating a token reads every weight once, so tokens/s ≈ memory bandwidth ÷ model size."},
+    {t:"Pick a runtime",zh:"選擇框架",p:"Ollama and LM Studio for easy local use, llama.cpp for CPUs and Apple Silicon, vLLM for serving many users."}
+  ],
+  course:[L.llm,L.hw],
+  models:["llama.cpp","Ollama","LM Studio","vLLM","DGX Spark","RTX 50 series","Mac Mini M4","Jetson Orin Nano Super","Raspberry Pi 5"],
+  diagram:{type:"flow", stages:["OPEN-WEIGHT MODEL","QUANTIZE → GGUF / AWQ",["WEIGHTS IN MEMORY","KV CACHE"],["llama.cpp","Ollama","vLLM"],"LOCAL API","YOUR APP / AGENT"]},
+  build:["Choose an open model","Quantize","Check memory: weights + KV cache","Pick a runtime","Serve a local API","Connect your app"],
+  quiz:{q:"Roughly what limits how many tokens per second a local LLM generates?",opts:["Memory bandwidth divided by the model's size in memory","The screen resolution","The prompt language","The number of CPU fans"],a:0,why:"Each new token needs all weights read once, so bandwidth ÷ bytes of weights gives an upper bound."},
+  lab:"local", labTitle:"Will it run on my machine?"
+};
+const ALL = [...STATIONS, EDGE];
+const STEPS = ["LEARN","VISUALIZE","EXPERIMENT","BUILD","MISSION"];
+/* =========================================================
+   app.js — store, camera, input, HUD, panel
+   ========================================================= */
+const $ = (s,r=document)=>r.querySelector(s);
+const h = (tag,attrs={},html="")=>{ const e=document.createElement(tag); for(const k in attrs){ if(k==="class") e.className=attrs[k]; else if(k.startsWith("on")) e.addEventListener(k.slice(2),attrs[k]); else e.setAttribute(k,attrs[k]); } if(html) e.innerHTML=html; return e; };
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const lerp=(a,b,t)=>a+(b-a)*t;
+const ease=t=>t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+const pad2=n=>typeof n==="number"?String(n).padStart(2,"0"):n;
+const REDUCED = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const isMobile=()=>innerWidth<=760;
+const W=5200, H=3100;
+const byId = id=>ALL.find(s=>s.id===id);
+
+/* ---------- progress store (localStorage) ---------- */
+const Store=(()=>{
+  const KEY="gao-progress-v1"; let d={s:{},cur:"base"};
+  try{ const r=localStorage.getItem(KEY); if(r){ const p=JSON.parse(r); if(p&&p.s) d=p; } }catch(e){}
+  const save=()=>{ try{ localStorage.setItem(KEY,JSON.stringify(d)); }catch(e){} };
+  return {
+    get(id){ if(!d.s[id]) d.s[id]=[0,0,0,0,0]; return d.s[id]; },
+    mark(id,i){ const a=this.get(id); if(a[i]) return false; a[i]=1; save(); return true; },
+    pct(id){ return this.get(id).reduce((x,y)=>x+y,0)/5; },
+    done(id){ return this.pct(id)===1; },
+    overall(){ return STATIONS.reduce((s,st)=>s+this.pct(st.id),0)/STATIONS.length; },
+    completed(){ return STATIONS.filter(s=>this.done(s.id)).length; },
+    get cur(){ return d.cur||"base"; }, set cur(v){ d.cur=v; save(); },
+    reset(){ d={s:{},cur:"base"}; save(); }
+  };
+})();
+
+/* ---------- camera ---------- */
+const world=$("#world"), viewport=$("#viewport");
+const Cam={x:420,y:620,s:1,vx:0,vy:0,tw:null,drag:false};
+let vw=innerWidth, vh=innerHeight;
+const minS=()=>Math.min(vw/W,vh/H)*0.9, maxS=1.5;
+function clampCam(){ Cam.s=clamp(Cam.s,minS(),maxS); Cam.x=clamp(Cam.x,0,W); Cam.y=clamp(Cam.y,0,H); }
+function applyCam(){ world.style.transform=`translate3d(${(vw/2-Cam.x*Cam.s).toFixed(2)}px,${(vh/2-Cam.y*Cam.s).toFixed(2)}px,0) scale(${Cam.s.toFixed(4)})`; }
+function tweenCam(x,y,s,dur=1100){
+  if(REDUCED) dur=1;
+  Cam.vx=Cam.vy=0;
+  Cam.tw={x0:Cam.x,y0:Cam.y,s0:Cam.s,x,y,s:clamp(s,minS(),maxS),t0:performance.now(),dur};
+}
+function panelW(){ return (!isMobile() && $("#panel").classList.contains("open")) ? $("#panel").offsetWidth+12 : 0; }
+function focusOn(st,s=1){
+  const pw = isMobile()?0:Math.min(600,innerWidth*.48)+12;
+  tweenCam(st.x + pw/2/s, st.y + (st.kind==="final"?40:20), s);
+}
+function fitView(){ tweenCam(W/2,H/2,minS()); }
+
+/* ---------- input: drag, inertia, wheel, pinch, keys ---------- */
+(function input(){
+  const pts=new Map(); let last=null, moved=0, pinch0=null, suppressClick=false;
+  viewport.addEventListener("pointerdown",e=>{
+    pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    last={x:e.clientX,y:e.clientY,t:performance.now()}; moved=0; Cam.tw=null; Cam.vx=Cam.vy=0;
+    if(pts.size===2){ const [a,b]=[...pts.values()]; pinch0={d:Math.hypot(a.x-b.x,a.y-b.y),s:Cam.s}; }
+  });
+  addEventListener("pointermove",e=>{
+    if(!pts.has(e.pointerId)) return;
+    pts.set(e.pointerId,{x:e.clientX,y:e.clientY});
+    if(pts.size===2 && pinch0){ const [a,b]=[...pts.values()]; Cam.s=clamp(pinch0.s*Math.hypot(a.x-b.x,a.y-b.y)/pinch0.d,minS(),maxS); moved=99; applyCam(); return; }
+    const dx=e.clientX-last.x, dy=e.clientY-last.y, now=performance.now(), dt=Math.max(1,now-last.t);
+    moved+=Math.abs(dx)+Math.abs(dy);
+    if(moved>6){ if(!Cam.drag){ Cam.drag=true; viewport.classList.add("dragging"); } 
+      Cam.x-=dx/Cam.s; Cam.y-=dy/Cam.s; Cam.vx=-dx/Cam.s/dt*16; Cam.vy=-dy/Cam.s/dt*16; clampCam(); applyCam(); }
+    last={x:e.clientX,y:e.clientY,t:now};
+  });
+  const up=e=>{ if(!pts.has(e.pointerId)) return; pts.delete(e.pointerId); if(pts.size<2) pinch0=null;
+    if(pts.size===0){ if(Cam.drag){ suppressClick=true; setTimeout(()=>suppressClick=false,30);} Cam.drag=false; viewport.classList.remove("dragging"); if(performance.now()-last.t>80){Cam.vx=Cam.vy=0;} } };
+  addEventListener("pointerup",up); addEventListener("pointercancel",up);
+  viewport.addEventListener("click",e=>{ if(suppressClick){ e.stopPropagation(); e.preventDefault(); } },true);
+  viewport.addEventListener("wheel",e=>{
+    e.preventDefault(); Cam.tw=null;
+    if(e.ctrlKey||e.metaKey){
+      const ns=clamp(Cam.s*Math.exp(-e.deltaY*0.01),minS(),maxS);
+      const wx=Cam.x+(e.clientX-vw/2)/Cam.s, wy=Cam.y+(e.clientY-vh/2)/Cam.s;
+      Cam.s=ns; Cam.x=wx-(e.clientX-vw/2)/ns; Cam.y=wy-(e.clientY-vh/2)/ns;
+    } else { const k=e.deltaMode===1?24:1; Cam.x+=e.deltaX*k/Cam.s; Cam.y+=e.deltaY*k/Cam.s; }
+    clampCam(); applyCam();
+  },{passive:false});
+  addEventListener("keydown",e=>{
+    const tag=(document.activeElement||{}).tagName;
+    if(tag==="INPUT"||tag==="TEXTAREA"||tag==="SELECT") return;
+    if(e.key==="Escape"){ if($("#panel").classList.contains("open")) Panel.close(); else Drawer.toggle(false); return; }
+    if($("#panel").classList.contains("open")) return;
+    const step=120/Cam.s;
+    if(e.key==="ArrowLeft"){Cam.tw=null;Cam.vx=-step/6;} else if(e.key==="ArrowRight"){Cam.tw=null;Cam.vx=step/6;}
+    else if(e.key==="ArrowUp"){Cam.tw=null;Cam.vy=-step/6;} else if(e.key==="ArrowDown"){Cam.tw=null;Cam.vy=step/6;}
+    else if(e.key==="+"||e.key==="="){ tweenCam(Cam.x,Cam.y,Cam.s*1.25,400); } else if(e.key==="-"){ tweenCam(Cam.x,Cam.y,Cam.s/1.25,400); }
+  });
+  $("#zIn").onclick=()=>tweenCam(Cam.x,Cam.y,Cam.s*1.3,450);
+  $("#zOut").onclick=()=>tweenCam(Cam.x,Cam.y,Cam.s/1.3,450);
+  $("#zFit").onclick=fitView;
+})();
+
+/* =========================================================
+   route.js — organic neural route + energy particles
+   ========================================================= */
+const NS="http://www.w3.org/2000/svg";
+const svgEl=(t,a={})=>{ const e=document.createElementNS(NS,t); for(const k in a) e.setAttribute(k,a[k]); return e; };
+function catmull(pts){
+  let d=`M${pts[0][0]},${pts[0][1]}`;
+  for(let i=0;i<pts.length-1;i++){
+    const p0=pts[i-1]||pts[i], p1=pts[i], p2=pts[i+1], p3=pts[i+2]||p2, t=.5/3*2;
+    d+=` C${p1[0]+(p2[0]-p0[0])*t/2*1.0},${p1[1]+(p2[1]-p0[1])*t/2} ${p2[0]-(p3[0]-p1[0])*t/2},${p2[1]-(p3[1]-p1[1])*t/2} ${p2[0]},${p2[1]}`;
+  }
+  return d;
+}
+let routePath, routeLen=1, routeLUT=[], particles=[];
+function seeded(n){ let s=n; return ()=>((s=Math.sin(s*9301+49297)*233280)-Math.floor(s)); }
+function buildRoute(){
+  const svg=$("#routeSvg"); svg.innerHTML="";
+  const defs=svgEl("defs");
+  defs.innerHTML=`<linearGradient id="rg" gradientUnits="userSpaceOnUse" x1="300" y1="600" x2="4650" y2="2560"><stop offset="0" stop-color="#A994FF"/><stop offset=".32" stop-color="#8FB4FF"/><stop offset=".55" stop-color="#3FD3F5"/><stop offset="1" stop-color="#A9E8FF"/></linearGradient>
+  <radialGradient id="zoneA"><stop offset="0" stop-color="#A994FF" stop-opacity=".10"/><stop offset="1" stop-color="#A994FF" stop-opacity="0"/></radialGradient>
+  <radialGradient id="zoneB"><stop offset="0" stop-color="#3FD3F5" stop-opacity=".08"/><stop offset="1" stop-color="#3FD3F5" stop-opacity="0"/></radialGradient>
+  <linearGradient id="gridFade" x1="0" y1="0" x2="1" y2="1"><stop offset=".35" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient>
+  <mask id="gridMask"><rect width="5200" height="3100" fill="url(#gridFade)"/></mask>`;
+  svg.appendChild(defs);
+  svg.appendChild(svgEl("ellipse",{cx:900,cy:700,rx:1300,ry:900,fill:"url(#zoneA)"}));
+  svg.appendChild(svgEl("ellipse",{cx:3900,cy:2200,rx:1700,ry:1100,fill:"url(#zoneB)"}));
+  // physical-world floor grid
+  const g=svgEl("g",{mask:"url(#gridMask)",stroke:"#A9E8FF","stroke-opacity":".06","stroke-width":"1"});
+  for(let x=0;x<=W;x+=100) g.appendChild(svgEl("line",{x1:x,y1:0,x2:x,y2:H}));
+  for(let y=0;y<=H;y+=100) g.appendChild(svgEl("line",{x1:0,y1:y,x2:W,y2:y}));
+  svg.appendChild(g);
+  // model-world neural mesh
+  const r=seeded(7), mesh=svgEl("g",{stroke:"#A994FF","stroke-opacity":".10",fill:"#A994FF","fill-opacity":".25"});
+  const pts=[]; for(let i=0;i<46;i++) pts.push([80+r()*1900,120+r()*1150]);
+  pts.forEach((p,i)=>pts.forEach((q,j)=>{ if(j>i && Math.hypot(p[0]-q[0],p[1]-q[1])<260) mesh.appendChild(svgEl("line",{x1:p[0],y1:p[1],x2:q[0],y2:q[1]})); }));
+  pts.forEach(p=>mesh.appendChild(svgEl("circle",{cx:p[0],cy:p[1],r:2.5,stroke:"none"})));
+  svg.appendChild(mesh);
+  // robot trajectories (dotted) in physical zone
+  const tr=svgEl("g",{fill:"none",stroke:"#3FD3F5","stroke-opacity":".14","stroke-dasharray":"2 10","stroke-linecap":"round","stroke-width":"2"});
+  ["M2600,2700 C3000,2500 3300,2900 3700,2700 S4300,2950 4900,2850","M3300,1250 C3600,1450 3900,1300 4200,1600 S4700,1900 5050,1750","M1800,2300 C2100,2500 2300,2250 2500,2550"].forEach(d=>tr.appendChild(svgEl("path",{d})));
+  svg.appendChild(tr);
+
+  const P=[[110,820],[230,700],...STATIONS.map(s=>[s.x,s.y])];
+  const d=catmull(P);
+  // edge branch
+  const ctl=byId("ft");
+  svg.appendChild(svgEl("path",{d:`M${ctl.x},${ctl.y} C${ctl.x-40},${ctl.y+300} ${EDGE.x+180},${EDGE.y-260} ${EDGE.x},${EDGE.y}`,fill:"none",stroke:"#FFB86B","stroke-opacity":".55","stroke-width":"1.6","stroke-dasharray":"6 8",class:"flowanim"}));
+  // currents
+  [[0,26,.16],[0,-30,.12],[14,52,.07]].forEach(([dx,dy,o])=>{ const c=svgEl("path",{d,fill:"none",stroke:"#A9E8FF","stroke-opacity":o,"stroke-width":"1","stroke-dasharray":"1 14",transform:`translate(${dx},${dy})`,class:"flowanim"}); svg.appendChild(c); });
+  svg.appendChild(svgEl("path",{d,fill:"none",stroke:"url(#rg)","stroke-opacity":".14","stroke-width":"22","stroke-linecap":"round"}));
+  routePath=svgEl("path",{d,fill:"none",stroke:"url(#rg)","stroke-width":"2.6","stroke-linecap":"round"});
+  svg.appendChild(routePath);
+  // circuit stubs at stations
+  const st=svgEl("g",{fill:"none",stroke:"#A9E8FF","stroke-opacity":".28","stroke-width":"1"});
+  const r2=seeded(3);
+  STATIONS.concat([EDGE]).forEach(s=>{ if(s.kind==="final") return; for(let k=0;k<3;k++){ const sx=s.x+(r2()>.5?1:-1)*(50+r2()*40), sy=s.y+(r2()>.5?1:-1)*(46+r2()*30), ex=sx+(r2()>.5?1:-1)*(60+r2()*80), ey=sy+(r2()>.5?1:-1)*(20+r2()*40);
+    st.appendChild(svgEl("path",{d:`M${sx},${sy} L${ex},${sy} L${ex},${ey}`})); st.appendChild(svgEl("circle",{cx:ex,cy:ey,r:3,fill:"#A9E8FF","fill-opacity":".35"})); } });
+  svg.appendChild(st);
+  // energy particles
+  routeLen=routePath.getTotalLength(); routeLUT=[];
+  const N=1400; for(let i=0;i<=N;i++){ const p=routePath.getPointAtLength(routeLen*i/N); routeLUT.push([p.x,p.y]); }
+  const pg=svgEl("g"); particles=[];
+  for(let i=0;i<34;i++){ const c=svgEl("circle",{r:(1.6+Math.random()*2.2).toFixed(1),fill:i%5===0?"#A994FF":"#CFF4FF"}); c.style.opacity=(.35+Math.random()*.6).toFixed(2); pg.appendChild(c); particles.push({el:c,p:Math.random(),v:.00025+Math.random()*.00045,off:(Math.random()-.5)*14}); }
+  svg.appendChild(pg);
+  // world labels
+  const nodes=$("#nodes");
+  [["LATENT SPACE",120,330],["CREATIVE WORLD",2050,3040]].forEach(([t,x,y])=>{ const z=h("div",{class:"zoneWord"},t); z.style.left=x+"px"; z.style.top=(y-150)+"px"; nodes.appendChild(z); });
+  [["DATA",250,520],["LATENT",1180,330],["LANGUAGE",1560,760],["ALIGNMENT",2450,1300],["MODALITIES",3300,1700],["CREATION",4280,2180]].forEach(([t,x,y])=>{ const z=h("div",{class:"phase"},t); z.style.left=x+"px"; z.style.top=y+"px"; nodes.appendChild(z); });
+}
+function tickParticles(dt){
+  const N=routeLUT.length-1; if(N<1) return;
+  for(const q of particles){ q.p+=q.v*dt*(REDUCED?0:1); if(q.p>1) q.p-=1; const a=routeLUT[Math.floor(q.p*N)]; q.el.setAttribute("cx",a[0]); q.el.setAttribute("cy",a[1]+q.off); }
+}
+
+/* ---------- nodes ---------- */
+function buildNodes(){
+  const wrap=$("#nodes");
+  ALL.forEach(s=>{
+    if(s.kind==="final"){ wrap.appendChild(buildFinal(s)); return; }
+    const b=h("button",{class:`node ${s.kind}`,"data-id":s.id,"aria-label":`${s.n} ${s.en} ${s.zh}`});
+    b.style.left=s.x+"px"; b.style.top=s.y+"px";
+    b.innerHTML=`<span class="core">${ICONS[s.icon]}<span class="num">${pad2(s.n)}</span><span class="orbit"><i></i><i></i><i></i></span></span>
+    <span class="label"><span class="t-en">${s.en}</span><span class="t-zh">${s.zh}</span><span class="desc">${s.short}</span>
+    <span class="bar"><b><i style="width:0%"></i></b><span class="pc">0%</span></span></span>`;
+    b.addEventListener("click",()=>Panel.open(s));
+    wrap.appendChild(b);
+  });
+}
+function buildFinal(s){
+  const f=h("div",{class:"final","data-id":s.id}); f.style.left=s.x+"px"; f.style.top=s.y+"px";
+  const mods=["TEXT","IMAGE","SPEECH","MUSIC","VIDEO","MEMORY·RAG","TOOLS·MCP","SKILLS"];
+  let g=`<svg viewBox="-310 -310 620 620"><defs><radialGradient id="fg"><stop offset="0" stop-color="#3FD3F5" stop-opacity=".35"/><stop offset="1" stop-color="#3FD3F5" stop-opacity="0"/></radialGradient></defs>
+  <circle r="300" fill="url(#fg)"/><circle r="272" fill="none" stroke="#A9E8FF" stroke-opacity=".18" stroke-dasharray="2 9"><animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="60s" repeatCount="indefinite"/></circle>
+  <circle r="150" fill="none" stroke="#A994FF" stroke-opacity=".25"/>`;
+  mods.forEach((m,i)=>{ const a=-Math.PI/2+i*Math.PI*2/8, x=Math.cos(a)*225, y=Math.sin(a)*225, x1=Math.cos(a)*92, y1=Math.sin(a)*92, w=m.length*8.4+26;
+    g+=`<line x1="${x1}" y1="${y1}" x2="${x-Math.cos(a)*28}" y2="${y-Math.sin(a)*18}" stroke="${i%2?"#A994FF":"#3FD3F5"}" stroke-opacity=".7" stroke-width="1.4" class="flowanim"/>
+    <rect x="${x-w/2}" y="${y-16}" width="${w}" height="32" rx="16" fill="#07111F" stroke="${i%2?"#A994FF":"#3FD3F5"}" stroke-opacity=".7"/>
+    <text x="${x}" y="${y+4.5}" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="13" fill="#DCE8F5" letter-spacing="1.5">${m}</text>`; });
+  g+=`<circle r="88" fill="#06101d" stroke="#A9E8FF" stroke-opacity=".6"/><g stroke="#CDBEFF" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M0 -44 L10 -12 L42 -2 L10 8 L0 40 L-10 8 L-42 -2 L-10 -12 Z" fill="rgba(169,148,255,.18)"/><circle r="8" fill="#3FD3F5" stroke="none"/></g>
+  <text y="70" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="10.5" fill="#72E3A6" letter-spacing="2">GENERATIVE AGENT</text></svg>
+  <button class="hit" aria-label="10 Final mission: build your generative AI agent"></button>
+  <div class="ft"><span class="mono" style="color:var(--warn);letter-spacing:.3em">★ 10 · FINAL MISSION</span><b>BUILD YOUR GENERATIVE AI AGENT</b><span>生成式 AI 代理人專題</span><em id="cycle">UNDERSTAND</em></div>`;
+  f.innerHTML=g;
+  f.querySelector(".hit").addEventListener("click",()=>Panel.open(s));
+  let k=0; const words=["UNDERSTAND","PLAN","GENERATE","EVALUATE","CREATE"]; if(!REDUCED) setInterval(()=>{ const c=$("#cycle"); if(c) c.textContent=words[++k%5]; },1400);
+  return f;
+}
+
+/* ---------- companion ---------- */
+const Companion={
+  el:null,
+  stage(){ const c=Store.completed(); return c>=9?5:c>=6?4:c>=4?3:c>=2?2:1; },
+  update(){
+    const el=$("#companion"), st=byId(Store.cur)||STATIONS[0], s=this.stage();
+    el.className="s"+s;
+    const off=st.kind==="final"?[150,-210]:[150,-80];
+    el.style.left=(st.x+off[0])+"px"; el.style.top=(st.y+off[1])+"px";
+    el.style.transition=REDUCED?"none":"left 1.4s cubic-bezier(.2,.8,.2,1), top 1.4s cubic-bezier(.2,.8,.2,1)";
+    const lines=["stage 1 · spark of a model","stage 2 · speaks in tokens","stage 3 · can see images","stage 4 · has a voice","stage 5 · creative agent"];
+    $("#say").textContent=lines[s-1];
+  }
+};
+
+/* ---------- HUD + drawer + node refresh ---------- */
+const FLOWMAP={base:0,vae:0,llm:0,prompt:1,ft:1,vlm:2,speech:2,image:2,avm:2,local:3,agent:-1};
+function refresh(){
+  const o=Math.round(Store.overall()*100);
+  $("#pct").textContent=o+"%"; $("#pbar").style.width=o+"%"; $("#dPct").textContent=o+"%"; $("#dBar").style.width=o+"%";
+  ALL.forEach(s=>{
+    const p=Math.round(Store.pct(s.id)*100);
+    const n=document.querySelector(`.node[data-id="${s.id}"]`);
+    if(n){ n.querySelector(".bar i").style.width=p+"%"; n.querySelector(".pc").textContent=p+"%"; n.classList.toggle("done",p===100); }
+  });
+  const cur=byId(Store.cur)||STATIONS[0];
+  $("#curIdx").textContent=`${pad2(cur.n)} / 10`; $("#curName").textContent=cur.en;
+  const fi=FLOWMAP[cur.id]??0; [...$("#flow").querySelectorAll("span")].forEach((e,i)=>e.classList.toggle("on",fi===-1||fi===i));
+  // drawer list
+  const ol=$("#dList"); ol.innerHTML="";
+  ALL.forEach(s=>{
+    const p=Store.pct(s.id), cls=s.kind==="final"?"star":p===1?"ok":s.id===Store.cur?"now":"";
+    const ic=s.kind==="final"?(p===1?"✓":"★"):p===1?"✓":s.id===Store.cur?"●":"○";
+    const li=h("li"); const b=h("button",{},`<span class="st ${cls}">${ic}</span><span class="n">${pad2(s.n)}</span><span class="nm">${s.en}<small>${s.zh}${s.kind==="edge"?" · optional branch":""}</small></span><span class="pc">${Math.round(p*100)}%</span>`);
+    b.onclick=()=>{ Drawer.toggle(false); Panel.open(s); }; li.appendChild(b); ol.appendChild(li);
+  });
+  Companion.update(); Mobile.render();
+}
+const Drawer={ toggle(v){ const d=$("#drawer"), o=v===undefined?!d.classList.contains("open"):v; d.classList.toggle("open",o); $("#journeyBtn").setAttribute("aria-expanded",o); } };
+$("#journeyBtn").onclick=()=>Drawer.toggle(); $("#drawerClose").onclick=()=>Drawer.toggle(false);
+$("#resetBtn").onclick=()=>{ if(confirm("Reset all saved progress in this browser?")){ Store.reset(); refresh(); Panel.close(); } };
+$("#curBtn").onclick=()=>Panel.open(byId(Store.cur)||STATIONS[0]);
+function nextStation(){
+  const order=STATIONS; const i=Math.max(0,order.findIndex(s=>s.id===Store.cur));
+  for(let k=1;k<=order.length;k++){ const s=order[(i+k)%order.length]; if(!Store.done(s.id)) return s; }
+  return order[(i+1)%order.length];
+}
+$("#nextBtn").onclick=()=>Panel.open(nextStation());
+
+/* ---------- mobile vertical journey ---------- */
+const Mobile={ render(){
+  const box=$("#mj"); if(!box) return; box.innerHTML="";
+  const seq=[...STATIONS.slice(0,5),EDGE,...STATIONS.slice(5)];
+  seq.forEach((s,i)=>{
+    const p=Math.round(Store.pct(s.id)*100);
+    const b=h("button",{class:`m ${s.kind==="ai"?"ai":""} ${s.kind==="edge"?"edge":""} ${p===100?"done":""}`},
+      `<span class="dot">${ICONS[s.icon]}</span><small class="mono">${s.kind==="final"?"★ ":""}${pad2(s.n)}${s.kind==="edge"?" · optional branch":" / 10"}</small><b>${s.en}</b><small>${s.zh} · ${s.short}</small><div class="bar"><i style="width:${p}%"></i></div>`);
+    if(s.kind==="edge"){ b.style.marginLeft="28px"; }
+    b.onclick=()=>Panel.open(s); box.appendChild(b);
+    if(i<seq.length-1) box.appendChild(h("div",{class:"link"}));
+  });
+}};
+/* =========================================================
+   Learning panel: LEARN → VISUALIZE → EXPERIMENT → BUILD → MISSION
+   ========================================================= */
+const Panel={
+  st:null, tab:0, cleanup:null,
+  open(st){
+    this.st=st; Store.cur=st.id;
+    const p=$("#panel"); p.classList.add("open"); p.setAttribute("aria-hidden","false");
+    document.querySelectorAll(".node.active,.final.active").forEach(n=>n.classList.remove("active"));
+    const n=document.querySelector(`[data-id="${st.id}"]`); if(n) n.classList.add("active");
+    world.classList.add("focus"); $("#app").classList.add("panel-open");
+    if(!isMobile()) focusOn(st, st.kind==="final"?.62:1);
+    $("#pIdx").textContent = st.kind==="edge"?"E · OPTIONAL BRANCH":`${pad2(st.n)} / 10`;
+    $("#pTitle").textContent=st.kind==="final"?"BUILD YOUR GENERATIVE AI AGENT":st.en;
+    $("#pZh").textContent=st.zh; $("#pLead").textContent=st.lead;
+    const a=Store.get(st.id); const first=a.findIndex(v=>!v);
+    this.show(first<0?0:first);
+    refresh();
+  },
+  close(){
+    this.stop(); const p=$("#panel"); p.classList.remove("open"); p.setAttribute("aria-hidden","true");
+    world.classList.remove("focus"); $("#app").classList.remove("panel-open"); document.querySelectorAll(".node.active,.final.active").forEach(n=>n.classList.remove("active"));
+  },
+  stop(){ if(this.cleanup){ try{this.cleanup();}catch(e){} this.cleanup=null; } },
+  renderSteps(){
+    const ul=$("#pSteps"), a=Store.get(this.st.id); ul.innerHTML="";
+    STEPS.forEach((s,i)=>{ const li=h("li",{style:"flex:1;display:flex"}); const b=h("button",{role:"tab","aria-selected":i===this.tab,class:`${i===this.tab?"on":""} ${a[i]?"done":""}`},`<span class="ck">✓</span>${s}`); b.style.flex="1"; b.onclick=()=>this.show(i); li.appendChild(b); ul.appendChild(li); });
+  },
+  mark(i){
+    const st=this.st, wasDone=Store.done(st.id);
+    if(Store.mark(st.id,i)){ this.renderSteps(); refresh();
+      if(!wasDone && Store.done(st.id)){ $("#say").textContent = st.kind==="final"?"I can create now. Thank you, maker.":"station complete · leveling up…"; }
+    }
+  },
+  show(i){
+    this.stop(); this.tab=i; this.renderSteps();
+    const body=$("#pBody"); body.innerHTML=""; body.scrollTop=0;
+    const st=this.st;
+    [this.learn,this.visualize,this.experiment,this.build,this.mission][i].call(this,body,st);
+    $("#pPrev").textContent = i===0?"← Map":"← "+STEPS[i-1].toLowerCase().replace(/^./,c=>c.toUpperCase());
+    $("#pNext").textContent = i<4? STEPS[i+1].charAt(0)+STEPS[i+1].slice(1).toLowerCase()+" →" : (st.kind==="final"?"Back to map":"Next station →");
+    $("#pStepNote").textContent = `Step ${i+1} of 5`;
+  },
+  learn(b,st){
+    this.mark(0);
+    b.innerHTML=`<div class="mission-card"><small>MISSION</small><b>“${st.mission}”</b></div>
+    <div class="sec"><h3>YOU WILL LEARN</h3><div class="tags">${st.topics.map(t=>`<span class="tag ${st.kind==="ai"?"v":"c"}">${t}</span>`).join("")}</div></div>
+    <div class="sec"><h3>KEY IDEAS</h3><div class="cards">${st.cards.map(c=>`<div class="card"><b>${c.t}<small>${c.zh}</small></b><p>${c.p}</p></div>`).join("")}</div></div>
+    <div class="sec"><h3>FROM THE COURSE · 課程章節</h3><div class="links">${st.course.map(c=>`<a href="${c[0]}" target="_blank" rel="noopener">${c[1]} <span>${c[2]} ↗</span></a>`).join("")}</div></div>
+    <div class="sec"><h3>MODELS & TOOLS IN THE LECTURES</h3><div class="tags">${st.models.map(t=>`<span class="tag">${t}</span>`).join("")}</div></div>
+    <div class="sec"><h3>INTERACTIVE LAB</h3><button class="btn" id="goLab">START ${st.labTitle.toUpperCase()}</button></div>`;
+    $("#goLab").onclick=()=>this.show(2);
+  },
+  visualize(b,st){
+    this.mark(1);
+    const d=st.diagram;
+    b.innerHTML=`<div class="sec"><h3>HOW IT FLOWS</h3><div class="diagram" id="diag"></div></div><p class="note">${d.type==="loop"?"The loop never stops: every action changes what the system observes next.":"Each block feeds the next. Signals move from data toward action."}</p>`;
+    const el=$("#diag");
+    if(d.type==="flow") el.innerHTML=flowSVG(d.stages);
+    else if(d.type==="loop") el.innerHTML=loopSVG(d.stages,d.center);
+    else el.innerHTML=treeSVG();
+  },
+  experiment(b,st){
+    b.innerHTML=`<div class="sec"><h3>INTERACTIVE LAB · ${st.labTitle.toUpperCase()}</h3><div class="lab" id="lab"></div><div id="labDone"></div></div>`;
+    const api={ done:()=>{ if(!Store.get(st.id)[2]){ this.mark(2); $("#labDone").innerHTML=`<div class="done-banner">Experiment logged ✓ — continue to Build when you're ready.</div>`; } } };
+    if(Store.get(st.id)[2]) $("#labDone").innerHTML=`<div class="done-banner">Experiment already completed ✓ — play again any time.</div>`;
+    this.cleanup = LABS[st.lab]($("#lab"),api) || null;
+  },
+  build(b,st){
+    const order=st.build; let pos=0;
+    const shuffled=[...order].sort(()=>Math.random()-.5);
+    b.innerHTML=`<div class="sec"><h3>BUILD · ASSEMBLE THE PIPELINE</h3><p class="note" style="margin-top:0">Click the blocks in the order data flows through the system, from first to last.</p><div class="blocks" id="blk"></div><div class="chain" id="chain"></div><div id="bmsg"></div></div>`;
+    const blk=$("#blk"), chain=$("#chain");
+    const finish=()=>{ this.mark(3); $("#bmsg").innerHTML=`<div class="done-banner">Pipeline assembled ✓ ${order.length} blocks in the right order.</div><div class="row" style="margin-top:10px"><button class="ghost" id="rebuild">Shuffle and rebuild</button></div>`; $("#rebuild").onclick=()=>this.show(3); };
+    if(Store.get(st.id)[3]){ order.forEach(o=>chain.appendChild(h("div",{},o))); finish(); return; }
+    shuffled.forEach(o=>{ const bt=h("button",{},o); bt.onclick=()=>{
+      if(o===order[pos]){ pos++; bt.remove(); chain.appendChild(h("div",{},o)); if(pos===order.length) finish(); }
+      else { bt.classList.remove("bad"); void bt.offsetWidth; bt.classList.add("bad"); $("#bmsg").innerHTML=`<p class="note">Not yet. What has to happen right after “${order[pos-1]||"the very beginning"}”?</p>`; }
+    }; blk.appendChild(bt); });
+  },
+  mission(b,st){
+    const q=st.quiz;
+    b.innerHTML=`<div class="mission-card"><small>${st.kind==="final"?"FINAL MISSION":"MISSION"}</small><b>“${st.mission}”</b></div>
+    <div class="sec quiz"><h3>MISSION CHECK</h3><p style="margin-top:0">${q.q}</p><div id="opts"></div><div id="qmsg"></div></div>`;
+    const idx=q.opts.map((_,i)=>i).sort(()=>Math.random()-.5);
+    const box=$("#opts");
+    const win=()=>{ this.mark(4);
+      const next=nextStation(); const done=Store.done(st.id);
+      $("#qmsg").innerHTML=`<div class="done-banner">${q.why}</div>${done?`<div class="done-banner" style="color:#EAF8FF;border-color:rgba(63,211,245,.5);background:rgba(63,211,245,.08)">${st.kind==="final"?"★ Final mission complete. You have built an agent that can read, see, listen, speak, draw, compose and plan.":"Station complete. Your AI companion just leveled up."}</div>`:`<p class="note">Finish all five steps to complete this station.</p>`}
+      ${st.kind!=="final"&&Store.overall()<1?`<div class="row" style="margin-top:12px"><button class="btn" id="goNext">Go to ${next.en} →</button></div>`:""}`;
+      const g=$("#goNext"); if(g) g.onclick=()=>this.open(next);
+    };
+    idx.forEach(i=>{ const bt=h("button",{},q.opts[i]); bt.onclick=()=>{
+      if(i===q.a){ box.querySelectorAll("button").forEach(x=>x.disabled=true); bt.classList.add("right"); win(); }
+      else { bt.classList.add("wrong"); bt.disabled=true; $("#qmsg").innerHTML=`<p class="note">Not this one. Revisit the Learn tab if you're unsure.</p>`; }
+    }; box.appendChild(bt); });
+    if(Store.get(st.id)[4]){ box.querySelectorAll("button").forEach(x=>{ x.disabled=true; if(x.textContent===q.opts[q.a]) x.classList.add("right"); }); win(); }
+  }
+};
+$("#pClose").onclick=()=>Panel.close();
+$("#pPrev").onclick=()=>{ if(Panel.tab>0) Panel.show(Panel.tab-1); else Panel.close(); };
+$("#pNext").onclick=()=>{ if(Panel.tab<4) Panel.show(Panel.tab+1); else if(Panel.st.kind==="final") Panel.close(); else Panel.open(nextStation()); };
+
+/* ---------- diagram renderers ---------- */
+function boxW(t){ return Math.max(70, t.length*7.4+26); }
+function flowSVG(stages){
+  const Wd=560, rowH=66; const Hd=stages.length*rowH+10;
+  const rows=stages.map((s,i)=>{ const items=Array.isArray(s)?s:[s]; const y=20+i*rowH; const gap=Wd/(items.length);
+    return items.map((t,k)=>({t,x:gap*(k+.5),y,w:boxW(t)})); });
+  let out=`<svg class="ddiag" viewBox="0 0 ${Wd} ${Hd}" role="img" aria-label="${stages.flat().join(" then ")}">`;
+  for(let i=0;i<rows.length-1;i++){ const A=rows[i], B=rows[i+1];
+    A.forEach((a,ai)=>B.forEach((b,bi)=>{ if(A.length>1&&B.length>1&&A.length===B.length&&ai!==bi) return;
+      out+=`<path d="M${a.x},${a.y+15} C${a.x},${a.y+40} ${b.x},${b.y-26} ${b.x},${b.y-15}" fill="none" stroke="#3FD3F5" stroke-opacity=".55" stroke-width="1.3" class="flowanim"/>`; })); }
+  rows.forEach((r,i)=>r.forEach(n=>{ const ai=i<rows.length/2; const col=i===rows.length-1?"#72E3A6":ai?"#A994FF":"#3FD3F5";
+    out+=`<g><rect x="${n.x-n.w/2}" y="${n.y-15}" width="${n.w}" height="30" rx="8" fill="#07111F" stroke="${col}" stroke-opacity=".75"><animate attributeName="stroke-opacity" values=".35;1;.35" dur="${rows.length*.5}s" begin="${i*.5}s" repeatCount="indefinite"/></rect>
+    <text x="${n.x}" y="${n.y+4}" text-anchor="middle" font-size="11.5" fill="#E6F2FF" letter-spacing=".8">${n.t}</text></g>`; }));
+  return out+"</svg>";
+}
+function loopSVG(st,center){
+  const R=170, cx=280, cy=210, n=st.length;
+  let out=`<svg class="ddiag" viewBox="0 0 560 420" role="img" aria-label="Loop: ${st.join(", ")}">
+  <circle cx="${cx}" cy="${cy}" r="${R}" fill="none" stroke="#3FD3F5" stroke-opacity=".35" stroke-width="1.3" class="flowanim"/>
+  <circle r="6" fill="#CFF4FF"><animateMotion dur="${n*1.2}s" repeatCount="indefinite" path="M${cx},${cy-R} a${R},${R} 0 1,1 -0.01,0"/></circle>
+  <circle cx="${cx}" cy="${cy}" r="62" fill="#07111F" stroke="#A994FF" stroke-opacity=".6"/>
+  <text x="${cx}" y="${cy+4}" text-anchor="middle" font-size="11" fill="#CDBEFF" letter-spacing="1">${center}</text>`;
+  st.forEach((t,i)=>{ const a=-Math.PI/2+i*2*Math.PI/n, x=cx+Math.cos(a)*R, y=cy+Math.sin(a)*R, w=boxW(t);
+    out+=`<rect x="${x-w/2}" y="${y-16}" width="${w}" height="32" rx="16" fill="#07111F" stroke="#3FD3F5"><animate attributeName="fill" values="#07111F;#0f3a4a;#07111F" dur="${n*1.2}s" begin="${i*1.2}s" repeatCount="indefinite"/></rect>
+    <text x="${x}" y="${y+4}" text-anchor="middle" font-size="12" fill="#E6F2FF" letter-spacing="1.5">${t}</text>`; });
+  return out+"</svg>";
+}
+function treeSVG(){
+  const N=(x,y,t,c="#3FD3F5")=>{ const w=boxW(t); return `<rect x="${x-w/2}" y="${y-15}" width="${w}" height="30" rx="8" fill="#07111F" stroke="${c}"/><text x="${x}" y="${y+4}" text-anchor="middle" font-size="11.5" fill="#E6F2FF" letter-spacing="1">${t}</text>`; };
+  const E=(x1,y1,x2,y2,c="#3FD3F5")=>`<path d="M${x1},${y1+15} C${x1},${(y1+y2)/2} ${x2},${(y1+y2)/2} ${x2},${y2-15}" fill="none" stroke="${c}" stroke-opacity=".6" class="flowanim"/>`;
+  let s=`<svg class="ddiag" viewBox="0 0 560 520" role="img" aria-label="Final generative agent architecture">`;
+  s+=N(280,24,"USER REQUEST","#72E3A6")+E(280,24,280,88,"#72E3A6")+N(280,88,"AI AGENT (LLM)","#A994FF");
+  [[110,"PLANNER"],[280,"MEMORY · RAG"],[450,"SKILLS"]].forEach(([x,t])=>{ s+=E(280,88,x,160,"#A994FF")+N(x,160,t,"#A994FF"); });
+  s+=E(280,160,280,232)+N(280,232,"TOOLS VIA MCP");
+  [[56,"TEXT"],[168,"IMAGE"],[280,"SPEECH"],[392,"MUSIC"],[504,"VIDEO"]].forEach(([x,t])=>{ s+=E(280,232,x,312)+N(x,312,t); });
+  [56,168,280,392,504].forEach(x=>{ s+=E(x,312,280,392,"#72E3A6"); });
+  s+=N(280,392,"EVALUATOR · SAFETY CHECK","#72E3A6")+E(280,392,280,470,"#72E3A6")+N(280,470,"FINISHED CREATION","#72E3A6");
+  s+=`<path d="M410,392 C520,392 520,88 360,88" fill="none" stroke="#A994FF" stroke-opacity=".45" stroke-dasharray="3 6"/><text x="526" y="250" font-size="10" fill="#7F95AE" text-anchor="end">revise</text>`;
+  return s+"</svg>";
+}
+/* =========================================================
+   labs.js — one interactive experiment per station
+   ========================================================= */
+function mkCanvas(parent,w,hh){ const c=document.createElement("canvas"); const dpr=Math.min(2,devicePixelRatio||1); c.width=w*dpr; c.height=hh*dpr; c.style.aspectRatio=`${w}/${hh}`; const ctx=c.getContext("2d"); ctx.scale(dpr,dpr); parent.appendChild(c); return [c,ctx]; }
+function rafLoop(fn){ let id, last=performance.now(), alive=true; const f=t=>{ if(!alive) return; fn(Math.min(50,t-last),t); last=t; id=requestAnimationFrame(f); }; id=requestAnimationFrame(f); return ()=>{ alive=false; cancelAnimationFrame(id); }; }
+function hash(s){ let x=2166136261; for(const ch of s){ x^=ch.charCodeAt(0); x=Math.imul(x,16777619); } return x>>>0; }
+function rng(seed){ let s=seed>>>0||1; return ()=>{ s^=s<<13; s>>>=0; s^=s>>17; s^=s<<5; s>>>=0; return s/4294967296; }; }
+function softmax(l,T=1){ const t=Math.max(.05,T); const m=Math.max(...l); const e=l.map(v=>Math.exp((v-m)/t)); const z=e.reduce((a,b)=>a+b,0); return e.map(v=>v/z); }
+function sample(p,r){ let x=r(), a=0; for(let i=0;i<p.length;i++){ a+=p[i]; if(x<=a) return i; } return p.length-1; }
+function typeInto(el,text,speed=14){ el.textContent=""; let i=0; if(REDUCED){ el.textContent=text; return ()=>{}; } const id=setInterval(()=>{ el.textContent=text.slice(0,++i); if(i>=text.length) clearInterval(id); },speed); return ()=>clearInterval(id); }
+function rr(ctx,x,y,w,hh,r){ ctx.beginPath(); ctx.moveTo(x+r,y); ctx.arcTo(x+w,y,x+w,y+hh,r); ctx.arcTo(x+w,y+hh,x,y+hh,r); ctx.arcTo(x,y+hh,x,y,r); ctx.arcTo(x,y,x+w,y,r); ctx.closePath(); }
+const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+const pbar=(n,v,col="linear-gradient(90deg,#A994FF,#3FD3F5)")=>`<div class="prob"><span style="text-align:left;color:var(--text);font-family:var(--body);font-size:13px">${n}</span><i style="width:${Math.round(clamp(v,0,1)*100)}%;background:${col}"></i><span>${Math.round(clamp(v,0,1)*100)}</span></div>`;
+const LABS={};
+
+/* ---------- 01 Basics — a real n-gram language model ---------- */
+LABS.base=(root,api)=>{
+  const CORP={
+    en:"the model reads the text . the model learns the pattern . the model writes new text . a robot reads the map . a robot learns the path . the new model writes a new story . the story has a happy ending . a model can draw a picture . a model can write a song . the song has a happy ending .",
+    zh:"生成式人工智慧可以寫文章，也可以畫圖。人工智慧可以聽，也可以說。模型學會了語言，也學會了圖像。模型可以寫詩，也可以寫歌。"
+  };
+  root.innerHTML=`<div class="row"><button class="btn sm" data-c="en">English corpus</button><button class="btn sm" data-c="zh" style="opacity:.55">中文語料</button><span class="note">or edit the training text:</span></div>
+  <textarea id="bc" style="margin-top:8px;min-height:84px"></textarea>
+  <div class="row" style="margin-top:8px"><label class="inl">Unit <select id="bu" style="width:auto"><option value="w">words</option><option value="c">characters</option></select></label>
+  <label class="inl">Context <select id="bo" style="width:auto"><option value="1">1 token (bigram)</option><option value="2">2 tokens (trigram)</option></select></label></div>
+  <label class="inl" style="margin-top:8px">Temperature <input type="range" id="bt" min="0.1" max="2" step="0.05" value="1"><b class="mono" id="btv" style="color:var(--text)">1.00</b></label>
+  <div class="row" style="margin-top:10px"><button class="btn" id="bgo">TRAIN & GENERATE</button><span class="note mono" id="bstat"></span></div>
+  <div class="out" id="bout"></div><div class="sec" style="margin-top:12px"><h3 id="bph">LEARNED NEXT-TOKEN PROBABILITIES</h3><div id="bprob" class="note">Generate to see what the model learned.</div></div>`;
+  const ta=$("#bc",root); ta.value=CORP.en;
+  root.querySelectorAll("[data-c]").forEach(b=>b.onclick=()=>{ ta.value=CORP[b.dataset.c]; $("#bu",root).value=b.dataset.c==="zh"?"c":"w"; root.querySelectorAll("[data-c]").forEach(x=>x.style.opacity=x===b?1:.55); });
+  $("#bt",root).oninput=e=>$("#btv",root).textContent=(+e.target.value).toFixed(2);
+  $("#bgo",root).onclick=()=>{
+    const unit=$("#bu",root).value, n=+$("#bo",root).value, T=+$("#bt",root).value;
+    const toks=unit==="w"?ta.value.trim().split(/\s+/).filter(Boolean):[...ta.value.replace(/\s+/g,"")];
+    if(toks.length<n+2){ $("#bout",root).textContent="Add more training text first."; return; }
+    const M=new Map(); for(let i=0;i+n<toks.length;i++){ const k=toks.slice(i,i+n).join("\u0001"); if(!M.has(k)) M.set(k,new Map()); const m=M.get(k); m.set(toks[i+n],(m.get(toks[i+n])||0)+1); }
+    const r=rng(Date.now()); const keys=[...M.keys()]; let ctxk=keys[Math.floor(r()*keys.length)].split("\u0001"); const out=[...ctxk]; let lastDist=null, lastCtx=null;
+    for(let s=0;s<(unit==="w"?22:40);s++){ const m=M.get(ctxk.join("\u0001")); if(!m) break; const ws=[...m.keys()], cs=[...m.values()]; const p=softmax(cs.map(c=>Math.log(c)),T); lastDist=ws.map((w,i)=>[w,p[i]]).sort((a,b)=>b[1]-a[1]); lastCtx=ctxk.join(unit==="w"?" ":""); const nx=ws[sample(p,r)]; out.push(nx); ctxk=[...ctxk.slice(1),nx]; }
+    $("#bout",root).textContent=out.join(unit==="w"?" ":"");
+    $("#bstat",root).textContent=`${toks.length} tokens · vocab ${new Set(toks).size} · ${M.size} contexts`;
+    $("#bph",root).textContent=`AFTER “${lastCtx||"?"}” THE MODEL PREDICTS`;
+    $("#bprob",root).innerHTML=lastDist?lastDist.slice(0,6).map(([w,p])=>`<div class="prob">${esc(w)}<i style="width:${(p*100).toFixed(1)}%"></i><span>${(p*100).toFixed(1)}%</span></div>`).join("")+`<p class="note">These numbers were counted from your text. Large language models learn the same kind of table, but with billions of parameters and much longer contexts.</p>`:"";
+    api.done();
+  };
+};
+
+/* ---------- 02 VAE & GAN — latent space explorer ---------- */
+LABS.vae=(root,api)=>{
+  const DATA=[[-.6,-.5,"sample A"],[.55,-.45,"sample B"],[-.45,.55,"sample C"],[.6,.5,"sample D"]];
+  root.innerHTML=`<div class="row" style="align-items:flex-start;gap:12px"><div style="flex:1 1 220px"><p class="note" style="margin:0 0 6px">Latent space z = (z₁, z₂). Drag the point.</p><div id="vp"></div></div><div style="flex:1 1 200px"><p class="note" style="margin:0 0 6px">Decoder output</p><div id="vd"></div><div class="readout" style="grid-template-columns:1fr 1fr"><div><small>z</small><b id="vz">0, 0</b></div><div><small>D(x) REAL?</small><b id="vr">–</b></div></div></div></div>
+  <div class="row" style="margin-top:10px"><button class="btn sm" id="vi">Interpolate A → D</button><button class="btn sm v" id="vs">Sample z ~ N(0, 1)</button></div>
+  <div id="vstrip" style="margin-top:10px"></div><p class="note">Dots are encoded training images. Near them the decoder makes convincing creatures and the discriminator says “real”. Far away, outputs get strange and D(x) drops.</p>`;
+  const [pc,px]=mkCanvas($("#vp",root),240,240), [,dx]=mkCanvas($("#vd",root),200,200);
+  let z=[0,0], moves=0;
+  const realness=([a,b])=>Math.max(.04,...DATA.map(([x,y])=>Math.exp(-((a-x)**2+(b-y)**2)/.16)));
+  const creature=(ctx,[a,b],S=200,seed=1)=>{
+    const R=realness([a,b]), r=rng(seed+Math.floor((1-R)*20)), hue=210+a*110, lobes=3+Math.round((b+1)*2.5), cx=S/2, cy=S/2, rad=S*.3;
+    ctx.fillStyle="#07111F"; ctx.fillRect(0,0,S,S);
+    ctx.beginPath(); for(let i=0;i<=80;i++){ const t=i/80*Math.PI*2; const wob=1+.12*Math.sin(t*lobes)+(1-R)*.22*(r()-.5); const x=cx+Math.cos(t)*rad*wob, y=cy+Math.sin(t)*rad*wob*(.9+b*.1); i?ctx.lineTo(x,y):ctx.moveTo(x,y); } ctx.closePath();
+    ctx.fillStyle=`hsl(${hue} 65% ${48+R*10}%)`; ctx.fill();
+    const es=S*(.05+(1-b)*.025), ex=S*.11; ctx.fillStyle="#F4F8FF"; [[-1,0],[1,(1-R)*S*.08*(r()-.5)]].forEach(([s,o])=>{ ctx.beginPath(); ctx.arc(cx+s*ex,cy-S*.05+o,es,0,7); ctx.fill(); }); ctx.fillStyle="#07111F"; [[-1],[1]].forEach(([s])=>{ ctx.beginPath(); ctx.arc(cx+s*ex+a*2,cy-S*.05,es*.45,0,7); ctx.fill(); });
+    ctx.strokeStyle="#07111F"; ctx.lineWidth=S*.018; ctx.beginPath(); ctx.moveTo(cx-S*.09,cy+S*.1); ctx.quadraticCurveTo(cx,cy+S*(.1+a*.09),cx+S*.09,cy+S*.1); ctx.stroke();
+  };
+  const drawPad=()=>{ const S=240; px.fillStyle="#040b16"; px.fillRect(0,0,S,S);
+    for(let i=0;i<24;i++) for(let j=0;j<24;j++){ const R=realness([i/12-1+1/24,j/12-1+1/24]); px.fillStyle=`rgba(169,148,255,${R*.28})`; px.fillRect(i*10,j*10,10,10); }
+    px.strokeStyle="rgba(169,232,255,.15)"; px.beginPath(); px.moveTo(S/2,0); px.lineTo(S/2,S); px.moveTo(0,S/2); px.lineTo(S,S/2); px.stroke();
+    px.font="10px JetBrains Mono, monospace"; DATA.forEach(([a,b,n])=>{ const X=(a+1)/2*S, Y=(b+1)/2*S; px.fillStyle="#A994FF"; px.beginPath(); px.arc(X,Y,4,0,7); px.fill(); px.fillStyle="#CDBEFF"; px.fillText(n.slice(-1),X+6,Y-6); });
+    const X=(z[0]+1)/2*S, Y=(z[1]+1)/2*S; px.strokeStyle="#EAFBFF"; px.lineWidth=2; px.beginPath(); px.arc(X,Y,8,0,7); px.stroke(); px.fillStyle="#3FD3F5"; px.beginPath(); px.arc(X,Y,3,0,7); px.fill(); };
+  const update=()=>{ drawPad(); creature(dx,z,200,7); const R=realness(z); $("#vz",root).textContent=`${z[0].toFixed(2)}, ${z[1].toFixed(2)}`; const el=$("#vr",root); el.textContent=R.toFixed(2); el.style.color=R>.5?"var(--green)":R>.2?"var(--warn)":"var(--red)"; };
+  let drag=false; const setZ=e=>{ const r=pc.getBoundingClientRect(); z=[clamp((e.clientX-r.left)/r.width*2-1,-1,1),clamp((e.clientY-r.top)/r.height*2-1,-1,1)]; update(); };
+  pc.style.touchAction="none"; pc.style.cursor="crosshair";
+  pc.addEventListener("pointerdown",e=>{ drag=true; pc.setPointerCapture(e.pointerId); setZ(e); });
+  pc.addEventListener("pointermove",e=>{ if(drag) setZ(e); });
+  pc.addEventListener("pointerup",()=>{ drag=false; if(++moves>=4) api.done(); });
+  $("#vs",root).onclick=()=>{ const g=()=>{ let u=Math.random()||1e-9, v=Math.random(); return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)*.45; }; z=[clamp(g(),-1,1),clamp(g(),-1,1)]; update(); if(++moves>=4) api.done(); };
+  let anim=null;
+  $("#vi",root).onclick=()=>{ const A=DATA[0], B=DATA[3]; const strip=$("#vstrip",root); strip.innerHTML=""; const row=h("div",{class:"row",style:"gap:6px;flex-wrap:nowrap;overflow-x:auto"}); strip.appendChild(row);
+    for(let k=0;k<7;k++){ const t=k/6, p=[A[0]+(B[0]-A[0])*t, A[1]+(B[1]-A[1])*t]; const box=h("div",{style:"flex:0 0 64px"}); row.appendChild(box); const [,c]=mkCanvas(box,64,64); creature(c,p,64,7); }
+    const t0=performance.now(); if(anim) anim(); anim=rafLoop((dt,t)=>{ const k=Math.min(1,(t-t0)/(REDUCED?1:1800)); z=[A[0]+(B[0]-A[0])*ease(k),A[1]+(B[1]-A[1])*ease(k)]; update(); if(k>=1){ anim(); anim=null; } });
+    api.done(); };
+  update();
+  return ()=>{ if(anim) anim(); };
+};
+
+/* ---------- 03 Transformer — attention + sampling ---------- */
+LABS.llm=(root,api)=>{
+  const T=["The","robot","picked","up","the","cup","because","it","was","light","."];
+  //            obj agent verb pron prop func
+  const E={"The":[0,0,0,0,0,1],"robot":[.2,1,0,0,0,0],"picked":[0,0,1,0,0,0],"up":[0,0,.6,0,0,.4],"the":[0,0,0,0,0,1],"cup":[1,.1,0,0,0,0],"because":[0,0,0,0,0,1],"it":[0,0,0,1,0,0],"was":[0,0,.5,0,0,.5],"light":[0,0,0,0,1,0],".":[0,0,0,0,0,1]};
+  const R=[[.8,0,2,0,0,0],[0,.8,1.5,0,0,0],[2,2.5,.8,0,0,0],[3.2,2.4,0,.8,0,0],[3,.6,0,2.5,.8,0],[0,0,0,0,0,1]];
+  const score=(i,j)=>{ const a=E[T[i]], b=E[T[j]]; let s=0; for(let p=0;p<6;p++) for(let q=0;q<6;q++) s+=a[p]*R[p][q]*b[q]; return s*1.6; };
+  const att=i=>{ const sc=T.map((_,j)=>j<=i?score(i,j):-1e9); return softmax(sc,1); };
+  root.innerHTML=`<div class="sec"><h3>1 · SELF-ATTENTION (CAUSAL)</h3><p class="note" style="margin-top:0">Click a token to see which earlier tokens it attends to. Weights = softmax(q·k / √d), computed live from toy embeddings.</p>
+  <div id="lt" class="row" style="gap:4px"></div><div id="lh" style="margin-top:10px"></div><p class="note" id="lnote"></p></div>
+  <div class="sec"><h3>2 · NEXT TOKEN AFTER “The robot picked up the …”</h3>
+  <label class="inl">Temperature <input type="range" id="lT" min="0.1" max="2" step="0.05" value="1"><b class="mono" id="lTv" style="color:var(--text)">1.00</b></label>
+  <label class="inl">Top-k <input type="range" id="lk" min="1" max="7" step="1" value="7"><b class="mono" id="lkv" style="color:var(--text)">7</b></label>
+  <div id="lp" style="margin-top:8px"></div><div class="row" style="margin-top:8px"><button class="btn sm" id="ls">Sample 10 times</button></div><div class="out" id="lo"></div></div>`;
+  let sel=7;
+  const drawTok=()=>{ const w=att(sel); $("#lt",root).innerHTML=T.map((t,j)=>`<button class="tok" data-j="${j}" style="cursor:pointer;flex-direction:column;${j===sel?"outline:2px solid var(--cyan);":""}background:rgba(63,211,245,${j<=sel?(w[j]*.85).toFixed(2):0})">${esc(t)}<small>${j<=sel?(w[j]*100).toFixed(0)+"%":"–"}</small></button>`).join("");
+    $("#lt",root).querySelectorAll("[data-j]").forEach(b=>b.onclick=()=>{ sel=+b.dataset.j; drawTok(); drawHeat(); });
+    const top=w.map((v,j)=>[v,j]).filter(([,j])=>j!==sel).sort((a,b)=>b[0]-a[0])[0];
+    $("#lnote",root).textContent= top? `“${T[sel]}” attends most to “${T[top[1]]}” (${(top[0]*100).toFixed(0)}%).`+(T[sel]==="it"?" The model links the pronoun to the cup, which is what makes “light” sensible.":""):""; };
+  const drawHeat=()=>{ const box=$("#lh",root); box.innerHTML=""; const n=T.length, cs=26, pad=56; const [,c]=mkCanvas(box,pad+n*cs,pad+n*cs);
+    c.font="10px JetBrains Mono, monospace"; c.fillStyle="#7F95AE";
+    for(let i=0;i<n;i++){ const w=att(i); c.fillText(T[i],2,pad+i*cs+16); c.save(); c.translate(pad+i*cs+16,pad-4); c.rotate(-Math.PI/3); c.fillText(T[i],0,0); c.restore();
+      for(let j=0;j<n;j++){ c.fillStyle=j<=i?`rgba(63,211,245,${w[j]})`:"rgba(169,232,255,.03)"; c.fillRect(pad+j*cs+1,pad+i*cs+1,cs-2,cs-2); } }
+    c.strokeStyle="#EAFBFF"; c.lineWidth=1.5; c.strokeRect(pad,pad+sel*cs,n*cs,cs); };
+  const C=[["cup",4.1],["box",3.3],["ball",3.0],["pen",2.2],["signal",1.2],["banana",.9],["galaxy",.2]];
+  const dist=()=>{ const Tt=+$("#lT",root).value, k=+$("#lk",root).value; const p=softmax(C.map(c=>c[1]),Tt); const idx=p.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]).slice(0,k).map(x=>x[1]); const z=idx.reduce((s,i)=>s+p[i],0); return C.map((c,i)=>idx.includes(i)?p[i]/z:0); };
+  const drawP=()=>{ const p=dist(); $("#lTv",root).textContent=(+$("#lT",root).value).toFixed(2); $("#lkv",root).textContent=$("#lk",root).value; $("#lp",root).innerHTML=C.map((c,i)=>`<div class="prob" style="opacity:${p[i]?1:.35}">${c[0]}<i style="width:${(p[i]*100).toFixed(1)}%"></i><span>${(p[i]*100).toFixed(1)}%</span></div>`).join(""); };
+  $("#lT",root).oninput=drawP; $("#lk",root).oninput=drawP;
+  $("#ls",root).onclick=()=>{ const p=dist(), r=rng(Date.now()); const out=Array.from({length:10},()=>C[sample(p,r)][0]); $("#lo",root).innerHTML=out.map(w=>`<span class="tok" style="flex-direction:row">${w}</span>`).join(""); api.done(); };
+  drawTok(); drawHeat(); drawP();
+};
+
+/* ---------- 04 Prompt & context engineering ---------- */
+LABS.prompt=(root,api)=>{
+  const PARTS=[
+    ["role","Role","You are a patient teacher for 15-year-old students."],
+    ["ctx","Retrieved context (RAG)","[Course notes] Diffusion models add Gaussian noise to training images step by step until only static remains, then learn to remove that noise. To generate, they start from random noise and denoise it."],
+    ["ex","Few-shot example","Example → Q: What is a GAN? A: In short: two networks compete, one makes fakes and one spots them, until the fakes look real."],
+    ["fmt","Output format","Answer in exactly 3 bullet points, under 80 words in total."],
+    ["cot","Reasoning","Think through the steps before you answer."],
+    ["ev","Evaluator (harness)","A second agent checks the answer against the course notes and the format, then asks for a revision if needed."]
+  ];
+  const on={role:false,ctx:false,ex:false,fmt:false,cot:false,ev:false};
+  root.innerHTML=`<p class="note" style="margin-top:0">Task: <b style="color:var(--text)">“Explain how diffusion models work.”</b> Switch on pieces of context, then run.</p>
+  <div class="toggles" id="pt"></div><div class="row" style="margin-top:10px"><button class="btn" id="prun">RUN MODEL</button><span class="note mono" id="ptok"></span></div>
+  <div class="sec" style="margin-top:12px"><h3>ASSEMBLED CONTEXT</h3><div class="log" id="pctx" style="max-height:150px"></div></div>
+  <div class="sec"><h3>MODEL OUTPUT (SIMULATED)</h3><div class="out" id="pout">–</div></div><div id="psc"></div>`;
+  const tg=$("#pt",root);
+  PARTS.forEach(([k,n])=>{ const b=h("button",{class:"off"},n); b.onclick=()=>{ on[k]=!on[k]; b.classList.toggle("off",!on[k]); show(); }; tg.appendChild(b); });
+  const assemble=()=>{ const sys=PARTS.filter(([k])=>on[k]&&k!=="ev").map(([,,t])=>t); return [...sys,"User: Explain how diffusion models work."]; };
+  const show=()=>{ const a=assemble(); $("#pctx",root).innerHTML=a.map((t,i)=>`<div class="${i===a.length-1?"c":"v"}">${esc(t)}</div>`).join("")+(on.ev?`<div class="ok">[harness] evaluator agent attached</div>`:""); const toks=Math.round(a.join(" ").length/4); $("#ptok",root).textContent=`≈ ${toks} tokens of context`; };
+  $("#prun",root).onclick=()=>{
+    const acc=on.ctx, simple=on.role, bullets=on.fmt;
+    let pts = acc ? [ simple?"Training: the AI takes real pictures and keeps adding TV-static noise until nothing is left.":"Training adds Gaussian noise to images step by step until only static remains.",
+                      simple?"It learns to guess that noise and wipe it away, one small step at a time.":"The network learns to predict and remove the noise at each step.",
+                      simple?"To make a new picture it starts from pure static and cleans it up, guided by your words.":"Generation starts from random noise and denoises it, guided by the text prompt." ]
+                  : [ "Diffusion models are a powerful kind of AI that creates images.", "They use deep neural networks trained on lots of data.", "Popular tools such as Stable Diffusion and DALL·E use them to make art from text." ];
+    if(on.ex) pts[0]="In short: "+pts[0].charAt(0).toLowerCase()+pts[0].slice(1);
+    let out = bullets ? pts.map(p=>"• "+p).join("\n") : pts.join(" ")+(acc?"":" They are also used in video, audio and science, and many researchers think they will keep improving in the future as hardware gets faster.");
+    if(on.cot) out="(planned: noise in → learn to remove → generate)\n"+out;
+    if(on.ev) out+= acc&&bullets ? "\n✓ evaluator: matches course notes, 3 bullets, under 80 words." : "\n↻ evaluator: "+(!acc?"claims not grounded in the course notes; ":"")+(!bullets?"format not followed; ":"")+"revision requested.";
+    $("#pout",root).style.whiteSpace="pre-line"; $("#pout",root).textContent=out;
+    const n=Object.values(on).filter(Boolean).length;
+    $("#psc",root).innerHTML=pbar("Accuracy",.3+.45*on.ctx+.1*on.cot+.1*on.ev)+pbar("Format",.25+.6*on.fmt+.1*on.ex)+pbar("Fits the audience",.3+.5*on.role+.15*on.ex)+pbar("Reliability over many runs",.2+.15*on.ex+.15*on.fmt+.15*on.ctx+.3*on.ev,"linear-gradient(90deg,#72E3A6,#B6F5D2)");
+    if(n>=3) api.done();
+  };
+  show();
+};
+
+/* ---------- 05 Fine-tuning — LoRA & VRAM calculator ---------- */
+LABS.ft=(root,api)=>{
+  const MODELS={"Qwen2.5-3B":{P:3.1e9,d:2048,L:36,f:11008},"Llama-3.1-8B":{P:8.0e9,d:4096,L:32,f:14336},"Qwen3-14B":{P:14.8e9,d:5120,L:40,f:17408}};
+  const GPUS=[["Kaggle / Colab T4",16],["RTX 5090",32],["H100",80],["DGX Spark",128]];
+  const STAGE={"Pre-train":"Self-supervised next-token prediction on trillions of tokens. Needs a cluster, not a single GPU.","SFT":"Supervised fine-tuning on instruction → answer pairs (e.g. with LlamaFactory or TRL).","DPO":"Preference optimisation: learn from pairs of a preferred and a rejected answer, without a separate reward model.","GRPO":"Sample a group of answers, score them with a verifiable reward (e.g. GSM8K math), push toward the better ones."};
+  root.innerHTML=`<div class="row" style="gap:10px"><label class="note" style="flex:1 1 160px">Base model<select id="fm">${Object.keys(MODELS).map(k=>`<option ${k==="Llama-3.1-8B"?"selected":""}>${k}</option>`).join("")}</select></label>
+  <label class="note" style="flex:1 1 160px">Method<select id="fme"><option>Full fine-tuning</option><option selected>LoRA</option><option>QLoRA (4-bit base)</option></select></label>
+  <label class="note" style="flex:1 1 160px">LoRA targets<select id="ft"><option value="qv">attention q, v</option><option value="all">all linear layers</option></select></label></div>
+  <label class="inl" style="margin-top:10px">LoRA rank r <input type="range" id="fr" min="2" max="128" step="2" value="16"><b class="mono" id="frv" style="color:var(--text)">16</b></label>
+  <div class="readout"><div><small>TRAINABLE PARAMS</small><b id="fp">–</b></div><div><small>% OF MODEL</small><b id="fpc">–</b></div><div><small>EST. VRAM</small><b id="fv">–</b></div><div><small>STAGE</small><b id="fs">SFT</b></div></div>
+  <div class="log" id="fg" style="max-height:none"></div>
+  <div class="row" style="margin-top:10px">${Object.keys(STAGE).map(s=>`<button class="ghost" data-s="${s}">${s}</button>`).join("")}</div><p class="note" id="fsn">${STAGE.SFT}</p>
+  <div class="row"><button class="btn sm" id="ftr">Train (illustrative loss curve)</button></div><div id="fcv" style="margin-top:8px"></div>
+  <p class="note">Memory = weights + gradients + optimizer states (+ ~2 GB activations at small batch size). Rough planning numbers, not exact.</p>`;
+  let changes=0, stage="SFT";
+  const fmt=n=>n>=1e9?(n/1e9).toFixed(2)+" B":n>=1e6?(n/1e6).toFixed(1)+" M":Math.round(n/1e3)+" K";
+  const calc=()=>{ const m=MODELS[$("#fm",root).value], me=$("#fme",root).value, r=+$("#fr",root).value, all=$("#ft",root).value==="all";
+    $("#frv",root).textContent=r; const lora=!me.startsWith("Full");
+    const per= all? 4*r*(2*m.d)+3*r*(m.d+m.f) : 2*r*(2*m.d);
+    const train= lora? per*m.L : m.P;
+    const gb = me.startsWith("Full") ? m.P*16/1e9+2 : me.startsWith("LoRA") ? m.P*2/1e9+train*16/1e9+2 : m.P*.55/1e9+train*16/1e9+2;
+    $("#fp",root).textContent=fmt(train); $("#fpc",root).textContent=(train/m.P*100).toFixed(train/m.P<.01?3:1)+"%"; $("#fv",root).textContent=gb.toFixed(1)+" GB";
+    $("#fg",root).innerHTML=GPUS.map(([n,v])=>`<div class="${gb<=v?"ok":"w"}">${gb<=v?"✓":"✕"} ${n} (${v} GB)${gb<=v?"":" · needs "+(gb-v).toFixed(1)+" GB more"}</div>`).join("");
+    return {m,me,r,gb}; };
+  ["#fm","#fme","#ft","#fr"].forEach(s=>$(s,root).addEventListener("input",()=>{ calc(); if(++changes>=3) api.done(); }));
+  root.querySelectorAll("[data-s]").forEach(b=>b.onclick=()=>{ stage=b.dataset.s; $("#fs",root).textContent=stage; $("#fsn",root).textContent=STAGE[stage]; });
+  let stop=null;
+  $("#ftr",root).onclick=()=>{ const {me,r}=calc(); const box=$("#fcv",root); box.innerHTML=""; const [,c]=mkCanvas(box,520,160); if(stop) stop();
+    const floor= me.startsWith("Full")?.62: .7+ .25/Math.sqrt(r) + (me.startsWith("QLoRA")?.03:0); const N=300, pts=[]; const rr_=rng(r*7+me.length); let i=0;
+    stop=rafLoop(()=>{ for(let k=0;k<(REDUCED?N:6)&&i<N;k++,i++){ pts.push(floor+(2.3-floor)*Math.exp(-i/55)+(rr_()-.5)*.08); }
+      c.fillStyle="#040b16"; c.fillRect(0,0,520,160); c.strokeStyle="rgba(169,232,255,.08)"; for(let y=0;y<160;y+=32){ c.beginPath(); c.moveTo(0,y); c.lineTo(520,y); c.stroke(); }
+      c.strokeStyle="#3FD3F5"; c.lineWidth=1.5; c.beginPath(); pts.forEach((v,k)=>{ const X=k/N*510+5, Y=150-(v/2.5)*140; k?c.lineTo(X,Y):c.moveTo(X,Y); }); c.stroke();
+      c.fillStyle="#7F95AE"; c.font="10px JetBrains Mono, monospace"; c.fillText(`${stage} · ${me} · r=${r} · loss ${pts[pts.length-1].toFixed(2)}`,10,14);
+      if(i>=N){ stop(); stop=null; api.done(); } }); };
+  calc();
+  return ()=>{ if(stop) stop(); };
+};
+/* ---------- 06 VLM ---------- */
+LABS.vlm=(root,api)=>{
+  const SC={
+    kitchen:{name:"Kitchen table",det:"cup (red), apple, plant pot, window, table",
+      a:["A kitchen table with a red cup, an apple and a small potted plant. Daylight comes from a window on the left.","5 objects: 1 red cup, 1 apple, 1 plant pot, 1 table, 1 window.","There is no readable text in this image.","The red cup on the table, right next to the apple."]},
+    street:{name:"City street",det:"car, person, traffic light (red), crosswalk",
+      a:["A city street: a blue car waits at a red light while a pedestrian walks across the crosswalk.","4 main objects: 1 car, 1 person, 1 traffic light, 1 crosswalk.","No clear text. The traffic light shows red.","The person on the crosswalk. The car has to wait for them."]},
+    chart:{name:"Bar chart",det:"bar chart, title, 4 bars with labels",
+      a:["A bar chart titled “GenAI app users (M)” with four bars: Text, Image, Speech and Video.","4 bars.","Title: GenAI app users (M). Text 9.2 · Image 6.1 · Speech 3.4 · Video 2.0.","Text apps lead with 9.2 M users, about 4.6 times as many as video apps."]}
+  };
+  const Q=["Describe the image.","Count the objects.","Read any text (OCR).","🎤 “What matters most here?” (spoken)"];
+  root.innerHTML=`<div class="row" id="scn"></div><div id="cvw" style="margin-top:10px"></div>
+  <h3 class="mono" style="font-size:11px;letter-spacing:.2em;color:var(--mute);margin:12px 0 6px;font-weight:500">ASK THE MODEL</h3><div class="row" id="qs"></div><div class="log" id="mlog">Pick an image, then ask a question.</div><div class="out" id="mans"></div><p class="note">Answers are scripted to show the pipeline; the chart uses sample numbers.</p>`;
+  const [,ctx]=mkCanvas($("#cvw",root),480,270);
+  let cur="kitchen", scanK=-1, stopT=()=>{}, timers=[];
+  const drawScene=()=>{ const s=cur; ctx.clearRect(0,0,480,270);
+    if(s==="kitchen"){ ctx.fillStyle="#13233a"; ctx.fillRect(0,0,480,270); ctx.fillStyle="#2b4a6b"; ctx.fillRect(30,30,110,90); ctx.strokeStyle="#5d84ad"; ctx.strokeRect(30,30,110,90);
+      ctx.fillStyle="#3a2a20"; ctx.fillRect(60,170,360,18); ctx.fillRect(80,188,12,70); ctx.fillRect(390,188,12,70);
+      ctx.fillStyle="#d94b5a"; rr(ctx,250,128,34,42,4); ctx.fill(); ctx.strokeStyle="#d94b5a"; ctx.lineWidth=4; ctx.beginPath(); ctx.arc(286,148,9,-1.2,1.2); ctx.stroke();
+      ctx.fillStyle="#c44"; ctx.beginPath(); ctx.arc(205,155,15,0,7); ctx.fill(); ctx.fillStyle="#6b4"; ctx.fillRect(203,135,4,8);
+      ctx.fillStyle="#8a5a3c"; ctx.fillRect(340,140,30,30); ctx.fillStyle="#4fa36b"; ctx.beginPath(); ctx.arc(355,125,22,0,7); ctx.fill(); }
+    if(s==="street"){ ctx.fillStyle="#0f1a2c"; ctx.fillRect(0,0,480,270); ctx.fillStyle="#1d2c44"; for(let i=0;i<6;i++) ctx.fillRect(i*85,20+(i%3)*20,70,140);
+      ctx.fillStyle="#222b38"; ctx.fillRect(0,170,480,100); ctx.fillStyle="#cfd8e3"; for(let i=0;i<7;i++) ctx.fillRect(200+i*14,175,8,90);
+      ctx.fillStyle="#3f7bff"; rr(ctx,40,180,120,40,10); ctx.fill(); ctx.fillStyle="#9fd0ff"; ctx.fillRect(70,186,60,14); ctx.fillStyle="#111"; ctx.beginPath(); ctx.arc(70,222,10,0,7); ctx.arc(135,222,10,0,7); ctx.fill();
+      ctx.fillStyle="#e8c39e"; ctx.beginPath(); ctx.arc(250,150,9,0,7); ctx.fill(); ctx.strokeStyle="#e8c39e"; ctx.lineWidth=5; ctx.beginPath(); ctx.moveTo(250,160); ctx.lineTo(250,195); ctx.moveTo(250,195); ctx.lineTo(240,222); ctx.moveTo(250,195); ctx.lineTo(262,220); ctx.moveTo(250,170); ctx.lineTo(238,188); ctx.stroke();
+      ctx.fillStyle="#333"; ctx.fillRect(400,90,6,90); ctx.fillStyle="#111"; rr(ctx,390,60,26,56,5); ctx.fill(); ctx.fillStyle="#ff4d5e"; ctx.beginPath(); ctx.arc(403,74,7,0,7); ctx.fill(); ctx.fillStyle="#333"; ctx.beginPath(); ctx.arc(403,100,7,0,7); ctx.fill(); }
+    if(s==="chart"){ ctx.fillStyle="#f3f6fb"; ctx.fillRect(0,0,480,270); ctx.fillStyle="#1b2a40"; ctx.font="bold 15px Saira, sans-serif"; ctx.fillText("GenAI app users (M)",150,30);
+      ctx.strokeStyle="#9aa8bb"; ctx.beginPath(); ctx.moveTo(60,45); ctx.lineTo(60,230); ctx.lineTo(450,230); ctx.stroke();
+      [["Text",9.2,"#7a5cff"],["Image",6.1,"#2bb6d9"],["Speech",3.4,"#2fbf7a"],["Video",2.0,"#f0a03c"]].forEach(([n,v,c],i)=>{ const x=90+i*90, hh=v/10*175; ctx.fillStyle=c; ctx.fillRect(x,230-hh,56,hh); ctx.fillStyle="#1b2a40"; ctx.font="12px Saira, sans-serif"; ctx.fillText(n,x+8,248); ctx.fillText(v.toFixed(1),x+16,225-hh); }); }
+    if(scanK>=0){ const cols=16,cw=30,ch=30; for(let i=0;i<144;i++){ const x=(i%cols)*cw, y=Math.floor(i/cols)*ch; if(i<scanK){ ctx.fillStyle="rgba(169,148,255,.12)"; ctx.fillRect(x,y,cw,ch);} ctx.strokeStyle="rgba(120,150,190,.18)"; ctx.strokeRect(x,y,cw,ch);} } };
+  const scn=$("#scn",root);
+  Object.entries(SC).forEach(([k,v])=>{ const b=h("button",{class:"btn sm"},v.name); b.onclick=()=>{ cur=k; scanK=-1; drawScene(); [...scn.children].forEach(c=>c.style.opacity=c===b?1:.55); }; b.style.opacity=k===cur?1:.55; scn.appendChild(b); });
+  const qs=$("#qs",root), log=$("#mlog",root), ans=$("#mans",root);
+  Q.forEach((q,qi)=>{ const b=h("button",{class:"ghost"},q); b.onclick=()=>{
+    timers.forEach(t=>{clearTimeout(t);clearInterval(t);}); timers=[]; stopT(); ans.textContent=""; log.innerHTML="";
+    const Lg=(t,c="")=>{ log.innerHTML+=`<div class="${c}">${t}</div>`; log.scrollTop=1e9; };
+    const at=(ms,f)=>timers.push(setTimeout(f,REDUCED?0:ms)); const sp=qi===3?350:0;
+    if(qi===3) Lg("speech-to-text ▸ audio 1.4 s → “what matters most here”","v");
+    at(sp,()=>{ Lg("vision encoder ▸ 480×270 → 16×9 = 144 patches → 144 image tokens","c"); let k=0; const id=setInterval(()=>{ scanK=(k+=8); drawScene(); if(k>=144) clearInterval(id); },REDUCED?0:30); timers.push(id); });
+    at(sp+700,()=>Lg("projector ▸ image tokens mapped into the LLM's embedding space"));
+    at(sp+1100,()=>Lg(`LLM ▸ attends to question + 144 image tokens · sees: ${SC[cur].det}`));
+    at(sp+1500,()=>{ Lg("answer ▸ generating…","ok"); stopT=typeInto(ans,SC[cur].a[qi],16); api.done(); });
+  }; qs.appendChild(b); });
+  drawScene();
+  return ()=>{ timers.forEach(t=>{clearTimeout(t);clearInterval(t);}); stopT(); };
+};
+
+/* ---------- 07 Speech — real browser TTS + pipeline view ---------- */
+LABS.speech=(root,api)=>{
+  const synth=window.speechSynthesis;
+  root.innerHTML=`<label class="note" for="st">Text</label><textarea id="st">Hello! I am a generative model. In 2026 I can speak, sing and listen. 你好，我會說話。</textarea>
+  <div class="row" style="gap:10px;margin-top:8px"><label class="note" style="flex:1 1 220px">Voice (speaker)<select id="sv"><option value="">Browser default</option></select></label></div>
+  <label class="inl">Rate <input type="range" id="srt" min="0.6" max="1.6" step="0.05" value="1"></label><label class="inl">Pitch <input type="range" id="spt" min="0.5" max="1.6" step="0.05" value="1"></label>
+  <div class="row" style="margin-top:8px"><button class="btn" id="sgo">SYNTHESIZE & SPEAK</button><button class="ghost" id="sstt">Transcribe back (ASR, simulated)</button><button class="ghost" id="sstop">Stop</button></div>
+  <ol class="plan" id="spl" style="padding-left:20px;margin:12px 0 0"><li>Normalize text <code id="s1"></code></li><li>Phonemes / speech tokens <code id="s2"></code></li><li>Acoustic model → mel spectrogram</li><li>Vocoder → waveform</li><li>Play audio <code id="s5"></code></li></ol>
+  <div id="sc" style="margin-top:10px"></div><div class="log" id="slog" style="display:none"></div>
+  <p class="note" id="snote">${synth?"Audio uses your browser's built-in speech engine. The spectrogram is a visual illustration of what a TTS model predicts.":"This browser has no speech engine, so the pipeline runs visually only."}</p>`;
+  const [,ctx]=mkCanvas($("#sc",root),520,200);
+  const sel=$("#sv",root);
+  const loadVoices=()=>{ if(!synth) return; const vs=synth.getVoices(); if(!vs.length) return; sel.innerHTML=`<option value="">Browser default</option>`+vs.map((v,i)=>`<option value="${i}">${esc(v.name)} · ${v.lang}</option>`).join(""); };
+  if(synth){ loadVoices(); synth.addEventListener?.("voiceschanged",loadVoices); }
+  const NUM={0:"zero",1:"one",2:"two",3:"three",4:"four",5:"five",6:"six",7:"seven",8:"eight",9:"nine"};
+  const normalize=t=>t.replace(/\b(19|20)(\d\d)\b/g,(m,a,b)=>`${a==="20"?"twenty":"nineteen"} ${b.split("").map(d=>NUM[d]).join(" ")}`).replace(/&/g," and ");
+  let prog=0, tmr=null, timers=[];
+  const draw=(text,pitch)=>{ const S=text.replace(/\s+/g," "), cols=Math.min(130,Math.max(30,S.length)), W=520, mh=120, cw=W/cols; ctx.fillStyle="#040b16"; ctx.fillRect(0,0,W,200);
+    for(let i=0;i<cols;i++){ const ch=S[Math.floor(i/cols*S.length)]||" ", code=ch.charCodeAt(0), r=rng(code*13+i), vowel=/[aeiouAEIOU\u4e00-\u9fff]/.test(ch), silent=/[\s.,!?，。]/.test(ch);
+      for(let b=0;b<40;b++){ const f=b/40; let e=silent?.04:(vowel? Math.exp(-((f-.18/pitch)**2)/.004)+.7*Math.exp(-((f-.42/pitch)**2)/.006) : .25+.5*f*r()); e*= .5+.6*r(); const x=i*cw, y=mh-(b+1)*(mh/40);
+        ctx.fillStyle=`rgba(${Math.round(80+170*e)},${Math.round(60+120*e)},${Math.round(160+90*e)},${clamp(e,0,1)})`; ctx.fillRect(x,y,cw+.5,mh/40+.5); } }
+    ctx.fillStyle="#7F95AE"; ctx.font="10px JetBrains Mono, monospace"; ctx.fillText("MEL SPECTROGRAM (illustrative)",8,12); ctx.fillText("WAVEFORM",8,138);
+    ctx.strokeStyle="#3FD3F5"; ctx.lineWidth=1; ctx.beginPath(); for(let x=0;x<W;x++){ const ch=S[Math.floor(x/W*S.length)]||" ", amp=/[\s.,!?，。]/.test(ch)?1:16; const y=168+Math.sin(x*.9*pitch)*amp*Math.sin(x*.05)**2; x?ctx.lineTo(x,y):ctx.moveTo(x,y);} ctx.stroke();
+    if(prog>0){ ctx.fillStyle="rgba(114,227,166,.85)"; ctx.fillRect(prog*W,0,2,200); } };
+  const run=()=>{ timers.forEach(clearTimeout); timers=[]; const raw=$("#st",root).value.trim()||"Hello.", n=normalize(raw), pitch=+$("#spt",root).value, rate=+$("#srt",root).value;
+    const li=[...$("#spl",root).children]; li.forEach(l=>l.classList.remove("on"));
+    const at=(ms,f)=>timers.push(setTimeout(f,REDUCED?0:ms));
+    at(0,()=>{ li[0].classList.add("on"); $("#s1",root).textContent=n.length>48?n.slice(0,48)+"…":n; });
+    at(350,()=>{ li[1].classList.add("on"); const ph=n.split(/\s+/).slice(0,6).map(w=>w.replace(/([aeiou]+)/gi,"·$1·").replace(/^·|·$/g,"")).join(" / "); $("#s2",root).textContent=ph.slice(0,60); });
+    at(700,()=>{ li[2].classList.add("on"); prog=0; draw(n,pitch); });
+    at(1000,()=>{ li[3].classList.add("on");
+      li[4].classList.add("on");
+      const est=Math.max(1500,n.length*70/rate); const t0=performance.now(); clearInterval(tmr); tmr=setInterval(()=>{ prog=Math.min(1,(performance.now()-t0)/est); draw(n,pitch); if(prog>=1) clearInterval(tmr); },60);
+      if(synth){ synth.cancel(); const u=new SpeechSynthesisUtterance(n); const vs=synth.getVoices(); if(sel.value!=="" && vs[+sel.value]) u.voice=vs[+sel.value]; else if(/[\u4e00-\u9fff]/.test(n)&&!/[a-z]{3}/i.test(n)) u.lang="zh-TW"; u.rate=rate; u.pitch=pitch; u.onend=()=>{ prog=1; draw(n,pitch); $("#s5",root).textContent="done ✓"; }; synth.speak(u); $("#s5",root).textContent="speaking…"; }
+      else $("#s5",root).textContent="(no speech engine)";
+      api.done(); });
+  };
+  $("#sgo",root).onclick=run;
+  $("#sstop",root).onclick=()=>{ if(synth) synth.cancel(); clearInterval(tmr); };
+  $("#sstt",root).onclick=()=>{ const L=$("#slog",root); L.style.display="block"; const words=normalize($("#st",root).value.trim()).split(/\s+/); let t=0;
+    L.innerHTML=`<div class="v">Whisper-style ASR ▸ audio → log-mel → encoder → decoder (simulated)</div>`+words.reduce((acc,w,i)=>{ if(i%6===0){ acc.push([t,[]]); } acc[acc.length-1][1].push(w); t+=.32+w.length*.04; return acc; },[]).map(([s,ws])=>`<div><span class="c">[${s.toFixed(2)}s]</span> ${esc(ws.join(" "))}</div>`).join(""); };
+  draw(normalize($("#st",root).value),1);
+  return ()=>{ timers.forEach(clearTimeout); clearInterval(tmr); if(synth) synth.cancel(); };
+};
+
+/* ---------- 08 Image — diffusion studio ---------- */
+LABS.image=(root,api)=>{
+  root.innerHTML=`<label class="note" for="ip">Prompt</label><textarea id="ip">a calm sea at sunset with a small robot on the beach, watercolor</textarea>
+  <div class="row" style="gap:12px;margin-top:6px"><label class="inl" style="flex:1 1 200px">Steps <input type="range" id="is" min="4" max="50" step="1" value="25"><b class="mono" id="isv" style="color:var(--text)">25</b></label>
+  <label class="inl" style="flex:1 1 200px">Guidance (CFG) <input type="range" id="ig" min="1" max="15" step="0.5" value="7"><b class="mono" id="igv" style="color:var(--text)">7.0</b></label></div>
+  <div class="row"><label class="inl">Seed <input type="text" id="isd" value="42" style="width:90px"></label><button class="ghost" id="idice">🎲 new seed</button><button class="btn" id="igo">GENERATE</button></div>
+  <div class="row" style="margin-top:6px"><span class="note">Try:</span>${["neon city at night with a cat","pixel art forest with a moon","golden mountains, epic, red sky"].map(p=>`<button class="ghost" data-p="${p}">${p}</button>`).join("")}</div>
+  <div id="ic" style="margin-top:10px"></div><div class="row" id="ith" style="gap:6px;flex-wrap:nowrap;overflow-x:auto;margin-top:8px"></div><p class="note mono" id="ist"></p>
+  <p class="note">A procedural stand-in for a real diffusion model: it shows how steps, guidance and seed change the result, not real image quality.</p>`;
+  const [cv,ctx]=mkCanvas($("#ic",root),512,288);
+  const off=document.createElement("canvas"); off.width=512; off.height=288; const o=off.getContext("2d");
+  const px=document.createElement("canvas"); px.width=64; px.height=36; const pxc=px.getContext("2d");
+  const nz=document.createElement("canvas"); nz.width=128; nz.height=72; const nctx=nz.getContext("2d");
+  $("#is",root).oninput=e=>$("#isv",root).textContent=e.target.value; $("#ig",root).oninput=e=>$("#igv",root).textContent=(+e.target.value).toFixed(1);
+  $("#idice",root).onclick=()=>{ $("#isd",root).value=Math.floor(Math.random()*99999); };
+  root.querySelectorAll("[data-p]").forEach(b=>b.onclick=()=>{ $("#ip",root).value=b.dataset.p; $("#igo",root).click(); });
+  const COL={red:"#e8504f",blue:"#3f7bff",green:"#3fae6f",gold:"#e8b64a",golden:"#e8b64a",purple:"#8d6cff",pink:"#ff8fc6",orange:"#ff9a4d",teal:"#2fb3b3",neon:"#3fd3f5",sunset:"#ff7a59"};
+  const scene=(p,seed,g)=>{ const r=rng(seed), w=512, hh=288, L=p.toLowerCase();
+    const drop=k=>g<3 && r()<(3-g)/2.6 ? false : L.includes(k);
+    const night=/night|moon|neon/.test(L), sunset=/sunset|dusk|red sky/.test(L);
+    const pal=Object.keys(COL).filter(k=>L.includes(k)).map(k=>COL[k]);
+    const top=night?"#050a24":sunset?"#2a1846":"#3f78c9", mid=pal[0]||(night?"#1b2a6b":sunset?"#ff7a59":"#9fd3ff");
+    const gr=o.createLinearGradient(0,0,0,hh); gr.addColorStop(0,top); gr.addColorStop(.62,mid); gr.addColorStop(1,pal[1]||"#0d1a2c"); o.fillStyle=gr; o.fillRect(0,0,w,hh);
+    const hz=170+(r()-.5)*40, sx=80+r()*350;
+    if(drop("moon")||night){ o.fillStyle="#f2f0e0"; o.beginPath(); o.arc(sx,70,22,0,7); o.fill(); for(let i=0;i<40;i++){ o.fillStyle="rgba(255,255,255,.7)"; o.fillRect(r()*w,r()*hz*.7,1.5,1.5);} }
+    else if(drop("sun")||sunset){ o.fillStyle="#ffe3b0"; o.beginPath(); o.arc(sx,hz-30,30,0,7); o.fill(); }
+    if(drop("mountain")){ o.fillStyle=pal[0]?pal[0]+"cc":"#2c3e5c"; o.beginPath(); o.moveTo(0,hz); for(let x=0;x<=w;x+=64) o.lineTo(x,hz-50-r()*90); o.lineTo(w,hz); o.fill(); }
+    if(drop("city")){ for(let x=0;x<w;x+=26+r()*14){ const bh=40+r()*110; o.fillStyle="#0c1426"; o.fillRect(x,hz-bh,22,bh+4); for(let y=hz-bh+6;y<hz-4;y+=10) if(r()>.45){ o.fillStyle=night?"#3fd3f5":"#ffe08a"; o.fillRect(x+4+Math.floor(r()*3)*5,y,3,4);} } }
+    if(drop("sea")||drop("ocean")||drop("beach")){ o.fillStyle="#1c4f8f"; o.fillRect(0,hz,w,hh-hz); o.strokeStyle="rgba(255,255,255,.35)"; for(let y=hz+8;y<hh;y+=12){ o.beginPath(); for(let x=0;x<w;x+=8) o.lineTo(x,y+Math.sin(x/18+y)*2); o.stroke(); } if(L.includes("beach")){ o.fillStyle="#e2c48f"; o.beginPath(); o.moveTo(0,hh); o.quadraticCurveTo(w*.5,hz+50,w,hh-30); o.lineTo(w,hh); o.fill(); } }
+    else { o.fillStyle=drop("forest")?"#173d2a":"#16243a"; o.fillRect(0,hz,w,hh-hz); }
+    if(drop("forest")||drop("tree")) for(let i=0;i<14;i++){ const x=r()*w, s=20+r()*30; o.fillStyle="#1f5a3a"; o.beginPath(); o.moveTo(x,hz+10-s*2); o.lineTo(x-s*.6,hz+10); o.lineTo(x+s*.6,hz+10); o.fill(); }
+    if(drop("robot")){ const x=w*.62, y=hz+40; o.fillStyle="#0a1424"; o.strokeStyle="#a9e8ff"; o.lineWidth=2; rr(o,x,y-34,44,36,9); o.fill(); o.stroke(); o.fillStyle="#3fd3f5"; o.beginPath(); o.arc(x+14,y-16,4,0,7); o.arc(x+30,y-16,4,0,7); o.fill(); o.beginPath(); o.moveTo(x+22,y-34); o.lineTo(x+22,y-46); o.stroke(); }
+    if(drop("cat")){ const x=w*.3, y=hz+56; o.fillStyle="#111"; o.beginPath(); o.ellipse(x,y,24,16,0,0,7); o.fill(); o.beginPath(); o.arc(x+22,y-18,11,0,7); o.fill(); o.beginPath(); o.moveTo(x+14,y-26); o.lineTo(x+16,y-38); o.lineTo(x+22,y-28); o.moveTo(x+26,y-28); o.lineTo(x+30,y-38); o.lineTo(x+32,y-24); o.fill(); }
+  };
+  let stop=null;
+  $("#igo",root).onclick=()=>{ if(stop) stop(); const p=$("#ip",root).value, steps=+$("#is",root).value, g=+$("#ig",root).value, seed=hash($("#isd",root).value+"");
+    scene(p,seed,g); const style=p.toLowerCase(); const th=$("#ith",root); th.innerHTML=""; const thumbs=[];
+    const filt=g>11?`saturate(${100+(g-11)*45}%) contrast(${100+(g-11)*12}%)`:g<4?`saturate(${40+g*15}%)`:"none";
+    const resid=Math.max(0,(12-steps)/12)*.55; let k=0; const N=steps;
+    const frame=(t)=>{ ctx.filter=filt+(style.includes("watercolor")?" blur(1.2px)":""); if(style.includes("pixel")){ pxc.clearRect(0,0,64,36); pxc.drawImage(off,0,0,64,36); ctx.imageSmoothingEnabled=false; ctx.drawImage(px,0,0,512,288); ctx.imageSmoothingEnabled=true; } else ctx.drawImage(off,0,0); ctx.filter="none";
+      const a=Math.max(resid,1-t); if(a>0){ const id=nctx.createImageData(128,72); const rn=rng(seed+k); for(let i=0;i<id.data.length;i+=4){ id.data[i]=rn()*255; id.data[i+1]=rn()*255; id.data[i+2]=rn()*255; id.data[i+3]=255*a; } nctx.putImageData(id,0,0); ctx.imageSmoothingEnabled=false; ctx.drawImage(nz,0,0,512,288); ctx.imageSmoothingEnabled=true; } };
+    const MS=[1,Math.round(N/4),Math.round(N/2),Math.round(3*N/4),N]; const t0=performance.now(); const D=REDUCED?1:1700;
+    stop=rafLoop((dt,now)=>{ const nk=Math.min(N,Math.max(1,Math.ceil((now-t0)/D*N))); if(nk===k) return; const prev=k; k=nk; frame(k/N);
+      $("#ist",root).textContent=`denoising step ${k}/${N} · latent 64×64×4 → VAE decode 512×288 · CFG ${g}`;
+      if(MS.some(m=>m>prev&&m<=k)){ const b=h("div",{style:"flex:0 0 96px"}); th.appendChild(b); const [,c2]=mkCanvas(b,96,54); c2.drawImage(cv,0,0,cv.width,cv.height,0,0,96,54); }
+      if(k>=N){ stop(); stop=null; $("#ist",root).textContent+=g<3?" · weak guidance: prompt elements may be missing":g>11?" · very strong guidance: oversaturated":resid>0?" · too few steps: noise left over":" · done ✓"; api.done(); } });
+  };
+  return ()=>{ if(stop) stop(); };
+};
+/* ---------- 09 Video & Music ---------- */
+LABS.avm=(root,api)=>{
+  root.innerHTML=`<div class="row"><button class="btn sm" id="tm">Music</button><button class="btn sm v" id="tv" style="opacity:.55">Video</button></div><div id="avb" style="margin-top:12px"></div>`;
+  let cleanup=()=>{};
+  const music=()=>{ cleanup();
+    const MOODS={calm:{sc:[0,2,4,7,9],bpm:72,wave:"sine",root:60},happy:{sc:[0,2,4,5,7,9,11],bpm:118,wave:"triangle",root:62},epic:{sc:[0,2,3,5,7,8,10],bpm:96,wave:"sawtooth",root:50},mysterious:{sc:[0,1,4,5,7,8,10],bpm:80,wave:"sine",root:57}};
+    const box=$("#avb",root);
+    box.innerHTML=`<label class="note" for="mp">Text-to-music prompt</label><input type="text" id="mp" value="calm lo-fi rainy night">
+    <div class="row" style="gap:10px;margin-top:8px"><label class="note" style="flex:1 1 160px">Mood<select id="mm"><option value="auto">from prompt</option>${Object.keys(MOODS).map(k=>`<option>${k}</option>`).join("")}</select></label>
+    <label class="inl" style="flex:1 1 200px">Creativity <input type="range" id="mt" min="0.2" max="2" step="0.1" value="0.8"></label></div>
+    <div class="row" style="margin-top:8px"><button class="btn" id="mg">COMPOSE</button><button class="btn v" id="mpl" disabled>▶ PLAY</button><button class="ghost" id="mst">Stop</button><span class="note mono" id="minfo"></span></div>
+    <div id="mroll" style="margin-top:10px"></div><p class="note">The melody is sampled note by note from a probability table over the scale, the same autoregressive idea as MusicGen or ACE-Step, at toy scale. Audio is synthesized live in your browser.</p>`;
+    const [,c]=mkCanvas($("#mroll",box),520,170); let song=null, ac=null, head=-1, stopLoop=null, t0=0;
+    const draw=()=>{ c.fillStyle="#040b16"; c.fillRect(0,0,520,170); if(!song) return; const n=song.notes.length, cw=500/n;
+      for(let i=0;i<16;i++){ c.fillStyle=i%2?"rgba(169,232,255,.03)":"transparent"; c.fillRect(10,10+i*9,500,9); }
+      song.notes.forEach((m,i)=>{ if(m==null) return; const y=10+(15-((m-song.root)%16+16)%16)*9; c.fillStyle=i===head?"#EAFBFF":"#A994FF"; rr(c,10+i*cw+1,y,cw*song.len[i]-2,8,3); c.fill(); });
+      song.bass.forEach((m,i)=>{ c.fillStyle="rgba(63,211,245,.5)"; c.fillRect(10+i*4*cw,160,cw*4-3,5); });
+      if(head>=0){ c.fillStyle="rgba(114,227,166,.9)"; c.fillRect(10+head*cw,6,2,158); } };
+    $("#mg",box).onclick=()=>{ const p=$("#mp",box).value.toLowerCase(); let mood=$("#mm",box).value;
+      if(mood==="auto") mood=/epic|battle|hero|史詩/.test(p)?"epic":/happy|dance|sunny|快樂/.test(p)?"happy":/myster|dark|night|ghost|神秘/.test(p)&&!/calm|lo-?fi/.test(p)?"mysterious":"calm";
+      const M=MOODS[mood], T=+$("#mt",box).value, r=rng(hash(p)+Date.now()%1000), N=32; let d=0; const notes=[], len=[];
+      for(let i=0;i<N;i++){ if(i>0&&r()<.15){ notes.push(null); len.push(1); continue; } const steps=[-2,-1,0,1,2,3,-3], lg=[1.6,2.4,.6,2.4,1.6,.6,.6]; const p2=softmax(lg,T); d=clamp(d+steps[sample(p2,r)],-3,M.sc.length+3); if(i%8===0&&r()>.4) d=0; const oct=Math.floor(d/M.sc.length), deg=((d%M.sc.length)+M.sc.length)%M.sc.length; notes.push(M.root+12+oct*12+M.sc[deg]); len.push(1); }
+      const prog=[0,7,9,5].map(x=>M.root-12+x); const bass=Array.from({length:N/4},(_,i)=>prog[i%4]);
+      song={notes,len,bass,bpm:M.bpm,wave:M.wave,root:M.root+12,mood}; head=-1; draw(); $("#mpl",box).disabled=false; $("#minfo",box).textContent=`${mood} · ${M.bpm} BPM · ${N} steps`; };
+    const stopAudio=()=>{ if(stopLoop){ stopLoop(); stopLoop=null; } if(ac){ try{ac.close();}catch(e){} ac=null; } head=-1; draw(); };
+    $("#mst",box).onclick=stopAudio;
+    $("#mpl",box).onclick=()=>{ if(!song) return; stopAudio(); const A=window.AudioContext||window.webkitAudioContext; if(!A){ $("#minfo",box).textContent="Web Audio not supported here."; return; }
+      ac=new A(); const step=60/song.bpm/2, start=ac.currentTime+.08, master=ac.createGain(); master.gain.value=.18; master.connect(ac.destination);
+      const tone=(midi,t,dur,wave,vol)=>{ const o=ac.createOscillator(), g=ac.createGain(); o.type=wave; o.frequency.value=440*Math.pow(2,(midi-69)/12); g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(vol,t+.02); g.gain.exponentialRampToValueAtTime(.001,t+dur); o.connect(g); g.connect(master); o.start(t); o.stop(t+dur+.05); };
+      song.notes.forEach((m,i)=>{ if(m!=null) tone(m,start+i*step,step*1.8,song.wave==="sawtooth"?"triangle":song.wave,.5); });
+      song.bass.forEach((m,i)=>tone(m,start+i*4*step,step*4,"sine",.6));
+      t0=start; const total=song.notes.length*step; stopLoop=rafLoop(()=>{ if(!ac) return; const t=ac.currentTime-t0; head=Math.floor(t/step); draw(); if(t>total+.4) stopAudio(); }); api.done(); };
+    cleanup=stopAudio; };
+  const video=()=>{ cleanup();
+    const box=$("#avb",root);
+    box.innerHTML=`<label class="note" for="vp2">Text-to-video prompt</label><input type="text" id="vp2" value="a paper boat sailing at sunset">
+    <label class="inl" style="margin-top:8px">Temporal consistency <input type="range" id="vc" min="0" max="1" step="0.05" value="0.9"><b class="mono" id="vcv" style="color:var(--text)">0.90</b></label>
+    <div class="row" style="margin-top:8px"><button class="btn" id="vg">GENERATE 8 FRAMES</button><span class="note mono" id="vinfo"></span></div>
+    <div id="vprev" style="margin-top:10px"></div><div class="row" id="vstr" style="gap:4px;flex-wrap:nowrap;overflow-x:auto;margin-top:8px"></div>
+    <p class="note">Video models denoise all frames together and attend across time. Turn consistency down to see what happens without that: flicker, jumping objects and shifting colors.</p>`;
+    $("#vc",box).oninput=e=>$("#vcv",box).textContent=(+e.target.value).toFixed(2);
+    const [,pc]=mkCanvas($("#vprev",box),480,270); let fr=[], stopL=null;
+    const paint=(c,f,S)=>{ const w=480*S, hh=270*S; const g=c.createLinearGradient(0,0,0,hh); g.addColorStop(0,`hsl(${260+f.hue} 45% 22%)`); g.addColorStop(.6,`hsl(${20+f.hue} 80% 60%)`); c.fillStyle=g; c.fillRect(0,0,w,hh);
+      c.fillStyle="#ffe3b0"; c.beginPath(); c.arc(f.sun*S,150*S,26*S,0,7); c.fill(); c.fillStyle="#1c3f73"; c.fillRect(0,170*S,w,100*S);
+      c.strokeStyle="rgba(255,255,255,.3)"; c.lineWidth=S; for(let y=180;y<270;y+=12){ c.beginPath(); for(let x=0;x<480;x+=10) c.lineTo(x*S,(y+Math.sin(x/16+f.t*3)*2)*S); c.stroke(); }
+      c.fillStyle=`hsl(${f.boatHue} 20% 92%)`; c.beginPath(); c.moveTo((f.x-40)*S,(f.y)*S); c.lineTo((f.x+40)*S,f.y*S); c.lineTo((f.x+26)*S,(f.y+16)*S); c.lineTo((f.x-26)*S,(f.y+16)*S); c.fill(); c.beginPath(); c.moveTo(f.x*S,(f.y-44)*S); c.lineTo((f.x+24)*S,f.y*S); c.lineTo((f.x-6)*S,f.y*S); c.fill(); };
+    $("#vg",box).onclick=()=>{ const k=+$("#vc",box).value, r=rng(hash($("#vp2",box).value)+Date.now()%997), J=1-k;
+      fr=Array.from({length:8},(_,i)=>({t:i/8, x:120+i*30+(r()-.5)*J*220, y:172+Math.sin(i*.9)*3+(r()-.5)*J*60, sun:330+(r()-.5)*J*240, hue:(r()-.5)*J*120, boatHue:(r()-.5)*J*300}));
+      let diff=0; for(let i=1;i<8;i++){ const a=fr[i], b=fr[i-1]; diff+=Math.abs(a.x-b.x-30)/220+Math.abs(a.y-b.y)/60+Math.abs(a.sun-b.sun)/240+Math.abs(a.hue-b.hue)/120; } const score=clamp(1-diff/7/1.2,0,1);
+      $("#vinfo",box).textContent=`frame-to-frame consistency ${score.toFixed(2)}${score<.6?" · flicker!":""}`;
+      const st=$("#vstr",box); st.innerHTML=""; fr.forEach(f=>{ const b=h("div",{style:"flex:0 0 72px"}); st.appendChild(b); const [,c]=mkCanvas(b,72,41); paint(c,f,72/480); });
+      if(stopL) stopL(); let acc=0, i=0; stopL=rafLoop(dt=>{ acc+=dt; if(acc<160) return; acc=0; paint(pc,fr[i%8],1); i++; }); api.done(); };
+    cleanup=()=>{ if(stopL) stopL(); }; };
+  $("#tm",root).onclick=()=>{ $("#tm",root).style.opacity=1; $("#tv",root).style.opacity=.55; music(); };
+  $("#tv",root).onclick=()=>{ $("#tv",root).style.opacity=1; $("#tm",root).style.opacity=.55; video(); };
+  music();
+  return ()=>cleanup();
+};
+
+/* ---------- 10 Final — creative agent ---------- */
+LABS.agent=(root,api)=>{
+  const MODS=["PLANNER","MEMORY·RAG","TOOLS·MCP","TEXT","IMAGE","SPEECH","MUSIC","VIDEO","EVALUATOR"];
+  const GEN=["TEXT","IMAGE","SPEECH","MUSIC","VIDEO"];
+  const SC={
+    "Make a 30-second birthday video message for Mom.":[
+      ["PLANNER","plan → script, 4 scenes, voice-over, background music, assemble video"],["MEMORY·RAG","recall: Mom's name, favourite flowers (peonies), last year's trip",true],
+      ["TEXT","script: 4 lines, warm tone, 62 words"],["IMAGE","4 scene images · peonies, family dinner, beach, cake"],["SPEECH","voice-over in your own (consented) voice · 24 s"],["MUSIC","gentle piano bed · 30 s, 80 BPM"],["VIDEO","image-to-video for each scene, narration synced · 30 s, 24 fps"],["EVALUATOR","check: length 30 s ✓, names correct ✓, AI-generated label added ✓"]],
+    "Turn my lecture notes into a 3-minute podcast.":[
+      ["PLANNER","plan → outline, two-host dialogue, intro jingle, narration"],["MEMORY·RAG","retrieve key points from 12 pages of notes (top-8 chunks)"],
+      ["TEXT","dialogue script · host A asks, host B explains · 420 words"],["SPEECH","two voices, multi-speaker TTS · 3 min 04 s"],["MUSIC","5-second intro jingle",true],["EVALUATOR","fact-check against notes ✓, duration within 10% ✓"]],
+    "Design a poster and jingle for the school AI club.":[
+      ["PLANNER","plan → slogan, poster layout, 3 image options, 15 s jingle"],["MEMORY·RAG","recall club name and colours from earlier chats",true],
+      ["TEXT","slogan: “Build the future, one token at a time.”"],["IMAGE","poster, 3 variants · A3 portrait · club colours"],["MUSIC","upbeat 15-second jingle, 118 BPM"],["EVALUATOR","text in image legible ✓, colours match ✓, picks variant 2"]]
+  };
+  const off=new Set();
+  root.innerHTML=`<div class="diagram" id="ad"></div><label class="note" for="ai">Request to your agent</label><select id="ai">${Object.keys(SC).map(k=>`<option>${k}</option>`).join("")}</select>
+  <p class="note" style="margin:10px 0 6px">Pull a module out to see where the agent breaks:</p><div class="toggles" id="am"></div>
+  <div class="row" style="margin-top:12px"><button class="btn" id="arun">RUN AGENT</button></div><div class="log" id="alog">Ready.</div>`;
+  const drawD=lit=>{ const cx=270,cy=150,n=MODS.length; let s=`<svg viewBox="0 0 540 300" class="ddiag"><circle cx="${cx}" cy="${cy}" r="44" fill="#07111F" stroke="#A994FF"/><text x="${cx}" y="${cy-2}" text-anchor="middle" fill="#E6F2FF" font-size="11" letter-spacing="1">AGENT</text><text x="${cx}" y="${cy+13}" text-anchor="middle" fill="#7F95AE" font-size="9">LLM loop</text>`;
+    MODS.forEach((m,i)=>{ const a=-Math.PI/2+i*2*Math.PI/n, x=cx+Math.cos(a)*205, y=cy+Math.sin(a)*114, o=!off.has(m), L=lit===m, w=m.length*7.4+22, col=GEN.includes(m)?"#3FD3F5":"#A994FF";
+      s+=`<line x1="${cx+Math.cos(a)*46}" y1="${cy+Math.sin(a)*46}" x2="${x}" y2="${y}" stroke="${o?(L?"#EAFBFF":col):"#4A5D75"}" stroke-opacity="${o?.7:.3}" ${o?'class="flowanim"':'stroke-dasharray="2 6"'}/>
+      <rect x="${x-w/2}" y="${y-14}" width="${w}" height="28" rx="14" fill="${L?"#1a1a44":"#07111F"}" stroke="${o?(L?"#EAFBFF":col):"#4A5D75"}"/><text x="${x}" y="${y+4}" text-anchor="middle" font-size="10.5" fill="${o?"#E6F2FF":"#4A5D75"}">${m}</text>`; });
+    $("#ad",root).innerHTML=s+"</svg>"; };
+  const am=$("#am",root); MODS.forEach(m=>{ const b=h("button",{},m); b.onclick=()=>{ off.has(m)?off.delete(m):off.add(m); b.classList.toggle("off",off.has(m)); drawD(); }; am.appendChild(b); });
+  drawD(); let timers=[];
+  $("#arun",root).onclick=()=>{ timers.forEach(clearTimeout); timers=[]; const req=$("#ai",root).value, seq=SC[req], L=$("#alog",root); L.innerHTML=`<div class="v">user: “${esc(req)}”</div>`;
+    let t=0, failed=false;
+    seq.forEach(([m,msg,soft],i)=>{ t+=REDUCED?0:640; timers.push(setTimeout(()=>{ if(failed) return; drawD(m);
+      const needMCP=GEN.includes(m); const missing=off.has(m)?m:(needMCP&&off.has("TOOLS·MCP")?"TOOLS·MCP":null);
+      if(missing&&!soft){ failed=true; L.innerHTML+=`<div class="w">✕ ${missing} missing · ${missing==="TOOLS·MCP"?"the agent cannot reach any generator":missing==="PLANNER"?"no plan, so the agent doesn't know what to do":missing==="EVALUATOR"?"nobody checks the result; mistakes would ship":"this request needs "+missing+" output"}</div><div class="w">mission failed at step ${i+1}. Put the module back and run again.</div>`; L.scrollTop=1e9; return; }
+      if(missing&&soft){ L.innerHTML+=`<div class="w">! ${missing} missing · continuing with less personal results</div>`; L.scrollTop=1e9; return; }
+      L.innerHTML+=`<div><span class="c">${needMCP?"mcp.call ":"         "}</span>${m.padEnd(11,".")} ${esc(msg)}</div>`; L.scrollTop=1e9;
+      if(i===seq.length-1){ L.innerHTML+=`<div class="ok">★ DELIVERED · understood → planned → generated → checked</div>`; L.scrollTop=1e9; drawD(); api.done(); } },t)); });
+  };
+  return ()=>timers.forEach(clearTimeout);
+};
+
+/* ---------- E Local — will it run on my machine? ---------- */
+LABS.local=(root,api)=>{
+  const MOD={"1B":[1.2,.03],"3B":[3.2,.11],"8B":[8.0,.13],"14B":[14.8,.19],"32B":[32.5,.25],"70B":[70.6,.33]};
+  const Q={"FP16":16,"Q8_0":8.5,"Q4_K_M":4.85,"Q2_K":2.6};
+  const HW=[["Raspberry Pi 5",8,17,true],["Jetson Orin Nano Super",8,102,true],["Mac Mini M4",24,120,true],["RTX 5090",32,1792,false],["DGX Spark",128,273,true],["Jetson AGX Thor",128,273,true]];
+  const CTX=[2048,4096,8192,16384,32768,65536,131072];
+  const USE={"Just me, easiest setup":["Ollama or LM Studio","ollama pull <model>\nollama run <model>"],"CPU, Apple Silicon or a small board":["llama.cpp","llama-server -m model-Q4_K_M.gguf -c CTX"],"Serve many users at once":["vLLM","vllm serve <hf-model> --max-model-len CTX"]};
+  root.innerHTML=`<div class="row" style="gap:10px"><label class="note" style="flex:1 1 120px">Model size<select id="lm">${Object.keys(MOD).map(k=>`<option ${k==="8B"?"selected":""}>${k}</option>`).join("")}</select></label>
+  <label class="note" style="flex:1 1 120px">Quantization<select id="lq">${Object.keys(Q).map(k=>`<option ${k==="Q4_K_M"?"selected":""}>${k}</option>`).join("")}</select></label>
+  <label class="note" style="flex:1 1 200px">Use case<select id="lu">${Object.keys(USE).map(k=>`<option>${k}</option>`).join("")}</select></label></div>
+  <label class="inl" style="margin-top:8px">Context length <input type="range" id="lc" min="0" max="6" step="1" value="2"><b class="mono" id="lcv" style="color:var(--text)">8K</b></label>
+  <div class="readout"><div><small>WEIGHTS</small><b id="lw">–</b></div><div><small>KV CACHE</small><b id="lk">–</b></div><div><small>TOTAL</small><b id="lt">–</b></div><div><small>RUNTIME</small><b id="lr" style="font-size:12px">–</b></div></div>
+  <div class="log" id="lh" style="max-height:none"></div><pre class="log" id="lcmd" style="white-space:pre-wrap"></pre>
+  <p class="note">Rules of thumb: memory ≈ parameters × bits ÷ 8 + KV cache + ~0.6 GB; unified-memory devices keep ~25% for the OS; speed ≈ bandwidth ÷ weight size × 0.6. Hardware figures from the course's AI Hardwares and LLM-framework sections, rounded.</p>`;
+  let ch=0;
+  const calc=()=>{ const [P,kv]=MOD[$("#lm",root).value], bits=Q[$("#lq",root).value], ctx=CTX[+$("#lc",root).value];
+    $("#lcv",root).textContent=(ctx/1024)+"K"; const w=P*bits/8, k=kv*ctx/1000, tot=w+k+.6;
+    $("#lw",root).textContent=w.toFixed(1)+" GB"; $("#lk",root).textContent=k.toFixed(1)+" GB"; $("#lt",root).textContent=tot.toFixed(1)+" GB";
+    $("#lh",root).innerHTML=`<div class="c">DEVICE                    MEMORY   FITS   ≈ TOKENS/S</div>`+HW.map(([n,m,bw,uni])=>{ const use=uni?m*.75:m*.95, fit=tot<=use, tps=bw/w*.6; return `<div class="${fit?"ok":"w"}">${esc(n.padEnd(25," ")).replace(/ /g,"&nbsp;")} ${String(m).padStart(3," ").replace(/ /g,"&nbsp;")} GB&nbsp;&nbsp;&nbsp;${fit?"✓":"✕"}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${fit?(tps>=100?Math.round(tps):tps.toFixed(1)):"–"}</div>`; }).join("");
+    const u=USE[$("#lu",root).value]; $("#lr",root).textContent=u[0]; $("#lcmd",root).textContent=u[1].replace(/CTX/g,ctx); };
+  ["#lm","#lq","#lu","#lc"].forEach(s=>$(s,root).addEventListener("input",()=>{ calc(); if(++ch>=2) api.done(); }));
+  calc();
+};
+/* =========================================================
+   particles.js — drifting neural background
+   ========================================================= */
+const BG=(()=>{
+  const c=$("#bg"), ctx=c.getContext("2d"); let w,hh,dpr, P=[], labels=[], lastSpawn=0;
+  const WORDS=["TOKEN","EMBEDDING","ATTENTION","LATENT z","DIFFUSION","DENOISE","LoRA","PROMPT","CONTEXT","MEL","VOCODER","CFG","AGENT","MCP","SAMPLE","SOFTMAX"];
+  const resize=()=>{ dpr=Math.min(2,devicePixelRatio||1); w=innerWidth; hh=innerHeight; c.width=w*dpr; c.height=hh*dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    const n=Math.round(Math.min(90,w*hh/16000)); P=Array.from({length:n},()=>({x:Math.random()*w,y:Math.random()*hh,vx:(Math.random()-.5)*.12,vy:(Math.random()-.5)*.12,r:Math.random()*1.4+.4,v:Math.random()<.4})); };
+  resize(); addEventListener("resize",resize);
+  let px=0, py=0;
+  return { draw(dt,t){
+    ctx.clearRect(0,0,w,hh);
+    const tx=-(Cam.x*Cam.s*.06)%w, ty=-(Cam.y*Cam.s*.06)%hh; px=tx; py=ty;
+    for(const p of P){ if(!REDUCED){ p.x+=p.vx*dt*.06; p.y+=p.vy*dt*.06; } if(p.x<0)p.x+=w; if(p.x>w)p.x-=w; if(p.y<0)p.y+=hh; if(p.y>hh)p.y-=hh; }
+    const pos=P.map(p=>[((p.x+px)%w+w)%w,((p.y+py)%hh+hh)%hh]);
+    ctx.lineWidth=.6;
+    for(let i=0;i<P.length;i++) for(let j=i+1;j<P.length;j++){ const dx=pos[i][0]-pos[j][0], dy=pos[i][1]-pos[j][1], d=dx*dx+dy*dy; if(d<11000){ ctx.strokeStyle=`rgba(169,232,255,${(1-d/11000)*.09})`; ctx.beginPath(); ctx.moveTo(...pos[i]); ctx.lineTo(...pos[j]); ctx.stroke(); } }
+    P.forEach((p,i)=>{ ctx.fillStyle=p.v?"rgba(169,148,255,.5)":"rgba(169,232,255,.45)"; ctx.beginPath(); ctx.arc(pos[i][0],pos[i][1],p.r,0,7); ctx.fill(); });
+    if(!REDUCED && t-lastSpawn>1800 && labels.length<5){ lastSpawn=t; labels.push({t:WORDS[Math.floor(Math.random()*WORDS.length)],x:Math.random()*w,y:Math.random()*hh,a:0,life:0}); }
+    ctx.font="10px JetBrains Mono, monospace";
+    labels=labels.filter(l=>{ l.life+=dt; l.y-=dt*.008; const a=l.life<1500?l.life/1500:l.life>5000?1-(l.life-5000)/1500:1; ctx.fillStyle=`rgba(169,232,255,${a*.22})`; ctx.fillText(l.t,l.x,l.y); return l.life<6500; });
+  }};
+})();
+
+/* ---------- main loop ---------- */
+let lastT=performance.now();
+function frame(t){
+  const dt=Math.min(50,t-lastT); lastT=t;
+  if(Cam.tw){ const k=Math.min(1,(t-Cam.tw.t0)/Cam.tw.dur), e=ease(k); Cam.x=lerp(Cam.tw.x0,Cam.tw.x,e); Cam.y=lerp(Cam.tw.y0,Cam.tw.y,e); Cam.s=lerp(Cam.tw.s0,Cam.tw.s,e); if(k>=1) Cam.tw=null; applyCam(); }
+  else if(!Cam.drag && (Math.abs(Cam.vx)>.01||Math.abs(Cam.vy)>.01)){ Cam.x+=Cam.vx*dt/16; Cam.y+=Cam.vy*dt/16; Cam.vx*=Math.pow(.92,dt/16); Cam.vy*=Math.pow(.92,dt/16); clampCam(); applyCam(); }
+  if(!isMobile()) tickParticles(dt);
+  BG.draw(dt,t);
+  requestAnimationFrame(frame);
+}
+
+/* ---------- intro ---------- */
+function intro(){
+  const I=$("#intro"), veil=I.querySelector(".veil"), h1=I.querySelector("h1"), zh=I.querySelector(".zh"), sub=I.querySelector(".sub");
+  const nodes=[...document.querySelectorAll(".node,.final")], cur=byId(Store.cur)||STATIONS[0];
+  let over=false; const timers=[];
+  const finish=()=>{ if(over) return; over=true; timers.forEach(clearTimeout);
+    nodes.forEach(n=>n.classList.remove("hidden-intro")); routePath.style.strokeDashoffset=0; $("#companion").style.opacity=1;
+    I.style.transition="opacity .6s"; I.style.opacity=0; setTimeout(()=>I.remove(),650);
+    if(!isMobile()){ const pw=0; tweenCam(cur.x+pw,cur.y+40,cur.kind==="final"?.62:.9,REDUCED?1:1300); } };
+  $("#skipIntro").onclick=finish; I.addEventListener("click",finish);
+  if(REDUCED||isMobile()){ Cam.x=cur.x; Cam.y=cur.y; Cam.s=.9; clampCam(); applyCam(); finish(); return; }
+  Cam.x=W/2; Cam.y=H/2; Cam.s=minS(); applyCam();
+  nodes.forEach(n=>n.classList.add("hidden-intro")); $("#companion").style.opacity=0; $("#companion").style.transition="opacity .8s";
+  routePath.style.strokeDasharray=routeLen; routePath.style.strokeDashoffset=routeLen;
+  const at=(ms,f)=>timers.push(setTimeout(f,ms)); I.style.pointerEvents="auto";
+  veil.style.transition="opacity 1.1s ease"; 
+  at(250,()=>{ veil.style.opacity=.0; routePath.style.transition="stroke-dashoffset 1.6s cubic-bezier(.4,0,.2,1)"; routePath.style.strokeDashoffset=0; });
+  nodes.forEach((n,i)=>at(500+i*120,()=>{ n.style.transition="opacity .5s, transform .5s"; n.classList.remove("hidden-intro"); }));
+  at(1500,()=>{ $("#companion").style.opacity=1; h1.style.transition="opacity .8s, letter-spacing 1.4s"; h1.style.opacity=1; });
+  at(1900,()=>{ zh.style.transition="opacity .8s"; zh.style.opacity=1; });
+  at(2300,()=>{ sub.style.transition="opacity .8s"; sub.style.opacity=1; });
+  at(3500,finish);
+}
+
+/* ---------- init ---------- */
+const appEl=$("#app"); appEl.addEventListener("scroll",()=>{ if(!isMobile()){ appEl.scrollTop=0; appEl.scrollLeft=0; } });
+function init(){
+  buildRoute(); buildNodes(); refresh(); applyCam(); intro();
+  requestAnimationFrame(frame);
+  addEventListener("resize",()=>{ vw=innerWidth; vh=innerHeight; clampCam(); applyCam(); });
+}
+if(document.fonts&&document.fonts.ready){ Promise.race([document.fonts.ready,new Promise(r=>setTimeout(r,1200))]).then(init); } else init();
+</script>
+</body>
+</html>
