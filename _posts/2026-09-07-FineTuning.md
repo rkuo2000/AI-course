@@ -48,6 +48,63 @@ The three most popular SFT techniques are full fine-tuning, LoRA, and QLoRA.<br>
 ![](https://cf-assets2.tenlong.com.tw/products/images/000/233/229/webp/9789863128236_%E5%A4%A9%E7%93%8F.webp?1736397148)<br>
 
 ---
+## Intelligence Benchmarks
+
+### [OpenAI Evals](https://evals.openai.com/)
+
+---
+### SWE-Bench
+#### Paper: [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)
+#### Code: [https://github.com/SWE-bench/SWE-bench](https://github.com/SWE-bench/SWE-bench)
+
+---
+### MLE-Bench
+#### Paper: [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)
+#### Code: [https://github.com/openai/mle-bench](https://github.com/openai/mle-bench)
+
+---
+### SWE-Lancer
+#### Paper: [SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?](https://arxiv.org/abs/2502.12115)
+
+### PaperBench
+#### Paper: [PaperBench: Evaluating AI's Ability to Replicate AI Research](https://arxiv.org/abs/2504.01848)
+#### Code: [https://github.com/openai/frontier-evals](https://github.com/openai/frontier-evals)
+
+---
+### SWE-Bench Pro
+#### Paper: [SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?](https://arxiv.org/abs/2509.16941)
+#### Code: [https://github.com/scaleapi/SWE-bench_Pro-os](https://github.com/scaleapi/SWE-bench_Pro-os)
+
+---
+### GPDval
+#### Paper: [GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks](https://arxiv.org/abs/2510.04374)
+![](https://arxiv.org/html/2510.04374v1/exampletasksscreenshot.png)
+#### Dataset: [https://huggingface.co/datasets/openai/gdpval](https://huggingface.co/datasets/openai/gdpval)
+* 220 real-world knowledge tasks across 44 occupations.
+* Each task consists of a text prompt and a set of supporting reference files.
+
+---
+### ToolOrchestra
+#### Paper: [ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration](https://arxiv.org/abs/2511.21689)
+#### Code: [https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)
+![](https://raw.githubusercontent.com/NVlabs/ToolOrchestra/main/assets/method.png)
+
+---
+### RLVR
+#### Paper: [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/html/2506.14245v2)
+
+---
+### [Nemotron-Cascade 2](https://research.nvidia.com/labs/nemotron/nemotron-cascade-2/)
+#### Paper: [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](https://arxiv.org/abs/2603.19220)
+![](https://research.nvidia.com/labs/nemotron/images/nemotron-cascade-2/pipeline.png)
+* **Cascade RL Framework**<br>
+* **Multi-domain On-policy Distillation**<br>
+
+#### Data:
+* [Nemotron-Cascade-2 SFT Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data): the data used for the SFT stage of Nemotron-Cascade-2 training pipeline.
+* [Nemotron-Cascade-2 RL Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-RL-data): the data used for our Nemotron-Cascade 2 RL training pipeline.
+
+---
 ## Fine-Tuning Examples
 
 ### LlamaFactory
@@ -111,63 +168,23 @@ This dataset comes with actual human submissions, which we do not need. All we u
 * **Algorithm**: Logit Threshold Empowerment <br>
 ![](https://github.com/rkuo2000/AI-course/blob/main/assets/images/Logit_Threshold_Empowerment.png?raw=true)
 
----
-## Intelligence Benchmarks
-
-### [OpenAI Evals](https://evals.openai.com/)
 
 ---
-### SWE-Bench
-#### Paper: [SWE-bench: Can Language Models Resolve Real-World GitHub Issues?](https://arxiv.org/abs/2310.06770)
-#### Code: [https://github.com/SWE-bench/SWE-bench](https://github.com/SWE-bench/SWE-bench)
+### Gemma-4 Fine-Tuning
+**[Gemma 4 Fine-tuning Guide](https://unsloth.ai/docs/models/gemma-4/train)**<br>
 
----
-### MLE-Bench
-#### Paper: [MLE-bench: Evaluating Machine Learning Agents on Machine Learning Engineering](https://arxiv.org/abs/2410.07095)
-#### Code: [https://github.com/openai/mle-bench](https://github.com/openai/mle-bench)
+#### [Gemma4_E2B_SFT_Text.ipynb](https://github.com/rkuo2000/AI-exercise/blob/main/colab/Gemma4_E2B_SFT_Text.ipynb)
 
----
-### SWE-Lancer
-#### Paper: [SWE-Lancer: Can Frontier LLMs Earn $1 Million from Real-World Freelance Software Engineering?](https://arxiv.org/abs/2502.12115)
+#### [Gemma4-E4B_SFT_Vision.ipynb](https://github.com/rkuo2000/AI-exercise/blob/main/colab/Gemma4-E4B_SFT_Vision.ipynb)
 
-### PaperBench
-#### Paper: [PaperBench: Evaluating AI's Ability to Replicate AI Research](https://arxiv.org/abs/2504.01848)
-#### Code: [https://github.com/openai/frontier-evals](https://github.com/openai/frontier-evals)
+#### [Gemma4-E2B_SFT_Audio.ipynb](https://github.com/rkuo2000/AI-exercise/blob/main/colab/Gemma4-E2B_SFT_Audio.ipynb)
 
----
-### SWE-Bench Pro
-#### Paper: [SWE-Bench Pro: Can AI Agents Solve Long-Horizon Software Engineering Tasks?](https://arxiv.org/abs/2509.16941)
-#### Code: [https://github.com/scaleapi/SWE-bench_Pro-os](https://github.com/scaleapi/SWE-bench_Pro-os)
+#### [Gemm4-E2B_SFT_Finance-Reasoning.ipynb](https://github.com/rkuo2000/AI-exercise/blob/main/colab/Gemm4-E2B_SFT_Finance-Reasoning.ipynb)
 
----
-### GPDval
-#### Paper: [GDPval: Evaluating AI Model Performance on Real-World Economically Valuable Tasks](https://arxiv.org/abs/2510.04374)
-![](https://arxiv.org/html/2510.04374v1/exampletasksscreenshot.png)
-#### Dataset: [https://huggingface.co/datasets/openai/gdpval](https://huggingface.co/datasets/openai/gdpval)
-* 220 real-world knowledge tasks across 44 occupations.
-* Each task consists of a text prompt and a set of supporting reference files.
+#### [Gemma4-E2B_GRPO_Sudoku.ipynb](https://github.com/rkuo2000/AI-exercise/blob/main/colab/Gemma4-E2B_GRPO_Sudoku.ipynb)
 
----
-### ToolOrchestra
-#### Paper: [ToolOrchestra: Elevating Intelligence via Efficient Model and Tool Orchestration](https://arxiv.org/abs/2511.21689)
-#### Code: [https://github.com/NVlabs/ToolOrchestra](https://github.com/NVlabs/ToolOrchestra)
-![](https://raw.githubusercontent.com/NVlabs/ToolOrchestra/main/assets/method.png)
+#### [gemma4-31b-unsloth (kaggle)](https://www.kaggle.com/code/danielhanchen/gemma4-31b-unsloth)
 
----
-### RLVR
-#### Paper: [Reinforcement Learning with Verifiable Rewards Implicitly Incentivizes Correct Reasoning in Base LLMs](https://arxiv.org/html/2506.14245v2)
-
----
-### [Nemotron-Cascade 2](https://research.nvidia.com/labs/nemotron/nemotron-cascade-2/)
-#### Paper: [Nemotron-Cascade 2: Post-Training LLMs with Cascade RL and Multi-Domain On-Policy Distillation](https://arxiv.org/abs/2603.19220)
-![](https://research.nvidia.com/labs/nemotron/images/nemotron-cascade-2/pipeline.png)
-* **Cascade RL Framework**<br>
-* **Multi-domain On-policy Distillation**<br>
-
-#### Data:
-* [Nemotron-Cascade-2 SFT Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-SFT-Data): the data used for the SFT stage of Nemotron-Cascade-2 training pipeline.
-* [Nemotron-Cascade-2 RL Data](https://huggingface.co/datasets/nvidia/Nemotron-Cascade-2-RL-data): the data used for our Nemotron-Cascade 2 RL training pipeline.
-  
 <br>
 <br>
 
